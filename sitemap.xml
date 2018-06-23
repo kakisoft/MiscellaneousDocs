@@ -9,4 +9,12 @@
     </url>
     
 
+    
+    <url>
+     <loc>http://yourSite/aaa/</loc>
+     <lastmod>2018-06-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
 </urlset>

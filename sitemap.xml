@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://yourSite/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,20 +12,72 @@
     
         
     <url>
+     <loc>http://yourSite/AWS/20170517_JAWS Festa/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/AWS/20171029_DevelopersIO/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/AWS/20171222_AWSreInvent2017開催概要と2018年のポイント/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/AWS/2017_AWS_loadshow/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/AWS/20180116_AWSnight/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/AWS/AWS- tutorial-APIGateway/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/AWS/AWS-EC2_memo/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>http://yourSite/Android/MyMobile_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Android/android_dev_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Android/tmp/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -35,7 +87,17 @@
         
     <url>
      <loc>http://yourSite/Ansible/reference/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://yourSite/Azure/ComparisonWithAWS/</loc>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -45,115 +107,115 @@
         
     <url>
      <loc>http://yourSite/Uncategorized/Electrical/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/GIMP_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/Hyper-V_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/IIS_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/MyPC_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/PixirEditor_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/RegularExpression_note/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/VMware_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/VisualStudioCode_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/VisualStudio_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/eclipse_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/google_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/icon_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/key_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/mac_note/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/slide/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/tools/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/various_ phrase_and_naming_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://yourSite/Uncategorized/vi_memo/</loc>
-     <lastmod>2018-06-23</lastmod>
+     <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

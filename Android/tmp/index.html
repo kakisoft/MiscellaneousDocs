@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="http://yourSite/Android/android_dev_memo/">
+        <link rel="canonical" href="http://yourSite/Android/tmp/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Android dev memo - kakiNote</title>
+        <title>Tmp - kakiNote</title>
       
     
     
@@ -99,7 +99,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                Android dev memo
+                Tmp
               </span>
             
           
@@ -213,6 +213,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../android_dev_memo/" title="Android dev memo" class="md-nav__link">
+      Android dev memo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -221,22 +233,10 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="Android dev memo" class="md-nav__link md-nav__link--active">
-      Android dev memo
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../tmp/" title="Tmp" class="md-nav__link">
+    <a href="./" title="Tmp" class="md-nav__link md-nav__link--active">
       Tmp
     </a>
+    
   </li>
 
         
@@ -258,87 +258,219 @@
               
                 
                 
-                  <h1>Android dev memo</h1>
+                  <h1>Tmp</h1>
                 
-                <pre><code>1インチ    25.4ミリメートル
-dpi        1インチの「幅」に何個の点が打てるかを表す
-ピクセル   ≒ドット。色や明るさの情報を保持してる点がドットとの違い。
+                <pre><code>＜SQLiteOpenHelper＞
+AndroidでSQLiteデータベースを作成するときは、SQLiteOpenHelperクラスを使います。
+http://androidhacker.blog94.fc2.com/blog-entry-83.html
 
-＜相対的な単位＞
-dp(dip)    端末のdpiによってサイズが切り替わる。160dpiの画面で 1dp=1px。
-sp         ユーザーのフォントサイズの設定により伸縮。
+＜SQLiteDatabase＞
+SQLiteDatabaseクラスはSQLiteデータベースを操作するためのメソッド群を持つクラスです。
 
-＜絶対的な単位＞
-px    10px×10pxなら、100個のピクセルで出来ている。（非推奨。デバイスによりインチ毎のピクセルが異なっているため。）
-in    インチ。物理的なサイズ。（非推奨）
-mm    ミリメートル。物理的なサイズ。（非推奨）
-pt    ポイント(1/72インチ)。物理的なサイズ。（非推奨）
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
-＜コーディング時＞
-480px X 800pxでだいたい考えて、一通り実装が終わったら
-720px X 1200pxの実機で検証。
-幅、高さ、マージン、パディングはdpを使用。
-文字サイズはspを使用。15sp前後を標準。大きめでも20、小さくても12。
+import android.widget.Toast;
+
+Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 
 
-## システム音が格納されているフォルダ
-HOME→system→media→audio→notification
+【 キーストア 】
+
+exe配布する時に、端末ごとのキーが振られる。
+（事実上、exeを作成できる端末は１つ。）
+違う端末で作った場合、再インストールで対応（１度アンインストール）
 
 
-## 内部ストレージ
-HOME→mnt→sdcard
-※Windowsと接続して見れる「内部ストレージ」のフォルダは、
-  Androidと完全な同期がとれない。（Android側で作成したばかりのファイルが見れないことがある。）
-  設定→アプリケーション→メディアストレージ  にて、キャッシュを削除するか、
-  Androidを再起動すると、ファイルが見れるようになる。
+--------------------------------------------------------------
+
+【 ペアリング 】
+
+設定→Blue Tooth  →ONにする
+
+キーボードみたいなマークを押す。MACアドレスみたいなやつ
+ペアリングの時の数字を打ち込む。
+
+該当数字のバーコードを読み込ませたあと、エンターを読む。
 
 
-## USBデバッグ
-設定→タブレット情報→ビルド番号を７回タップ
 
-開発者向けオプション→USBデバッグをON
+あとは通信確認
 
-（Android 6以降）
-スワイプしてUSB起動メニューを表示→ファイル転送
-
-## Android⇔PC のファイル交換（Android 6）
-Android側にて、上からスワイプしてメニューを表示→『USBを充電に使用（タップしてその他のオプション）』を選択。
-→「ファイル転送」を設定。
+ビープ音の調整は、バーコード読ませるだけでOK。
 
 
-＜Android機器設定　※業務用アプリの例＞
-ディスプレイ
-　　・画面の自動回転  off
-　　・画面の明るさ    3/4
-　　・スリープ        30分
+□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ｖ
 
-開発者向けオプション
-　　・スリープモードにしない ⇒ ON
-
-セキュリティ
-　　・提供元不明のアプリ ⇒ ON
-
-ローミング設定
-　　・ON
+『 ondestory 呼ばれない 』
 
 
-## IISにてapkダウンロード可にする設定
-MIMEの種類→追加
-.apk
-application/vnd.android.package-archive
+http://www.limy.org/program/android/life_cycle.html
 
 
-【AudioManager】
-|   ストリームの種類     |           説明            |
-|:----------------------:| :------------------------:| 
-| STREAM_ALARM           | アラーム音量              |
-| STREAM_DTMF            | ダイヤル音量              |
-| STREAM_MUSIC           | 音楽再生音量              |
-| STREAM_NOTIFICATION    | 通知音量                  |
-| STREAM_RING            | 着信音量                  |
-| STREAM_SYSTEM          | システムメッセージ音量    |
-| STREAM_VOICE_CALL      | 通話音量                  |
+Process の強制終了 システムは、onPause() や onStop() の処理が終わった後、
+いつでもその Process を強制的に終了させることができます。
 
+
+つまり、onStop() と onDestroy() は、呼び出されない可能性があります。
+プロセスが破棄される前に確実に実行させたい処理は onPause() に記述する必要があります。
+
+
+
+
+http://andante.in/i/android%E3%82%A2%E3%83%97%E3%83%AAtips/activity%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%80%83%E3%81%88%E3%82%8B/
+
+
+
+
+レシーバ
+http://libro.tuyano.com/index3?id=296001&amp;page=4
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+
+＝＝＝＝＝＝＝＝＝＝＝
+
+ファイル名の拡張子        .apk
+MIMEの種類                application/vnd.android.package-archive
+
+
+関連付けられた拡張子      .apk
+コンテンツの種類(MIME)    application/vnd.android.package-archive
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+SVNバージョン確認
+
+http://172.16.24.201/svn/Android/SiwaTablet/trunk/SiwaTabletClient
+
+
+
+
+GooglePlayストアにWifiアナライザというソフトがあるので
+インストールして福配で何db出るか試して欲しい。
+70以上が、ハンディのエクセレントと同じ。
+
+また、ネットワーク設定で自動ローミングというのがあるので
+設定して切り替わるか試して欲しい。
+↑アクセスポイントを自動で切り替える設定
+
+
+
+□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+Android SQLiteデータベースを作成する（SQL文をリソースファイルに定義する） 
+http://yan-note.blogspot.jp/2010/09/android-sqlitesql.html
+
+
+
+Androidアプリで使用するSQLiteのテーブル作成時の注意点
+http://android.roof-balcony.com/shori/strage/createtable/
+
+
+
+http://androidhacker.blog94.fc2.com/blog-entry-83.html
+
+SQLiteOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
+
+
+引数は、1番目がContext型インスタンスで、どのアプリケーションか指示します。
+
+2番目は、データベース名を指示します。nullにするとメモリ上にデータベースが作成され、ファイル名を指定した場合は
+　　　　 /data/data/パッケージ名/database/ファイル名 
+に、データベースファイルが作成されます。
+
+3番目はcursorオブジェクトを作るのに使いますが、デフォルトではnullを指定します。
+
+4番目はバージョン情報です。
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+Log.d(&quot;○○のデバッグ&quot;, &quot;ここを通過したよ！&quot;);
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+    private void getPairedDevices() {
+        // *** ペアリングされたBluetoothデバイスの取得
+        Set&lt;BluetoothDevice&gt; pairedDevices = mBluetoothAdapter.getBondedDevices();　
+        // If there are paired devices, add each one to the ArrayAdapter
+         if (pairedDevices.size() &lt; 1) {
+             showAlert(HbMsgIdConstants.C007);
+         }
+    }
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+android 内部ストレージ ファイル 保存
+
+★１
+http://techbooster.org/android/application/16004/
+
+
+http://androidapp.blog.jp/archives/2030738.html
+
+
+http://www50.atpages.jp/hipgipfip/?p=30
+
+★２
+http://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13118635933
+
+
+
+
+
+
+Environment.getExternalStorageDirectory().getPath();
+Environment.getExternalStorageDirectory()
+
+
+store
+
+
+storePath
+
+
+
+
+『ddms フォルダ作成』
+
+
+java.io.BufferedWriter
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+android スライドメニュー
+ナビゲーションドローアー
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 </code></pre>
                 
                   
@@ -360,7 +492,7 @@ application/vnd.android.package-archive
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../MyMobile_memo/" title="MyMobile memo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../android_dev_memo/" title="Android dev memo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -369,25 +501,11 @@ application/vnd.android.package-archive
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MyMobile memo
+                Android dev memo
               </span>
             </div>
           </a>
         
-        
-          <a href="../tmp/" title="Tmp" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Tmp
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

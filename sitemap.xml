@@ -10,14 +10,12 @@
     
 
     
+        
     <url>
-     <loc>http://yourSite/aaa/</loc>
+     <loc>http://yourSite/Android/MyMobile_memo/</loc>
      <lastmod>2018-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
         
     <url>
      <loc>http://yourSite/Android/android_dev_memo/</loc>
@@ -25,12 +23,8 @@
      <changefreq>daily</changefreq>
     </url>
         
-    
-
-    
-        
     <url>
-     <loc>http://yourSite/nnnn/bbb/</loc>
+     <loc>http://yourSite/Android/tmp/</loc>
      <lastmod>2018-06-23</lastmod>
      <changefreq>daily</changefreq>
     </url>

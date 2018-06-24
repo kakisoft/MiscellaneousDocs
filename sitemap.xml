@@ -106,6 +106,210 @@
     
         
     <url>
+     <loc>http://yourSite/English/misc/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://yourSite/General/FirstNote/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/General/account/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/General/file_pass/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/General/hatena/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/General/mail_template/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://yourSite/Git/AddRemoteRepo_note/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Git/git_basic_command/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Git/git_tips/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Git/github_TrackLatestBranch/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Git/github_memo/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Git/gitlab_memo/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Git/omit_username_and_pass/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Git/remote_memo01/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Git/squash_for_sourcetree/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://yourSite/Linux/DirectoryStructure_note/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Linux/Linux_device_memo/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Linux/MyNote/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Linux/centos_memo/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/Linux/linux_command_memo/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://yourSite/Logistics/2017_logistic_note/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://yourSite/MongoDB/MongoDB_note1_install/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/MongoDB/MongoDB_note2_start_command/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/MongoDB/MongoDB_note3_basic/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/MongoDB/MongoDB_note4_use/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/MongoDB/config_note/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/MongoDB/overview/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/MongoDB/reference/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>http://yourSite/Uncategorized/Electrical/</loc>
      <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
@@ -215,6 +419,74 @@
         
     <url>
      <loc>http://yourSite/Uncategorized/vi_memo/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://yourSite/free/20171014_キャリア相談会/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/free/20171026_geeches/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/free/20171102_pe-bank/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/free/20171110_面談/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/free/20171207_面談/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/free/クラウドテック/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/free/フリーランスことはじめ/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/free/確定申告について/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://yourSite/free/雑記/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://yourSite/heroku/heroku_memo/</loc>
      <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>
     </url>

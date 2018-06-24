@@ -318,6 +318,16 @@
     
         
     <url>
+     <loc>http://yourSite/MkDocs/MkDocs_note/</loc>
+     <lastmod>2018-06-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>http://yourSite/MongoDB/MongoDB_note1_install/</loc>
      <lastmod>2018-06-24</lastmod>
      <changefreq>daily</changefreq>

@@ -1,22 +1,5 @@
-# Welcome to MkDocs
-
-For full documentation visit [mkdocs.org](http://mkdocs.org).
-aaa
-bb
-ccc
-ｄｄｄ
-eee
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+# MiscellaneousNotes
+福岡で物流系エンジニアをやっている、kakisoftの個人メモです。  
+　  
+勉強会で得た知識や趣味の調べものをしていて、メモとして残しておきたい事を記録しています。  
+ブログ記事にするほど纏まっていないものを放り込んでいます。

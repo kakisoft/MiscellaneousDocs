@@ -44,5 +44,7 @@ pip install mkdocs-material
 mkdocs gh-deploy
 ```
 実行でデプロイ。
-
+　  
+・・・ブランチ名は「gh-pages」でなきゃいけないのかと思ったが、何でもいいみたい。  
+masterでも可。  
 

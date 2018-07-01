@@ -104,5 +104,34 @@ root_pathでなく、他のパスにしたい場合、rails routes 等で確認�
 ・config
 ・db
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Rails 5.1：form_with
+form_tagとform_forが form_withに統合された。
+
+
+### form_for
+modelに基づいたformを作るときに使う
+
+
+### form_tag
+modelに基づかないformを作るときに使う
+
+
+
+# URLで飛ばすとき 
+form_for(@book, url: 'https://cre8cre8.com') 
+# コントローラ名とアクション名で飛ばすとき 
+form_for(@book, url: {controller: index, action:index }) 
+# ルーティングで定義したものでうまいこと飛ばすとき "$ rake routes" で確認できる 
+form_for(@book, url: books_path) 
+# HTTPメソッドを変更したいとき 
+form_for(@book, url: 'http://cre8cre8.com', html: {method: 'GET'}) 
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+【動画付き】Rails 5.1で作るVue.jsアプリケーション ～Herokuデプロイからシステムテストまで～ - Qiita 
+https://qiita.com/jnchito/items/30ab14ebf29b945559f6
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ```

@@ -2,32 +2,9 @@
 rakeコマンドがRails 5ではrailsコマンドで実行できるようになっている。
 
 ヘルパー・・・viewで使えるメソッド
-===================================
-rails new mymemo
-rails g scaffold Memo title:string body:text
-rails db:migrate
-
-===================================
-rails new myblog
-rails db:migrate
-
-
-【model】
-rails g model Post title:string body:text
-rails c  # （consoleでも可）
-＜↓↓以下、コンソール↓↓＞
-p = Post.new(title: 'title1', body:'body1')
-p.save
-Post.create(title:'title2', body:'body2')  #=> newとsaveを同時に
-Post.all  #=> 登録データ確認
-quit
-＜↑↑コンソールここまで↑↑＞
------------------------------------
-## 初期化
-rails db:migrate:reset
+```
 
 -----------------------------------
-
 rails g controller Posts
 confit/routes.rb にルーティングを記述。
 （例）

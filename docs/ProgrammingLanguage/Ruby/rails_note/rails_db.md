@@ -1,8 +1,25 @@
+# Console
+```
+rails console
+（rails c　でも可）
+```
+## コンソールコマンド
+```
+p = Post.new(title: 'title 1', body: 'body 1')
+p.save
+----------------
+Post.create(title: 'title 2', body: 'body 2')
+----------------
+Post.all
+```
+quit
+
 # SQLite
 
 ### コンソールログイン
 ```
-rails db  # （dbconsoleでも可）
+rails db  
+（rails dbconsoleでも可）
 ```
 ### テーブル一覧表示
 ```
@@ -29,11 +46,15 @@ end
 rails db:seed
 ```
 
-# migrateコマンド
-### rake db:migrate:reset
+## 初期化
+```
+rails db:migrate:reset
+```
 DB を drop した後、通常通りのマイグレート（db:migrate）が行われる。  
-db/migrate/**.rb が古い順から全て実行される。
+db/migrate/**.rb が古い順から全て実行される。  
 
-### rake db:reset
+```
+rake db:reset
+```
 db/schema.rb からDBを作成。  
 db/migrate/**.rb は使用されない。

@@ -1,6 +1,0 @@
-```
-Oracle Database Net Services リファレンス
-リスナー・パラメータ（listener.ora）
-http://otndnld.oracle.co.jp/document/products/oracle10g/102/doc_cd/network.102/B19209-01/listener.htm#i500658
-
-```

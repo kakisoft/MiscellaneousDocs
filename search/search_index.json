@@ -4717,7 +4717,7 @@
         }, 
         {
             "location": "/ProgrammingLanguage/PHP/pear/PEAR_install_note_windows/", 
-            "text": "Windows\n\n\n\u53c2\u8003\u30b5\u30a4\u30c8\n\n\nhttp://sprint-life.hatenablog.com/entry/2014/02/24/150423\n\n\u2015http://pentan.info/server/windows/win_php_pear.html  \n\n\n\uff11\uff0e\n\n\n\u4e0b\u8a18\u306eURL\u3088\u308a\u3001PEAR\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u306e\u305f\u3081\u306ePHP\u306e\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3057\u307e\u3059\u3002  \n\n \u203bPHP7\n\nhttp://pear.php.net/go-pear\n\n\n\uff12\uff0e\n\n\nPHP\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30a9\u30eb\u30c0\u306b\u3001\u300cPEAR\u300d\u3068\u3044\u3046\u30d5\u30a9\u30eb\u30c0\u3092\u4f5c\u3063\u3066\u3001\u305d\u3053\u306b\u4fdd\u5b58\u3057\u307e\u3059\u3002\n\n\nwhere php\n\nC:\\tools\\php72\\php.exe\n\n\n\n\n\uff13\uff0e\n\n\n\u4ee5\u4e0b\u306e\u30b3\u30fc\u30c9\u3092\u3001\u300cgo-pear.bat\u300d\u3068\u3057\u3066\u3001PHP\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30a9\u30eb\u30c0\u306b\u4fdd\u5b58\u3002\u3000\u3000\n\u305d\u306e\u5f8c\u3001\u5b9f\u884c\u3002\n\n\n@ECHO OFF\nset PHP_BIN=php.exe\n%PHP_BIN% -d output_buffering=0 PEAR\\go-pear.php\npause\n\n\n\n\nPHP\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30a9\u30eb\u30c0(C:\\Program Files\\PHP \u307e\u305f\u306f C:\\PHP)\n\u251c PEAR\n\u2502\u2514 go-pear.php\n\u2514 go-pear.bat\n\n\n\n\n\u74b0\u5883\u5909\u6570\u8ffd\u52a0\n\n\n\u203bchoco \u4f7f\u3063\u305f\u5834\u5408\n\n\nPHP_PEAR_SYSCONF_DIR\nC:\\tools\\php72\\PEAR\n\n\n\n\n\u6700\u7d42\u7684\u306b\u4f7f\u7528\u3057\u305f\u30b3\u30de\u30f3\u30c9\n\n\nC:\\tools\\php72\\PEAR\u3000\u306b\u3066\u5b9f\u884c\u3002\n\n\nphp go-pear.phar", 
+            "text": "Windows\n\n\n\u53c2\u8003\u30b5\u30a4\u30c8\n\n\nhttp://sprint-life.hatenablog.com/entry/2014/02/24/150423\n\n\u2015http://pentan.info/server/windows/win_php_pear.html  \n\n\n\uff11\uff0e\n\n\n\u4e0b\u8a18\u306eURL\u3088\u308a\u3001PEAR\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u306e\u305f\u3081\u306ePHP\u306e\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3057\u307e\u3059\u3002  \n\n \u203bPHP7\n\nhttp://pear.php.net/go-pear\n\n\n\uff08\u516c\u5f0f\u30b5\u30a4\u30c8\uff09\n\n\nhttps://pear.php.net/manual/en/installation.getting.php\n\nhttps://pear.php.net/go-pear.phar  \n\n\n\uff12\uff0e\n\n\nPHP\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30a9\u30eb\u30c0\u306b\u3001\u300cPEAR\u300d\u3068\u3044\u3046\u30d5\u30a9\u30eb\u30c0\u3092\u4f5c\u3063\u3066\u3001\u305d\u3053\u306b\u4fdd\u5b58\u3057\u307e\u3059\u3002\n\n\nwhere php\n\nC:\\tools\\php72\\php.exe\n\n\n\n\n\uff13\uff0e\n\n\n\u4ee5\u4e0b\u306e\u30b3\u30fc\u30c9\u3092\u3001\u300cgo-pear.bat\u300d\u3068\u3057\u3066\u3001PHP\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30a9\u30eb\u30c0\u306b\u4fdd\u5b58\u3002\u3000\u3000\n\u305d\u306e\u5f8c\u3001\u5b9f\u884c\u3002\n\n\n@ECHO OFF\nset PHP_BIN=php.exe\n%PHP_BIN% -d output_buffering=0 PEAR\\go-pear.php\npause\n\n\n\n\nPHP\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30a9\u30eb\u30c0(C:\\Program Files\\PHP \u307e\u305f\u306f C:\\PHP)\n\u251c PEAR\n\u2502\u2514 go-pear.php\n\u2514 go-pear.bat\n\n\n\n\n\u74b0\u5883\u5909\u6570\u8ffd\u52a0\n\n\n\u203bchoco \u4f7f\u3063\u305f\u5834\u5408\n\n\nPHP_PEAR_SYSCONF_DIR\nC:\\tools\\php72\\PEAR\n\n\n\n\n\u6700\u7d42\u7684\u306b\u4f7f\u7528\u3057\u305f\u30b3\u30de\u30f3\u30c9\n\n\nC:\\tools\\php72\\PEAR\u3000\u306b\u3066\u5b9f\u884c\u3002\n\n\nphp go-pear.phar\n\n\n\n\n\u203b\u8981\u7ba1\u7406\u8005\u6a29\u9650", 
             "title": "Windows"
         }, 
         {
@@ -4736,6 +4736,11 @@
             "title": "\uff11\uff0e"
         }, 
         {
+            "location": "/ProgrammingLanguage/PHP/pear/PEAR_install_note_windows/#_2", 
+            "text": "https://pear.php.net/manual/en/installation.getting.php \nhttps://pear.php.net/go-pear.phar", 
+            "title": "\uff08\u516c\u5f0f\u30b5\u30a4\u30c8\uff09"
+        }, 
+        {
             "location": "/ProgrammingLanguage/PHP/pear/PEAR_install_note_windows/#2", 
             "text": "PHP\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30a9\u30eb\u30c0\u306b\u3001\u300cPEAR\u300d\u3068\u3044\u3046\u30d5\u30a9\u30eb\u30c0\u3092\u4f5c\u3063\u3066\u3001\u305d\u3053\u306b\u4fdd\u5b58\u3057\u307e\u3059\u3002  where php\n\nC:\\tools\\php72\\php.exe", 
             "title": "\uff12\uff0e"
@@ -4746,13 +4751,13 @@
             "title": "\uff13\uff0e"
         }, 
         {
-            "location": "/ProgrammingLanguage/PHP/pear/PEAR_install_note_windows/#_2", 
+            "location": "/ProgrammingLanguage/PHP/pear/PEAR_install_note_windows/#_3", 
             "text": "\u203bchoco \u4f7f\u3063\u305f\u5834\u5408  PHP_PEAR_SYSCONF_DIR\nC:\\tools\\php72\\PEAR", 
             "title": "\u74b0\u5883\u5909\u6570\u8ffd\u52a0"
         }, 
         {
-            "location": "/ProgrammingLanguage/PHP/pear/PEAR_install_note_windows/#_3", 
-            "text": "C:\\tools\\php72\\PEAR\u3000\u306b\u3066\u5b9f\u884c\u3002  php go-pear.phar", 
+            "location": "/ProgrammingLanguage/PHP/pear/PEAR_install_note_windows/#_4", 
+            "text": "C:\\tools\\php72\\PEAR\u3000\u306b\u3066\u5b9f\u884c\u3002  php go-pear.phar  \u203b\u8981\u7ba1\u7406\u8005\u6a29\u9650", 
             "title": "\u6700\u7d42\u7684\u306b\u4f7f\u7528\u3057\u305f\u30b3\u30de\u30f3\u30c9"
         }, 
         {

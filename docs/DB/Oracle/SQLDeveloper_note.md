@@ -1,0 +1,21 @@
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 出力結果を、列名を含めてコピー 】
+「Ctrl + a」で全体を選択後、「Ctrl + Shift + c」でコピーし、「Ctrl + a」で貼り付け。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 SQL成形 】
+ctrl + shift + F7
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 SQLチューニング・アドバイザ 】
+
+http://www.oracle.com/webfolder/technetwork/jp/obe/db/sqldev/r30/TuningAdvisor/TuningAdvisor.htm
+
+（権限付与）
+grant advisor to KAKIP2;
+grant administer sql tuning set to KAKIP2;
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```

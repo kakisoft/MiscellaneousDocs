@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv/Virtualization/Vagrant_note4_use/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv/Virtualization/Vagrant_note03_build/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Vagrant note4 use - kakiNote</title>
+        <title>Vagrant note03 build - kakiNote</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#box" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                Vagrant note4 use
+                Vagrant note03 build
               </span>
             
           
@@ -2940,8 +2940,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Docker_note1_basic/" title="Docker note1 basic" class="md-nav__link">
-      Docker note1 basic
+    <a href="../Docker_note01_reference/" title="Docker note01 reference" class="md-nav__link">
+      Docker note01 reference
     </a>
   </li>
 
@@ -2952,8 +2952,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Docker_note2_build/" title="Docker note2 build" class="md-nav__link">
-      Docker note2 build
+    <a href="../Docker_note03_basic/" title="Docker note03 basic" class="md-nav__link">
+      Docker note03 basic
     </a>
   </li>
 
@@ -2964,8 +2964,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Docker_note3_use/" title="Docker note3 use" class="md-nav__link">
-      Docker note3 use
+    <a href="../Docker_note03_build/" title="Docker note03 build" class="md-nav__link">
+      Docker note03 build
     </a>
   </li>
 
@@ -2976,8 +2976,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note1_basic/" title="Vagrant note1 basic" class="md-nav__link">
-      Vagrant note1 basic
+    <a href="../Docker_note04_use/" title="Docker note04 use" class="md-nav__link">
+      Docker note04 use
     </a>
   </li>
 
@@ -2988,8 +2988,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note2_build/" title="Vagrant note2 build" class="md-nav__link">
-      Vagrant note2 build
+    <a href="../Vagrant_note01_reference/" title="Vagrant note01 reference" class="md-nav__link">
+      Vagrant note01 reference
     </a>
   </li>
 
@@ -3000,8 +3000,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note3_tips/" title="Vagrant note3 tips" class="md-nav__link">
-      Vagrant note3 tips
+    <a href="../Vagrant_note02_basic/" title="Vagrant note02 basic" class="md-nav__link">
+      Vagrant note02 basic
     </a>
   </li>
 
@@ -3019,11 +3019,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Vagrant note4 use
+        Vagrant note03 build
       </label>
     
-    <a href="./" title="Vagrant note4 use" class="md-nav__link md-nav__link--active">
-      Vagrant note4 use
+    <a href="./" title="Vagrant note03 build" class="md-nav__link md-nav__link--active">
+      Vagrant note03 build
     </a>
     
       
@@ -3035,78 +3035,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="仮想マシン初期化" class="md-nav__link">
-    仮想マシン初期化
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="仮想マシンを起動" class="md-nav__link">
-    仮想マシンを起動
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="仮想マシンの状態確認" class="md-nav__link">
-    仮想マシンの状態確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="仮想マシンのスリープ" class="md-nav__link">
-    仮想マシンのスリープ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="スリープからの復帰" class="md-nav__link">
-    スリープからの復帰
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" title="仮想マシンの終了" class="md-nav__link">
-    仮想マシンの終了
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="仮想マシン再起動" class="md-nav__link">
-    仮想マシン再起動
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" title="仮想マシンの削除" class="md-nav__link">
-    仮想マシンの削除
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" title="仮想マシンへの接続" class="md-nav__link">
-    仮想マシンへの接続
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" title="ホストから仮想マシンへの接続" class="md-nav__link">
-    ホストから仮想マシンへの接続
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" title="共有フォルダの設定" class="md-nav__link">
-    共有フォルダの設定
+  <a href="#box" title="Boxの作成" class="md-nav__link">
+    Boxの作成
   </a>
   
 </li>
@@ -3119,6 +3049,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vagrant_note04_use/" title="Vagrant note04 use" class="md-nav__link">
+      Vagrant note04 use
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vagrant_note05_tips/" title="Vagrant note05 tips" class="md-nav__link">
+      Vagrant note05 tips
+    </a>
   </li>
 
         
@@ -3851,6 +3805,114 @@
         
       </ul>
     </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
+    
+    <label class="md-nav__link" for="nav-8-2">
+      Windows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        Windows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../OS/Windows/Excel_note/" title="Excel note" class="md-nav__link">
+      Excel note
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../OS/Windows/PowerShell/" title="PowerShell" class="md-nav__link">
+      PowerShell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../OS/Windows/Shortcut/" title="Shortcut" class="md-nav__link">
+      Shortcut
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../OS/Windows/VSS_memo/" title="VSS memo" class="md-nav__link">
+      VSS memo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../OS/Windows/tmp/" title="Tmp" class="md-nav__link">
+      Tmp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../OS/Windows/windows10_tips/" title="Windows10 tips" class="md-nav__link">
+      Windows10 tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../OS/Windows/windows_tips/" title="Windows tips" class="md-nav__link">
+      Windows tips
+    </a>
   </li>
 
         
@@ -5599,78 +5661,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="仮想マシン初期化" class="md-nav__link">
-    仮想マシン初期化
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="仮想マシンを起動" class="md-nav__link">
-    仮想マシンを起動
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="仮想マシンの状態確認" class="md-nav__link">
-    仮想マシンの状態確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="仮想マシンのスリープ" class="md-nav__link">
-    仮想マシンのスリープ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="スリープからの復帰" class="md-nav__link">
-    スリープからの復帰
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" title="仮想マシンの終了" class="md-nav__link">
-    仮想マシンの終了
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="仮想マシン再起動" class="md-nav__link">
-    仮想マシン再起動
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" title="仮想マシンの削除" class="md-nav__link">
-    仮想マシンの削除
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" title="仮想マシンへの接続" class="md-nav__link">
-    仮想マシンへの接続
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" title="ホストから仮想マシンへの接続" class="md-nav__link">
-    ホストから仮想マシンへの接続
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" title="共有フォルダの設定" class="md-nav__link">
-    共有フォルダの設定
+  <a href="#box" title="Boxの作成" class="md-nav__link">
+    Boxの作成
   </a>
   
 </li>
@@ -5692,95 +5684,18 @@
               
                 
                 
-                  <h1>Vagrant note4 use</h1>
+                  <h1>Vagrant note03 build</h1>
                 
-                <h3 id="_1">仮想マシン初期化</h3>
-<p>仮想マシンごとにディレクトリを作成する。<br />
-以下では、<code>MyCentOSVM</code>というフォルダを作成し、そのフォルダにて実行しました。</p>
-<pre><code>vagrant init &lt;box名&gt;
+                <h3 id="box">Boxの作成</h3>
+<p>現在稼働中の仮想マシンをBox化する場合、以下のコマンドを使用する。</p>
+<pre><code>vagrant package
 </code></pre>
 
-<p>Vagrantfileという設定ファイルが作成される。<br />
-テキストエディタで内容を確認できる。<br />
-内容の詳細については<a href="https://www.vagrantup.com/docs/vagrantfile/">公式サイト</a>を参照。</p>
-<h3 id="_2">仮想マシンを起動</h3>
-<p>Vagrantfileが存在するフォルダにて、以下を実行。</p>
-<pre><code>vagrant up
+<p>「package.box」というファイルが作成される。<br />
+仮想マシンが起動中の場合、自動的にシャットダウンしてくれる。<br />
+作成したBoxをリストに追加するには、以下を実行。</p>
+<pre><code>vagrant box add &lt;ボックス名&gt; package.box
 </code></pre>
-
-<p>virtualboxを立ち上げると、仮想マシンが起動中であることを確認できる。</p>
-<h3 id="_3">仮想マシンの状態確認</h3>
-<pre><code>vagrant status
-</code></pre>
-
-<h3 id="_4">仮想マシンのスリープ</h3>
-<pre><code>vagrant suspend
-</code></pre>
-
-<h3 id="_5">スリープからの復帰</h3>
-<pre><code>vagrant resume
-</code></pre>
-
-<h3 id="_6">仮想マシンの終了</h3>
-<pre><code>vagrant halt
-
-vagrant global-status
-vagrant halt &lt;id&gt;
-</code></pre>
-
-<p>再度、立ち上げたい場合、<code>vagrant up</code></p>
-<h3 id="_7">仮想マシン再起動</h3>
-<pre><code>vagrant reload
-</code></pre>
-
-<h3 id="_8">仮想マシンの削除</h3>
-<pre><code>vagrant destroy
-</code></pre>
-
-<p>Vagrantfileは残っているので、仮想マシンを削除しても、同じ設定で再作成できる。</p>
-<h3 id="_9">仮想マシンへの接続</h3>
-<pre><code>vagrant ssh
-</code></pre>
-
-<p>ユーザ名は「vagrant」となる</p>
-<h3 id="_10">ホストから仮想マシンへの接続</h3>
-<p>Vagrantfileにて、以下のコメントアウトを解除（以下の内容があるので、先頭の「#」を削除）</p>
-<pre><code># config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;
-</code></pre>
-
-<p>この例だと、192.168.33.10 でアクセスできる。<br />
-設定変更後は、<code>vagrant reload</code>で再起動。</p>
-<h3 id="_11">共有フォルダの設定</h3>
-<p>ゲストの<code>/vagrant</code>ディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。<br />
-ゲストがCentOSの場合、ゲストOSにて以下を実行すると、ホスト側で編集した内容を、ゲスト側に反映させる事ができる。 </p>
-<pre><code>sudo rm -rf /var/www/html/
-sudo ln -fs /vagrant /var/www/html
-```　  
-403 Forbiddenとなった場合、 SELinuxを無効化する等で対処する。  
-具体的には、```/etc/selinux/config```にて、以下のように変更。
-</code></pre>
-
-<p>SELINUX=enforcing　→　SELINUX=disbled</p>
-<pre><code>
-### プロビジョン設定
-仮想マシンを起動した時に、一連の処理を自動的に実行できる。  
-Vagrantfileに以下を追記することで設定できる。
-
-＜Vagrantfileに直接スクリプトを書く場合＞
-</code></pre>
-
-<p>config.vm.provision :shell, :inline =&gt; "script xxxx"</p>
-<pre><code>＜作成したスクリプトファイルを読む場合＞
-</code></pre>
-
-<p>config.vm.provision :shell, :path =&gt; "provision.sh"</p>
-<pre><code>【スクリプトファイル(上記では provision.sh)記述例】
-</code></pre>
-
-<p>sudo yum -y install httpd
-sudo service httpd start
-sudo chkconfig httpd on
-<code>仮想マシンが起動中の場合、</code>vagrant provision```と実行することで、プロビジョンのみを実行できる。</p>
                 
                   
                 
@@ -5801,7 +5716,7 @@ sudo chkconfig httpd on
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Vagrant_note3_tips/" title="Vagrant note3 tips" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Vagrant_note02_basic/" title="Vagrant note02 basic" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -5810,19 +5725,19 @@ sudo chkconfig httpd on
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Vagrant note3 tips
+                Vagrant note02 basic
               </span>
             </div>
           </a>
         
         
-          <a href="../../heroku/heroku_memo/" title="Heroku memo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Vagrant_note04_use/" title="Vagrant note04 use" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Heroku memo
+                Vagrant note04 use
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

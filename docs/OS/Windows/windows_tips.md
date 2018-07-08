@@ -1,3 +1,4 @@
+```
 ## hostsファイルのパス
 C:\Windows\System32\drivers\etc\hosts
 
@@ -60,3 +61,4 @@ Shiftキーを押しながら、電源ON
 
 ## WinMerge：差分レポート作成
 ツール→レポート→（任意のファイル名.html）
+```

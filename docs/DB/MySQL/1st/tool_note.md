@@ -1,8 +1,0 @@
-```
-## Oracle→MySQL へのコンバート
-http://murapong.hatenablog.com/entry/20090914/1252921322
-MySQL GUI Tools
-
-MySQL Migration Toolkit 
-
-```

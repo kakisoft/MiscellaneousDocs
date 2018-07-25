@@ -1,0 +1,5 @@
+```
+## htmlのプレビュー
+Gethub Pagesを設定する。
+Settings→GitHub Pages→Sourceを「None」→「master branch」などに変更。
+```

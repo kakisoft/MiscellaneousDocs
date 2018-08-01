@@ -1,0 +1,1 @@
+![alt](assets/remote_memo01.png)

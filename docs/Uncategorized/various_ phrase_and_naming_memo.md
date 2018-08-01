@@ -1,0 +1,40 @@
+```
+on click：クリック時
+explicit：明示的な
+implicit：暗黙の
+
+Trailing Commas：後続カンマ
+
+プレビューを表示する：show_preview
+レポートを印刷する：print_report、create_report
+確保する：hold, keep
+
+TimeToCountDown
+elapsedTime ： 経過時間
+timeLeft：残り時間
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                       ShowDialogWithLoadingMessage
+処理中ダイアログ終了    CloseProccssingDialog
+処理中ダイアログ表示    ShowProccssingDialog
+
+
+GetIniFile
+GetPrivateProfileString
+SetPrivateProfileString
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+検索条件：SearchExpression
+
+## 「検索条件」
+SearchExpression
+https://ejje.weblio.jp/sentence/content/%22%E6%A4%9C%E7%B4%A2%E6%9D%A1%E4%BB%B6%22
+（Codic）：search_criteria
+（Weblio）：a search expression
+            search criteria
+（Google）：Search condition
+
+criteria は、「基準」という意味。
+expression は「表現」「語句」
+
+```

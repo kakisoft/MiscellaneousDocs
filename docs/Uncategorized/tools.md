@@ -1,0 +1,17 @@
+```
+## Postman
+https://www.getpostman.com/
+
+
+## Chrome拡張
+Instant Translate（右クリック）
+Google 翻訳（ページ単位。URLの右にアイコンが出る）
+weblioポップアップ英和辞典
+Lighthouse  ウェブサイトのパフォーマンスチェック
+
+イメージマジック
+
+
+## インターネット回線の速度テスト | Fast.com
+https://fast.com/ja/
+```

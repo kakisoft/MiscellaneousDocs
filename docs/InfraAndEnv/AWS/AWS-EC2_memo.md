@@ -1,7 +1,0 @@
-```
-ParaVirtual
-Hardware-assited VM
-
-PV方式は準仮想化
-HVMは全仮想化となっています。パフォーマンスは高く、利用料金も安い。
-```

@@ -1688,8 +1688,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../DB/PostgreSQL/PostgreSQL_note90_tools/" title="PostgreSQL note90 tools" class="md-nav__link">
-      PostgreSQL note90 tools
+    <a href="../../../DB/PostgreSQL/PostgreSQL_note90_Maintenance/" title="PostgreSQL note90 Maintenance" class="md-nav__link">
+      PostgreSQL note90 Maintenance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../DB/PostgreSQL/PostgreSQL_note91_tools/" title="PostgreSQL note91 tools" class="md-nav__link">
+      PostgreSQL note91 tools
     </a>
   </li>
 
@@ -3511,6 +3523,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MkDocs/deploy/" title="Deploy" class="md-nav__link">
+      Deploy
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3752,6 +3776,26 @@
   <a href="#ip7" title="ip確認（7以降？）" class="md-nav__link">
     ip確認（7以降？）
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service" title="起動サービス確認  service" class="md-nav__link">
+    起動サービス確認  service
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="（例）" class="md-nav__link">
+    （例）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6099,6 +6143,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#service" title="起動サービス確認  service" class="md-nav__link">
+    起動サービス確認  service
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="（例）" class="md-nav__link">
+    （例）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -6146,6 +6210,27 @@ yum list installed
 <hr />
 <h2 id="ip7">ip確認（7以降？）</h2>
 <p>ip a</p>
+<hr />
+<h2 id="service">起動サービス確認  service</h2>
+<p>systemctl</p>
+<table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">コマンド</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">サービスステータス表示</td>
+<td align="left">systemctl status ${Unit}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4"><strong>（例）</strong></h3>
+<pre><code>systemctl status
+systemctl status postgresql-9.6.service
+</code></pre>
                 
                   
                 

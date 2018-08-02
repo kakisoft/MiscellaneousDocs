@@ -2779,6 +2779,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#alias" title="Alias" class="md-nav__link">
+    Alias
+  </a>
+  
+</li>
+      
       
       
       
@@ -6103,6 +6110,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#alias" title="Alias" class="md-nav__link">
+    Alias
+  </a>
+  
+</li>
+      
       
       
       
@@ -6167,6 +6181,16 @@ AllowOverride ALL　・・・.htaccessを有効にする
 AllowOverride None ・・・.htaccessを無効にする
 Options FollowSymLinks　・・・　シンボリックリンクのリンク先を Apache がたどれるようにします。
 
+</code></pre>
+
+<h2 id="alias">Alias</h2>
+<pre><code>Alias リクエストのURLパス 実際のディレクトリ
+
+
+Alias /alias /var/www/html/alias
+
+test.comにアクセス　      ⇒　/var/www/html/test/index.html
+test.com/aliasにアクセス　⇒　/var/www/html/alias/index.html
 </code></pre>
                 
                   

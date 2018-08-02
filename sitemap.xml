@@ -756,6 +756,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/InfraAndEnv/NetworkNote/Authentication/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/InfraAndEnv/NetworkNote/DNS_note/</loc>
      <lastmod>2018-08-02</lastmod>
      <changefreq>daily</changefreq>
@@ -1026,7 +1031,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/OS/Linux/1/mynote/</loc>
+     <loc>http://yourSite/OS/Linux/パッケージマネージャー/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/OS/Linux/script/mynote/</loc>
      <lastmod>2018-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1277,6 +1287,16 @@
     </url>
     <url>
      <loc>http://yourSite/ProgrammingLanguage/Nodejs/memo/reference/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/ProgrammingLanguage/PHP/ini_note/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/ProgrammingLanguage/PHP/install_note/</loc>
      <lastmod>2018-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>

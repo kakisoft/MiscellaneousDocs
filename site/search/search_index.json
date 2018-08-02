@@ -1317,18 +1317,23 @@
         },
         {
             "location": "/DB/PostgreSQL/PostgreSQL_note01_install/",
-            "text": "\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\uff08Windows\uff09\n\n\nsudo apt-get update\nsudo apt-get install -y postgresql\n\n\n\n\n\u53c2\u8003\u30b5\u30a4\u30c8\n\n\nhttps://qiita.com/kaitoii11/items/7acd24cce5315792931f  \n\nhttps://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04  \n\nhttp://ts0818.hatenablog.com/entry/2017/02/11/210104",
+            "text": "\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\uff08Ubuntu\uff09\n\n\nsudo apt-get update\nsudo apt-get install -y postgresql\n\n\n\n\n\u53c2\u8003\u30b5\u30a4\u30c8\n\n\nhttps://qiita.com/kaitoii11/items/7acd24cce5315792931f  \n\nhttps://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04  \n\nhttp://ts0818.hatenablog.com/entry/2017/02/11/210104    \n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\uff08CentOS 7\uff09\n\n\nhttps://qiita.com/uhooi/items/44ed9370740c7521dce4\n\n\n# pgdg96\u30ea\u30dd\u30b8\u30c8\u30ea\u3092\u8ffd\u52a0\u3059\u308b\n$ sudo yum install -y https://yum.postgresql.org/9.6/redhat/rhel-7-x86_64/pgdg-redhat96-9.6-3.noarch.rpm\n\n# PostgreSQL\u30b5\u30fc\u30d0\u30fc\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3059\u308b\n$ sudo yum install -y postgresql96-server postgresql96-contrib",
             "title": "PostgreSQL note01 install"
         },
         {
-            "location": "/DB/PostgreSQL/PostgreSQL_note01_install/#windows",
+            "location": "/DB/PostgreSQL/PostgreSQL_note01_install/#ubuntu",
             "text": "sudo apt-get update\nsudo apt-get install -y postgresql",
-            "title": "\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\uff08Windows\uff09"
+            "title": "\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\uff08Ubuntu\uff09"
         },
         {
             "location": "/DB/PostgreSQL/PostgreSQL_note01_install/#_1",
             "text": "https://qiita.com/kaitoii11/items/7acd24cce5315792931f   \nhttps://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04   \nhttp://ts0818.hatenablog.com/entry/2017/02/11/210104",
             "title": "\u53c2\u8003\u30b5\u30a4\u30c8"
+        },
+        {
+            "location": "/DB/PostgreSQL/PostgreSQL_note01_install/#centos-7",
+            "text": "https://qiita.com/uhooi/items/44ed9370740c7521dce4  # pgdg96\u30ea\u30dd\u30b8\u30c8\u30ea\u3092\u8ffd\u52a0\u3059\u308b\n$ sudo yum install -y https://yum.postgresql.org/9.6/redhat/rhel-7-x86_64/pgdg-redhat96-9.6-3.noarch.rpm\n\n# PostgreSQL\u30b5\u30fc\u30d0\u30fc\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3059\u308b\n$ sudo yum install -y postgresql96-server postgresql96-contrib",
+            "title": "\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\uff08CentOS 7\uff09"
         },
         {
             "location": "/DB/PostgreSQL/PostgreSQL_note02_connect/",

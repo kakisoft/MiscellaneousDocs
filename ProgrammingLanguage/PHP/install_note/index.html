@@ -77,6 +77,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#php71" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -4850,9 +4854,36 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Install note
+      </label>
+    
     <a href="./" title="Install note" class="md-nav__link md-nav__link--active">
       Install note
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#php71" title="【 PHP7.1をインストール 】" class="md-nav__link">
+    【 PHP7.1をインストール 】
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -6146,6 +6177,35 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#php71" title="【 PHP7.1をインストール 】" class="md-nav__link">
+    【 PHP7.1をインストール 】
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -6154,8 +6214,17 @@
                 
                   <h1>Install note</h1>
                 
-                <p>yum install -y --enablerepo=remi-php71,epel php-opcache
-yum install -y --enablerepo=remi-php71,epel php-pgsql</p>
+                <h2 id="php71">【 PHP7.1をインストール 】</h2>
+<p>https://qiita.com/ozawan/items/caf6e7ddec7c6b31f01e</p>
+<pre><code>＜ CentOS 7 ＞
+
+yum install --enablerepo=remi,remi-php71 php php-devel php-mbstring php-pdo php-gd php-xml php-mcrypt
+</code></pre>
+
+<pre><code>yum install -y --enablerepo=remi-php71,epel php-opcache
+yum install -y --enablerepo=remi-php71,epel php-pgsql
+
+</code></pre>
                 
                   
                 

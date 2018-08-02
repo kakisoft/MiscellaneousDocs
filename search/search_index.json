@@ -4942,8 +4942,13 @@
         },
         {
             "location": "/ProgrammingLanguage/PHP/install_note/",
-            "text": "yum install -y --enablerepo=remi-php71,epel php-opcache\nyum install -y --enablerepo=remi-php71,epel php-pgsql",
+            "text": "\u3010 PHP7.1\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb \u3011\n\n\nhttps://qiita.com/ozawan/items/caf6e7ddec7c6b31f01e\n\n\n\uff1c CentOS 7 \uff1e\n\nyum install --enablerepo=remi,remi-php71 php php-devel php-mbstring php-pdo php-gd php-xml php-mcrypt\n\n\n\n\nyum install -y --enablerepo=remi-php71,epel php-opcache\nyum install -y --enablerepo=remi-php71,epel php-pgsql",
             "title": "Install note"
+        },
+        {
+            "location": "/ProgrammingLanguage/PHP/install_note/#php71",
+            "text": "https://qiita.com/ozawan/items/caf6e7ddec7c6b31f01e  \uff1c CentOS 7 \uff1e\n\nyum install --enablerepo=remi,remi-php71 php php-devel php-mbstring php-pdo php-gd php-xml php-mcrypt  yum install -y --enablerepo=remi-php71,epel php-opcache\nyum install -y --enablerepo=remi-php71,epel php-pgsql",
+            "title": "\u3010 PHP7.1\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb \u3011"
         },
         {
             "location": "/ProgrammingLanguage/PHP/memo/",

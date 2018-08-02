@@ -466,7 +466,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/DB/PostgreSQL/PostgreSQL_note90_tools/</loc>
+     <loc>http://yourSite/DB/PostgreSQL/PostgreSQL_note90_Maintenance/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/DB/PostgreSQL/PostgreSQL_note91_tools/</loc>
      <lastmod>2018-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -746,6 +751,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/InfraAndEnv/Apache/Apache_note/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/InfraAndEnv/Azure/ComparisonWithAWS/</loc>
      <lastmod>2018-08-02</lastmod>
      <changefreq>daily</changefreq>
@@ -986,6 +996,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/MkDocs/deploy/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/MobileApps/Android/MyMobile_memo/</loc>
      <lastmod>2018-08-02</lastmod>
      <changefreq>daily</changefreq>
@@ -1027,6 +1042,11 @@
     </url>
     <url>
      <loc>http://yourSite/OS/Linux/prompt/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/OS/Linux/vi_note/</loc>
      <lastmod>2018-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>

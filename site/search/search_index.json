@@ -1562,33 +1562,8 @@
         },
         {
             "location": "/DB/PostgreSQL/PostgreSQL_note91_tools/",
-            "text": "pgAdmin\n\n\nhttps://www.pgadmin.org/  \n\nhttps://wiki.postgresql.org/wiki/Apt\n\u3000\n\n\uff1c\u53c2\u8003\u30b5\u30a4\u30c8\uff1e  \n\nhttp://www.system-act.com/develop/windows/pgadmin.html    \n\n\n\uff08\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u30e2\u30fc\u30c9\u3063\u3066\u306e\u3082\u3042\u308b\uff1f\uff09  \n\nhttps://medium.com/@philip.mutua/postgresql-install-pgadmin-4-desktop-mode-in-ubuntu-16-04-6faca19f0cfe\n\n\ndeb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main\n\n\nsudo sh -c 'echo \"deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main\" > /etc/apt/sources.list.d/pgdg.list\n\n\nsudo apt-get install wget ca-certificates\nwget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -\nsudo apt-get update\nsudo apt-get upgrade\nsudo apt-get install postgresql-9.6 pgadmin3\n\n\npgAdmin\uff1aWindows\n\n\nhttp://db-study.com/archives/133\n\n\nweb\u304b\u3089\n\n\n\uff1cphpPgAdmin\uff1e  \n\nhttps://sourceforge.net/projects/phppgadmin/\n\n\n\u3044\u304f\u3064\u304b\n\n\nhttps://sugimotonote.com/2017/11/02/postgresql-gui-select/\n\n\nEMS PostgreSQL Manager 3 Lite\u300d\u3067\n\n\nhttp://d.hatena.ne.jp/obys/20061125/1164464900\nhttps://www.sqlmanager.net/en/products/postgresql/manager/download",
+            "text": "## pgAdmin\nhttps://www.pgadmin.org/    \nhttps://wiki.postgresql.org/wiki/Apt\n\u3000  \n\uff1c\u53c2\u8003\u30b5\u30a4\u30c8\uff1e    \nhttp://www.system-act.com/develop/windows/pgadmin.html    \n\n\uff08\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u30e2\u30fc\u30c9\u3063\u3066\u306e\u3082\u3042\u308b\uff1f\uff09    \nhttps://medium.com/@philip.mutua/postgresql-install-pgadmin-4-desktop-mode-in-ubuntu-16-04-6faca19f0cfe\n\n\n\n\ndeb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main\n\nsudo sh -c 'echo \"deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main\" > /etc/apt/sources.list.d/pgdg.list\n\nsudo apt-get install wget ca-certificates\nwget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -\nsudo apt-get update\nsudo apt-get upgrade\nsudo apt-get install postgresql-9.6 pgadmin3\n\n\n## pgAdmin\uff1aWindows\nhttp://db-study.com/archives/133\n\n## web\u304b\u3089\n\uff1cphpPgAdmin\uff1e    \nhttps://sourceforge.net/projects/phppgadmin/\n\n\n## \u3044\u304f\u3064\u304b\nhttps://sugimotonote.com/2017/11/02/postgresql-gui-select/\n\n\n## EMS PostgreSQL Manager 3 Lite\u300d\u3067\nhttp://d.hatena.ne.jp/obys/20061125/1164464900\nhttps://www.sqlmanager.net/en/products/postgresql/manager/download",
             "title": "PostgreSQL note91 tools"
-        },
-        {
-            "location": "/DB/PostgreSQL/PostgreSQL_note91_tools/#pgadmin",
-            "text": "https://www.pgadmin.org/   \nhttps://wiki.postgresql.org/wiki/Apt\n\u3000 \n\uff1c\u53c2\u8003\u30b5\u30a4\u30c8\uff1e   \nhttp://www.system-act.com/develop/windows/pgadmin.html      \uff08\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u30e2\u30fc\u30c9\u3063\u3066\u306e\u3082\u3042\u308b\uff1f\uff09   \nhttps://medium.com/@philip.mutua/postgresql-install-pgadmin-4-desktop-mode-in-ubuntu-16-04-6faca19f0cfe  deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main  sudo sh -c 'echo \"deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main\" > /etc/apt/sources.list.d/pgdg.list  sudo apt-get install wget ca-certificates\nwget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -\nsudo apt-get update\nsudo apt-get upgrade\nsudo apt-get install postgresql-9.6 pgadmin3",
-            "title": "pgAdmin"
-        },
-        {
-            "location": "/DB/PostgreSQL/PostgreSQL_note91_tools/#pgadminwindows",
-            "text": "http://db-study.com/archives/133",
-            "title": "pgAdmin\uff1aWindows"
-        },
-        {
-            "location": "/DB/PostgreSQL/PostgreSQL_note91_tools/#web",
-            "text": "\uff1cphpPgAdmin\uff1e   \nhttps://sourceforge.net/projects/phppgadmin/",
-            "title": "web\u304b\u3089"
-        },
-        {
-            "location": "/DB/PostgreSQL/PostgreSQL_note91_tools/#_1",
-            "text": "https://sugimotonote.com/2017/11/02/postgresql-gui-select/",
-            "title": "\u3044\u304f\u3064\u304b"
-        },
-        {
-            "location": "/DB/PostgreSQL/PostgreSQL_note91_tools/#ems-postgresql-manager-3-lite",
-            "text": "http://d.hatena.ne.jp/obys/20061125/1164464900\nhttps://www.sqlmanager.net/en/products/postgresql/manager/download",
-            "title": "EMS PostgreSQL Manager 3 Lite\u300d\u3067"
         },
         {
             "location": "/DB/PostgreSQL/TrubleShoot01/",

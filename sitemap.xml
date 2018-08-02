@@ -1046,6 +1046,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/OS/Linux/vi_note/</loc>
+     <lastmod>2018-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/OS/Linux/パッケージマネージャー/</loc>
      <lastmod>2018-08-02</lastmod>
      <changefreq>daily</changefreq>

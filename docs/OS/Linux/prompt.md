@@ -1,1 +1,0 @@
-![alt](assets/prompt.png)

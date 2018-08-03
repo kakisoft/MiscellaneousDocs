@@ -1,0 +1,19 @@
+# Project information
+site_name: 'kakiNote'
+site_description: 'kakisoft 個人用メモ'
+site_author: 'kakisoft'
+site_url: 'http://yourSite'
+
+
+# Copyright
+# copyright: 'Copyright (c) 2018'
+
+# Documentation and theme
+docs_dir: 'docs'
+theme:
+  name: 'material'
+  language: 'ja'
+extra:
+  search:
+    language: 'jp'
+  

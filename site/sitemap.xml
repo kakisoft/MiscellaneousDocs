@@ -991,12 +991,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/MkDocs/Admonition/</loc>
+     <lastmod>2018-08-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/MkDocs/MkDocs_note/</loc>
      <lastmod>2018-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/MkDocs/deploy/</loc>
+     <lastmod>2018-08-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/MkDocs/japanese/</loc>
      <lastmod>2018-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url>

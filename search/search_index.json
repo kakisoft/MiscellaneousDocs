@@ -3251,6 +3251,16 @@
             "title": "\u30c7\u30d7\u30ed\u30a4\u30b3\u30de\u30f3\u30c9"
         },
         {
+            "location": "/MkDocs/refer/",
+            "text": "MkDocs Themes\n\n\nhttps://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes",
+            "title": "Refer"
+        },
+        {
+            "location": "/MkDocs/refer/#mkdocs-themes",
+            "text": "https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes",
+            "title": "MkDocs Themes"
+        },
+        {
             "location": "/MobileApps/Android/MyMobile_memo/",
             "text": "Arrows\uff08\u5bcc\u58eb\u901a\uff09\n\u30e2\u30c7\u30eb\u756a\u53f7\uff1aF-04\nAndroid\u30d0\u30fc\u30b8\u30e7\u30f3\uff1a6.0.1\n\n\uff1c\u30e1\u30e2\u30ea\u3092\u6d88\u8017\u3057\u3066\u3044\u308b\u30a2\u30d7\u30ea\uff1e\n\u8a2d\u5b9a\u2192\u7aef\u672b\u7ba1\u7406\u2192\u30e1\u30e2\u30ea\u2192\n\u300c\u30a2\u30d7\u30ea\u306e\u30e1\u30e2\u30ea\u4f7f\u7528\u72b6\u6cc1\u300d\u3092\u30bf\u30c3\u30d7\u3002\n\n\n\uff1cFacebook\u901a\u77e5\u89e3\u9664\uff08Chrome\uff09\uff1e\n\u901a\u77e5\u30a2\u30a4\u30b3\u30f3\uff08\u30d9\u30eb\uff09\u2192\u8a2d\u5b9a\uff08\u30ae\u30a2\u306e\u30a2\u30a4\u30b3\u30f3\uff09\u2192\u30e2\u30d0\u30a4\u30eb\u2192\n\u30d7\u30c3\u30b7\u30e5\u901a\u77e5\u3092\u30aa\u30d5",
             "title": "MyMobile memo"

@@ -1,0 +1,10 @@
+```
+BUFFALO
+WHR-300HP
+
+Wi-Fiルーター(無線LAN親機)
+
+## Wi-Fi Direct 【 Wi-Fiダイレクト 】
+無線LANルーターを経由せず、直接、プリンタ・PC・スマホと通信したり。（Wi-Fi接続）
+
+```

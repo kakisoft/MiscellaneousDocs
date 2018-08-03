@@ -1337,7 +1337,7 @@
         },
         {
             "location": "/DB/PostgreSQL/PostgreSQL_note02_connect/",
-            "text": "\u63a5\u7d9a\n\n\n(su - postgres)\npsql blogapp01\n\n\n\u7d42\u4e86\n\n\n\\q\n\n\n\u30d0\u30fc\u30b8\u30e7\u30f3\u78ba\u8a8d\n\n\npsql --version\n\n\n\u4e00\u89a7\u78ba\u8a8d\n\n\npsql -l\n\\l\n\n\n\n\n\u3068\u308a\u3042\u3048\u305a\u306e\u52d5\u4f5c\u78ba\u8a8d\u306b\u3067\u3082\n\n\nselect now();",
+            "text": "\u63a5\u7d9a\n\n\n(su - postgres)\npsql blogapp01\n\n\n\u7d42\u4e86\n\n\n\\q\n\n\n\u30d0\u30fc\u30b8\u30e7\u30f3\u78ba\u8a8d\n\n\npsql --version\n\n\n\u4e00\u89a7\u78ba\u8a8d\n\n\npsql -l\n\\l\n\n\n\n\n\u3068\u308a\u3042\u3048\u305a\u306e\u52d5\u4f5c\u78ba\u8a8d\u306b\u3067\u3082\n\n\nselect now();\n\n\nCentOS7\uff1a\u5916\u90e8\u304b\u3089\u306e\u63a5\u7d9a\u8a2d\u5b9a\n\n\nsu - postgres\necho $PGDATA\n---------------------------------------------\n\uff1c\u4f8b\uff1e\nvi /var/lib/pgsql/9.6/data/postgresql.conf\n\nlisten_addresses = '\u63a5\u7d9a\u3092\u8a31\u53ef\u3059\u308bIP\u30a2\u30c9\u30ec\u30b9'\nlisten_addresses = '*'  # \u5168\u30a2\u30c9\u30ec\u30b9\u304b\u3089\u8a31\u53ef\n---------------------------------------------\n\uff1c\u4f8b\uff1e\nvi /var/lib/pgsql/9.6/data/pg_hba.conf\n\n# TYPE  DATABASE        USER            ADDRESS                 METHOD\n# IPv4 local connections:\nhost  all  all  \u63a5\u7d9a\u3092\u8a31\u53ef\u3059\u308bIP\u30a2\u30c9\u30ec\u30b9    trust\nhost  all  all  all                       trust  # \u5168\u30a2\u30c9\u30ec\u30b9\u304b\u3089\u8a31\u53ef\n---------------------------------------------\n\uff1c\u518d\u8d77\u52d5\uff1e\nsystemctl restart postgresql-9.6.service",
             "title": "PostgreSQL note02 connect"
         },
         {
@@ -1364,6 +1364,11 @@
             "location": "/DB/PostgreSQL/PostgreSQL_note02_connect/#_5",
             "text": "select now();",
             "title": "\u3068\u308a\u3042\u3048\u305a\u306e\u52d5\u4f5c\u78ba\u8a8d\u306b\u3067\u3082"
+        },
+        {
+            "location": "/DB/PostgreSQL/PostgreSQL_note02_connect/#centos7",
+            "text": "su - postgres\necho $PGDATA\n---------------------------------------------\n\uff1c\u4f8b\uff1e\nvi /var/lib/pgsql/9.6/data/postgresql.conf\n\nlisten_addresses = '\u63a5\u7d9a\u3092\u8a31\u53ef\u3059\u308bIP\u30a2\u30c9\u30ec\u30b9'\nlisten_addresses = '*'  # \u5168\u30a2\u30c9\u30ec\u30b9\u304b\u3089\u8a31\u53ef\n---------------------------------------------\n\uff1c\u4f8b\uff1e\nvi /var/lib/pgsql/9.6/data/pg_hba.conf\n\n# TYPE  DATABASE        USER            ADDRESS                 METHOD\n# IPv4 local connections:\nhost  all  all  \u63a5\u7d9a\u3092\u8a31\u53ef\u3059\u308bIP\u30a2\u30c9\u30ec\u30b9    trust\nhost  all  all  all                       trust  # \u5168\u30a2\u30c9\u30ec\u30b9\u304b\u3089\u8a31\u53ef\n---------------------------------------------\n\uff1c\u518d\u8d77\u52d5\uff1e\nsystemctl restart postgresql-9.6.service",
+            "title": "CentOS7\uff1a\u5916\u90e8\u304b\u3089\u306e\u63a5\u7d9a\u8a2d\u5b9a"
         },
         {
             "location": "/DB/PostgreSQL/PostgreSQL_note03_cmd_conf/",
@@ -1564,6 +1569,26 @@
             "location": "/DB/PostgreSQL/PostgreSQL_note91_tools/",
             "text": "## pgAdmin\nhttps://www.pgadmin.org/    \nhttps://wiki.postgresql.org/wiki/Apt\n\u3000  \n\uff1c\u53c2\u8003\u30b5\u30a4\u30c8\uff1e    \nhttp://www.system-act.com/develop/windows/pgadmin.html    \n\n\uff08\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u30e2\u30fc\u30c9\u3063\u3066\u306e\u3082\u3042\u308b\uff1f\uff09    \nhttps://medium.com/@philip.mutua/postgresql-install-pgadmin-4-desktop-mode-in-ubuntu-16-04-6faca19f0cfe\n\n\n\n\ndeb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main\n\nsudo sh -c 'echo \"deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main\" > /etc/apt/sources.list.d/pgdg.list\n\nsudo apt-get install wget ca-certificates\nwget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -\nsudo apt-get update\nsudo apt-get upgrade\nsudo apt-get install postgresql-9.6 pgadmin3\n\n\n## pgAdmin\uff1aWindows\nhttp://db-study.com/archives/133\n\n## web\u304b\u3089\n\uff1cphpPgAdmin\uff1e    \nhttps://sourceforge.net/projects/phppgadmin/\n\n\n## \u3044\u304f\u3064\u304b\nhttps://sugimotonote.com/2017/11/02/postgresql-gui-select/\n\n\n## EMS PostgreSQL Manager 3 Lite\u300d\u3067\nhttp://d.hatena.ne.jp/obys/20061125/1164464900\nhttps://www.sqlmanager.net/en/products/postgresql/manager/download",
             "title": "PostgreSQL note91 tools"
+        },
+        {
+            "location": "/DB/PostgreSQL/PostgreSQL_note92_tools_use/",
+            "text": "pgAdmin4\n\n\n\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u30a2\u30d7\u30ea\u3067\u306a\u304f\u3001\u30d6\u30e9\u30a6\u30b6\u30a2\u30d7\u30ea\uff1f\n\n\u30ed\u30fc\u30ab\u30eb\u2192\u30ea\u30e2\u30fc\u30c8\u3078\u306e\u63a5\u7d9a\u304c\u3088\u304f\u308f\u304b\u3089\u3093\u3002\n\n\n\n\nA5:SQL Mk-2\n\n\n\u307e\u3041\u307e\u3041\u4f7f\u3048\u308b\u3002\n\u305f\u3060\u3001\u901f\u5ea6\u306f\u3082\u3046\u3061\u3087\u3044\u6b32\u3057\u3044\u3002\n\n\n\n\nHeidiSQL\n\n\n\u63a5\u7d9a\u304c\u4e0a\u624b\u304f\u3044\u304b\u3093\u3002\n\u3042\u3068\u3001posgres\u306f\u3001\u307e\u3060\u5b9f\u9a13\u6bb5\u968e\u307f\u305f\u3044\u3002",
+            "title": "PostgreSQL note92 tools use"
+        },
+        {
+            "location": "/DB/PostgreSQL/PostgreSQL_note92_tools_use/#pgadmin4",
+            "text": "\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u30a2\u30d7\u30ea\u3067\u306a\u304f\u3001\u30d6\u30e9\u30a6\u30b6\u30a2\u30d7\u30ea\uff1f\n\n\u30ed\u30fc\u30ab\u30eb\u2192\u30ea\u30e2\u30fc\u30c8\u3078\u306e\u63a5\u7d9a\u304c\u3088\u304f\u308f\u304b\u3089\u3093\u3002",
+            "title": "pgAdmin4"
+        },
+        {
+            "location": "/DB/PostgreSQL/PostgreSQL_note92_tools_use/#a5sql-mk-2",
+            "text": "\u307e\u3041\u307e\u3041\u4f7f\u3048\u308b\u3002\n\u305f\u3060\u3001\u901f\u5ea6\u306f\u3082\u3046\u3061\u3087\u3044\u6b32\u3057\u3044\u3002",
+            "title": "A5:SQL Mk-2"
+        },
+        {
+            "location": "/DB/PostgreSQL/PostgreSQL_note92_tools_use/#heidisql",
+            "text": "\u63a5\u7d9a\u304c\u4e0a\u624b\u304f\u3044\u304b\u3093\u3002\n\u3042\u3068\u3001posgres\u306f\u3001\u307e\u3060\u5b9f\u9a13\u6bb5\u968e\u307f\u305f\u3044\u3002",
+            "title": "HeidiSQL"
         },
         {
             "location": "/DB/PostgreSQL/TrubleShoot01/",

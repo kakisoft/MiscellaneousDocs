@@ -1,0 +1,26 @@
+```
+## リモート追加
+git init
+git remote add origin https://github.com/kakisoft/test003.git
+git pull origin master
+
+※以下、最低１回、コマンドラインで実行しておく。
+git add .
+git commit -m "first commit"
+git push -u origin master
+
+以降、vsCodeから、通常使用できるようになる。
+
+
+
+━━━＜Visual Studio 2017＞━━
+プロジェクト作成後
+git remote add origin https://github.com/kakisoft/tmp01.git
+git pull origin master
+git merge --allow-unrelated-histories origin/master
+git add .
+git commit -m "first commit"
+git push -u origin master
+
+以降、Visual Studioから、コミット・プッシュが実行できる。
+```

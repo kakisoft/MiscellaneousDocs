@@ -3282,13 +3282,18 @@
         }, 
         {
             "location": "/MkDocs/deploy/", 
-            "text": "\u30c7\u30d7\u30ed\u30a4\u30b3\u30de\u30f3\u30c9\n\n\nmkdocs gh-deploy\n\n\u203b gh-deploy \u30d6\u30e9\u30f3\u30c1", 
+            "text": "\u30c7\u30d7\u30ed\u30a4\u30b3\u30de\u30f3\u30c9\n\n\nmkdocs gh-deploy\n\n\u203b gh-deploy \u30d6\u30e9\u30f3\u30c1\n\n\n\n\n\u5168\u90e8\u8fbc\u307f\uff08docs\u30d5\u30a1\u30a4\u30eb\u306e\u4e2d\u8eab\u3068\u304b\uff09\u3067\u3001github\u306b push\n\n\nmkdocs serve\nmkdocs gh-deploy\n\u21d2push\n\n\u203b deploy\u306e\u307f\u3092\u5b9f\u884c\u3057\u3066 push\u3059\u308b\u3068\u3001site\u30d5\u30a9\u30eb\u30c0\u304c\u30af\u30ea\u30a2\u3055\u308c\u308b\u3063\u307d\u3044\u3002", 
             "title": "Deploy"
         }, 
         {
             "location": "/MkDocs/deploy/#_1", 
             "text": "mkdocs gh-deploy\n\n\u203b gh-deploy \u30d6\u30e9\u30f3\u30c1", 
             "title": "\u30c7\u30d7\u30ed\u30a4\u30b3\u30de\u30f3\u30c9"
+        }, 
+        {
+            "location": "/MkDocs/deploy/#docsgithub-push", 
+            "text": "mkdocs serve\nmkdocs gh-deploy\n\u21d2push\n\n\u203b deploy\u306e\u307f\u3092\u5b9f\u884c\u3057\u3066 push\u3059\u308b\u3068\u3001site\u30d5\u30a9\u30eb\u30c0\u304c\u30af\u30ea\u30a2\u3055\u308c\u308b\u3063\u307d\u3044\u3002", 
+            "title": "\u5168\u90e8\u8fbc\u307f\uff08docs\u30d5\u30a1\u30a4\u30eb\u306e\u4e2d\u8eab\u3068\u304b\uff09\u3067\u3001github\u306b push"
         }, 
         {
             "location": "/MkDocs/japanese/", 

@@ -1,0 +1,213 @@
+```
+@…変数
+$…通常の文字。PL/SQLでは「.」が使えるが、T-SQLでは使えない。
+　 コンバート時に、この文字に置換される。
+
+
+ssma_oracle.xxxxx … PL/SQLからコンバートした時、該当するファンクションが無
+い時に付く接頭語。
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 @@変数 】
+
+一部の Transact-SQL システム関数の名前には、2 つのアット マーク (@@) で始ま
+るものがあります。
+初期のバージョンの Microsoft SQL Server では、@@ 関数がグローバル変数と呼ば
+れていましたが、これらは変数ではなく、変数とは違った動作をします。
+@@ 関数はシステム関数であり、構文の用法は関数の規則に従います。
+
+＜システム関数＞
+https://msdn.microsoft.com/ja-jp/library/ms187786(v=sql.120).aspx
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 @@FETCH_STATUS 】
+
+https://docs.microsoft.com/ja-jp/sql/t-sql/functions/fetch-status-transact-sql
+@@FETCH_STATUS … 接続によって現在オープンされているカーソルに対して最後に実
+行した FETCH ステートメントの状態を返します。 
+
+| 戻り値 | Description                                                      
+       | 
+|:-------|:------------------------------------------------------------------------|
+|    0   | FETCH ステートメントは正常に実行されました。                     
+       | 
+|   -1   | FETCH ステートメントが失敗したか、または行が結果セットに収まりま
+せん。  |
+|   -2   | 取り出した行がありません。                                       
+       | 
+|   -9   | カーソルがフェッチ操作を実行しません。                           
+       | 
+
+
+
+@@CURSOR_ROWS  … 接続で最後にオープンされたカーソルに現在取得されている行数
+を返します。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 FETCH 】
+
+https://docs.microsoft.com/ja-jp/sql/t-sql/language-elements/fetch-transact-sql
+FETCH ［カーソル名］ INTO ［変数リスト］
+
+FETCH NEXT FROM ［カーソル名］ INTO ［変数リスト］
+
+
+| 戻り値 | Description                                                      
+             | 
+|:-------|:------------------------------------------------------------------------------|
+| NEXT   | 規定。現在位置を返す。（仕様上の定義は、現在の行の直後にある行、
+らしい。）    | 
+| PRIOR  | 直前の行を返す。先頭行の位置は変更なし。                         
+             |
+| FIRST  | 取り出した行がありません。                                       
+             | 
+| LAST   | カーソルがフェッチ操作を実行しません。                           
+             | 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 OPEN-CLOSE 】
+
+DECLARE Employee_Cursor CURSOR FOR  
+
+SELECT EmployeeID, Title FROM AdventureWorks2012.HumanResources.Employee; 
+
+
+OPEN Employee_Cursor;  
+
+FETCH NEXT FROM Employee_Cursor;  
+WHILE @@FETCH_STATUS = 0  
+   BEGIN  
+      FETCH NEXT FROM Employee_Cursor;  
+   END;  
+
+CLOSE Employee_Cursor;  
+
+DEALLOCATE Employee_Cursor;  
+GO 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 DEALLOCATE 】
+カーソルの割当てを削除する
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 外部のストアドを実行 】
+
+EXEC @return_value = PROCEDURE_NAME @arg1, @arg2, @arg3
+※()とか書かない
+
+EXEC SYSNAME.PROCEDURE_NAME @arg1 = @param1, @arg2 = @param2 OUTPUT
+（※@param2 は OUTPUT）
+
+戻り値が欲しい場合は、多分、こんな感じ。
+EXEC PROCEDURE_NAME @arg1, @arg2, @arg3, @return_value
+※@return_valueは、呼び出し先にて、「OUTPUT」が付与
+
+
+こういう書き方でも可。
+SELECT dbo.GetTestData('0001','0002','0003') AS RESULT
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 例外処理 】
+
+RAISERROR ([error_message], [severity], [state]); 
+
+（使用例）
+RAISERROR ('Error occurred!!!', 16, 1); 
+
+------------------------------------------------------------------------
+（エラーメッセージ例）
+Msg 8134, Level 16, State 1, Procedure uspErrorMessageTest1, Line 5 Divide
+by zero error encountered.
+
+＜エラーメッセージ（6つの部位から構成される）＞
+・ERROR_NUMBER
+（Msg 8134）
+50000 番以下は System Error Messages として定義されているので、
+ユーザー定義のエラーを作る際は 50000 番より上の数字を選ぶ。
+
+--[ ERROR_NUMBERの詳細は、以下で確認できる ]--
+SELECT   *
+FROM     sys.messages
+WHERE    message_id = 8134
+          AND language_id = 1033; -- 英語: 1033 / 日本語: 1041
+
+
+・ERROR_SEVERITY
+（Level 16）
+ 0～10  情報や警告程度のは重大ではないエラー。 TRY...CATCH を使った時に 10 
+以下は CATCH に飛ばない。
+11～16  ユーザーが訂正できる一般的なエラー。
+17～24  リソースやハードウエア等の問題でアドミニストレーターが解決しなければ
+ならないようなエラー。
+20～25  重大なエラー。接続が切断される。
+19～24  SQL Server のエラーログに出力される。
+<詳細>
+https://msdn.microsoft.com/ja-jp/library/ms164086(v=sql.120).aspx
+
+
+・ERROR STATE
+（State 1）
+エラーが起こった状況を特定するためにアサインされているコードです。
+（同じエラーでも起こる状況が違うケースがある）
+Microsoft Knowledge Base を参照する時や、SQL Server のサポートエンジニアが問
+題の箇所を特定する際に役立ちます。
+
+
+・ERROR_PROCEDURE
+（Procedure uspErrorMessageTest1）
+エラーが起こったストアドプロシジャー名前です。 
+エラーが起こったのがストアドプロシジャー内でない場合は何も返ってきません。
+
+
+・ERROR_LINE
+（Line 5 ）
+エラーが起こったライン番号です。
+
+
+・ERROR_MESSAGE
+（Divide by zero error encountered.）
+起こったエラーの内容。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 例外処理 】
+※現在はこっちが推奨されている
+
+THROW [error_number], [error_message], [state]; 
+
+（使用例）
+THROW 50000, 'Error!!!', 1; 
+
+THROW の severity は常に 16 で、error_number には 50000 以上で 2147483647 以
+下の整数を設定できます。 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DECLARE @return_status int;  
+EXEC @return_status = checkstate '2';  
+SELECT 'Return Status' = @return_status;  
+GO 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+begin try
+ select 1/0 as DivideByZero
+end try
+
+begin catch
+  throw;
+end catch
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+create procedure uspErrorMessageTest1
+as
+begin
+  select 1/0;
+end
+-------------------------------
+exec uspErrorMessageTest1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+```

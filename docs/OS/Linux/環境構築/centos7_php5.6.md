@@ -1,6 +1,8 @@
 ## Vagrant
 （参考）  
 <https://app.vagrantup.com/centos/boxes/7/versions/1803.01>  
+　  
+centos/7 の suパスワードは「vagrant」
 ```
 vagrant box add centos/7
 

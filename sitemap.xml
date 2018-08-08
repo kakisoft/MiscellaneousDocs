@@ -1046,6 +1046,21 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/CentOS7_Nome/centos7_apache_01_cmd/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/CentOS7_Nome/centos7_apache_02_httpd.conf/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/CentOS7_Nome/centos7_firewall/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/環境構築/centos7_php5.6_mysql5.7/01_centos7/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>

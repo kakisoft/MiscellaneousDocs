@@ -1061,6 +1061,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/MkDocs/Admonition/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/MkDocs/MkDocs_note/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>

@@ -831,6 +831,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv/NetworkNote/用語/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv/Virtualization/Docker_note01_basic/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>

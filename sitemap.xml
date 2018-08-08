@@ -866,6 +866,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note99_misc/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/InfraAndEnv/heroku/heroku_memo/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>

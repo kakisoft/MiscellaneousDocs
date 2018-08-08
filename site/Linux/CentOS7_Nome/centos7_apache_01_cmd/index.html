@@ -3759,13 +3759,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" title="自動起動設定" class="md-nav__link">
+    自動起動設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="自動起動の設定確認" class="md-nav__link">
+    自動起動の設定確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="自動起動設定の解除" class="md-nav__link">
+    自動起動設定の解除
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="ステータス確認" class="md-nav__link">
+  <a href="#_7" title="ステータス確認" class="md-nav__link">
     ステータス確認
   </a>
   
@@ -6431,13 +6452,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" title="自動起動設定" class="md-nav__link">
+    自動起動設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="自動起動の設定確認" class="md-nav__link">
+    自動起動の設定確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="自動起動設定の解除" class="md-nav__link">
+    自動起動設定の解除
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="ステータス確認" class="md-nav__link">
+  <a href="#_7" title="ステータス確認" class="md-nav__link">
     ステータス確認
   </a>
   
@@ -6476,7 +6518,19 @@
 <pre><code>sudo systemctl restart httpd.service
 </code></pre>
 
-<h2 id="_4">ステータス確認</h2>
+<h3 id="_4">自動起動設定</h3>
+<pre><code>sudo systemctl enable httpd.service
+</code></pre>
+
+<h3 id="_5">自動起動の設定確認</h3>
+<pre><code>sudo systemctl is-enabled httpd.service 
+</code></pre>
+
+<h3 id="_6">自動起動設定の解除</h3>
+<pre><code>sudo systemctl disable httpd.service
+</code></pre>
+
+<h2 id="_7">ステータス確認</h2>
 <pre><code>sudo systemctl status httpd.service
 
 ps aux | grep httpd

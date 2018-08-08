@@ -20,11 +20,11 @@ sudo systemctl enable firewalld.service
 
 ## 自動起動の設定確認
 ```
-systemctl is-enabled firewalld.service 
+sudo systemctl is-enabled firewalld.service 
 ```
 
 ## 自動起動設定の解除
 ```
-systemctl disable firewalld.service
+sudo systemctl disable firewalld.service
 ```
 

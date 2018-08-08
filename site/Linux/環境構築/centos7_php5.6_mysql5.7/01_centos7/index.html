@@ -3685,18 +3685,78 @@
           
           
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+    
+    <label class="md-nav__link" for="nav-6-8">
+      CentOS7 Nome
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-8">
+        CentOS7 Nome
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../CentOS7_Nome/centos7_apache_01_cmd/" title="Centos7 apache 01 cmd" class="md-nav__link">
+      Centos7 apache 01 cmd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../CentOS7_Nome/centos7_apache_02_httpd.conf/" title="Centos7 apache 02 httpd.conf" class="md-nav__link">
+      Centos7 apache 02 httpd.conf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../CentOS7_Nome/centos7_firewall/" title="Centos7 firewall" class="md-nav__link">
+      Centos7 firewall
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9" checked>
     
-    <label class="md-nav__link" for="nav-6-8">
+    <label class="md-nav__link" for="nav-6-9">
       環境構築
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-8">
+      <label class="md-nav__title" for="nav-6-9">
         環境構築
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3711,13 +3771,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-1" type="checkbox" id="nav-6-8-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-1" type="checkbox" id="nav-6-9-1" checked>
     
-    <label class="md-nav__link" for="nav-6-8-1">
+    <label class="md-nav__link" for="nav-6-9-1">
       Centos7 php5.6 mysql5.7
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-8-1">
+      <label class="md-nav__title" for="nav-6-9-1">
         Centos7 php5.6 mysql5.7
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3754,6 +3814,40 @@
         <li class="md-nav__item">
   <a href="#vagrant" title="Vagrant" class="md-nav__link">
     Vagrant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vagrantfile" title="Vagrantfile編集" class="md-nav__link">
+    Vagrantfile編集
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="バージョンを指定" class="md-nav__link">
+    バージョンを指定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="ポートリダイレクト設定" class="md-nav__link">
+    ポートリダイレクト設定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="共有フォルダ設定" class="md-nav__link">
+    共有フォルダ設定
   </a>
   
 </li>
@@ -6317,6 +6411,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vagrantfile" title="Vagrantfile編集" class="md-nav__link">
+    Vagrantfile編集
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="バージョンを指定" class="md-nav__link">
+    バージョンを指定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="ポートリダイレクト設定" class="md-nav__link">
+    ポートリダイレクト設定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="共有フォルダ設定" class="md-nav__link">
+    共有フォルダ設定
+  </a>
+  
+</li>
+      
       
       
       
@@ -6348,11 +6476,17 @@ cd centos7-4
 vagrant init centos/7
 </code></pre>
 
-<p>Vagrantfileを以下のように修正。</p>
+<h2 id="vagrantfile">Vagrantfile編集</h2>
+<h3 id="_1">バージョンを指定</h3>
 <pre><code>Vagrant.configure(&quot;2&quot;) do |config|
   config.vm.box = &quot;centos/7&quot;
   config.vm.box_version = &quot;1803.01&quot;
 end
+</code></pre>
+
+<h3 id="_2">ポートリダイレクト設定</h3>
+<p>ゲストの80ポートをホストの8080ポートにフォワード。</p>
+<pre><code>config.vm.network :forwarded_port, guest: 80, host: 8080
 </code></pre>
 
 <p>その後、</p>
@@ -6360,6 +6494,12 @@ end
 
 （バージョン確認）
 cat /etc/redhat-release
+</code></pre>
+
+<h2 id="_3">共有フォルダ設定</h2>
+<p>ゲストの/vagrantディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。</p>
+<pre><code>sudo rm -rf /var/www/html/
+sudo ln -fs /vagrant /var/www/html
 </code></pre>
                 
                   
@@ -6381,7 +6521,7 @@ cat /etc/redhat-release
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../../1/mynote/" title="Mynote" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../../CentOS7_Nome/centos7_firewall/" title="Centos7 firewall" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6390,7 +6530,7 @@ cat /etc/redhat-release
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Mynote
+                Centos7 firewall
               </span>
             </div>
           </a>

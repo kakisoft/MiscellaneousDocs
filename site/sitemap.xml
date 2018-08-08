@@ -86,6 +86,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/DB/MySQL/password_note/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/DB/MySQL/reference/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
@@ -826,42 +831,52 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note1_basic/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note01_basic/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note2_build/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note02_build/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note3_use/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note03_use/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note1_basic/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note99_misc/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note2_build/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note01_basic/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note3_tips/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note02_build/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note4_use/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note03_tips/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note04_use/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note90_reference/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note99_misc/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -991,6 +1006,61 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/Linux/DirectoryStructure_note/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/Linux_device_memo/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/MyNote/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/centos_memo/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/linux_command_memo/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/prompt/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/1/mynote/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/環境構築/centos7_php5.6_mysql5.7/01_centos7/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/環境構築/centos7_php5.6_mysql5.7/02_apache/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/環境構築/centos7_php5.6_mysql5.7/03_php5.6/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Linux/環境構築/centos7_php5.6_mysql5.7/04_mysql5.7/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/MkDocs/MkDocs_note/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
@@ -1007,96 +1077,6 @@
     </url>
     <url>
      <loc>http://yourSite/MobileApps/Android/tmp/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/DirectoryStructure_note/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/Linux_device_memo/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/MyNote/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/centos_memo/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/linux_command_memo/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/prompt/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/1/mynote/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/環境構築/centos7_php5.6_mysql5.7/01_centos7/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/環境構築/centos7_php5.6_mysql5.7/02_apache/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/環境構築/centos7_php5.6_mysql5.7/03_php5.6/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Linux/環境構築/centos7_php5.6_mysql5.7/04_mysql5.7/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Windows/Excel_note/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Windows/PowerShell/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Windows/Shortcut/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Windows/VSS_memo/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Windows/tmp/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Windows/windows10_tips/</loc>
-     <lastmod>2018-08-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://yourSite/OS/Windows/windows_tips/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1567,6 +1547,41 @@
     </url>
     <url>
      <loc>http://yourSite/Uncategorized/Scraping/misc_reference/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Windows/Excel_note/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Windows/PowerShell/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Windows/Shortcut/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Windows/VSS_memo/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Windows/tmp/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Windows/windows10_tips/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/Windows/windows_tips/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>

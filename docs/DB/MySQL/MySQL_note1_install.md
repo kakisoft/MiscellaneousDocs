@@ -18,3 +18,9 @@ sudo apt-get install mysql-workbench
 （起動）
 mysql-workbench &
 ```
+
+________________________________________
+【 CentOS 】
+```
+Linux→環境構築→centos7_php5.6_mysql5.7
+```

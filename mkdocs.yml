@@ -2,7 +2,7 @@
 site_name: 'kakiNote'
 site_description: 'kakisoft 個人用メモ'
 site_author: 'kakisoft'
-site_url: 'http://yourSite'
+site_url: 'https://kakisoft.github.io/MiscellaneousDocs/'
 
 
 # Copyright
@@ -10,4 +10,17 @@ site_url: 'http://yourSite'
 
 # Documentation and theme
 docs_dir: 'docs'
-theme: 'material'
+
+#theme: 'material'
+theme:
+  name: 'material'
+  language: 'ja'
+extra:
+  search:
+    language: 'jp'
+
+    
+markdown_extensions:
+  - admonition
+
+

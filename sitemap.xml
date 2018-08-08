@@ -826,37 +826,42 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note1_basic/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note01_basic/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note2_build/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note02_build/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note3_use/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note03_use/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note1_basic/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Docker_note99_misc/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note2_build/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note01_basic/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note3_tips/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note02_build/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note4_use/</loc>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note03_tips/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/InfraAndEnv/Virtualization/Vagrant_note04_use/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>

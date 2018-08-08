@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="http://yourSite/InfraAndEnv/Virtualization/Vagrant_note3_tips/">
+        <link rel="canonical" href="http://yourSite/InfraAndEnv/Virtualization/Docker_note03_use/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Vagrant note3 tips - kakiNote</title>
+        <title>Docker note03 use - kakiNote</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#gui" tabindex="1" class="md-skip">
+      <a href="../../../#docker-hub" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                Vagrant note3 tips
+                Docker note03 use
               </span>
             
           
@@ -2964,8 +2964,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Docker_note1_basic/" title="Docker note1 basic" class="md-nav__link">
-      Docker note1 basic
+    <a href="../Docker_note01_basic/" title="Docker note01 basic" class="md-nav__link">
+      Docker note01 basic
     </a>
   </li>
 
@@ -2976,44 +2976,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Docker_note2_build/" title="Docker note2 build" class="md-nav__link">
-      Docker note2 build
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Docker_note3_use/" title="Docker note3 use" class="md-nav__link">
-      Docker note3 use
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note1_basic/" title="Vagrant note1 basic" class="md-nav__link">
-      Vagrant note1 basic
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note2_build/" title="Vagrant note2 build" class="md-nav__link">
-      Vagrant note2 build
+    <a href="../Docker_note02_build/" title="Docker note02 build" class="md-nav__link">
+      Docker note02 build
     </a>
   </li>
 
@@ -3031,11 +2995,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Vagrant note3 tips
+        Docker note03 use
       </label>
     
-    <a href="./" title="Vagrant note3 tips" class="md-nav__link md-nav__link--active">
-      Vagrant note3 tips
+    <a href="./" title="Docker note03 use" class="md-nav__link md-nav__link--active">
+      Docker note03 use
     </a>
     
       
@@ -3047,56 +3011,114 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gui" title="GUIモード" class="md-nav__link">
-    GUIモード
+  <a href="#docker-hub" title="Docker Hub" class="md-nav__link">
+    Docker Hub
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="ログ" class="md-nav__link">
-    ログ
+  <a href="#image" title="Imageファイルの取得" class="md-nav__link">
+    Imageファイルの取得
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" title="エラー１" class="md-nav__link">
-    エラー１
+  <a href="#_1" title="ローカルのイメージの一覧を確認" class="md-nav__link">
+    ローカルのイメージの一覧を確認
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="対処法" class="md-nav__link">
-    対処法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="エラー２" class="md-nav__link">
-    エラー２
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="対処法" class="md-nav__link">
-    対処法
+  <a href="#_2" title="コンテナ作成" class="md-nav__link">
+    コンテナ作成
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="実行中のコンテナ一覧を表示" class="md-nav__link">
+    実行中のコンテナ一覧を表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="実行終了したコンテナ一覧を表示" class="md-nav__link">
+    実行終了したコンテナ一覧を表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="コンテナの削除" class="md-nav__link">
+    コンテナの削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="実行中のコンテナのログを確認" class="md-nav__link">
+    実行中のコンテナのログを確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="バックグラウンドで実行中のコンテナを、フォアグラウンドに移動" class="md-nav__link">
+    バックグラウンドで実行中のコンテナを、フォアグラウンドに移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="バッググラウンドで実行中のコンテナにログイン" class="md-nav__link">
+    バッググラウンドで実行中のコンテナにログイン
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="実行中のコンテナを停止" class="md-nav__link">
+    実行中のコンテナを停止
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="停止したコンテナを再開" class="md-nav__link">
+    停止したコンテナを再開
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" title="コンテナの削除" class="md-nav__link">
+    コンテナの削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" title="停止中のコンテナを全て削除" class="md-nav__link">
+    停止中のコンテナを全て削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="コンテナを起動し、内部で作業する" class="md-nav__link">
+    コンテナを起動し、内部で作業する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="ホストのポートをコンテナのポートにリダイレクト" class="md-nav__link">
+    ホストのポートをコンテナのポートにリダイレクト
+  </a>
   
 </li>
       
@@ -3117,8 +3139,56 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note4_use/" title="Vagrant note4 use" class="md-nav__link">
-      Vagrant note4 use
+    <a href="../Docker_note99_misc/" title="Docker note99 misc" class="md-nav__link">
+      Docker note99 misc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vagrant_note01_basic/" title="Vagrant note01 basic" class="md-nav__link">
+      Vagrant note01 basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vagrant_note02_build/" title="Vagrant note02 build" class="md-nav__link">
+      Vagrant note02 build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vagrant_note03_tips/" title="Vagrant note03 tips" class="md-nav__link">
+      Vagrant note03 tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vagrant_note04_use/" title="Vagrant note04 use" class="md-nav__link">
+      Vagrant note04 use
     </a>
   </li>
 
@@ -6236,56 +6306,114 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gui" title="GUIモード" class="md-nav__link">
-    GUIモード
+  <a href="#docker-hub" title="Docker Hub" class="md-nav__link">
+    Docker Hub
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="ログ" class="md-nav__link">
-    ログ
+  <a href="#image" title="Imageファイルの取得" class="md-nav__link">
+    Imageファイルの取得
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" title="エラー１" class="md-nav__link">
-    エラー１
+  <a href="#_1" title="ローカルのイメージの一覧を確認" class="md-nav__link">
+    ローカルのイメージの一覧を確認
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="対処法" class="md-nav__link">
-    対処法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="エラー２" class="md-nav__link">
-    エラー２
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="対処法" class="md-nav__link">
-    対処法
+  <a href="#_2" title="コンテナ作成" class="md-nav__link">
+    コンテナ作成
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="実行中のコンテナ一覧を表示" class="md-nav__link">
+    実行中のコンテナ一覧を表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="実行終了したコンテナ一覧を表示" class="md-nav__link">
+    実行終了したコンテナ一覧を表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="コンテナの削除" class="md-nav__link">
+    コンテナの削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="実行中のコンテナのログを確認" class="md-nav__link">
+    実行中のコンテナのログを確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="バックグラウンドで実行中のコンテナを、フォアグラウンドに移動" class="md-nav__link">
+    バックグラウンドで実行中のコンテナを、フォアグラウンドに移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="バッググラウンドで実行中のコンテナにログイン" class="md-nav__link">
+    バッググラウンドで実行中のコンテナにログイン
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="実行中のコンテナを停止" class="md-nav__link">
+    実行中のコンテナを停止
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="停止したコンテナを再開" class="md-nav__link">
+    停止したコンテナを再開
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" title="コンテナの削除" class="md-nav__link">
+    コンテナの削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" title="停止中のコンテナを全て削除" class="md-nav__link">
+    停止中のコンテナを全て削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="コンテナを起動し、内部で作業する" class="md-nav__link">
+    コンテナを起動し、内部で作業する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="ホストのポートをコンテナのポートにリダイレクト" class="md-nav__link">
+    ホストのポートをコンテナのポートにリダイレクト
+  </a>
   
 </li>
       
@@ -6306,35 +6434,88 @@
               
                 
                 
-                  <h1>Vagrant note3 tips</h1>
+                  <h1>Docker note03 use</h1>
                 
-                <h2 id="gui">GUIモード</h2>
-<p>https://weblabo.oscasierra.net/vagrant-vb-gui/</p>
-<h2 id="_1">ログ</h2>
-<pre><code>C： → ユーザー →（ユーザ名）→ VirtualBox VMs → 
-C:\Users\(ユーザ名)\VirualBox VMs\(仮想マシン名)\Logs\VBox.log
+                <h3 id="docker-hub">Docker Hub</h3>
+<p>https://hub.docker.com</p>
+<h3 id="image">Imageファイルの取得</h3>
+<pre><code>sudo docker pull &lt;イメージ名&gt;
+
+（例：centosのイメージを取得）
+sudo docker pull centos
 </code></pre>
 
-<h2 id="1">エラー１</h2>
-<pre><code>ssh 192.168.33.10
-
-Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+<h3 id="_1">ローカルのイメージの一覧を確認</h3>
+<pre><code>sudo docker images
 </code></pre>
 
-<h4 id="_2">対処法</h4>
-<pre><code>（未解決）
+<h3 id="_2">コンテナ作成</h3>
+<pre><code>sudo docker run &lt;REPOSITORY:TAG&gt;
 </code></pre>
 
-<h2 id="2">エラー２</h2>
-<pre><code>ssh 192.168.33.10
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<p>または</p>
+<pre><code>sudo docker run &lt;IMAGE ID&gt;
 </code></pre>
 
-<h4 id="_3">対処法</h4>
-<pre><code>（未解決）   
+<p>オプション無しで runを実行した場合、起動後にすぐに終了する。<br />
+バックグラウンドで動作させたい場合、<code>-td</code>オプションを使用する。  </p>
+<pre><code>（よく使うオプション）
+-t：疑似ターミナル (pseudo-TTY) を割り当て
+-d：コンテナをバックグラウンドで実行（デタッチドモード）
+-i：コンテナの STDIN にアタッチ
+-p：コンテナのポートをホスト側に公開
+</code></pre>
+
+<h3 id="_3">実行中のコンテナ一覧を表示</h3>
+<pre><code>sudo docker ps
+</code></pre>
+
+<h3 id="_4">実行終了したコンテナ一覧を表示</h3>
+<pre><code>sudo docker ps -a
+</code></pre>
+
+<h3 id="_5">コンテナの削除</h3>
+<pre><code>sudo docker rm &lt;CONTAINER ID&gt;
+</code></pre>
+
+<p>CONTAINER ID は、上記の <code>docker ps</code>にて確認できる。<br />
+CONTAINER ID を指定する時は、先頭X文字を入力するだけでも判別してくれる。</p>
+<h3 id="_6">実行中のコンテナのログを確認</h3>
+<pre><code>sudo docker logs &lt;CONTAINER ID&gt;
+</code></pre>
+
+<h3 id="_7">バックグラウンドで実行中のコンテナを、フォアグラウンドに移動</h3>
+<pre><code>sudo docker attach --sig-proxy=false &lt;CONTAINER ID&gt;
+</code></pre>
+
+<p>ctrl+C でコンテナを再びバックグランドに戻す。</p>
+<h3 id="_8">バッググラウンドで実行中のコンテナにログイン</h3>
+<pre><code>sudo docker exec -it &lt;CONTAINER ID&gt; /bin/bash
+</code></pre>
+
+<h3 id="_9">実行中のコンテナを停止</h3>
+<pre><code>sudo docker kill &lt;CONTAINER ID&gt;
+</code></pre>
+
+<h3 id="_10">停止したコンテナを再開</h3>
+<pre><code>sudo docker start &lt;CONTAINER ID&gt;
+</code></pre>
+
+<h3 id="_11">コンテナの削除</h3>
+<pre><code>sudo docker rm &lt;CONTAINER ID&gt;
+</code></pre>
+
+<h3 id="_12">停止中のコンテナを全て削除</h3>
+<pre><code>sudo docker rm `sudo docker ps -a -q`
+</code></pre>
+
+<h3 id="_13">コンテナを起動し、内部で作業する</h3>
+<pre><code>sudo docker run -it &lt;REPOSITORY:TAG&gt; /bin/bash/bin/bash
+</code></pre>
+
+<h3 id="_14">ホストのポートをコンテナのポートにリダイレクト</h3>
+<p>以下では、ホストのポート8080を、コンテナの80にリダイレクト。</p>
+<pre><code>sudo docker run -p 8080:80 -d &lt;イメージ名&gt;
 </code></pre>
                 
                   
@@ -6356,7 +6537,7 @@ Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Vagrant_note2_build/" title="Vagrant note2 build" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Docker_note02_build/" title="Docker note02 build" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6365,19 +6546,19 @@ Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Vagrant note2 build
+                Docker note02 build
               </span>
             </div>
           </a>
         
         
-          <a href="../Vagrant_note4_use/" title="Vagrant note4 use" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Docker_note99_misc/" title="Docker note99 misc" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Vagrant note4 use
+                Docker note99 misc
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

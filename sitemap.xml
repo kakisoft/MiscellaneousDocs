@@ -1071,6 +1071,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/MkDocs/Other/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/MkDocs/japanese/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>

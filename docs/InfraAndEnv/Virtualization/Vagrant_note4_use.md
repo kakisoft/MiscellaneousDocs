@@ -70,7 +70,7 @@ Vagrantfileにて、以下のコメントアウトを解除（以下の内容が
 ```
 sudo rm -rf /var/www/html/
 sudo ln -fs /vagrant /var/www/html
-```　  
+```
 403 Forbiddenとなった場合、 SELinuxを無効化する等で対処する。  
 具体的には、```/etc/selinux/config```にて、以下のように変更。
 ```

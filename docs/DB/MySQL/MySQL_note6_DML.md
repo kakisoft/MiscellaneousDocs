@@ -47,6 +47,7 @@ select * from users order by rand() limit 1;
 ```
 
 ## 文字列の演算
+```
 select
  length('Hello')         -- 5
 ,substr('Hello', 2)      -- ello
@@ -55,3 +56,4 @@ select
 ,lower('Hello')          -- hello
 ,concat('Hello','World') -- HelloWorld
 ;
+```

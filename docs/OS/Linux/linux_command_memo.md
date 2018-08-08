@@ -8,29 +8,12 @@
 ssh -i <AccessKey> UserName@<IPアドレス>
 chmod 600 <AccessKey>
 
-# rootユーザに変更
-sudo su
-
-# ユーザ変更
-su (ユーザ名)
-su postgres
-
 # ファイル検索
 sudo find / -name "filename" 
 locate "filename"　　　※updatedb。ファイル名データベースから検索。
 
 # 解凍
 tar zxvf asterisk-1.8.8.1.tar.gz
-
-z --gzip     gzipで
-x --extract  抽出する
-v --verbose  冗長に
-f --file     このファイルを
-
-# 圧縮
-zcvf
-
-c --create  作り出す
 
 # ログインユーザ切り替え
 su [オプション] [ユーザー名]
@@ -118,20 +101,6 @@ fg
 分割を解除
 分割された画面にて exit
 
-## tmux【 Cent OS 7 】
-・水平分割
-Ctrl-b + “
-
-・垂直分割
-Ctrl-b + %
-
-・移動
-Ctrl-b + o
-
-http://developers.goalist.co.jp/entry/2017/03/09/184319
-
-
-
 # Windowsのメモ帳チックなエディタ起動
 gegit
 
@@ -190,43 +159,4 @@ ______________________________________________________________
 cd     ホームディレクトリに戻る
 cd -  １つ前に戻る
 
-
-## 環境変数（Environment variable)
-＜表示＞
-printenv
-echo $PATH
-
-＜設定＞
-export PATH=$PATH:/usr/pgsql-9.6/bin
-
-
-## SELinuxの状態確認方法
-https://www.server-memo.net/centos-settings/selinux/deiabled-selinux.html
-getenforce
-sestatus
-
-
-## グループの一覧を確認  group
-getent group
-または
-view /etc/group
-
-（例）
-apache:x:48:kaki
-postgres:x:26:
-
-
-x・・・「 x 」という文字か、暗号化されたパスワード。「 x 」はシャドウパスワードを使用している事を意味する。
-48・・・グループID( GID )
-kaki・・・サブグループとして所属しているユーザーアカウントのリスト。カンマ区切り。
-
-
-
-ユーザーは、複数のグループに所属する事ができる。
-ユーザーの基本のグループの事をプライマリグループ or イニシャルグループといい、 
-それ以外で所属しているグループの事を、サブグループといいます。
-
-あるユーザーがファイル等を作成した場合、通常、ファイルのグループは、プライマリグループに設定されます。。
 ```
-
-

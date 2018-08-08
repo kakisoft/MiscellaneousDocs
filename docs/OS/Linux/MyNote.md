@@ -84,3 +84,7 @@ exFAT
 
 
 ```
+
+
+CentOS：RHEL のクローン。
+

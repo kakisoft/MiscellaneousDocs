@@ -1,3 +1,4 @@
+```
 ls | ForEach-Object -Process { "$_"; Get-ChildItem -Path "$_" -Recurse -Force | ForEach-Object -Begin { $Len = 0 } -Process { $Len = $Len + $_.Length } -End { $Len / 1024 / 1024 / 1024 }; " " }
 dir /S
 dir /s /a-d  > hoge.txt
@@ -120,3 +121,5 @@ https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=Topic&f%5B0%5D.Value=W
 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
+
+```

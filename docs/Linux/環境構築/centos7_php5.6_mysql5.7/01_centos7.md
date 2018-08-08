@@ -38,11 +38,25 @@ cat /etc/redhat-release
 ```
 /etc/selinux/config
 の内容を変更。
-SELINUX=enforcing　→　SELINUX=disbled
+SELINUX=enforcing　→　SELINUX=disabled
 
 ※再起動後に有効化
 getenforce
 ```
+### エラー発生時
+```
+Vagrant was unable to mount VirtualBox shared folders.
+```
+### プラグインをインストール
+```
+vagrant plugin install vagrant-vbguest
+
+その後
+vagrant vbguest
+※ゲスト起動時に、ホストから実行する
+```
+
+
 ゲストの/vagrantディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。
 ```
 sudo rm -rf /var/www/html/

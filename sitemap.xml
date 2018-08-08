@@ -1066,6 +1066,41 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/OS/Windows/Excel_note/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/OS/Windows/PowerShell/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/OS/Windows/Shortcut/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/OS/Windows/VSS_memo/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/OS/Windows/tmp/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/OS/Windows/windows10_tips/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://yourSite/OS/Windows/windows_tips/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/ProgrammingLanguage/Csharp/cast_note/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>

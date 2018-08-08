@@ -3850,6 +3850,26 @@
     ホスト⇔ゲスト　共有フォルダ設定
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="エラー発生時" class="md-nav__link">
+    エラー発生時
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="プラグインをインストール" class="md-nav__link">
+    プラグインをインストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -6443,6 +6463,26 @@
     ホスト⇔ゲスト　共有フォルダ設定
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="エラー発生時" class="md-nav__link">
+    エラー発生時
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="プラグインをインストール" class="md-nav__link">
+    プラグインをインストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -6500,10 +6540,22 @@ cat /etc/redhat-release
 <p>ゲスト側にて、以下を設定</p>
 <pre><code>/etc/selinux/config
 の内容を変更。
-SELINUX=enforcing　→　SELINUX=disbled
+SELINUX=enforcing　→　SELINUX=disabled
 
 ※再起動後に有効化
 getenforce
+</code></pre>
+
+<h3 id="_4">エラー発生時</h3>
+<pre><code>Vagrant was unable to mount VirtualBox shared folders.
+</code></pre>
+
+<h3 id="_5">プラグインをインストール</h3>
+<pre><code>vagrant plugin install vagrant-vbguest
+
+その後
+vagrant vbguest
+※ゲスト起動時に、ホストから実行する
 </code></pre>
 
 <p>ゲストの/vagrantディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。</p>

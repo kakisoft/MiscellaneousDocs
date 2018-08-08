@@ -86,6 +86,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://yourSite/DB/MySQL/password_note/</loc>
+     <lastmod>2018-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://yourSite/DB/MySQL/reference/</loc>
      <lastmod>2018-08-08</lastmod>
      <changefreq>daily</changefreq>

@@ -1738,18 +1738,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../PostgreSQL_note91_tools_use/" title="PostgreSQL note91 tools use" class="md-nav__link">
-      PostgreSQL note91 tools use
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -1792,6 +1780,19 @@
   <a href="#heidisql" title="HeidiSQL" class="md-nav__link">
     HeidiSQL
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heidisql_1" title="（HeidiSQL）：エラー発生時" class="md-nav__link">
+    （HeidiSQL）：エラー発生時
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6509,6 +6510,19 @@
     HeidiSQL
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heidisql_1" title="（HeidiSQL）：エラー発生時" class="md-nav__link">
+    （HeidiSQL）：エラー発生時
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -6533,7 +6547,7 @@
                 <h2 id="pgadmin4">pgAdmin4</h2>
 <pre><code>デスクトップアプリでなく、ブラウザアプリ？
 
-ローカル→リモートへの接続がよくわからん。
+ローカル→リモートへの接続がよくわからん・・・
 </code></pre>
 
 <h2 id="a5sql-mk-2">A5:SQL Mk-2</h2>
@@ -6542,9 +6556,20 @@
 </code></pre>
 
 <h2 id="heidisql">HeidiSQL</h2>
-<pre><code>接続が上手くいかん。。
-あと、posgresは、まだ実験段階みたい。
+<p>結構よさげ。ただ、postgresは、まだ実験段階みたい。（2018/08/08 時点）
+<a href="https://www.heidisql.com/">https://www.heidisql.com/</a><br />
+<br />
+chocoインストール可。</p>
+<h3 id="heidisql_1">（HeidiSQL）：エラー発生時</h3>
+<pre><code>Format '&quot;%s&quot; の不明なデータ型 oid #%d です。%s にフォ' invalid or incompatible with argument.
 </code></pre>
+
+<p>回避策
+```
+[設定]タブ→続き→環境設定→言語→『English』に変更。</p>
+<p>※再起動後に有効
+``
+参考サイト：<a href="https://github.com/HeidiSQL/HeidiSQL/issues/55">https://github.com/HeidiSQL/HeidiSQL/issues/55</a></p>
                 
                   
                 
@@ -6565,7 +6590,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../PostgreSQL_note91_tools_use/" title="PostgreSQL note91 tools use" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../PostgreSQL_note91_tools/" title="PostgreSQL note91 tools" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6574,7 +6599,7 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                PostgreSQL note91 tools use
+                PostgreSQL note91 tools
               </span>
             </div>
           </a>

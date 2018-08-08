@@ -3816,11 +3816,18 @@
     Ethna 2.6
   </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="バージョン確認" class="md-nav__link">
+    バージョン確認
+  </a>
+  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" title="インストール時のメッセージ" class="md-nav__link">
+  <a href="#_2" title="インストール時のメッセージ" class="md-nav__link">
     インストール時のメッセージ
   </a>
   
@@ -6328,11 +6335,18 @@
     Ethna 2.6
   </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="バージョン確認" class="md-nav__link">
+    バージョン確認
+  </a>
+  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" title="インストール時のメッセージ" class="md-nav__link">
+  <a href="#_2" title="インストール時のメッセージ" class="md-nav__link">
     インストール時のメッセージ
   </a>
   
@@ -6366,10 +6380,18 @@
 <p><a href="http://ethna.jp/doc/install.html#install">http://ethna.jp/doc/install.html#install</a></p>
 <pre><code>sudo pear channel-discover pear.ethna.jp
 sudo pear install -a ethna/ethna
+
+（アップデート）
+sudo pear upgrade ethna/ethna
+</code></pre>
+
+<h2 id="_1">バージョン確認</h2>
+<pre><code>ethna -v
+※アップデートしないと、ethnaコマンドが使えなかった。
 </code></pre>
 
 <p>Smarty も同時にインストールされてるっぽい。</p>
-<h3 id="_1">インストール時のメッセージ</h3>
+<h3 id="_2">インストール時のメッセージ</h3>
 <pre><code>[vagrant@localhost ~]$ sudo pear install -a ethna/ethna
 WARNING: &quot;pear/DB&quot; is deprecated in favor of &quot;pear/MDB2&quot;
 Could not download from &quot;http://pear.ethna.jp/get/Ethna-2.5.0.tgz&quot;, cannot download &quot;ethna/ethna&quot; (Connection to `pear.ethna.jp:80' failed: php_network_getaddresses: getaddrinfo failed: Name or service not known)

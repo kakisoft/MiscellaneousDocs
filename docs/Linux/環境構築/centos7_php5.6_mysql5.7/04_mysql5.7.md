@@ -1,5 +1,5 @@
-# CentOS 7.4に、MySQL 5.7 をインストール
-参考サイト
+## CentOS 7.4に、MySQL 5.7 をインストール.
+参考サイト  
 <https://enomotodev.hatenablog.com/entry/2016/09/01/225200>  
 　  
 
@@ -23,6 +23,7 @@ sudo yum install mysql-community-server
 ```
 mysqld --version
 ```
+
 
 ____________________________________________________________
 

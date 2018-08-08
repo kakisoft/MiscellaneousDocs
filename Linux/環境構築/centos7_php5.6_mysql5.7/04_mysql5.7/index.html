@@ -3828,6 +3828,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" title="ログイン" class="md-nav__link">
+    ログイン
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="パスワードポリシーの変更（例）" class="md-nav__link">
+    パスワードポリシーの変更（例）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="パスワード変更（例）" class="md-nav__link">
+    パスワード変更（例）
+  </a>
+  
+</li>
+      
       
       
       
@@ -6311,6 +6332,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" title="ログイン" class="md-nav__link">
+    ログイン
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="パスワードポリシーの変更（例）" class="md-nav__link">
+    パスワードポリシーの変更（例）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="パスワード変更（例）" class="md-nav__link">
+    パスワード変更（例）
+  </a>
+  
+</li>
+      
       
       
       
@@ -6364,6 +6406,19 @@ sudo rm -rf /var/lib/mysql
 
 （例）
 2018-08-07T09:02:54.205020Z 1 [Note] A temporary password is generated for root@localhost: GFgS-wCoG5oi
+</code></pre>
+
+<h2 id="_3">ログイン</h2>
+<pre><code>mysql -u root -p
+</code></pre>
+
+<h2 id="_4">パスワードポリシーの変更（例）</h2>
+<pre><code>set global validate_password_length=6;
+set global validate_password_policy=LOW;
+</code></pre>
+
+<h2 id="_5">パスワード変更（例）</h2>
+<pre><code>set password = password('root');
 </code></pre>
                 
                   

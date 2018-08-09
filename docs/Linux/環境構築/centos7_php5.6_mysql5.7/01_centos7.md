@@ -32,8 +32,21 @@ vagrant up
 （バージョン確認）
 cat /etc/redhat-release
 ```
+_______________________________________________
+```
+素の状態では仮想マシン起動時に rsync で同期するだけのようで、
+リアルタイムで同期させるには、VitualBoxの仮想マシンに Guest Addtions が必要みたい。（プラグイン）
+```
 
 ## ホスト⇔ゲスト　共有フォルダ設定
+
+### Vagrantファイル
+設定例
+```
+config.vm.synced_folder "./shared", "/home/vagrant/shared", type: "virtualbox"
+```
+
+### SELINUX 設定
 ゲスト側にて、以下を設定
 ```
 /etc/selinux/config
@@ -43,23 +56,14 @@ SELINUX=enforcing　→　SELINUX=disabled
 ※再起動後に有効化
 getenforce
 ```
-### エラー発生時
-```
-Vagrant was unable to mount VirtualBox shared folders.
-```
+
 ### プラグインをインストール
 ```
+vagrant plugin install vagrant-winnfsd
 vagrant plugin install vagrant-vbguest
 
 その後
 vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
-```
-
-
-ゲストの/vagrantディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。
-```
-sudo rm -rf /var/www/html/
-sudo ln -fs /vagrant /var/www/html
 ```
 

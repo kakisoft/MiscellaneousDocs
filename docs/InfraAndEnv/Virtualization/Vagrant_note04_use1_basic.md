@@ -64,19 +64,6 @@ Vagrantfileにて、以下のコメントアウトを解除（以下の内容が
 この例だと、192.168.33.10 でアクセスできる。  
 設定変更後は、```vagrant reload```で再起動。
 
-### 共有フォルダの設定
-ゲストの```/vagrant```ディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。  
-ゲストがCentOSの場合、ゲストOSにて以下を実行すると、ホスト側で編集した内容を、ゲスト側に反映させる事ができる。 
-```
-sudo rm -rf /var/www/html/
-sudo ln -fs /vagrant /var/www/html
-```
-403 Forbiddenとなった場合、 SELinuxを無効化する等で対処する。  
-具体的には、```/etc/selinux/config```にて、以下のように変更。
-```
-SELINUX=enforcing　→　SELINUX=disbled
-```
-
 ### プロビジョン設定
 仮想マシンを起動した時に、一連の処理を自動的に実行できる。  
 Vagrantfileに以下を追記することで設定できる。

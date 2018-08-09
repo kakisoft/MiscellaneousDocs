@@ -3068,8 +3068,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../InfraAndEnv/Virtualization/Vagrant_note04_use/" title="Vagrant note04 use" class="md-nav__link">
-      Vagrant note04 use
+    <a href="../../../../InfraAndEnv/Virtualization/Vagrant_note04_use1_basic/" title="Vagrant note04 use1 basic" class="md-nav__link">
+      Vagrant note04 use1 basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../InfraAndEnv/Virtualization/Vagrant_note04_use2_shareFolder/" title="Vagrant note04 use2 shareFolder" class="md-nav__link">
+      Vagrant note04 use2 shareFolder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../InfraAndEnv/Virtualization/Vagrant_note04_use3_portForward/" title="Vagrant note04 use3 portForward" class="md-nav__link">
+      Vagrant note04 use3 portForward
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../InfraAndEnv/Virtualization/Vagrant_note11_manage1_ssh/" title="Vagrant note11 manage1 ssh" class="md-nav__link">
+      Vagrant note11 manage1 ssh
     </a>
   </li>
 
@@ -3854,14 +3890,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" title="エラー発生時" class="md-nav__link">
-    エラー発生時
+  <a href="#vagrant_1" title="Vagrantファイル" class="md-nav__link">
+    Vagrantファイル
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" title="プラグインをインストール" class="md-nav__link">
+  <a href="#selinux" title="SELINUX 設定" class="md-nav__link">
+    SELINUX 設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="プラグインをインストール" class="md-nav__link">
     プラグインをインストール
   </a>
   
@@ -6467,14 +6510,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" title="エラー発生時" class="md-nav__link">
-    エラー発生時
+  <a href="#vagrant_1" title="Vagrantファイル" class="md-nav__link">
+    Vagrantファイル
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" title="プラグインをインストール" class="md-nav__link">
+  <a href="#selinux" title="SELINUX 設定" class="md-nav__link">
+    SELINUX 設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="プラグインをインストール" class="md-nav__link">
     プラグインをインストール
   </a>
   
@@ -6536,7 +6586,18 @@ end
 cat /etc/redhat-release
 </code></pre>
 
+<hr />
+<pre><code>素の状態では仮想マシン起動時に rsync で同期するだけのようで、
+リアルタイムで同期させるには、VitualBoxの仮想マシンに Guest Addtions が必要みたい。（プラグイン）
+</code></pre>
+
 <h2 id="_3">ホスト⇔ゲスト　共有フォルダ設定</h2>
+<h3 id="vagrant_1">Vagrantファイル</h3>
+<p>設定例</p>
+<pre><code>config.vm.synced_folder &quot;./shared&quot;, &quot;/home/vagrant/shared&quot;, type: &quot;virtualbox&quot;
+</code></pre>
+
+<h3 id="selinux">SELINUX 設定</h3>
 <p>ゲスト側にて、以下を設定</p>
 <pre><code>/etc/selinux/config
 の内容を変更。
@@ -6546,21 +6607,13 @@ SELINUX=enforcing　→　SELINUX=disabled
 getenforce
 </code></pre>
 
-<h3 id="_4">エラー発生時</h3>
-<pre><code>Vagrant was unable to mount VirtualBox shared folders.
-</code></pre>
-
-<h3 id="_5">プラグインをインストール</h3>
-<pre><code>vagrant plugin install vagrant-vbguest
+<h3 id="_4">プラグインをインストール</h3>
+<pre><code>vagrant plugin install vagrant-winnfsd
+vagrant plugin install vagrant-vbguest
 
 その後
 vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
-</code></pre>
-
-<p>ゲストの/vagrantディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。</p>
-<pre><code>sudo rm -rf /var/www/html/
-sudo ln -fs /vagrant /var/www/html
 </code></pre>
                 
                   

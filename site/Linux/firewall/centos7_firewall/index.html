@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/Linux/CentOS7_Nome/centos7_apache_02_httpd.conf/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/Linux/firewall/centos7_firewall/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Centos7 apache 02 httpd.conf - kakiNote</title>
+        <title>Centos7 firewall - kakiNote</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#httpdconf" tabindex="1" class="md-skip">
+      <a href="../../../#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                Centos7 apache 02 httpd.conf
+                Centos7 firewall
               </span>
             
           
@@ -3721,19 +3721,17 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
     <label class="md-nav__link" for="nav-6-8">
-      CentOS7 Nome
+      Apache
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
-        CentOS7 Nome
+        Apache
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3744,11 +3742,49 @@
 
 
   <li class="md-nav__item">
-    <a href="../centos7_apache_01_cmd/" title="Centos7 apache 01 cmd" class="md-nav__link">
+    <a href="../../apache/centos7_apache_01_cmd/" title="Centos7 apache 01 cmd" class="md-nav__link">
       Centos7 apache 01 cmd
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apache/centos7_apache_02_httpd.conf/" title="Centos7 apache 02 httpd.conf" class="md-nav__link">
+      Centos7 apache 02 httpd.conf
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9" checked>
+    
+    <label class="md-nav__link" for="nav-6-9">
+      Firewall
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-9">
+        Firewall
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -3763,11 +3799,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Centos7 apache 02 httpd.conf
+        Centos7 firewall
       </label>
     
-    <a href="./" title="Centos7 apache 02 httpd.conf" class="md-nav__link md-nav__link--active">
-      Centos7 apache 02 httpd.conf
+    <a href="./" title="Centos7 firewall" class="md-nav__link md-nav__link--active">
+      Centos7 firewall
     </a>
     
       
@@ -3779,22 +3815,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#httpdconf" title="httpd.conf" class="md-nav__link">
-    httpd.conf
+  <a href="#_1" title="停止" class="md-nav__link">
+    停止
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="ポート追加" class="md-nav__link">
-    ポート追加
+  <a href="#_2" title="起動" class="md-nav__link">
+    起動
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="ドキュメントルート" class="md-nav__link">
-    ドキュメントルート
+  <a href="#_3" title="動作確認" class="md-nav__link">
+    動作確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="自動起動設定" class="md-nav__link">
+    自動起動設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="自動起動の設定確認" class="md-nav__link">
+    自動起動の設定確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="自動起動設定の解除" class="md-nav__link">
+    自動起動設定の解除
   </a>
   
 </li>
@@ -3810,18 +3867,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../centos7_firewall/" title="Centos7 firewall" class="md-nav__link">
-      Centos7 firewall
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -3834,13 +3879,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
     
-    <label class="md-nav__link" for="nav-6-9">
+    <label class="md-nav__link" for="nav-6-10">
       環境構築
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-9">
+      <label class="md-nav__title" for="nav-6-10">
         環境構築
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3853,13 +3898,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-1" type="checkbox" id="nav-6-9-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10-1" type="checkbox" id="nav-6-10-1">
     
-    <label class="md-nav__link" for="nav-6-9-1">
+    <label class="md-nav__link" for="nav-6-10-1">
       Centos7 php5.6 mysql5.7
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-9-1">
+      <label class="md-nav__title" for="nav-6-10-1">
         Centos7 php5.6 mysql5.7
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -6419,22 +6464,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#httpdconf" title="httpd.conf" class="md-nav__link">
-    httpd.conf
+  <a href="#_1" title="停止" class="md-nav__link">
+    停止
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="ポート追加" class="md-nav__link">
-    ポート追加
+  <a href="#_2" title="起動" class="md-nav__link">
+    起動
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="ドキュメントルート" class="md-nav__link">
-    ドキュメントルート
+  <a href="#_3" title="動作確認" class="md-nav__link">
+    動作確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="自動起動設定" class="md-nav__link">
+    自動起動設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="自動起動の設定確認" class="md-nav__link">
+    自動起動の設定確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="自動起動設定の解除" class="md-nav__link">
+    自動起動設定の解除
   </a>
   
 </li>
@@ -6456,61 +6522,30 @@
               
                 
                 
-                  <h1>Centos7 apache 02 httpd.conf</h1>
+                  <h1>Centos7 firewall</h1>
                 
-                <p><strong> 設定変更後は apacheを再起動。</strong>  </p>
-<pre><code>sudo systemctl restart httpd.service
+                <h2 id="_1">停止</h2>
+<pre><code>sudo systemctl stop firewalld.service
 </code></pre>
 
-<p>※仮想環境の場合、要ポート追加。（のケースがある）</p>
-<pre><code>curl: (7) Failed to connect to 127.0.0.1 port 80: Connection refused
+<h2 id="_2">起動</h2>
+<pre><code>sudo systemctl start firewalld.service
 </code></pre>
 
-<p><a href="https://www.adminweb.jp/apache/">https://www.adminweb.jp/apache/</a></p>
-<h2 id="httpdconf">httpd.conf</h2>
-<p>様々な設定を記述。 
-　<br />
-通常、</p>
-<pre><code>/etc/httpd/conf/httpd.conf
+<h2 id="_3">動作確認</h2>
+<pre><code>sudo firewall-cmd --state
 </code></pre>
 
-<p>無ければ検索。</p>
-<pre><code>sudo find / -name &quot;httpd.conf&quot;
+<h2 id="_4">自動起動設定</h2>
+<pre><code>sudo systemctl enable firewalld.service
 </code></pre>
 
-<h2 id="_1">ポート追加</h2>
-<pre><code>Listen 80
-Listen 8080
-
-（80 と 8080 で待ち受けするようになる）
-特定の IPやポートから受け付ける場合、以下のような設定。
-
-Listen 192.168.128.1:80
+<h2 id="_5">自動起動の設定確認</h2>
+<pre><code>sudo systemctl is-enabled firewalld.service 
 </code></pre>
 
-<h2 id="_2">ドキュメントルート</h2>
-<p>コンテンツを配置しておく場所。</p>
-<pre><code>DocumentRoot &quot;/var/www/html&quot;
-
-　　↓変更可
-
-（例）
-DocumentRoot /home/kakisoft/kaki_edit/htdocs
-</code></pre>
-
-<h2 id="_3"></h2>
-<pre><code>&lt;Directory &quot;/var/www&quot;&gt;
-    AllowOverride None
-    # Allow open access:
-    Require all granted
-&lt;/Directory&gt;
-
-  ↓
-
-&lt;Directory /home/kakisoft/kakisoft_edit/htdocs&gt;
-    AllowOverride All
-    Options FollowSymLinks
-&lt;/Directory&gt;
+<h2 id="_6">自動起動設定の解除</h2>
+<pre><code>sudo systemctl disable firewalld.service
 </code></pre>
                 
                   
@@ -6532,7 +6567,7 @@ DocumentRoot /home/kakisoft/kaki_edit/htdocs
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../centos7_apache_01_cmd/" title="Centos7 apache 01 cmd" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../apache/centos7_apache_02_httpd.conf/" title="Centos7 apache 02 httpd.conf" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6541,19 +6576,19 @@ DocumentRoot /home/kakisoft/kaki_edit/htdocs
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Centos7 apache 01 cmd
+                Centos7 apache 02 httpd.conf
               </span>
             </div>
           </a>
         
         
-          <a href="../centos7_firewall/" title="Centos7 firewall" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../環境構築/centos7_php5.6_mysql5.7/01_centos7/" title="01 centos7" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Centos7 firewall
+                01 centos7
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

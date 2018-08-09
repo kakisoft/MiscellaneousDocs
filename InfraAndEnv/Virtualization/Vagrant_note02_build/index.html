@@ -3036,8 +3036,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note01_basic/" title="Vagrant note01 basic" class="md-nav__link">
-      Vagrant note01 basic
+    <a href="../Vagrant_note01_prepare/" title="Vagrant note01 prepare" class="md-nav__link">
+      Vagrant note01 prepare
     </a>
   </li>
 
@@ -3073,6 +3073,13 @@
         <li class="md-nav__item">
   <a href="#box" title="Boxの作成" class="md-nav__link">
     Boxの作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#box_1" title="作成したBoxをリストに追加" class="md-nav__link">
+    作成したBoxをリストに追加
   </a>
   
 </li>
@@ -6447,6 +6454,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#box_1" title="作成したBoxをリストに追加" class="md-nav__link">
+    作成したBoxをリストに追加
+  </a>
+  
+</li>
+      
       
       
       
@@ -6472,9 +6486,12 @@
 </code></pre>
 
 <p>「package.box」というファイルが作成される。<br />
-仮想マシンが起動中の場合、自動的にシャットダウンしてくれる。<br />
-作成したBoxをリストに追加するには、以下を実行。</p>
+仮想マシンが起動中の場合、自動的にシャットダウンしてくれる。  </p>
+<h2 id="box_1">作成したBoxをリストに追加</h2>
 <pre><code>vagrant box add &lt;ボックス名&gt; package.box
+
+（例）
+vagrant box add VM02 VM02.box
 </code></pre>
                 
                   
@@ -6496,7 +6513,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Vagrant_note01_basic/" title="Vagrant note01 basic" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Vagrant_note01_prepare/" title="Vagrant note01 prepare" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6505,7 +6522,7 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Vagrant note01 basic
+                Vagrant note01 prepare
               </span>
             </div>
           </a>

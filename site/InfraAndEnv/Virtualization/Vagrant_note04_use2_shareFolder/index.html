@@ -6641,6 +6641,13 @@
 
 config.vm.synced_folder &quot;./shared&quot;, &quot;/home/vagrant/shared&quot;, type: &quot;virtualbox&quot;
 ※ホスト側に「shared」というフォルダを作成しています。
+
+パーミッションも併せて設定する場合
+config.vm.synced_folder &quot;./shared&quot;, &quot;/home/vagrant/shared&quot;, type: &quot;virtualbox&quot;, mount_options: ['dmode=777','fmode=755']
+※ dmodeはディレクトリ、fmodeはファイルのパーミッション
+
+上記の例で、apacheの DocumentRootを設定する場合、「/home/vagrant」のパーミッションにも注意する。
+（webサーバは apacheユーザでログインするため。）
 </code></pre>
 
 <h3 id="selinux">SELINUX 設定</h3>

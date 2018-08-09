@@ -77,6 +77,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../../#vagrantmount" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -3134,9 +3138,50 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Vagrant note99 misc
+      </label>
+    
     <a href="./" title="Vagrant note99 misc" class="md-nav__link md-nav__link--active">
       Vagrant note99 misc
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vagrantmount" title="vagrantでmountエラーの解決方法" class="md-nav__link">
+    vagrantでmountエラーの解決方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vagrantapache" title="Vagrantの共有フォルダをapacheの公開ディレクトリにしていると更新が反映されない問題" class="md-nav__link">
+    Vagrantの共有フォルダをapacheの公開ディレクトリにしていると更新が反映されない問題
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vagrant" title="Vagrantでゲストとホストのフォルダを共有する" class="md-nav__link">
+    Vagrantでゲストとホストのフォルダを共有する
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -6386,6 +6431,49 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vagrantmount" title="vagrantでmountエラーの解決方法" class="md-nav__link">
+    vagrantでmountエラーの解決方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vagrantapache" title="Vagrantの共有フォルダをapacheの公開ディレクトリにしていると更新が反映されない問題" class="md-nav__link">
+    Vagrantの共有フォルダをapacheの公開ディレクトリにしていると更新が反映されない問題
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vagrant" title="Vagrantでゲストとホストのフォルダを共有する" class="md-nav__link">
+    Vagrantでゲストとホストのフォルダを共有する
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -6394,11 +6482,24 @@
                 
                   <h1>Vagrant note99 misc</h1>
                 
-                <pre><code>vagrant halt --force
+                <h2 id="vagrantmount">vagrantでmountエラーの解決方法</h2>
+<p><a href="https://qiita.com/osamu1203/items/10e19c74c912d303ca0b">https://qiita.com/osamu1203/items/10e19c74c912d303ca0b</a></p>
+<pre><code>sudo /etc/init.d/vboxadd setup
+</code></pre>
 
+<h2 id="vagrantapache">Vagrantの共有フォルダをapacheの公開ディレクトリにしていると更新が反映されない問題</h2>
+<p><a href="http://d.hatena.ne.jp/stealthinu/20160310/p1">http://d.hatena.ne.jp/stealthinu/20160310/p1</a></p>
+<pre><code>/etc/httpd/conf/httpd.conf
 
-config.vm.network :forwarded_port, guest: 80, host: 8080
-これで、ゲストの80ポートをホストの8080ポートに、フォワードしてくれる。
+EnableMMAP off
+EnableSendfile off
+あらかじめ記述済みで、コメントアウトされている場合もある。
+</code></pre>
+
+<h2 id="vagrant">Vagrantでゲストとホストのフォルダを共有する</h2>
+<p><a href="http://koltatt.net/programing/vagrant_dirsync/">http://koltatt.net/programing/vagrant_dirsync/</a></p>
+<pre><code>vagrant rsync
+agrant rsync-auto
 </code></pre>
                 
                   

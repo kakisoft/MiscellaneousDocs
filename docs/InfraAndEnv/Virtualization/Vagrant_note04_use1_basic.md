@@ -33,6 +33,7 @@ vagrant resume
 ### 仮想マシンの終了
 ```
 vagrant halt
+vagrant halt --force   # 強制的に終了
 
 vagrant global-status
 vagrant halt <id>

@@ -42,7 +42,9 @@ DocumentRoot "/var/www/html"
 （例）
 DocumentRoot /home/kakisoft/kaki_edit/htdocs
 ```
-##
+## Directory 設定
+webサーバは apacheユーザでログインする？  
+アクセスできない場合、ディレクトリそのもののパーミッションにも注意。
 ```
 <Directory "/var/www">
     AllowOverride None

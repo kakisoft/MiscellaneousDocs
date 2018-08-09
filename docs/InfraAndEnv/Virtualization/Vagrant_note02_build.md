@@ -5,8 +5,15 @@ vagrant package
 ```
 「package.box」というファイルが作成される。  
 仮想マシンが起動中の場合、自動的にシャットダウンしてくれる。  
-作成したBoxをリストに追加するには、以下を実行。
+
+
+## 作成したBoxをリストに追加
 ```
 vagrant box add <ボックス名> package.box
+
+（例）
+vagrant box add VM02 VM02.box
 ```
+
+
 

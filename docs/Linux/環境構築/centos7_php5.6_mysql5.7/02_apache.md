@@ -94,9 +94,11 @@ DocumentRoot "/var/www/html"
 　　↓変更可
 
 （例）
-DocumentRoot /home/kakisoft/kaki_edit/htdocs
+DocumentRoot "/vagrant/shared"
 ```
-##
+## Directory 設定
+webサーバは apacheユーザでログインする？  
+アクセスできない場合、ディレクトリそのもののパーミッションにも注意。
 ```
 <Directory "/var/www">
     AllowOverride None
@@ -106,10 +108,11 @@ DocumentRoot /home/kakisoft/kaki_edit/htdocs
 
   ↓
 
-<Directory /home/kakisoft/kakisoft_edit/htdocs>
+<Directory "/vagrant/shared">
     AllowOverride All
     Options FollowSymLinks
+    Require all granted
 </Directory>
-```
 
+```
 _____________________________________________________

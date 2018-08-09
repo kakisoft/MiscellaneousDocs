@@ -1,3 +1,13 @@
+```
+vagrant ssh
+vagrant@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+```
+
+
+## スナップショット
+<https://weblabo.oscasierra.net/vagrant-snapshot/>
+
+
 ## vagrantでmountエラーの解決方法
 <https://qiita.com/osamu1203/items/10e19c74c912d303ca0b>
 ```

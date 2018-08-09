@@ -40,7 +40,7 @@ DocumentRoot "/var/www/html"
 　　↓変更可
 
 （例）
-DocumentRoot /home/kakisoft/kaki_edit/htdocs
+DocumentRoot "/vagrant/shared"
 ```
 ## Directory 設定
 webサーバは apacheユーザでログインする？  
@@ -54,8 +54,10 @@ webサーバは apacheユーザでログインする？
 
   ↓
 
-<Directory /home/kakisoft/kakisoft_edit/htdocs>
+<Directory "/vagrant/shared">
     AllowOverride All
     Options FollowSymLinks
+    Require all granted
 </Directory>
+
 ```

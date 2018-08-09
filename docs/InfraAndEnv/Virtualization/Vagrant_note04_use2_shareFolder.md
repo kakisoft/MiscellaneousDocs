@@ -41,8 +41,17 @@ vagrant plugin install vagrant-vbguest
 vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
 ```
+### Guest Addtions 設定
+```
+（kernel更新。ゲスト側で実行）
+sudo yum update kernel -y
+sudo yum install kernel-devel gcc -y
 
+（停止後、Virtual Boxを操作）
+設定→ストレージ→光学ドライブの追加（空のままでOK）
 
+vagrant up
+```
 
 
 __________________________________________

@@ -3142,6 +3142,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#guest-addtions" title="Guest Addtions 設定" class="md-nav__link">
+    Guest Addtions 設定
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3810,15 +3817,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../Linux/注意点/" title="注意点" class="md-nav__link">
+      注意点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
-    <label class="md-nav__link" for="nav-6-7">
+    <label class="md-nav__link" for="nav-6-8">
       1
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-7">
+      <label class="md-nav__title" for="nav-6-8">
         1
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3848,13 +3867,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
     
-    <label class="md-nav__link" for="nav-6-8">
+    <label class="md-nav__link" for="nav-6-9">
       Apache
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-8">
+      <label class="md-nav__title" for="nav-6-9">
         Apache
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3896,13 +3915,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
     
-    <label class="md-nav__link" for="nav-6-9">
+    <label class="md-nav__link" for="nav-6-10">
       Firewall
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-9">
+      <label class="md-nav__title" for="nav-6-10">
         Firewall
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3932,13 +3951,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-11" type="checkbox" id="nav-6-11">
     
-    <label class="md-nav__link" for="nav-6-10">
+    <label class="md-nav__link" for="nav-6-11">
       環境構築
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-10">
+      <label class="md-nav__title" for="nav-6-11">
         環境構築
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3951,13 +3970,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10-1" type="checkbox" id="nav-6-10-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-11-1" type="checkbox" id="nav-6-11-1">
     
-    <label class="md-nav__link" for="nav-6-10-1">
+    <label class="md-nav__link" for="nav-6-11-1">
       Centos7 php5.6 mysql5.7
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-10-1">
+      <label class="md-nav__title" for="nav-6-11-1">
         Centos7 php5.6 mysql5.7
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -6552,6 +6571,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#guest-addtions" title="Guest Addtions 設定" class="md-nav__link">
+    Guest Addtions 設定
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6667,6 +6693,17 @@ vagrant plugin install vagrant-vbguest
 その後
 vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
+</code></pre>
+
+<h3 id="guest-addtions">Guest Addtions 設定</h3>
+<pre><code>（kernel更新。ゲスト側で実行）
+sudo yum update kernel -y
+sudo yum install kernel-devel gcc -y
+
+（停止後、Virtual Boxを操作）
+設定→ストレージ→光学ドライブの追加（空のままでOK）
+
+vagrant up
 </code></pre>
 
 <hr />

@@ -6545,7 +6545,7 @@ Listen 192.168.128.1:80
 　　↓変更可
 
 （例）
-DocumentRoot /home/kakisoft/kaki_edit/htdocs
+DocumentRoot &quot;/vagrant/shared&quot;
 </code></pre>
 
 <h2 id="directory">Directory 設定</h2>
@@ -6559,10 +6559,12 @@ DocumentRoot /home/kakisoft/kaki_edit/htdocs
 
   ↓
 
-&lt;Directory /home/kakisoft/kakisoft_edit/htdocs&gt;
+&lt;Directory &quot;/vagrant/shared&quot;&gt;
     AllowOverride All
     Options FollowSymLinks
+    Require all granted
 &lt;/Directory&gt;
+
 </code></pre>
                 
                   

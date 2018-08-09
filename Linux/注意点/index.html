@@ -6465,9 +6465,15 @@
                   <h1>注意点</h1>
                 
                 <h2 id="_1">パーミッションの設定</h2>
+<p><a href="https://qiita.com/ShirakawaMaru/items/766d51597f96b027f724">https://qiita.com/ShirakawaMaru/items/766d51597f96b027f724</a></p>
 <pre><code>ユーザホームディレクトリのパーミッションは、変にいじらないほうがいい。
 
-sudo yum install kernel-devel gcc -y
+/home/user/.ssh は 0700
+/home/user/.ssh/authorized_keys は 0600
+でなければいけないようで、777とかにしちゃうと、sshログインができなくなる。
+
+vagrant@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+
 </code></pre>
                 
                   

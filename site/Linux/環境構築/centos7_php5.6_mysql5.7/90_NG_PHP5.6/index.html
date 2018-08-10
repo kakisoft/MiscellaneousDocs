@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/Linux/環境構築/centos7_php5.6_mysql5.7/90_PHP5.4./">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/Linux/環境構築/centos7_php5.6_mysql5.7/90_NG_PHP5.6/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>90 PHP5.4. - kakiNote</title>
+        <title>90 NG PHP5.6 - kakiNote</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../../#centos-7-php-56-yum" tabindex="1" class="md-skip">
+      <a href="../../../../#ng" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                90 PHP5.4.
+                90 NG PHP5.6
               </span>
             
           
@@ -4312,11 +4312,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        90 PHP5.4.
+        90 NG PHP5.6
       </label>
     
-    <a href="./" title="90 PHP5.4." class="md-nav__link md-nav__link--active">
-      90 PHP5.4.
+    <a href="./" title="90 NG PHP5.6" class="md-nav__link md-nav__link--active">
+      90 NG PHP5.6
     </a>
     
       
@@ -4328,22 +4328,72 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centos-7-php-56-yum" title="CentOS 7 に PHP 5.6 を yum でインストールする手順" class="md-nav__link">
-    CentOS 7 に PHP 5.6 を yum でインストールする手順
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" title="コマンド" class="md-nav__link">
-    コマンド
+  <a href="#ng" title="NGパターン" class="md-nav__link">
+    NGパターン
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#php-56" title="PHP 5.6をインストール." class="md-nav__link">
+    PHP 5.6をインストール.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos-74php-56" title="CentOS 7.4に、PHP 5.6 をインストール" class="md-nav__link">
+    CentOS 7.4に、PHP 5.6 をインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php" title="一旦、普通にPHPをインストール" class="md-nav__link">
+    一旦、普通にPHPをインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="現在インストールされているバージョンをアンインストール" class="md-nav__link">
+    現在インストールされているバージョンをアンインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="リポジトリを追加する" class="md-nav__link">
+    リポジトリを追加する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entos-base" title="entOS-Baseリポジトリを一時的に切る" class="md-nav__link">
+    entOS-Baseリポジトリを一時的に切る
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php56" title="php5.6をインストール" class="md-nav__link">
+    php5.6をインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php_1" title="PHP のバージョン確認" class="md-nav__link">
+    PHP のバージョン確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="ハマった点" class="md-nav__link">
+    ハマった点
+  </a>
   
 </li>
       
@@ -4364,8 +4414,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../91_PHP5.6/" title="91 PHP5.6" class="md-nav__link">
-      91 PHP5.6
+    <a href="../91_NG_PHP5.4/" title="91 NG PHP5.4" class="md-nav__link">
+      91 NG PHP5.4
     </a>
   </li>
 
@@ -6636,22 +6686,72 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centos-7-php-56-yum" title="CentOS 7 に PHP 5.6 を yum でインストールする手順" class="md-nav__link">
-    CentOS 7 に PHP 5.6 を yum でインストールする手順
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" title="コマンド" class="md-nav__link">
-    コマンド
+  <a href="#ng" title="NGパターン" class="md-nav__link">
+    NGパターン
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#php-56" title="PHP 5.6をインストール." class="md-nav__link">
+    PHP 5.6をインストール.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos-74php-56" title="CentOS 7.4に、PHP 5.6 をインストール" class="md-nav__link">
+    CentOS 7.4に、PHP 5.6 をインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php" title="一旦、普通にPHPをインストール" class="md-nav__link">
+    一旦、普通にPHPをインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="現在インストールされているバージョンをアンインストール" class="md-nav__link">
+    現在インストールされているバージョンをアンインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="リポジトリを追加する" class="md-nav__link">
+    リポジトリを追加する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entos-base" title="entOS-Baseリポジトリを一時的に切る" class="md-nav__link">
+    entOS-Baseリポジトリを一時的に切る
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php56" title="php5.6をインストール" class="md-nav__link">
+    php5.6をインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php_1" title="PHP のバージョン確認" class="md-nav__link">
+    PHP のバージョン確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="ハマった点" class="md-nav__link">
+    ハマった点
+  </a>
   
 </li>
       
@@ -6672,27 +6772,73 @@
               
                 
                 
-                  <h1>90 PHP5.4.</h1>
+                  <h1>90 NG PHP5.6</h1>
                 
-                <h2 id="centos-7-php-56-yum">CentOS 7 に PHP 5.6 を yum でインストールする手順</h2>
-<p><a href="https://weblabo.oscasierra.net/centos7-php56-install/">https://weblabo.oscasierra.net/centos7-php56-install/</a>  </p>
-<pre><code>実際にやってみたら、5.4 がインストールされた。
-が、03のやり方だと、ApacheがちゃんとPHPを解釈してくれなかったので、
-渋々このバージョンでやってる。
+                <h4 id="ng">NGパターン</h4>
+<pre><code>※
+この方法でインストールすると、ApacheがPHPを認識しなかった。
+（ロードモジュール  libphp5.so  が無かった）
 </code></pre>
 
-<h3 id="_1">コマンド</h3>
-<pre><code>sudo yum remove -y php*
-sudo yum remove -y epel-release*
+<h2 id="php-56">PHP 5.6をインストール.</h2>
+<h2 id="centos-74php-56">CentOS 7.4に、PHP 5.6 をインストール</h2>
+<p>参考サイト
+<a href="https://qiita.com/ddss/items/6c704334a0fde4a29dc0">https://qiita.com/ddss/items/6c704334a0fde4a29dc0</a></p>
+<h2 id="php">一旦、普通にPHPをインストール</h2>
+<pre><code>sudo yum install php
+</code></pre>
+
+<h2 id="_1">現在インストールされているバージョンをアンインストール</h2>
+<pre><code>sudo yum remove php-*
+</code></pre>
+
+<h2 id="_2">リポジトリを追加する</h2>
+<pre><code>sudo rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+</code></pre>
+
+<h2 id="entos-base">entOS-Baseリポジトリを一時的に切る</h2>
+<pre><code>sudo vi /etc/yum.repos.d/CentOS-Base.repo
+</code></pre>
+
+<p>編集内容</p>
+<pre><code>[base]
+enabled=0
+[updates]
+enabled=0
+[extras]
+enabled=0
+[centosplus]
+enabled=0
+[contrib]
+enabled=0
+</code></pre>
+
+<h2 id="php56">php5.6をインストール</h2>
+<pre><code>sudo yum install --enablerepo=remi --enablerepo=remi-php56 php php-devel php-mbstring php-mcrypt php-mysql
+
+（エラー発生時は以下で）
+sudo yum install --skip-broken --enablerepo=remi --enablerepo=remi-php56 php php-devel php-mbstring php-mcrypt php-mysql
+</code></pre>
+
+<h2 id="php_1">PHP のバージョン確認</h2>
+<pre><code>php -v
+</code></pre>
+
+<hr />
+<h2 id="_3">ハマった点</h2>
+<p>エラー</p>
+<pre><code>rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+rpm -Uvh http://rpms.famillecollet.com/enterprise/6/remi/i386//remi-release-6.9-4.el6.remi.noarch.rpm
 
 
-sudo yum -y install epel-release
-cd /etc/yum.repos.d
-curl -O http://rpms.famillecollet.com/enterprise/remi.repo
-sudo yum -y --enablerepo=remi,remi-php56 install httpd php php-common
+[vagrant@localhost ~]$ rpm -Uvh remi-release-6.rpm
+error: Failed dependencies:
+        epel-release = 6 is needed by remi-release-6.9-3.el6.remi.noarch
+</code></pre>
 
-（アパッチ再起動）
-sudo systemctl restart httpd.service
+<p>以下のコマンドで epelをインストールすると、「remi-release-7.1」がインストールされていた。（要 remi-release-6）</p>
+<pre><code>sudo yum install epel-release
 </code></pre>
                 
                   
@@ -6729,13 +6875,13 @@ sudo systemctl restart httpd.service
           </a>
         
         
-          <a href="../91_PHP5.6/" title="91 PHP5.6" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../91_NG_PHP5.4/" title="91 NG PHP5.4" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                91 PHP5.6
+                91 NG PHP5.4
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

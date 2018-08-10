@@ -12,8 +12,24 @@ chmod 600 <AccessKey>
 sudo find / -name "filename" 
 locate "filename"　　　※updatedb。ファイル名データベースから検索。
 
-# 解凍
-tar zxvf asterisk-1.8.8.1.tar.gz
+# 解凍（tar）
+tar xzvf asterisk-1.8.8.1.tar.gz
+
+# 圧縮（tar）
+tar czvf xxxx.tar.gz directory
+
+ z - gzip形式を利用
+ v - 処理したファイルの一覧を表示
+ f - 指定したアーカイブを利用する
+ x - アーカイブからファイルを取得する
+ c - アーカイブを作成する
+
+# Zipアーカイブ
+zip a.zip b.txt
+zip -e --password=xxxx encrypt.zip source.txt      # パスワード付き
+zip -r 生成するzipファイル名 zip化するディレクトリ名   #  ディレクトリ単位
+unzip -P xxxx encrypt.zip                          # パスワード付きを展開
+
 
 # ログインユーザ切り替え
 su [オプション] [ユーザー名]
@@ -106,9 +122,6 @@ gegit
 
 # 再起動
 sudo shutdown -r now
-
-# SSHログイン
-ssh -i <AccessKey> UserName@<IPアドレス>
 
 # 文字コードを識別
 file -i <FILE-NAME>

@@ -9,6 +9,9 @@
 $a = array('a', 'b', 'c');　⇒　$a = ['a', 'b', 'c'];
 
 
-## Polyfill
-仕様で策定されている機能だが、古いブラウザなどではまだ実装されていない時に、APIが全く同じ互換実装を提供するライブラリ。
+
+## TSV（Tab Separated Values ）
+tab版 csv
+
+
 ```

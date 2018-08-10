@@ -1,4 +1,9 @@
-
+#### 準 NGパターン
+```
+※
+この方法だと、PHP 5.4 がインストールされた。
+が、ロードモジュールは正常に配置されていたんで、Apacheは動く。
+```
 
 ## CentOS 7 に PHP 5.6 を yum でインストールする手順
 <https://weblabo.oscasierra.net/centos7-php56-install/>  

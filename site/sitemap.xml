@@ -1191,7 +1191,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/環境構築/centos7_php5.6_mysql5.7/90_/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/環境構築/centos7_php5.6_mysql5.7/90_PHP/</loc>
      <lastmod>2018-08-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1487,6 +1487,11 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/ProgrammingLanguage/Nodejs/memo/reference/</loc>
+     <lastmod>2018-08-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/ProgrammingLanguage/PHP/ApacheがPHPを認識しない/</loc>
      <lastmod>2018-08-10</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/Linux/linux_command_memo/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/Linux/01_command_memo/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Linux command memo - kakiNote</title>
+        <title>01 command memo - kakiNote</title>
       
     
     
@@ -99,7 +99,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                Linux command memo
+                01 command memo
               </span>
             
           
@@ -3957,6 +3957,25 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="01 command memo" class="md-nav__link md-nav__link--active">
+      01 command memo
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
     <a href="../DirectoryStructure_note/" title="DirectoryStructure note" class="md-nav__link">
@@ -3998,25 +4017,6 @@
     <a href="../centos_memo/" title="Centos memo" class="md-nav__link">
       Centos memo
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Linux command memo" class="md-nav__link md-nav__link--active">
-      Linux command memo
-    </a>
-    
   </li>
 
         
@@ -6558,7 +6558,7 @@
               
                 
                 
-                  <h1>Linux command memo</h1>
+                  <h1>01 command memo</h1>
                 
                 <pre><code># ディストリ確認
 (debian）cat /etc/issue
@@ -6573,8 +6573,24 @@ chmod 600 &lt;AccessKey&gt;
 sudo find / -name &quot;filename&quot; 
 locate &quot;filename&quot;　　　※updatedb。ファイル名データベースから検索。
 
-# 解凍
-tar zxvf asterisk-1.8.8.1.tar.gz
+# 解凍（tar）
+tar xzvf asterisk-1.8.8.1.tar.gz
+
+# 圧縮（tar）
+tar czvf xxxx.tar.gz directory
+
+ z - gzip形式を利用
+ v - 処理したファイルの一覧を表示
+ f - 指定したアーカイブを利用する
+ x - アーカイブからファイルを取得する
+ c - アーカイブを作成する
+
+# Zipアーカイブ
+zip a.zip b.txt
+zip -e --password=xxxx encrypt.zip source.txt      # パスワード付き
+zip -r 生成するzipファイル名 zip化するディレクトリ名   #  ディレクトリ単位
+unzip -P xxxx encrypt.zip                          # パスワード付きを展開
+
 
 # ログインユーザ切り替え
 su [オプション] [ユーザー名]
@@ -6668,9 +6684,6 @@ gegit
 # 再起動
 sudo shutdown -r now
 
-# SSHログイン
-ssh -i &lt;AccessKey&gt; UserName@&lt;IPアドレス&gt;
-
 # 文字コードを識別
 file -i &lt;FILE-NAME&gt;
 nkf -g &lt;FILE-NAME&gt;
@@ -6750,7 +6763,7 @@ export PATH=$PATH:/usr/pgsql-9.6/bin
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../centos_memo/" title="Centos memo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../Life/mysite/style_kakisoft.css/" title="Style kakisoft.css" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6759,19 +6772,19 @@ export PATH=$PATH:/usr/pgsql-9.6/bin
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Centos memo
+                Style kakisoft.css
               </span>
             </div>
           </a>
         
         
-          <a href="../prompt/" title="Prompt" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../DirectoryStructure_note/" title="DirectoryStructure note" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Prompt
+                DirectoryStructure note
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

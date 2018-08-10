@@ -1101,6 +1101,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/01_command_memo/</loc>
+     <lastmod>2018-08-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/DirectoryStructure_note/</loc>
      <lastmod>2018-08-10</lastmod>
      <changefreq>daily</changefreq>
@@ -1117,11 +1122,6 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/centos_memo/</loc>
-     <lastmod>2018-08-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/linux_command_memo/</loc>
      <lastmod>2018-08-10</lastmod>
      <changefreq>daily</changefreq>
     </url>

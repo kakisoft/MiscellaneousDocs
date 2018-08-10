@@ -1,21 +1,21 @@
 ```
-# ディストリ確認
+## ディストリ確認
 (debian）cat /etc/issue
 (redhat) cat /etc/redhat-release
 (Amazon) cat /etc/system-release
 
-# sshログイン
+## sshログイン
 ssh -i <AccessKey> UserName@<IPアドレス>
 chmod 600 <AccessKey>
 
-# ファイル検索
+## ファイル検索
 sudo find / -name "filename" 
 locate "filename"　　　※updatedb。ファイル名データベースから検索。
 
-# 解凍（tar）
+## 解凍（tar）
 tar xzvf asterisk-1.8.8.1.tar.gz
 
-# 圧縮（tar）
+## 圧縮（tar）
 tar czvf xxxx.tar.gz directory
 
  z - gzip形式を利用
@@ -24,14 +24,14 @@ tar czvf xxxx.tar.gz directory
  x - アーカイブからファイルを取得する
  c - アーカイブを作成する
 
-# Zipアーカイブ
+## Zipアーカイブ
 zip a.zip b.txt
 zip -e --password=xxxx encrypt.zip source.txt      # パスワード付き
 zip -r 生成するzipファイル名 zip化するディレクトリ名   #  ディレクトリ単位
 unzip -P xxxx encrypt.zip                          # パスワード付きを展開
 
 
-# ログインユーザ切り替え
+## ログインユーザ切り替え
 su [オプション] [ユーザー名]
  -   環境変数を引き継がずにユーザーを切り替える
  -m  環境変数「USER」と「LOGNAME」を切り替え後のユーザーに引き継ぐ
@@ -45,68 +45,74 @@ sudo sysv-rc-conf mongod on
 sudo apt-get install sysv-rc-conf
 
 
-# ファイルの内容を１画面ごとに表示
+## ファイルの内容を１画面ごとに表示
 ～～ | more
 
-# IPアドレス確認
+## IPアドレス確認
 ip a
 ifconfig  （inet addr:xxxx の部分）
 
-# デフォルトゲートウェイ確認
+## デフォルトゲートウェイ確認
 ip route show
 
-# DNS確認
+## DNS確認
 cat /etc/resolv.conf
 
-# viを読み取り専用で開く
+## viを読み取り専用で開く
 view <ファイル名>
 
-# debパッケージインストール
+## debパッケージインストール
 dpkg -i <ファイル名>
 
-# シンボリックリンク作成
+## シンボリックリンク作成
 ln -s <リンク先ディレクトリ名 or ファイル名> <作成するリンク名>
 
 内容確認は　ls -l
 
-# シンボリックリンク削除
+## シンボリックリンク削除
 unlink <リンク名>
 
-# シンボリックリンクのコピー
+## シンボリックリンクのコピー
 ln -s <リンク先ディレクトリ名 or ファイル名> <作成するリンク名>
 
-# chmodメモ：ugo  rwx     a全ユーザ
+## chmodメモ：ugo  rwx     a全ユーザ
 
-# ログ見るときはlessよりもtailコマンドが便利
+## ログ見るときはlessよりもtailコマンドが便利
 
-# パスの確認
+## 環境変数（パスの確認）
+printenv
+
 echo $PATH
+
+（追加例。「$PATH:/usr/pgsql-9.6/bin」を追加。）
+export PATH=$PATH:/usr/pgsql-9.6/bin
 
 /usr/local/sbin
 /usr/local/bin
 /usr/sbin
 等はデフォルトで入ってる。
 
-# リモート端末のファイルをコピー
+
+## リモート端末のファイルをコピー
 （下記は ec2への接続）
 scp -i secret_key.pem ec2-user@hostname:/home/ec2-user/file_name.txt ~/
 
-# リモート端末のディレクトリをコピー
+## リモート端末のディレクトリをコピー
 （下記は ec2への接続）
 scp -r -i secret_key.pem ec2-user@hostname:/home/ec2-user/dir_name/ ~/
 
-# 中身ごとディレクトリを中身削除
+## 中身ごとディレクトリを中身削除
 rm -rf
 
-# ログインユーザ確認
+## ログインユーザ確認
 whoami 
 
-# 現在の作業をバックグラウンドに移動
+## 現在の作業をバックグラウンドに移動
 [ctrl] + z
 復帰する場合
 fg
 
-# 画面を分割して作業
+## 画面を分割して作業
 ＜tmux＞
 無ければ apt-get や yum でインストール。
 起動後
@@ -117,18 +123,18 @@ fg
 分割を解除
 分割された画面にて exit
 
-# Windowsのメモ帳チックなエディタ起動
+## Windowsのメモ帳チックなエディタ起動
 gegit
 
-# 再起動
+## 再起動
 sudo shutdown -r now
 
-# 文字コードを識別
+## 文字コードを識別
 file -i <FILE-NAME>
 nkf -g <FILE-NAME>
 ※半角英数のみで構成されたファイルの場合、「ASCII」と推測される。
 
-# 文字コード変換
+## 文字コード変換
 nkf -e file.txt > euc.txt
 nkf -w --overwrite readme.txt
 nkf -Ew 対象ファイル
@@ -160,7 +166,7 @@ kill -9 <PID>
 9：Killシグナルによるプロセスの終了
 http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230806/?rt=nocnt
 
-# 接続端末のデバイスファイル名を表示
+## 接続端末のデバイスファイル名を表示
 tty
 
 
@@ -173,12 +179,15 @@ cd     ホームディレクトリに戻る
 cd -  １つ前に戻る
 
 
-## 環境変数
-printenv
 
-echo $PATH
 
-（追加例。「$PATH:/usr/pgsql-9.6/bin」を追加。）
-export PATH=$PATH:/usr/pgsql-9.6/bin
+## 容量確認
+＜ドライブ単位＞
+df -hT
+（ /dev を確認 ）
+
+＜ディレクトリごと＞
+du -h
+（調べたいディレクトリで実行）
 
 ```

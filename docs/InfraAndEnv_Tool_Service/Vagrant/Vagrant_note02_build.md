@@ -14,6 +14,6 @@ vagrant box add <ボックス名> package.box
 （例）
 vagrant box add VM02 VM02.box
 ```
-
+後は通常通り、vagrant init から。
 
 

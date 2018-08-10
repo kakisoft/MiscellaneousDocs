@@ -1,3 +1,13 @@
+## GUIモード
+https://weblabo.oscasierra.net/vagrant-vb-gui/
+
+
+## ログ
+```
+C： → ユーザー →（ユーザ名）→ VirtualBox VMs → 
+C:\Users\(ユーザ名)\VirualBox VMs\(仮想マシン名)\Logs\VBox.log
+```
+
 ## ssh設定確認
 ```
 vagrant ssh-config

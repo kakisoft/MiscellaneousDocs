@@ -18,3 +18,7 @@ vagrant snapshot restore savepoint1
 ```
 vagrant snapshot delete savepoint1
 ```
+
+_______________________________________________________
+### 参考サイト
+<https://weblabo.oscasierra.net/vagrant-snapshot/>

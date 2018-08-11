@@ -196,5 +196,9 @@ free -m
 ## マシン情報を確認
 cat /proc/cpuinfo
 
+## 画面クリア
+Ctrl + l（エル）
+
+
 
 ```

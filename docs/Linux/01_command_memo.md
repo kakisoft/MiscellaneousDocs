@@ -8,6 +8,11 @@
 ssh -i <AccessKey> UserName@<IPアドレス>
 chmod 600 <AccessKey>
 
+（GUIモード）
+ssh -Y -C
+nautilus
+
+
 ## ファイル検索
 sudo find / -name "filename" 
 locate "filename"　　　※updatedb。ファイル名データベースから検索。

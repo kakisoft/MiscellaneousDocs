@@ -43,7 +43,7 @@ _______________________________________________
 ### Vagrantファイル
 設定例
 ```
-config.vm.synced_folder "./shared", "/home/vagrant/shared", type: "virtualbox"
+config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox"
 ```
 
 ### SELINUX 設定

@@ -1,0 +1,21 @@
+## 複数VM起動
+Vagrantファイル設定例
+```
+  config.vm.define "host" do |node|
+    node.vm.box = "centos/7"
+    node.vm.hostname = "host"
+    node.vm.network :private_network, ip: "192.168.43.51"
+  end
+
+  config.vm.define "web" do |node|
+  node.vm.box = "centos/7"
+    node.vm.hostname = "web"
+    node.vm.network :private_network, ip: "192.168.43.52"
+  end
+
+  config.vm.define "db" do |node|
+  node.vm.box = "centos/7"
+    node.vm.hostname = "db"
+    node.vm.network :private_network, ip: "192.168.43.53"
+  end
+```

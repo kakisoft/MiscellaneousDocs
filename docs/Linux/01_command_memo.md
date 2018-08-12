@@ -12,6 +12,13 @@ chmod 600 <AccessKey>
 sudo find / -name "filename" 
 locate "filename"　　　※updatedb。ファイル名データベースから検索。
 
+sudo find /etc -name "http*" -type f    # （ファイルのみ。ディレクトリは除く。）
+sudo find /etc -name "http*" -type f -exec wc -l {} +
+
+## コマンドAの実行結果を引数にしてコマンドBを実行（xargs）
+sudo find /etc -name "http*" -type f | xargs wc -l
+
+
 ## 解凍（tar）
 tar xzvf asterisk-1.8.8.1.tar.gz
 
@@ -36,6 +43,8 @@ su [オプション] [ユーザー名]
  -   環境変数を引き継がずにユーザーを切り替える
  -m  環境変数「USER」と「LOGNAME」を切り替え後のユーザーに引き継ぐ
  -c  ユーザーを切り替えた後で、「-c」の後に記入されたコマンドを実行する
+
+「su」 のみを実行すると、rootユーザとなる。
 
 ## マシン起動時に自動的にstart
 （例：apache2、mongodb）
@@ -75,14 +84,71 @@ unlink <リンク名>
 ## シンボリックリンクのコピー
 ln -s <リンク先ディレクトリ名 or ファイル名> <作成するリンク名>
 
-## chmodメモ
-ugo  rwx     a全ユーザ
+## ユーザ一覧
+cat /etc/passwd
 
-## ログ見るときはlessよりもtailコマンドが便利
+vagrant:x:900:900:vagrant,,,:/home/vagrant:/bin/bash
+ユーザ名:x:ユーザID:グループ:コメント:ホームディレクトリ:シェル
+（xは、パスワードが必要という意味）
+
+## グループ一覧
+cat /etc/group
+グループ名:x:グループID:グループ所属のユーザ名
+（xは、グループログインにパスワードが必要という意味）
+
+## 自分が所属しているグループの確認
+groups
+
+
+
+## chmodメモ
+ugo                      rwx     a全ユーザ
+ユーザ  グループ  その他
+
+パーミッション  ファイル所有ユーザ  グループ  ファイルサイズ  最終更新日  ファイル名
+-rwxr-x--x 1 vagrant vagrant 0 Aug 11 10:21 bbb.sql
+
+d ディレクトリ
+- 通常のファイル
+l シンボリックリンク
+
+rwx ・・・ ファイル所有ユーザのアクセス権
+r-x ・・・ グループに所属しているユーザのアクセス権
+--x ・・・ その他のユーザのアクセス権
+
+
+（その他ユーザに読み込み権限を追加）
+chmod o+r bbb.sql
+
+
+## 所有者変更
+sudo chown vagrant:vagrant filename
+
+
+## ログの確認
+/var/log/messages
+lessよりもtailコマンドが便利
+
+
+## 行数・単語数を取得（正確な数字ではない？）
+wc /var/log/syslog.1
+行数、単語数、バイト数
+
+
+## テキストの中身を検索
+grep 'etc' /var/log/syslog.1
+grep (etc|cd|root) /var/log/syslog.1
+grep -E -R "(etc|root|report)" /var/log/syslog.1
+
+-E  検索に正規表現を使う
+-r  サブディレクトリも含めて検索
+-R  サブディレクトリ、シンボリックリンク先も含めて検索
+
 
 ## 環境変数（パスの確認）
 printenv
 
+## パスを確認するだけなら、これでOK
 echo $PATH
 
 （追加例。「$PATH:/usr/pgsql-9.6/bin」を追加。）
@@ -198,6 +264,18 @@ cat /proc/cpuinfo
 
 ## 画面クリア
 Ctrl + l（エル）
+
+## リダイレクト
+echo "date" > cmd.txt
+echo "free" >> cmd.txt
+
+## ファイルの内容をコマンドに渡す
+bash < cmd.txt
+
+（結果を別ファイルに保存）
+bash < cmd.txt > result.txt
+
+
 
 
 

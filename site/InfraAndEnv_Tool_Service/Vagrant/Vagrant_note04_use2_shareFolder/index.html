@@ -3166,8 +3166,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Ansible/01_/" title="01 " class="md-nav__link">
-      01 
+    <a href="../../Ansible/01_Overview/" title="01 Overview" class="md-nav__link">
+      01 Overview
     </a>
   </li>
 
@@ -3178,8 +3178,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Ansible/reference/" title="Reference" class="md-nav__link">
-      Reference
+    <a href="../../Ansible/90_reference/" title="90 reference" class="md-nav__link">
+      90 reference
     </a>
   </li>
 
@@ -3587,6 +3587,18 @@
   <li class="md-nav__item">
     <a href="../Vagrant_note04_use3_portForward/" title="Vagrant note04 use3 portForward" class="md-nav__link">
       Vagrant note04 use3 portForward
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vagrant_note04_use4_multi/" title="Vagrant note04 use4 multi" class="md-nav__link">
+      Vagrant note04 use4 multi
     </a>
   </li>
 
@@ -6869,11 +6881,11 @@
 <p>設定例</p>
 <pre><code># config.vm.synced_folder {host_path}, {guest_path}, option...
 
-config.vm.synced_folder &quot;./shared&quot;, &quot;/home/vagrant/shared&quot;, type: &quot;virtualbox&quot;
+config.vm.synced_folder &quot;./shared&quot;, &quot;/vagrant/shared&quot;, type: &quot;virtualbox&quot;
 ※ホスト側に「shared」というフォルダを作成しています。
 
 パーミッションも併せて設定する場合
-config.vm.synced_folder &quot;./shared&quot;, &quot;/home/vagrant/shared&quot;, type: &quot;virtualbox&quot;, mount_options: ['dmode=777','fmode=755']
+config.vm.synced_folder &quot;./shared&quot;, &quot;/vagrant/shared&quot;, type: &quot;virtualbox&quot;, mount_options: ['dmode=777','fmode=755']
 ※ dmodeはディレクトリ、fmodeはファイルのパーミッション
 
 上記の例で、apacheの DocumentRootを設定する場合、「/home/vagrant」のパーミッションにも注意する。
@@ -6900,6 +6912,7 @@ vagrant vbguest
 </code></pre>
 
 <h3 id="guest-addtions">Guest Addtions 設定</h3>
+<p>（この設定は不要かも。）</p>
 <pre><code>（kernel更新。ゲスト側で実行）
 sudo yum update kernel -y
 sudo yum install kernel-devel gcc -y

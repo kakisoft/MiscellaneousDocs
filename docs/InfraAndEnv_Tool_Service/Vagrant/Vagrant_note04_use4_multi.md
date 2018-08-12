@@ -24,6 +24,11 @@ Vagrantファイル設定例
 ## 確認
 ```
 vagrant status
-``@
+```
+
+## ログイン
+```
+vagrant ssh host
+```
 
 

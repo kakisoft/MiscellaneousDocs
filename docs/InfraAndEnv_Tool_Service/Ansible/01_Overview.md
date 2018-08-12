@@ -1,5 +1,5 @@
 ## 概要
-![01.]](asset/01.png)
+![01.](asset/01.png)
 
 ## ansible.cfg
 Ansible 全体の設定

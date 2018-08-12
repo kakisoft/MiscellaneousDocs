@@ -236,6 +236,12 @@
     </url>
         
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs//Linux/03_key/</loc>
+     <lastmod>2018-08-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs//Linux/DirectoryStructure_note/</loc>
      <lastmod>2018-08-13</lastmod>
      <changefreq>daily</changefreq>
@@ -255,6 +261,12 @@
         
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs//Linux/centos_memo/</loc>
+     <lastmod>2018-08-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs//Linux/epel/</loc>
      <lastmod>2018-08-13</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -3160,6 +3160,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../InfraAndEnv_Tool_Service/Ansible/01_/" title="01 " class="md-nav__link">
+      01 
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../InfraAndEnv_Tool_Service/Ansible/reference/" title="Reference" class="md-nav__link">
       Reference
     </a>
@@ -4090,46 +4102,10 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-11" type="checkbox" id="nav-7-11">
     
     <label class="md-nav__link" for="nav-7-11">
-      1
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-11">
-        1
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1/mynote/" title="Mynote" class="md-nav__link">
-      Mynote
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-12" type="checkbox" id="nav-7-12">
-    
-    <label class="md-nav__link" for="nav-7-12">
       Apache
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-12">
+      <label class="md-nav__title" for="nav-7-11">
         Apache
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4171,13 +4147,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-13" type="checkbox" id="nav-7-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-12" type="checkbox" id="nav-7-12">
     
-    <label class="md-nav__link" for="nav-7-13">
+    <label class="md-nav__link" for="nav-7-12">
       Firewall
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-13">
+      <label class="md-nav__title" for="nav-7-12">
         Firewall
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4207,13 +4183,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-14" type="checkbox" id="nav-7-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-13" type="checkbox" id="nav-7-13">
     
-    <label class="md-nav__link" for="nav-7-14">
+    <label class="md-nav__link" for="nav-7-13">
       環境構築
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-14">
+      <label class="md-nav__title" for="nav-7-13">
         環境構築
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4226,13 +4202,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-14-1" type="checkbox" id="nav-7-14-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-13-1" type="checkbox" id="nav-7-13-1">
     
-    <label class="md-nav__link" for="nav-7-14-1">
+    <label class="md-nav__link" for="nav-7-13-1">
       Centos7 php5.6 mysql5.7
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-7-14-1">
+      <label class="md-nav__title" for="nav-7-13-1">
         Centos7 php5.6 mysql5.7
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -6641,9 +6617,21 @@
 ssh -i &lt;AccessKey&gt; UserName@&lt;IPアドレス&gt;
 chmod 600 &lt;AccessKey&gt;
 
+（GUIモード）
+ssh -Y -C
+nautilus
+
+
 ## ファイル検索
 sudo find / -name &quot;filename&quot; 
 locate &quot;filename&quot;　　　※updatedb。ファイル名データベースから検索。
+
+sudo find /etc -name &quot;http*&quot; -type f    # （ファイルのみ。ディレクトリは除く。）
+sudo find /etc -name &quot;http*&quot; -type f -exec wc -l {} +
+
+## コマンドAの実行結果を引数にしてコマンドBを実行（xargs）
+sudo find /etc -name &quot;http*&quot; -type f | xargs wc -l
+
 
 ## 解凍（tar）
 tar xzvf asterisk-1.8.8.1.tar.gz
@@ -6669,6 +6657,8 @@ su [オプション] [ユーザー名]
  -   環境変数を引き継がずにユーザーを切り替える
  -m  環境変数「USER」と「LOGNAME」を切り替え後のユーザーに引き継ぐ
  -c  ユーザーを切り替えた後で、「-c」の後に記入されたコマンドを実行する
+
+「su」 のみを実行すると、rootユーザとなる。
 
 ## マシン起動時に自動的にstart
 （例：apache2、mongodb）
@@ -6708,14 +6698,71 @@ unlink &lt;リンク名&gt;
 ## シンボリックリンクのコピー
 ln -s &lt;リンク先ディレクトリ名 or ファイル名&gt; &lt;作成するリンク名&gt;
 
-## chmodメモ
-ugo  rwx     a全ユーザ
+## ユーザ一覧
+cat /etc/passwd
 
-## ログ見るときはlessよりもtailコマンドが便利
+vagrant:x:900:900:vagrant,,,:/home/vagrant:/bin/bash
+ユーザ名:x:ユーザID:グループ:コメント:ホームディレクトリ:シェル
+（xは、パスワードが必要という意味）
+
+## グループ一覧
+cat /etc/group
+グループ名:x:グループID:グループ所属のユーザ名
+（xは、グループログインにパスワードが必要という意味）
+
+## 自分が所属しているグループの確認
+groups
+
+
+
+## chmodメモ
+ugo                      rwx     a全ユーザ
+ユーザ  グループ  その他
+
+パーミッション  ファイル所有ユーザ  グループ  ファイルサイズ  最終更新日  ファイル名
+-rwxr-x--x 1 vagrant vagrant 0 Aug 11 10:21 bbb.sql
+
+d ディレクトリ
+- 通常のファイル
+l シンボリックリンク
+
+rwx ・・・ ファイル所有ユーザのアクセス権
+r-x ・・・ グループに所属しているユーザのアクセス権
+--x ・・・ その他のユーザのアクセス権
+
+
+（その他ユーザに読み込み権限を追加）
+chmod o+r bbb.sql
+
+
+## 所有者変更
+sudo chown vagrant:vagrant filename
+
+
+## ログの確認
+/var/log/messages
+lessよりもtailコマンドが便利
+
+
+## 行数・単語数を取得（正確な数字ではない？）
+wc /var/log/syslog.1
+行数、単語数、バイト数
+
+
+## テキストの中身を検索
+grep 'etc' /var/log/syslog.1
+grep (etc|cd|root) /var/log/syslog.1
+grep -E -R &quot;(etc|root|report)&quot; /var/log/syslog.1
+
+-E  検索に正規表現を使う
+-r  サブディレクトリも含めて検索
+-R  サブディレクトリ、シンボリックリンク先も含めて検索
+
 
 ## 環境変数（パスの確認）
 printenv
 
+## パスを確認するだけなら、これでOK
 echo $PATH
 
 （追加例。「$PATH:/usr/pgsql-9.6/bin」を追加。）
@@ -6831,6 +6878,18 @@ cat /proc/cpuinfo
 
 ## 画面クリア
 Ctrl + l（エル）
+
+## リダイレクト
+echo &quot;date&quot; &gt; cmd.txt
+echo &quot;free&quot; &gt;&gt; cmd.txt
+
+## ファイルの内容をコマンドに渡す
+bash &lt; cmd.txt
+
+（結果を別ファイルに保存）
+bash &lt; cmd.txt &gt; result.txt
+
+
 
 
 

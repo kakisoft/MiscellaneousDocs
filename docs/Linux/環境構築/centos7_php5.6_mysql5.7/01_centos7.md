@@ -44,6 +44,9 @@ _______________________________________________
 設定例
 ```
 config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox"
+
+とか
+config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox", mount_options: ['dmode=777','fmode=755']
 ```
 
 ### SELINUX 設定

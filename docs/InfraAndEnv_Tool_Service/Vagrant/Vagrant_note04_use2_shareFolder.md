@@ -10,11 +10,11 @@
 ```
 # config.vm.synced_folder {host_path}, {guest_path}, option...
 
-config.vm.synced_folder "./shared", "/home/vagrant/shared", type: "virtualbox"
+config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox"
 ※ホスト側に「shared」というフォルダを作成しています。
 
 パーミッションも併せて設定する場合
-config.vm.synced_folder "./shared", "/home/vagrant/shared", type: "virtualbox", mount_options: ['dmode=777','fmode=755']
+config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox", mount_options: ['dmode=777','fmode=755']
 ※ dmodeはディレクトリ、fmodeはファイルのパーミッション
 
 上記の例で、apacheの DocumentRootを設定する場合、「/home/vagrant」のパーミッションにも注意する。
@@ -42,6 +42,7 @@ vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
 ```
 ### Guest Addtions 設定
+（この設定は不要かも。）
 ```
 （kernel更新。ゲスト側で実行）
 sudo yum update kernel -y

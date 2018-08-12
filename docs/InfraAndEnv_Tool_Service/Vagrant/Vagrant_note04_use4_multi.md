@@ -1,5 +1,6 @@
 ## 複数VM起動
-Vagrantファイル設定例
+Vagrantファイル設定例  
+（host, web, db という名称）
 ```
   config.vm.define "host" do |node|
     node.vm.box = "centos/7"
@@ -19,3 +20,10 @@ Vagrantファイル設定例
     node.vm.network :private_network, ip: "192.168.43.53"
   end
 ```
+
+## 確認
+```
+vagrant status
+``@
+
+

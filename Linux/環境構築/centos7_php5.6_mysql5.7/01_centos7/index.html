@@ -4314,28 +4314,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" title="ポートリダイレクト設定" class="md-nav__link">
-    ポートリダイレクト設定
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="ホスト⇔ゲスト　共有フォルダ設定" class="md-nav__link">
-    ホスト⇔ゲスト　共有フォルダ設定
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_1" title="Vagrantファイル" class="md-nav__link">
-    Vagrantファイル
+  <a href="#_2" title="一旦、起動しておく。" class="md-nav__link">
+    一旦、起動しておく。
   </a>
   
 </li>
@@ -4348,8 +4328,42 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_3" title="終了" class="md-nav__link">
+    終了
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_4" title="プラグインをインストール" class="md-nav__link">
     プラグインをインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="ポートリダイレクト設定" class="md-nav__link">
+    ポートリダイレクト設定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="ホスト⇔ゲスト　共有フォルダ設定" class="md-nav__link">
+    ホスト⇔ゲスト　共有フォルダ設定
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vagrant_1" title="Vagrantファイル" class="md-nav__link">
+    Vagrantファイル
   </a>
   
 </li>
@@ -4477,6 +4491,18 @@
   <li class="md-nav__item">
     <a href="../91_NG_PHP5.4_/" title="91 NG PHP5.4 " class="md-nav__link">
       91 NG PHP5.4 
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../99_save/" title="99 save" class="md-nav__link">
+      99 save
     </a>
   </li>
 
@@ -6805,28 +6831,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" title="ポートリダイレクト設定" class="md-nav__link">
-    ポートリダイレクト設定
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="ホスト⇔ゲスト　共有フォルダ設定" class="md-nav__link">
-    ホスト⇔ゲスト　共有フォルダ設定
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_1" title="Vagrantファイル" class="md-nav__link">
-    Vagrantファイル
+  <a href="#_2" title="一旦、起動しておく。" class="md-nav__link">
+    一旦、起動しておく。
   </a>
   
 </li>
@@ -6839,8 +6845,42 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_3" title="終了" class="md-nav__link">
+    終了
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_4" title="プラグインをインストール" class="md-nav__link">
     プラグインをインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="ポートリダイレクト設定" class="md-nav__link">
+    ポートリダイレクト設定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="ホスト⇔ゲスト　共有フォルダ設定" class="md-nav__link">
+    ホスト⇔ゲスト　共有フォルダ設定
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vagrant_1" title="Vagrantファイル" class="md-nav__link">
+    Vagrantファイル
   </a>
   
 </li>
@@ -6916,30 +6956,12 @@ vagrant init centos/7
 end
 </code></pre>
 
-<h3 id="_2">ポートリダイレクト設定</h3>
-<p>ゲストの80ポートをホストの8080ポートにフォワード。</p>
-<pre><code>config.vm.network :forwarded_port, guest: 80, host: 8080
-</code></pre>
-
-<p>その後、</p>
+<h3 id="_2">一旦、起動しておく。</h3>
 <pre><code>vagrant up
+
 
 （バージョン確認）
 cat /etc/redhat-release
-</code></pre>
-
-<hr />
-<pre><code>素の状態では仮想マシン起動時に rsync で同期するだけのようで、
-リアルタイムで同期させるには、VitualBoxの仮想マシンに Guest Addtions が必要みたい。（プラグイン）
-</code></pre>
-
-<h2 id="_3">ホスト⇔ゲスト　共有フォルダ設定</h2>
-<h3 id="vagrant_1">Vagrantファイル</h3>
-<p>設定例</p>
-<pre><code>config.vm.synced_folder &quot;./shared&quot;, &quot;/vagrant/shared&quot;, type: &quot;virtualbox&quot;
-
-とか
-config.vm.synced_folder &quot;./shared&quot;, &quot;/vagrant/shared&quot;, type: &quot;virtualbox&quot;, mount_options: ['dmode=777','fmode=755']
 </code></pre>
 
 <h3 id="selinux">SELINUX 設定</h3>
@@ -6952,6 +6974,10 @@ SELINUX=enforcing　→　SELINUX=disabled
 getenforce
 </code></pre>
 
+<h3 id="_3">終了</h3>
+<pre><code>vagrant halt
+</code></pre>
+
 <h3 id="_4">プラグインをインストール</h3>
 <pre><code>vagrant plugin install vagrant-winnfsd
 vagrant plugin install vagrant-vbguest
@@ -6959,6 +6985,32 @@ vagrant plugin install vagrant-vbguest
 その後
 vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
+</code></pre>
+
+<h3 id="_5">ポートリダイレクト設定</h3>
+<p>ゲストの80ポートをホストの8080ポートにフォワード。</p>
+<pre><code>config.vm.network :forwarded_port, guest: 80, host: 8080
+</code></pre>
+
+<hr />
+<pre><code>素の状態では仮想マシン起動時に rsync で同期するだけのようで、
+リアルタイムで同期させるには、VitualBoxの仮想マシンに Guest Addtions が必要みたい。（プラグイン）
+</code></pre>
+
+<h2 id="_6">ホスト⇔ゲスト　共有フォルダ設定</h2>
+<h3 id="vagrant_1">Vagrantファイル</h3>
+<p>設定例</p>
+<pre><code>※CentOS7の場合、カーネルを更新しておく。
+
+（ドライブを共有しないなら、こっち？）
+  config.vm.synced_folder &quot;./shared&quot;, &quot;/vagrant/shared&quot;, type: &quot;virtualbox&quot;
+
+（ドライブを共有するなら、こっち？）
+config.vm.synced_folder &quot;./shared&quot;, &quot;/vagrant/shared&quot;, type: &quot;virtualbox&quot;, mount_options: ['dmode=777','fmode=777']
+
+
+※パーミッション設定
+chmod 777 /vagrant
 </code></pre>
 
 <hr />

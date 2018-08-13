@@ -19,34 +19,13 @@ Vagrant.configure("2") do |config|
   config.vm.box_version = "1803.01"
 end
 ```
-### ポートリダイレクト設定
-ゲストの80ポートをホストの8080ポートにフォワード。
-```
-config.vm.network :forwarded_port, guest: 80, host: 8080
-```
-
-その後、
+### 一旦、起動しておく。
 ```
 vagrant up
 
+
 （バージョン確認）
 cat /etc/redhat-release
-```
-_______________________________________________
-```
-素の状態では仮想マシン起動時に rsync で同期するだけのようで、
-リアルタイムで同期させるには、VitualBoxの仮想マシンに Guest Addtions が必要みたい。（プラグイン）
-```
-
-## ホスト⇔ゲスト　共有フォルダ設定
-
-### Vagrantファイル
-設定例
-```
-config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox"
-
-とか
-config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox", mount_options: ['dmode=777','fmode=755']
 ```
 
 ### SELINUX 設定
@@ -60,6 +39,11 @@ SELINUX=enforcing　→　SELINUX=disabled
 getenforce
 ```
 
+### 終了
+```
+vagrant halt
+```
+
 ### プラグインをインストール
 ```
 vagrant plugin install vagrant-winnfsd
@@ -69,6 +53,38 @@ vagrant plugin install vagrant-vbguest
 vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
 ```
+
+### ポートリダイレクト設定
+ゲストの80ポートをホストの8080ポートにフォワード。
+```
+config.vm.network :forwarded_port, guest: 80, host: 8080
+```
+
+_______________________________________________
+```
+素の状態では仮想マシン起動時に rsync で同期するだけのようで、
+リアルタイムで同期させるには、VitualBoxの仮想マシンに Guest Addtions が必要みたい。（プラグイン）
+```
+
+## ホスト⇔ゲスト　共有フォルダ設定
+
+### Vagrantファイル
+設定例
+```
+※CentOS7の場合、カーネルを更新しておく。
+
+（ドライブを共有しないなら、こっち？）
+  config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox"
+
+（ドライブを共有するなら、こっち？）
+config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox", mount_options: ['dmode=777','fmode=777']
+
+
+※パーミッション設定
+chmod 777 /vagrant
+```
+
+
 _______________________________
 【 CentOS7 】
 ### Guest Addtions 設定

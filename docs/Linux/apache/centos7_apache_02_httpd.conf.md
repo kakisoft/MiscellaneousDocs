@@ -61,3 +61,20 @@ webサーバは apacheユーザでログインする？
 </Directory>
 
 ```
+
+## ブラウザ上にディレクトリを表示
+```
+Options Indexes FollowSymLinks を設定
+
+
+（例）
+<Directory "/var/www/html">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
+
+禁止する場合、
+Options -Indexes FollowSymLinks
+```

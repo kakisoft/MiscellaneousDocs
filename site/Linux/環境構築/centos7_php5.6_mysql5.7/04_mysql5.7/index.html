@@ -4463,6 +4463,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../99_save/" title="99 save" class="md-nav__link">
+      99 save
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -6865,7 +6877,7 @@
 <a href="https://enomotodev.hatenablog.com/entry/2016/09/01/225200">https://enomotodev.hatenablog.com/entry/2016/09/01/225200</a><br />
 </p>
 <h2 id="mariadb">デフォルトインストールされている MariaDBをアンインストール</h2>
-<pre><code>sudo yum remove mariadb-libs
+<pre><code>sudo yum remove -y mariadb-libs
 sudo rm -rf /var/lib/mysql
 </code></pre>
 
@@ -6874,7 +6886,7 @@ sudo rm -rf /var/lib/mysql
 </code></pre>
 
 <h2 id="mysql">MySQL のインストール</h2>
-<pre><code>sudo yum install mysql-community-server
+<pre><code>sudo yum install -y mysql-community-server
 </code></pre>
 
 <h2 id="_1">バージョン確認</h2>
@@ -6903,7 +6915,7 @@ sudo rm -rf /var/lib/mysql
 </code></pre>
 
 <h2 id="_4">パスワードポリシーの変更（例）</h2>
-<pre><code>set global validate_password_length=6;
+<pre><code>set global validate_password_length=1;
 set global validate_password_policy=LOW;
 </code></pre>
 

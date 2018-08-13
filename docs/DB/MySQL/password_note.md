@@ -7,7 +7,7 @@
 
 ## パスワードポリシーの変更
 ```
-set global validate_password_length=6;
+set global validate_password_length=1;
 
 set global validate_password_policy=LOW;
 ```
@@ -19,11 +19,20 @@ SHOW VARIABLES LIKE 'validate_password%';
 
 ## パスワード変更
 ```
+set password = password('root');
+
 set password = password('some password');
 
 set password for user = password('some password');
 
 set password for ユーザ名@"ホスト名"=password('変更後のパスワード');
 
+set password for root@localhost=password('root');
+```
+
+_____________________________________
+#### 一時的なメモ
+```
+set password for root@localhost=password('passwordPASSWORD@999');
 set password for root@localhost=password('root');
 ```

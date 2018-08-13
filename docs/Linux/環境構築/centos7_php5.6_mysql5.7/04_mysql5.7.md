@@ -5,7 +5,7 @@
 
 ## デフォルトインストールされている MariaDBをアンインストール
 ```
-sudo yum remove mariadb-libs
+sudo yum remove -y mariadb-libs
 sudo rm -rf /var/lib/mysql
 ```
 
@@ -16,7 +16,7 @@ sudo rpm -ivh http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rp
 
 ## MySQL のインストール
 ```
-sudo yum install mysql-community-server
+sudo yum install -y mysql-community-server
 ```
 
 ## バージョン確認
@@ -53,7 +53,7 @@ mysql -u root -p
 
 ## パスワードポリシーの変更（例）
 ```
-set global validate_password_length=6;
+set global validate_password_length=1;
 set global validate_password_policy=LOW;
 ```
 

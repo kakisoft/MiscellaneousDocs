@@ -21,3 +21,19 @@ ssh-copy-id db
 ssh db
 ```
 
+_________________________________________________
+
+## sshサーバのインストール状況を確認
+```
+【 CentOS 】
+（インストール状況）
+rpm -qa | grep ssh
+
+（インストール先のフォルダ）
+rpm -ql openssh-server
+
+（デーモン）
+ps aux | grep sshd
+
+
+```

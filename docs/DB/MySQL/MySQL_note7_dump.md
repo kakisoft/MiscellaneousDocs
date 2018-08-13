@@ -1,5 +1,5 @@
 ## dumpファイル作成
-mysqldump -u root -p DATABASE_NAME < dump_file.sql 
+mysqldump -u root -p DATABASE_NAME > dump_file.sql 
 
 ## dumpファイルから復元
 mysql -u root -p DATABASE_NAME < dump_file.sql 

@@ -4226,6 +4226,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" title="ブラウザ上にディレクトリを表示" class="md-nav__link">
+    ブラウザ上にディレクトリを表示
+  </a>
+  
+</li>
+      
       
       
       
@@ -6753,6 +6760,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" title="ブラウザ上にディレクトリを表示" class="md-nav__link">
+    ブラウザ上にディレクトリを表示
+  </a>
+  
+</li>
+      
       
       
       
@@ -6829,6 +6843,22 @@ DocumentRoot &quot;/vagrant/shared&quot;
     Require all granted
 &lt;/Directory&gt;
 
+</code></pre>
+
+<h2 id="_3">ブラウザ上にディレクトリを表示</h2>
+<pre><code>Options Indexes FollowSymLinks を設定
+
+
+（例）
+&lt;Directory &quot;/var/www/html&quot;&gt;
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+
+禁止する場合、
+Options -Indexes FollowSymLinks
 </code></pre>
                 
                   

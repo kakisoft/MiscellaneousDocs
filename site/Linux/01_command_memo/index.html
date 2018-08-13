@@ -6920,6 +6920,10 @@ cd     ホームディレクトリに戻る
 cd -  １つ前に戻る
 
 
+## ファイルサイズ確認
+ls -lh
+
+
 ## 容量確認
 ＜ドライブ単位＞
 df -hT
@@ -6953,6 +6957,13 @@ bash &lt; cmd.txt &gt; result.txt
 ## 起動サービス（デーモン）確認
 CentOS6    chkconfig --list
 CentOS7    systemctl list-unit-files -t service
+
+
+## エイリアス
+alias  # 引数なしで実行すると、一覧を確認
+alias apast='sudo systemctl restart httpd.service'
+
+unalias apast  # 削除
 
 
 

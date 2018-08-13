@@ -281,6 +281,9 @@ bash < cmd.txt
 bash < cmd.txt > result.txt
 
 
+## 起動サービス（デーモン）確認
+CentOS6    chkconfig --list
+CentOS7    systemctl list-unit-files -t service
 
 
 

@@ -69,7 +69,8 @@ vagrant plugin install vagrant-vbguest
 vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
 ```
-
+_______________________________
+【 CentOS7 】
 ### Guest Addtions 設定
 #### １．カーネル更新
 ```

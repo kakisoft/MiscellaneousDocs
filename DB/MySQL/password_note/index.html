@@ -492,6 +492,19 @@
     パスワード変更
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="一時的なメモ" class="md-nav__link">
+    一時的なメモ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -6739,6 +6752,19 @@
     パスワード変更
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="一時的なメモ" class="md-nav__link">
+    一時的なメモ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -6768,7 +6794,7 @@
 </ul>
 <p>参考：<a href="https://dev.mysql.com/doc/refman/5.6/en/validate-password-options-variables.html#sysvar_validate_password_policy">https://dev.mysql.com/doc/refman/5.6/en/validate-password-options-variables.html#sysvar_validate_password_policy</a></p>
 <h2 id="_1">パスワードポリシーの変更</h2>
-<pre><code>set global validate_password_length=6;
+<pre><code>set global validate_password_length=1;
 
 set global validate_password_policy=LOW;
 </code></pre>
@@ -6778,12 +6804,20 @@ set global validate_password_policy=LOW;
 </code></pre>
 
 <h2 id="_3">パスワード変更</h2>
-<pre><code>set password = password('some password');
+<pre><code>set password = password('root');
+
+set password = password('some password');
 
 set password for user = password('some password');
 
 set password for ユーザ名@&quot;ホスト名&quot;=password('変更後のパスワード');
 
+set password for root@localhost=password('root');
+</code></pre>
+
+<hr />
+<h4 id="_4">一時的なメモ</h4>
+<pre><code>set password for root@localhost=password('passwordPASSWORD@999');
 set password for root@localhost=password('root');
 </code></pre>
                 

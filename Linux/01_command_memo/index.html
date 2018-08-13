@@ -6955,6 +6955,13 @@ CentOS6    chkconfig --list
 CentOS7    systemctl list-unit-files -t service
 
 
+## エイリアス
+alias  # 引数なしで実行すると、一覧を確認
+alias apast='sudo systemctl restart httpd.service'
+
+unalias apast  # 削除
+
+
 
 </code></pre>
                 

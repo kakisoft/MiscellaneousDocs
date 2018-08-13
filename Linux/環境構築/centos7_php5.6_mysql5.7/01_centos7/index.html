@@ -4354,6 +4354,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#guest-addtions" title="Guest Addtions 設定" class="md-nav__link">
+    Guest Addtions 設定
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="１．カーネル更新" class="md-nav__link">
+    １．カーネル更新
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2virtual-box" title="２．Virtual Box設定（この設定は不要かも。）" class="md-nav__link">
+    ２．Virtual Box設定（この設定は不要かも。）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6818,6 +6845,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#guest-addtions" title="Guest Addtions 設定" class="md-nav__link">
+    Guest Addtions 設定
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="１．カーネル更新" class="md-nav__link">
+    １．カーネル更新
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2virtual-box" title="２．Virtual Box設定（この設定は不要かも。）" class="md-nav__link">
+    ２．Virtual Box設定（この設定は不要かも。）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6905,6 +6959,20 @@ vagrant plugin install vagrant-vbguest
 その後
 vagrant vbguest
 ※ゲスト起動時に、ホストから実行する
+</code></pre>
+
+<h3 id="guest-addtions">Guest Addtions 設定</h3>
+<h4 id="1">１．カーネル更新</h4>
+<pre><code>（kernel更新。ゲスト側で実行）
+sudo yum update kernel -y
+sudo yum install kernel-devel gcc -y
+</code></pre>
+
+<h4 id="2virtual-box">２．Virtual Box設定（この設定は不要かも。）</h4>
+<pre><code>（停止後、Virtual Boxを操作）
+設定→ストレージ→光学ドライブの追加（空のままでOK）
+
+vagrant up
 </code></pre>
                 
                   

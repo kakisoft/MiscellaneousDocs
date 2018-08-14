@@ -126,6 +126,10 @@ r-x ・・・ グループに所属しているユーザのアクセス権
 chmod o+r bbb.sql
 
 
+（サブディレクトリを含めて変更）
+sudo chmod -R 777 app
+
+
 ## 所有者変更
 sudo chown vagrant:vagrant filename
 

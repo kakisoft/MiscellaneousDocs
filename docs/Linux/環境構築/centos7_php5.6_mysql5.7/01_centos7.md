@@ -56,8 +56,10 @@ vagrant vbguest
 
 ### ポートリダイレクト設定
 ゲストの80ポートをホストの8080ポートにフォワード。
+ゲストの3306ポートをホストの4306ポートにフォワード。
 ```
-config.vm.network :forwarded_port, guest: 80, host: 8080
+config.vm.network "forwarded_port", guest: 80, host: 8080
+config.vm.network "forwarded_port", guest: 3306, host: 4306
 ```
 
 _______________________________________________

@@ -15,3 +15,20 @@ use データベース名
 
 ## 終了
 quit
+
+_________________________________________________________
+
+## 外部からの接続設定
+https://kakistamp.hatenadiary.jp/entry/2016/12/03/225951
+
+## 外部からの接続設定（簡易版）
+```
+set global validate_password_length=1;
+set global validate_password_policy=LOW;
+
+grant all privileges on *.* to root@"%" identified by 'root';
+
+＜接続（ポート 4306）＞
+mysql -h 127.0.0.1 -u root -P 4306 -p
+```
+

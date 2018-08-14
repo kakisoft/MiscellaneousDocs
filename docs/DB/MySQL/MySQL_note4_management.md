@@ -1,5 +1,9 @@
 ## 設定内容確認
-show variables
+```
+show variables;
+
+show variables like ‘port’;
+```
 
 ## 設定ファイル
 /etc/my.cnf

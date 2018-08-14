@@ -301,5 +301,23 @@ alias apast='sudo systemctl restart httpd.service'
 unalias apast  # 削除
 
 
+## ポートの空きを確認
+nmap <HOSTNAME>
+
+＜ssコマンド＞
+ss
+
+＜netstat は、CentOs7からは非推奨？＞
+netstat -nap
+
+sudo netstat -ltup4
+
+-l	Listenしているポートのみ表示
+-t	TCPを表示
+-u	UDPを表示
+-n	ポートやホストを数値で表示
+-p	ポートを開いているプロセスを表示（sudo）
+-4	IPv4のみ
+-6	IPv6のみ
 
 ```

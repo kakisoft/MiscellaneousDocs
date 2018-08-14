@@ -415,6 +415,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" title="外部からの接続設定" class="md-nav__link">
+    外部からの接続設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="外部からの接続設定（簡易版）" class="md-nav__link">
+    外部からの接続設定（簡易版）
+  </a>
+  
+</li>
+      
       
       
       
@@ -6137,6 +6151,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../Windows/network_note/" title="Network note" class="md-nav__link">
+      Network note
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../Windows/tmp/" title="Tmp" class="md-nav__link">
       Tmp
     </a>
@@ -6751,6 +6777,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" title="外部からの接続設定" class="md-nav__link">
+    外部からの接続設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="外部からの接続設定（簡易版）" class="md-nav__link">
+    外部からの接続設定（簡易版）
+  </a>
+  
+</li>
+      
       
       
       
@@ -6786,6 +6826,18 @@ mysql -h hostname -u remoteusername -p
 <p>use データベース名</p>
 <h2 id="_3">終了</h2>
 <p>quit</p>
+<hr />
+<h2 id="_4">外部からの接続設定</h2>
+<p>https://kakistamp.hatenadiary.jp/entry/2016/12/03/225951</p>
+<h2 id="_5">外部からの接続設定（簡易版）</h2>
+<pre><code>set global validate_password_length=1;
+set global validate_password_policy=LOW;
+
+grant all privileges on *.* to root@&quot;%&quot; identified by 'root';
+
+＜接続（ポート 4306）＞
+mysql -h 127.0.0.1 -u root -P 4306 -p
+</code></pre>
                 
                   
                 

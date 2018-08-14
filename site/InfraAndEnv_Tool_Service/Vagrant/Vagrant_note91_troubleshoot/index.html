@@ -3531,6 +3531,26 @@
     vagrant ssh ログイン時に `encode' エラー
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="エラーメッセージ" class="md-nav__link">
+    エラーメッセージ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="解決策" class="md-nav__link">
+    解決策
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -6721,6 +6741,26 @@
     vagrant ssh ログイン時に `encode' エラー
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="エラーメッセージ" class="md-nav__link">
+    エラーメッセージ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="解決策" class="md-nav__link">
+    解決策
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -6743,20 +6783,24 @@
                   <h1>Vagrant note91 troubleshoot</h1>
                 
                 <h2 id="vagrant-ssh-encode">vagrant ssh ログイン時に `encode' エラー</h2>
-<p><a href="https://qiita.com/mokuo/items/fb18713c4f0a19d9c48e">https://qiita.com/mokuo/items/fb18713c4f0a19d9c48e</a></p>
+<h3 id="_1">エラーメッセージ</h3>
 <pre><code>C:/HashiCorp/Vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/io.rb:32:in `encode': 
   incomplete &quot;\x82&quot; on Windows-31J (Encoding::InvalidByteSequenceError)
 
+（以下略）
+</code></pre>
 
-
-
-C:/HashiCorp/Vagrant/embedded/gems/gems/vagrant-1.8.6/lib/vagrant/util/ にある、io.rb の32行目を
+<h3 id="_2">解決策</h3>
+<p><a href="https://qiita.com/mokuo/items/fb18713c4f0a19d9c48e">https://qiita.com/mokuo/items/fb18713c4f0a19d9c48e</a></p>
+<pre><code>C:/HashiCorp/Vagrant/embedded/gems/gems/vagrant-1.8.6/lib/vagrant/util/ にある、io.rb の32行目を編集。
 
 C:/HashiCorp/Vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/io.rb:32
 C:/HashiCorp/Vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/
 
-
+【 修正前 】
 data &lt;&lt; io.readpartial(READ_CHUNK_SIZE).encode(&quot;UTF-8&quot;,       Encoding.default_external)
+
+【 修正後 】
 data &lt;&lt; io.readpartial(READ_CHUNK_SIZE).encode(&quot;Windows-31J&quot;, Encoding.default_external)
 </code></pre>
                 

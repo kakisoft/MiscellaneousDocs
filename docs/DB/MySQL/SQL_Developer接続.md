@@ -47,4 +47,4 @@ C:\Users\（ユーザ名）\AppData\Roaming\SQL Developer\system18.2.0.x.xx\o.jd
 _____________________________________________
 ## 備考
  * 定義書は出せない？ 
- * MySQL→Oracleの意向ができるっぽい。
+ * MySQL→Oracleの移行ができるっぽい。

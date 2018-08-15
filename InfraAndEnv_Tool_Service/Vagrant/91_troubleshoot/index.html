@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Vagrant/Vagrant_note03_snapshot/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Vagrant/91_troubleshoot/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Vagrant note03 snapshot - kakiNote</title>
+        <title>91 troubleshoot - kakiNote</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#_1" tabindex="1" class="md-skip">
+      <a href="../../../#vagrant-ssh-encode" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                Vagrant note03 snapshot
+                91 troubleshoot
               </span>
             
           
@@ -3492,8 +3492,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note01_prepare/" title="Vagrant note01 prepare" class="md-nav__link">
-      Vagrant note01 prepare
+    <a href="../01_prepare/" title="01 prepare" class="md-nav__link">
+      01 prepare
     </a>
   </li>
 
@@ -3504,8 +3504,104 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note02_build/" title="Vagrant note02 build" class="md-nav__link">
-      Vagrant note02 build
+    <a href="../02_build/" title="02 build" class="md-nav__link">
+      02 build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_snapshot/" title="03 snapshot" class="md-nav__link">
+      03 snapshot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use1_basic/" title="04 use1 basic" class="md-nav__link">
+      04 use1 basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use2_shareFolder/" title="04 use2 shareFolder" class="md-nav__link">
+      04 use2 shareFolder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use3_portForward/" title="04 use3 portForward" class="md-nav__link">
+      04 use3 portForward
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use4_multi/" title="04 use4 multi" class="md-nav__link">
+      04 use4 multi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../11_manage1_ssh/" title="11 manage1 ssh" class="md-nav__link">
+      11 manage1 ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../12_manage2_backup/" title="12 manage2 backup" class="md-nav__link">
+      12 manage2 backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../90_reference/" title="90 reference" class="md-nav__link">
+      90 reference
     </a>
   </li>
 
@@ -3523,11 +3619,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Vagrant note03 snapshot
+        91 troubleshoot
       </label>
     
-    <a href="./" title="Vagrant note03 snapshot" class="md-nav__link md-nav__link--active">
-      Vagrant note03 snapshot
+    <a href="./" title="91 troubleshoot" class="md-nav__link md-nav__link--active">
+      91 troubleshoot
     </a>
     
       
@@ -3539,37 +3635,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="スナップショットの一覧" class="md-nav__link">
-    スナップショットの一覧
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="スナップショット作成" class="md-nav__link">
-    スナップショット作成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="スナップショット復元" class="md-nav__link">
-    スナップショット復元
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="スナップショット削除" class="md-nav__link">
-    スナップショット削除
+  <a href="#vagrant-ssh-encode" title="vagrant ssh ログイン時に `encode' エラー" class="md-nav__link">
+    vagrant ssh ログイン時に `encode' エラー
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" title="参考サイト" class="md-nav__link">
-    参考サイト
+  <a href="#_1" title="エラーメッセージ" class="md-nav__link">
+    エラーメッセージ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="解決策" class="md-nav__link">
+    解決策
   </a>
   
 </li>
@@ -3596,92 +3678,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note04_use1_basic/" title="Vagrant note04 use1 basic" class="md-nav__link">
-      Vagrant note04 use1 basic
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note04_use2_shareFolder/" title="Vagrant note04 use2 shareFolder" class="md-nav__link">
-      Vagrant note04 use2 shareFolder
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note04_use3_portForward/" title="Vagrant note04 use3 portForward" class="md-nav__link">
-      Vagrant note04 use3 portForward
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note04_use4_multi/" title="Vagrant note04 use4 multi" class="md-nav__link">
-      Vagrant note04 use4 multi
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note11_manage1_ssh/" title="Vagrant note11 manage1 ssh" class="md-nav__link">
-      Vagrant note11 manage1 ssh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note90_reference/" title="Vagrant note90 reference" class="md-nav__link">
-      Vagrant note90 reference
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note91_troubleshoot/" title="Vagrant note91 troubleshoot" class="md-nav__link">
-      Vagrant note91 troubleshoot
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note99_misc/" title="Vagrant note99 misc" class="md-nav__link">
-      Vagrant note99 misc
+    <a href="../99_misc/" title="99 misc" class="md-nav__link">
+      99 misc
     </a>
   </li>
 
@@ -6859,37 +6857,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="スナップショットの一覧" class="md-nav__link">
-    スナップショットの一覧
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="スナップショット作成" class="md-nav__link">
-    スナップショット作成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="スナップショット復元" class="md-nav__link">
-    スナップショット復元
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="スナップショット削除" class="md-nav__link">
-    スナップショット削除
+  <a href="#vagrant-ssh-encode" title="vagrant ssh ログイン時に `encode' エラー" class="md-nav__link">
+    vagrant ssh ログイン時に `encode' エラー
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" title="参考サイト" class="md-nav__link">
-    参考サイト
+  <a href="#_1" title="エラーメッセージ" class="md-nav__link">
+    エラーメッセージ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="解決策" class="md-nav__link">
+    解決策
   </a>
   
 </li>
@@ -6916,28 +6900,29 @@
               
                 
                 
-                  <h1>Vagrant note03 snapshot</h1>
+                  <h1>91 troubleshoot</h1>
                 
-                <h2 id="_1">スナップショットの一覧</h2>
-<pre><code>vagrant snapshot list
+                <h2 id="vagrant-ssh-encode">vagrant ssh ログイン時に `encode' エラー</h2>
+<h3 id="_1">エラーメッセージ</h3>
+<pre><code>C:/HashiCorp/Vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/io.rb:32:in `encode': 
+  incomplete &quot;\x82&quot; on Windows-31J (Encoding::InvalidByteSequenceError)
+
+（以下略）
 </code></pre>
 
-<h2 id="_2">スナップショット作成</h2>
-<p>「savepoint1」という名称で作成。</p>
-<pre><code>vagrant snapshot save savepoint1
-</code></pre>
+<h3 id="_2">解決策</h3>
+<p><a href="https://qiita.com/mokuo/items/fb18713c4f0a19d9c48e">https://qiita.com/mokuo/items/fb18713c4f0a19d9c48e</a></p>
+<pre><code>C:/HashiCorp/Vagrant/embedded/gems/gems/vagrant-1.8.6/lib/vagrant/util/ にある、io.rb の32行目を編集。
 
-<h2 id="_3">スナップショット復元</h2>
-<pre><code>vagrant snapshot restore savepoint1
-</code></pre>
+C:/HashiCorp/Vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/io.rb:32
+C:/HashiCorp/Vagrant/embedded/gems/2.1.2/gems/vagrant-2.1.2/lib/vagrant/util/
 
-<h2 id="_4">スナップショット削除</h2>
-<pre><code>vagrant snapshot delete savepoint1
-</code></pre>
+【 修正前 】
+data &lt;&lt; io.readpartial(READ_CHUNK_SIZE).encode(&quot;UTF-8&quot;,       Encoding.default_external)
 
-<hr />
-<h3 id="_5">参考サイト</h3>
-<p><a href="https://weblabo.oscasierra.net/vagrant-snapshot/">https://weblabo.oscasierra.net/vagrant-snapshot/</a></p>
+【 修正後 】
+data &lt;&lt; io.readpartial(READ_CHUNK_SIZE).encode(&quot;Windows-31J&quot;, Encoding.default_external)
+</code></pre>
                 
                   
                 
@@ -6958,7 +6943,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Vagrant_note02_build/" title="Vagrant note02 build" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../90_reference/" title="90 reference" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6967,19 +6952,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Vagrant note02 build
+                90 reference
               </span>
             </div>
           </a>
         
         
-          <a href="../Vagrant_note04_use1_basic/" title="Vagrant note04 use1 basic" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../99_misc/" title="99 misc" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Vagrant note04 use1 basic
+                99 misc
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

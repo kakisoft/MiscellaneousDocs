@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Vagrant/Vagrant_note01_prepare/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Vagrant/12_manage2_backup/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Vagrant note01 prepare - kakiNote</title>
+        <title>12 manage2 backup - kakiNote</title>
       
     
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                Vagrant note01 prepare
+                12 manage2 backup
               </span>
             
           
@@ -3490,6 +3490,102 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../01_prepare/" title="01 prepare" class="md-nav__link">
+      01 prepare
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_build/" title="02 build" class="md-nav__link">
+      02 build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_snapshot/" title="03 snapshot" class="md-nav__link">
+      03 snapshot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use1_basic/" title="04 use1 basic" class="md-nav__link">
+      04 use1 basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use2_shareFolder/" title="04 use2 shareFolder" class="md-nav__link">
+      04 use2 shareFolder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use3_portForward/" title="04 use3 portForward" class="md-nav__link">
+      04 use3 portForward
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use4_multi/" title="04 use4 multi" class="md-nav__link">
+      04 use4 multi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../11_manage1_ssh/" title="11 manage1 ssh" class="md-nav__link">
+      11 manage1 ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -3499,11 +3595,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Vagrant note01 prepare
+        12 manage2 backup
       </label>
     
-    <a href="./" title="Vagrant note01 prepare" class="md-nav__link md-nav__link--active">
-      Vagrant note01 prepare
+    <a href="./" title="12 manage2 backup" class="md-nav__link md-nav__link--active">
+      12 manage2 backup
     </a>
     
       
@@ -3515,43 +3611,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="インストール" class="md-nav__link">
-    インストール
+  <a href="#_1" title="スナップショット作成" class="md-nav__link">
+    スナップショット作成
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="バージョン確認" class="md-nav__link">
-    バージョン確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#box" title="Box（テンプレート）を取得" class="md-nav__link">
-    Box（テンプレート）を取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#box_1" title="Boxの一覧を確認" class="md-nav__link">
-    Boxの一覧を確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#box_2" title="Boxの削除" class="md-nav__link">
-    Boxの削除
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#box_3" title="Box操作系コマンド一覧表示" class="md-nav__link">
-    Box操作系コマンド一覧表示
+  <a href="#box" title="boxファイル作成" class="md-nav__link">
+    boxファイル作成
   </a>
   
 </li>
@@ -3573,8 +3641,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note02_build/" title="Vagrant note02 build" class="md-nav__link">
-      Vagrant note02 build
+    <a href="../90_reference/" title="90 reference" class="md-nav__link">
+      90 reference
     </a>
   </li>
 
@@ -3585,8 +3653,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note03_snapshot/" title="Vagrant note03 snapshot" class="md-nav__link">
-      Vagrant note03 snapshot
+    <a href="../91_troubleshoot/" title="91 troubleshoot" class="md-nav__link">
+      91 troubleshoot
     </a>
   </li>
 
@@ -3597,92 +3665,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note04_use1_basic/" title="Vagrant note04 use1 basic" class="md-nav__link">
-      Vagrant note04 use1 basic
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note04_use2_shareFolder/" title="Vagrant note04 use2 shareFolder" class="md-nav__link">
-      Vagrant note04 use2 shareFolder
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note04_use3_portForward/" title="Vagrant note04 use3 portForward" class="md-nav__link">
-      Vagrant note04 use3 portForward
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note04_use4_multi/" title="Vagrant note04 use4 multi" class="md-nav__link">
-      Vagrant note04 use4 multi
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note11_manage1_ssh/" title="Vagrant note11 manage1 ssh" class="md-nav__link">
-      Vagrant note11 manage1 ssh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note90_reference/" title="Vagrant note90 reference" class="md-nav__link">
-      Vagrant note90 reference
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note91_troubleshoot/" title="Vagrant note91 troubleshoot" class="md-nav__link">
-      Vagrant note91 troubleshoot
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note99_misc/" title="Vagrant note99 misc" class="md-nav__link">
-      Vagrant note99 misc
+    <a href="../99_misc/" title="99 misc" class="md-nav__link">
+      99 misc
     </a>
   </li>
 
@@ -6860,43 +6844,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="インストール" class="md-nav__link">
-    インストール
+  <a href="#_1" title="スナップショット作成" class="md-nav__link">
+    スナップショット作成
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="バージョン確認" class="md-nav__link">
-    バージョン確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#box" title="Box（テンプレート）を取得" class="md-nav__link">
-    Box（テンプレート）を取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#box_1" title="Boxの一覧を確認" class="md-nav__link">
-    Boxの一覧を確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#box_2" title="Boxの削除" class="md-nav__link">
-    Boxの削除
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#box_3" title="Box操作系コマンド一覧表示" class="md-nav__link">
-    Box操作系コマンド一覧表示
+  <a href="#box" title="boxファイル作成" class="md-nav__link">
+    boxファイル作成
   </a>
   
 </li>
@@ -6918,42 +6874,14 @@
               
                 
                 
-                  <h1>Vagrant note01 prepare</h1>
+                  <h1>12 manage2 backup</h1>
                 
-                <h3 id="_1">インストール</h3>
-<pre><code>sudo apt-get install vagrant
+                <h2 id="_1">スナップショット作成</h2>
+<pre><code>vagrant snapshot save savepoint01
 </code></pre>
 
-<h3 id="_2">バージョン確認</h3>
-<pre><code>vagrant --version
-</code></pre>
-
-<h3 id="box">Box（テンプレート）を取得</h3>
-<pre><code>vagrant box add  &lt;box名, url, or path&gt;
-
-(入力例１)
-vagrant box add hashicorp/precise64
-
-(入力例２)
-vagrant box add centos7 https://github.com/tommy-muehle/puppet-vagrant-boxes/releases/download/1.1.0/centos-7.0-x86_64.box
-</code></pre>
-
-<p>入力後、ダイアログにて「virtualbox」を選択。　　<br />
-上記の「precise64」は、Ubuntu 64bitの事。<br />
-テンプレートは、<a href="https://www.vagrantup.com/">公式サイト</a>の Docs→Getting Started→Boxes や、
-<a href="http://www.vagrantbox.es/">Vagrantbox.es</a>などで取得できる。<br />
-落としたBoxは、「~/.vagrant.d/boxes」にキャッシュされている。<br />
-1つのboxから、複数の仮想マシンを作成する事が出来る。  </p>
-<h3 id="box_1">Boxの一覧を確認</h3>
-<pre><code>vagrant box list
-</code></pre>
-
-<h3 id="box_2">Boxの削除</h3>
-<pre><code>vagrant box remove &lt;box名&gt;
-</code></pre>
-
-<h3 id="box_3">Box操作系コマンド一覧表示</h3>
-<pre><code>vagrant box -h
+<h2 id="box">boxファイル作成</h2>
+<pre><code>vagrant package --output VM02.box
 </code></pre>
                 
                   
@@ -6975,7 +6903,7 @@ vagrant box add centos7 https://github.com/tommy-muehle/puppet-vagrant-boxes/rel
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../VMware/VMware_memo/" title="VMware memo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../11_manage1_ssh/" title="11 manage1 ssh" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6984,19 +6912,19 @@ vagrant box add centos7 https://github.com/tommy-muehle/puppet-vagrant-boxes/rel
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                VMware memo
+                11 manage1 ssh
               </span>
             </div>
           </a>
         
         
-          <a href="../Vagrant_note02_build/" title="Vagrant note02 build" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../90_reference/" title="90 reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Vagrant note02 build
+                90 reference
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

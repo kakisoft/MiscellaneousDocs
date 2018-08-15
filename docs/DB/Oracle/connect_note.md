@@ -67,5 +67,5 @@ def
 ```
 
 ### ＜参考サイト＞
-http://tooljp.com/database/Oracle/Oracle-SID-INSTANCE/Oracle-SID-INSTANCE.html  
-https://www.shift-the-oracle.com/config/oracle_sid-db_name-global_name.html  
+<http://tooljp.com/database/Oracle/Oracle-SID-INSTANCE/Oracle-SID-INSTANCE.html>  
+<https://www.shift-the-oracle.com/config/oracle_sid-db_name-global_name.html>  

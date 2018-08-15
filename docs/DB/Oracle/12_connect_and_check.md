@@ -33,13 +33,13 @@ Oracle Database 12c R1からマルチテナントアーキテクチャと呼ば�
 ```
 
 ### アーキテクチャ
-https://www.climb.co.jp/blog_dbmoto/archives/1272
+<https://www.climb.co.jp/blog_dbmoto/archives/1272>
 
 ### Oracle 12cでユーザ登録からテーブル作成までをやってみた。
-http://replication.hatenablog.com/entry/2015/08/05/093000
+<http://replication.hatenablog.com/entry/2015/08/05/093000>
 
 ## ネットワーク利用の有効化Add Star
-http://d.hatena.ne.jp/cyokodog-memo/20120522/1337676161
+<http://d.hatena.ne.jp/cyokodog-memo/20120522/1337676161>
 
 ```
 データベースmylocaldbに接続中です。

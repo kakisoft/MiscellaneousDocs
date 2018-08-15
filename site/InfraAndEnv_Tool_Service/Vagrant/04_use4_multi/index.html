@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Vagrant/Vagrant_note04_use2_shareFolder/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Vagrant/04_use4_multi/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Vagrant note04 use2 shareFolder - kakiNote</title>
+        <title>04 use4 multi - kakiNote</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#_1" tabindex="1" class="md-skip">
+      <a href="../../../#vm" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                Vagrant note04 use2 shareFolder
+                04 use4 multi
               </span>
             
           
@@ -3492,8 +3492,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note01_prepare/" title="Vagrant note01 prepare" class="md-nav__link">
-      Vagrant note01 prepare
+    <a href="../01_prepare/" title="01 prepare" class="md-nav__link">
+      01 prepare
     </a>
   </li>
 
@@ -3504,8 +3504,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note02_build/" title="Vagrant note02 build" class="md-nav__link">
-      Vagrant note02 build
+    <a href="../02_build/" title="02 build" class="md-nav__link">
+      02 build
     </a>
   </li>
 
@@ -3516,8 +3516,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note03_snapshot/" title="Vagrant note03 snapshot" class="md-nav__link">
-      Vagrant note03 snapshot
+    <a href="../03_snapshot/" title="03 snapshot" class="md-nav__link">
+      03 snapshot
     </a>
   </li>
 
@@ -3528,8 +3528,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note04_use1_basic/" title="Vagrant note04 use1 basic" class="md-nav__link">
-      Vagrant note04 use1 basic
+    <a href="../04_use1_basic/" title="04 use1 basic" class="md-nav__link">
+      04 use1 basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use2_shareFolder/" title="04 use2 shareFolder" class="md-nav__link">
+      04 use2 shareFolder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_use3_portForward/" title="04 use3 portForward" class="md-nav__link">
+      04 use3 portForward
     </a>
   </li>
 
@@ -3547,11 +3571,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Vagrant note04 use2 shareFolder
+        04 use4 multi
       </label>
     
-    <a href="./" title="Vagrant note04 use2 shareFolder" class="md-nav__link md-nav__link--active">
-      Vagrant note04 use2 shareFolder
+    <a href="./" title="04 use4 multi" class="md-nav__link md-nav__link--active">
+      04 use4 multi
     </a>
     
       
@@ -3563,124 +3587,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="共有フォルダの設定" class="md-nav__link">
-    共有フォルダの設定
+  <a href="#vm" title="複数VM起動" class="md-nav__link">
+    複数VM起動
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="ホスト⇔ゲスト　共有フォルダ設定" class="md-nav__link">
-    ホスト⇔ゲスト　共有フォルダ設定
+  <a href="#_1" title="確認" class="md-nav__link">
+    確認
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant" title="Vagrantファイル" class="md-nav__link">
-    Vagrantファイル
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#selinux" title="SELINUX 設定" class="md-nav__link">
-    SELINUX 設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="プラグインをインストール" class="md-nav__link">
-    プラグインをインストール
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#guest-addtions" title="Guest Addtions 設定" class="md-nav__link">
-    Guest Addtions 設定
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" title="１．カーネル更新" class="md-nav__link">
-    １．カーネル更新
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2virtual-box" title="２．Virtual Box設定（この設定は不要かも。）" class="md-nav__link">
-    ２．Virtual Box設定（この設定は不要かも。）
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="以下、雑記" class="md-nav__link">
-    以下、雑記
+  <a href="#_2" title="ログイン" class="md-nav__link">
+    ログイン
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" title="エラー発生時" class="md-nav__link">
-    エラー発生時
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" title="参考サイト" class="md-nav__link">
-    参考サイト
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_1" title="Vagrantで共有フォルダの内容がリアルタイム同期されない件" class="md-nav__link">
-    Vagrantで共有フォルダの内容がリアルタイム同期されない件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cannot-configure-shared-folders-on-windows-10-9041" title="Cannot configure shared folders on Windows 10 #9041" class="md-nav__link">
-    Cannot configure shared folders on Windows 10 #9041
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updated-centos-vagrant-images-available-v170801" title="Updated CentOS Vagrant Images Available (v1708.01)" class="md-nav__link">
-    Updated CentOS Vagrant Images Available (v1708.01)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3701,8 +3624,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note04_use3_portForward/" title="Vagrant note04 use3 portForward" class="md-nav__link">
-      Vagrant note04 use3 portForward
+    <a href="../11_manage1_ssh/" title="11 manage1 ssh" class="md-nav__link">
+      11 manage1 ssh
     </a>
   </li>
 
@@ -3713,8 +3636,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note04_use4_multi/" title="Vagrant note04 use4 multi" class="md-nav__link">
-      Vagrant note04 use4 multi
+    <a href="../12_manage2_backup/" title="12 manage2 backup" class="md-nav__link">
+      12 manage2 backup
     </a>
   </li>
 
@@ -3725,8 +3648,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note11_manage1_ssh/" title="Vagrant note11 manage1 ssh" class="md-nav__link">
-      Vagrant note11 manage1 ssh
+    <a href="../90_reference/" title="90 reference" class="md-nav__link">
+      90 reference
     </a>
   </li>
 
@@ -3737,8 +3660,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note90_reference/" title="Vagrant note90 reference" class="md-nav__link">
-      Vagrant note90 reference
+    <a href="../91_troubleshoot/" title="91 troubleshoot" class="md-nav__link">
+      91 troubleshoot
     </a>
   </li>
 
@@ -3749,20 +3672,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Vagrant_note91_troubleshoot/" title="Vagrant note91 troubleshoot" class="md-nav__link">
-      Vagrant note91 troubleshoot
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vagrant_note99_misc/" title="Vagrant note99 misc" class="md-nav__link">
-      Vagrant note99 misc
+    <a href="../99_misc/" title="99 misc" class="md-nav__link">
+      99 misc
     </a>
   </li>
 
@@ -6940,124 +6851,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="共有フォルダの設定" class="md-nav__link">
-    共有フォルダの設定
+  <a href="#vm" title="複数VM起動" class="md-nav__link">
+    複数VM起動
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="ホスト⇔ゲスト　共有フォルダ設定" class="md-nav__link">
-    ホスト⇔ゲスト　共有フォルダ設定
+  <a href="#_1" title="確認" class="md-nav__link">
+    確認
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant" title="Vagrantファイル" class="md-nav__link">
-    Vagrantファイル
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#selinux" title="SELINUX 設定" class="md-nav__link">
-    SELINUX 設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="プラグインをインストール" class="md-nav__link">
-    プラグインをインストール
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#guest-addtions" title="Guest Addtions 設定" class="md-nav__link">
-    Guest Addtions 設定
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" title="１．カーネル更新" class="md-nav__link">
-    １．カーネル更新
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2virtual-box" title="２．Virtual Box設定（この設定は不要かも。）" class="md-nav__link">
-    ２．Virtual Box設定（この設定は不要かも。）
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="以下、雑記" class="md-nav__link">
-    以下、雑記
+  <a href="#_2" title="ログイン" class="md-nav__link">
+    ログイン
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" title="エラー発生時" class="md-nav__link">
-    エラー発生時
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" title="参考サイト" class="md-nav__link">
-    参考サイト
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_1" title="Vagrantで共有フォルダの内容がリアルタイム同期されない件" class="md-nav__link">
-    Vagrantで共有フォルダの内容がリアルタイム同期されない件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cannot-configure-shared-folders-on-windows-10-9041" title="Cannot configure shared folders on Windows 10 #9041" class="md-nav__link">
-    Cannot configure shared folders on Windows 10 #9041
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updated-centos-vagrant-images-available-v170801" title="Updated CentOS Vagrant Images Available (v1708.01)" class="md-nav__link">
-    Updated CentOS Vagrant Images Available (v1708.01)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7078,81 +6888,37 @@
               
                 
                 
-                  <h1>Vagrant note04 use2 shareFolder</h1>
+                  <h1>04 use4 multi</h1>
                 
-                <h4 id="_1">共有フォルダの設定</h4>
-<p>ゲストの<code>/vagrant</code>ディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。<br />
-が、素の状態では仮想マシン起動時に rsync で同期するだけのようで、<br />
-リアルタイムで同期させるには、VitualBoxの仮想マシンに Guest Addtions が必要みたい。（プラグイン）</p>
-<h2 id="_2">ホスト⇔ゲスト　共有フォルダ設定</h2>
-<h3 id="vagrant">Vagrantファイル</h3>
-<p>設定例</p>
-<pre><code># config.vm.synced_folder {host_path}, {guest_path}, option...
+                <h2 id="vm">複数VM起動</h2>
+<p>Vagrantファイル設定例<br />
+（host, web, db という名称）</p>
+<pre><code>  config.vm.define &quot;host&quot; do |node|
+    node.vm.box = &quot;centos/7&quot;
+    node.vm.hostname = &quot;host&quot;
+    node.vm.network :private_network, ip: &quot;192.168.43.51&quot;
+  end
 
-config.vm.synced_folder &quot;./shared&quot;, &quot;/vagrant/shared&quot;, type: &quot;virtualbox&quot;
-※ホスト側に「shared」というフォルダを作成しています。
+  config.vm.define &quot;web&quot; do |node|
+  node.vm.box = &quot;centos/7&quot;
+    node.vm.hostname = &quot;web&quot;
+    node.vm.network :private_network, ip: &quot;192.168.43.52&quot;
+  end
 
-パーミッションも併せて設定する場合
-config.vm.synced_folder &quot;./shared&quot;, &quot;/vagrant/shared&quot;, type: &quot;virtualbox&quot;, mount_options: ['dmode=777','fmode=755']
-※ dmodeはディレクトリ、fmodeはファイルのパーミッション
-
-上記の例で、apacheの DocumentRootを設定する場合、「/home/vagrant」のパーミッションにも注意する。
-（webサーバは apacheユーザでログインするため。）
+  config.vm.define &quot;db&quot; do |node|
+  node.vm.box = &quot;centos/7&quot;
+    node.vm.hostname = &quot;db&quot;
+    node.vm.network :private_network, ip: &quot;192.168.43.53&quot;
+  end
 </code></pre>
 
-<h3 id="selinux">SELINUX 設定</h3>
-<p>ゲスト側にて、以下を設定</p>
-<pre><code>/etc/selinux/config
-の内容を変更。
-SELINUX=enforcing　→　SELINUX=disabled
-
-※再起動後に有効化
-getenforce
+<h2 id="_1">確認</h2>
+<pre><code>vagrant status
 </code></pre>
 
-<h3 id="_3">プラグインをインストール</h3>
-<pre><code>vagrant plugin install vagrant-winnfsd
-vagrant plugin install vagrant-vbguest
-
-その後
-vagrant vbguest
-※ゲスト起動時に、ホストから実行する
+<h2 id="_2">ログイン</h2>
+<pre><code>vagrant ssh host
 </code></pre>
-
-<h3 id="guest-addtions">Guest Addtions 設定</h3>
-<h4 id="1">１．カーネル更新</h4>
-<pre><code>（kernel更新。ゲスト側で実行）
-sudo yum update kernel -y
-sudo yum install kernel-devel gcc -y
-</code></pre>
-
-<h4 id="2virtual-box">２．Virtual Box設定（この設定は不要かも。）</h4>
-<pre><code>（停止後、Virtual Boxを操作）
-設定→ストレージ→光学ドライブの追加（空のままでOK）
-
-vagrant up
-</code></pre>
-
-<hr />
-<hr />
-<h2 id="_4">以下、雑記</h2>
-<h3 id="_5">エラー発生時</h3>
-<pre><code>Vagrant was unable to mount VirtualBox shared folders.
-</code></pre>
-
-<p>ゲストの/vagrantディレクトリは、ホストのVagrantfileが存在するディレクトリと共有されている。</p>
-<pre><code>sudo rm -rf /var/www/html/
-sudo ln -fs /vagrant /var/www/html
-</code></pre>
-
-<hr />
-<h2 id="_6">参考サイト</h2>
-<h5 id="vagrant_1">Vagrantで共有フォルダの内容がリアルタイム同期されない件</h5>
-<p><a href="https://qiita.com/sudachi808/items/edc304b3ee6c1436b0fd">https://qiita.com/sudachi808/items/edc304b3ee6c1436b0fd</a></p>
-<h5 id="cannot-configure-shared-folders-on-windows-10-9041">Cannot configure shared folders on Windows 10 #9041</h5>
-<p><a href="https://github.com/hashicorp/vagrant/issues/9041#issuecomment-402301714">https://github.com/hashicorp/vagrant/issues/9041#issuecomment-402301714</a></p>
-<h5 id="updated-centos-vagrant-images-available-v170801">Updated CentOS Vagrant Images Available (v1708.01)</h5>
-<p><a href="https://seven.centos.org/2017/09/updated-centos-vagrant-images-available-v1708-01/">https://seven.centos.org/2017/09/updated-centos-vagrant-images-available-v1708-01/</a></p>
                 
                   
                 
@@ -7173,7 +6939,7 @@ sudo ln -fs /vagrant /var/www/html
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Vagrant_note04_use1_basic/" title="Vagrant note04 use1 basic" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../04_use3_portForward/" title="04 use3 portForward" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -7182,19 +6948,19 @@ sudo ln -fs /vagrant /var/www/html
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Vagrant note04 use1 basic
+                04 use3 portForward
               </span>
             </div>
           </a>
         
         
-          <a href="../Vagrant_note04_use3_portForward/" title="Vagrant note04 use3 portForward" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../11_manage1_ssh/" title="11 manage1 ssh" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Vagrant note04 use3 portForward
+                11 manage1 ssh
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

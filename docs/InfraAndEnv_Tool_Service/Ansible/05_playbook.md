@@ -3,6 +3,9 @@ ansible-playbook playbook.yml --syntax-check
 ansible-playbook playbook.yml --list-task
 ansible-playbook playbook.yml --check
 
+
+
+【 playbook.yml 】
 ============================================
 ---
 - hosts: all

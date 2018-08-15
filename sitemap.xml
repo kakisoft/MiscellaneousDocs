@@ -166,11 +166,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/Oracle/RDB_note/</loc>
-     <lastmod>2018-08-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/Oracle/SQLDeveloper_note/</loc>
      <lastmod>2018-08-15</lastmod>
      <changefreq>daily</changefreq>
@@ -502,6 +497,21 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/reference/</loc>
+     <lastmod>2018-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/RDB全般/ロック制御/</loc>
+     <lastmod>2018-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/RDB全般/基本用語/</loc>
+     <lastmod>2018-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/RDB全般/結合/</loc>
      <lastmod>2018-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>

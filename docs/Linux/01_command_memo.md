@@ -320,4 +320,20 @@ sudo netstat -ltup4
 -4	IPv4のみ
 -6	IPv6のみ
 
+
+# 起動中のサービスの一覧を表示 (--all を付けると全サービス)
+systemctl -t service
+
+
+## postfix
+systemctl status postfix.service
+
+systemctl stop postfix 
+systemctl disable postfix 
+
+
+
+
+
+
 ```

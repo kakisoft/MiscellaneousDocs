@@ -32,3 +32,10 @@ sudo yum list
 sudo yum list | grep php56
 ```
 
+## インストール済みのツールを確認
+```
+yum list installed
+yum list installed | grep php
+```
+
+

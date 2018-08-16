@@ -4377,6 +4377,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#php" title="セッション情報（PHP）" class="md-nav__link">
+    セッション情報（PHP）
+  </a>
+  
+</li>
+      
       
       
       
@@ -6935,6 +6942,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#php" title="セッション情報（PHP）" class="md-nav__link">
+    セッション情報（PHP）
+  </a>
+  
+</li>
+      
       
       
       
@@ -7027,6 +7041,16 @@ DocumentRoot &quot;/vagrant/shared&quot;
 
 禁止する場合、
 Options -Indexes FollowSymLinks
+</code></pre>
+
+<h2 id="php">セッション情報（PHP）</h2>
+<pre><code>/etc/php.ini
+
+
+session.save_path = &quot;/vagrant/shared/sample02/GCP/tmp&quot;
+
+指定フォルダの権限を、rootもしくは apacheユーザに変更。
+sudo chown -R apache:apache tmp/
 </code></pre>
                 
                   

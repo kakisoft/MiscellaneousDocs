@@ -19,6 +19,12 @@ config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox", mount
 
 上記の例で、apacheの DocumentRootを設定する場合、「/home/vagrant」のパーミッションにも注意する。
 （webサーバは apacheユーザでログインするため。）
+
+
+【 ゲストで apache使うときの設定例 】
+config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox", owner: 'apache',  mount_options: ['fmode=777', 'dmode=777']
+
+※キャッシュの読み書きは、ユーザが rootもしくは apacheでなければいけないみたい。（sudo chown -R apache:apache tmp/）
 ```
 
 ### SELINUX 設定

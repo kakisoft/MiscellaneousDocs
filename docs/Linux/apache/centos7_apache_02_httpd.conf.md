@@ -78,3 +78,14 @@ Options Indexes FollowSymLinks を設定
 禁止する場合、
 Options -Indexes FollowSymLinks
 ```
+
+## セッション情報（PHP）
+```
+/etc/php.ini
+
+
+session.save_path = "/vagrant/shared/sample02/GCP/tmp"
+
+指定フォルダの権限を、rootもしくは apacheユーザに変更。
+sudo chown -R apache:apache tmp/
+```

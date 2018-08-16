@@ -101,6 +101,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/sql_log_conf/</loc>
+     <lastmod>2018-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/1st/20180220_MySQL Trend Seminar 2018 @福岡/</loc>
      <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
@@ -1217,6 +1222,11 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/vi_memo/</loc>
+     <lastmod>2018-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/セキュリティ設定/</loc>
      <lastmod>2018-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>

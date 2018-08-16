@@ -300,6 +300,9 @@ alias apast='sudo systemctl restart httpd.service'
 
 unalias apast  # 削除
 
+## エイリアスを保持
+sudo vi ~/.bashrc
+alias apast='sudo systemctl restart httpd.service'
 
 ## ポートの空きを確認
 nmap <HOSTNAME>

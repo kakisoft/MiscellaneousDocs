@@ -38,3 +38,11 @@ mysql -u root -p  < create_myqpp01.sql
 （接続状態から実行２）
 source create_myqpp01.sql
 ```
+
+__________________________________________
+
+【 CentOS 】
+## 再起動
+```
+sudo systemctl restart mysqld.service
+```

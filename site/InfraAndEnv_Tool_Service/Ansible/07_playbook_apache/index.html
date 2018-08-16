@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Ansible/04_aaa/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Ansible/07_playbook_apache/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>04 aaa - kakiNote</title>
+        <title>07 playbook apache - kakiNote</title>
       
     
     
@@ -99,7 +99,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                04 aaa
+                07 playbook apache
               </span>
             
           
@@ -3236,8 +3236,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../02_Inventory_01/" title="02 Inventory 01" class="md-nav__link">
-      02 Inventory 01
+    <a href="../02_install/" title="02 install" class="md-nav__link">
+      02 install
     </a>
   </li>
 
@@ -3248,8 +3248,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../03_playbook_01/" title="03 playbook 01" class="md-nav__link">
-      03 playbook 01
+    <a href="../03_Inventory_01/" title="03 Inventory 01" class="md-nav__link">
+      03 Inventory 01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_playbook_01/" title="04 playbook 01" class="md-nav__link">
+      04 playbook 01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05_playbook/" title="05 playbook" class="md-nav__link">
+      05 playbook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06_playbook_vars/" title="06 playbook vars" class="md-nav__link">
+      06 playbook vars
     </a>
   </li>
 
@@ -3266,8 +3302,8 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="04 aaa" class="md-nav__link md-nav__link--active">
-      04 aaa
+    <a href="./" title="07 playbook apache" class="md-nav__link md-nav__link--active">
+      07 playbook apache
     </a>
     
   </li>
@@ -6800,12 +6836,13 @@
               
                 
                 
-                  <h1>04 aaa</h1>
+                  <h1>07 playbook apache</h1>
                 
-                <pre><code>ansible-playbook playbook.yml --syntax-check
-ansible-playbook playbook.yml --list-task
-ansible-playbook playbook.yml --check
+                <pre><code>
 
+
+
+【 playbook.yml 】
 ============================================
 ---
 - hosts: all
@@ -6813,55 +6850,58 @@ ansible-playbook playbook.yml --check
   tasks:
     - name: add a new user
       user: name=taguchi state=absent
+
+- hosts: web
+  sudo: yes
+  tasks:
+    - name: install apache
+      yum: name=httpd state=latest
+    - name: start apache and enabled
+      service: name=httpd state=started enabled=yes
 ============================================
 
+
 さて、続きをやっていきましょう。
-0:05
-前回は Playbook を使っていろいろやっていきましたが、今回はその中で使ったモジュールについて見ていきましょう。
-0:13
-例えば user モジュールを使ったのですが、他にどのようなオプションがあるか、user 以外にどういうモジュールがあるかというのを見ていきたいと思います。
+0:04
+今ユーザの追加ができたので、今度は Web の方に Apache をインストールして、さらにそれを起動させて、さらに再起動時も有効になるように設定していきます。
+0:15
+Playbook でやっていきたいので、それを編集していきましょう。
 0:20
-どこに一覧があるかというと…、Ansible ドキュメントに一覧があります。
-0:26
-左側に「Module Index」というのがあるので、こちらを見ていきましょう。
+「var_prompt: …」はもう要らないので消して、「user: name=taguchi」としておきましょう。
 0:29
-カテゴリに分かれていますが、この中にたくさんモジュールが詰まっているので、詳細を見たい場合はこちらから探していってください。
-0:39
-ユーザの場合は、System Modules の user のところにあるかと思います。
-0:45
-それぞれのオプションが必須なのかどうか、それぞれどういった値を取り得るか、というのが書かれていたりします。
-0:51
-例えば name は必須なので必ず付けなくてはいけません、となっています。
-0:56
-せっかくなので、他のオプションも使ってみましょう。
-0:58
-よく使うのは state というものです。
-1:01
-state は、それが存在するかどうかを指定することができます。
-1:05
-例えば「taguchi ユーザがいない」としたい場合には、Playbook を編集して、「user: name=taguchi state=absent」とすれば削除がされるはずです。
-1:24
-これで実行してみましょう。
-1:26
-実行すると、サーバの状態が変わりましたと出ています。
-1:31
-「ssh web」で Web にログインして、「cat /etc/passwd」とすると、ユーザの一覧から taguchi がいなくなっているのが分かるかと思います。
-1:43
-こういった具合にいろいろなオプションを使うことができるので、使い方として、マニュアルの見方とともに覚えておくようにしましょう。
-1:50
-それから ansible-playbook のオプションがいくつかあるので、それを見ていきます。
+all に対してではなくて、web に対してだけやりたいので、新しいセクションを作っていけば OK ですね。
+0:34
+「- hosts: web」としましょう。
+0:36
+管理者権限が必要なので、「sudo: yes」とします。
+0:40
+「tasks:」で、「- name: install apache」とします。
+0:48
+モジュールは何を使うかというと、yum を使えば OK ですね。
+0:52
+「yum: name=httpd state=latest」とすると最新版をインストールしてくれるので、それも覚えておきましょう。
+1:07
+それからさらにそれを起動しないといけないので、「- name: start apache and enabled」としましょう。
+1:16
+今回は service モジュールを使っていきます。
+1:19
+「service: name=httpd state=started enabled=yes」とすると、再起動の時も有効になってくれるはずです。
+1:30
+このあたりのオプションは、公式ドキュメントのモジュール一覧の yum とか service を見てみるといいかと思います。
+1:37
+これで保存して、実行していきましょう。
+1:40
+ちょっと時間がかかるので、終わったところから再開していきます。
+1:46
+…さて、終わったようですね。
+1:47
+「install apache」と「start apache and enabled」が実行されて、192.168.43.52 の方が「changed=2」になっています。
 1:56
-1 つ目が「--syntax-check」で、これをオプションに付けると Playbook の文法が合っているか間違っているかを教えてくれます。
-2:06
-今回やってみると、ちゃんとエラーもなくできているのが分かるかと思います。
-2:10
-その他、「--list-task」とすると、タスクの一覧を出してくれるので、この Playbook で何をやるのかというときに使えるかと思います。
-2:23
-その他、「--check」とすると、ドライランをしてくれます。
-2:27
-ドライランは何かというと、実際に実行はしないが、実行したとするとどういった結果表示になるかというのを教えてくれるものになります。
-2:36
-この辺もオプションとして慣れておくといいかと思います。
+ここまで出来たら、Web サーバが立ち上がっているはずなので、192.168.43.52 でアクセスすると何かが見えるのではないでしょうか。
+2:05
+ブラウザでアクセスすると、ちゃんと Apache のテストページができているので、Web に対してうまく設定ができています。
+2:11
+といったところで、簡単でしたが Apache のインストールの仕方を見てきました。
 
 </code></pre>
                 
@@ -6884,7 +6924,7 @@ state は、それが存在するかどうかを指定することができま�
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../03_playbook_01/" title="03 playbook 01" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../06_playbook_vars/" title="06 playbook vars" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6893,7 +6933,7 @@ state は、それが存在するかどうかを指定することができま�
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                03 playbook 01
+                06 playbook vars
               </span>
             </div>
           </a>

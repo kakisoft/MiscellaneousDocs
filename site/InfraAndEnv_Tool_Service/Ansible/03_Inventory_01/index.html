@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Ansible/03_playbook_01/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Ansible/03_Inventory_01/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>03 playbook 01 - kakiNote</title>
+        <title>03 Inventory 01 - kakiNote</title>
       
     
     
@@ -99,7 +99,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                03 playbook 01
+                03 Inventory 01
               </span>
             
           
@@ -3236,8 +3236,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../02_Inventory_01/" title="02 Inventory 01" class="md-nav__link">
-      02 Inventory 01
+    <a href="../02_install/" title="02 install" class="md-nav__link">
+      02 install
     </a>
   </li>
 
@@ -3254,8 +3254,8 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="03 playbook 01" class="md-nav__link md-nav__link--active">
-      03 playbook 01
+    <a href="./" title="03 Inventory 01" class="md-nav__link md-nav__link--active">
+      03 Inventory 01
     </a>
     
   </li>
@@ -3267,8 +3267,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../04_aaa/" title="04 aaa" class="md-nav__link">
-      04 aaa
+    <a href="../04_playbook_01/" title="04 playbook 01" class="md-nav__link">
+      04 playbook 01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05_playbook/" title="05 playbook" class="md-nav__link">
+      05 playbook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06_playbook_vars/" title="06 playbook vars" class="md-nav__link">
+      06 playbook vars
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07_playbook_apache/" title="07 playbook apache" class="md-nav__link">
+      07 playbook apache
     </a>
   </li>
 
@@ -6800,74 +6836,42 @@
               
                 
                 
-                  <h1>03 playbook 01</h1>
+                  <h1>03 Inventory 01</h1>
                 
-                <pre><code>playbook.yml 
+                <pre><code>ansible (ホスト名)
+ansible web
+ansible db 
+ansible all
 
-1 行目は「---」で YAML ファイルということを示します。
-====================================
----
-- hosts: all
-  sudo: yes
-  tasks:
-    - name: add a new user
-      user: name=taguchi
-====================================
+i オプションで Inventory ファイルの場所を指定します。
 
-ansible-playbook playbook.yml
+そのあとに実行するコマンドを書いていくのですが、コマンド自体はモジュールというもので管理されていたりするので、「-m」として何かのモジュールを指定してください。
+
+毎回 Inventory ファイルの場所を指定してもいいのですが、ansible.config というファイルに場所を書いておくと省略することができるので、それをやってしまいましょう。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+vi hosts
+----- 編集開始
+[web]
+192.168.43.52
+
+[db]
+192.168.43.53
+----- 編集終了
+ansible all -i hosts -m ping
 
 
-━
-ファイル形式は YAML なので、yml という拡張子にしましょう。
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1 行目は「---」で YAML ファイルということを示します。
 
-最初に書かなければいけないのは「- hosts: 」で、対象となるサーバを指定しましょう。
+vi ansible.cfg
+----- 編集開始
+[defaults]
+hostfile = ./hosts
+----- 編集終了
+ansible all -m ping
 
-「web」「db」でもいいのですが、今回は全部なので「all」とします。
-
-ユーザを追加するにあたっては管理者権限が必要なので、そういう場合は「sudo: yes」としましょう。
-
-そこまで来たらようやくタスクを実行することができて、「tasks:」でモジュールを指定していきます。
-
-ここではタスクの名前を指定するのが推奨されているので、必須ではないですが付けておきましょう。
-「- name: add a new user」としましょう。
-
-モジュール自体は user モジュールを使っていきます。
-
-オプションで name が必須になるので、今回は「user: name=taguchi」としましょう。
-
-これでとりあえずできたのですが、注意しておいていただきたいのは、ここに書いているものは「サーバのあるべき状態を記述したもの」だと思ってください。
-
-なので、このタスクは毎回実行するたびに taguchi ユーザがどんどん追加されていくのではなくて、もし taguchi ユーザがあった場合には何もしないというものになるので、意識しておいてください。
-
-これは難しい言葉で「冪等性（べきとうせい）」というのですが、興味がある人は調べてみるといいでしょう。
-1:44
-ここまでできたら保存して、実行していきます。
-
-実行するには absible-playbook というコマンドを使って、Playbook のファイル名を指定しましょう。
-
-実行すると「WARNING」が出てきていますが、これは無視しておいてください。
-
-「TASK」に実行結果が出ています。
-
-タスクをやりましたよ、と。
-
-実際処理は OK で、サーバの状態が変わりましたよということで、「changed」となっています。
-
-ここで冪等性を試すために、もう 1 回同じ Playbook を実行してみましょう。
-
-そうすると、タスク自体は OK なのですが、すでにユーザがあるので、「changed=0」になっているのが分かるかと思います。
-
-こういった冪等性というか、サーバのあるべき状態を Playbook に書くのを意識しておくといいかと思います。
-
-それからちゃんとユーザが追加されているかというのも確認しておきましょう。
-
-「ssh web」で Web にログインして、「cat /etc/passwd」を見るとユーザの一覧が出てきます。
-
-一番下にちゃんと taguchi ユーザが追加されているのが分かるかと思います。
-
-「exit」で Host に戻って続きをやっていきたいのですが、長くなりそうなので次回以降にしていきましょう。
 
 </code></pre>
                 
@@ -6890,7 +6894,7 @@ ansible-playbook playbook.yml
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../02_Inventory_01/" title="02 Inventory 01" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../02_install/" title="02 install" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6899,19 +6903,19 @@ ansible-playbook playbook.yml
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                02 Inventory 01
+                02 install
               </span>
             </div>
           </a>
         
         
-          <a href="../04_aaa/" title="04 aaa" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../04_playbook_01/" title="04 playbook 01" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                04 aaa
+                04 playbook 01
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Ansible/02_Inventory_01/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Ansible/05_playbook/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>02 Inventory 01 - kakiNote</title>
+        <title>05 playbook - kakiNote</title>
       
     
     
@@ -99,7 +99,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                02 Inventory 01
+                05 playbook
               </span>
             
           
@@ -3234,6 +3234,42 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../02_install/" title="02 install" class="md-nav__link">
+      02 install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_Inventory_01/" title="03 Inventory 01" class="md-nav__link">
+      03 Inventory 01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_playbook_01/" title="04 playbook 01" class="md-nav__link">
+      04 playbook 01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -3242,8 +3278,8 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="02 Inventory 01" class="md-nav__link md-nav__link--active">
-      02 Inventory 01
+    <a href="./" title="05 playbook" class="md-nav__link md-nav__link--active">
+      05 playbook
     </a>
     
   </li>
@@ -3255,8 +3291,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../03_playbook_01/" title="03 playbook 01" class="md-nav__link">
-      03 playbook 01
+    <a href="../06_playbook_vars/" title="06 playbook vars" class="md-nav__link">
+      06 playbook vars
     </a>
   </li>
 
@@ -3267,8 +3303,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../04_aaa/" title="04 aaa" class="md-nav__link">
-      04 aaa
+    <a href="../07_playbook_apache/" title="07 playbook apache" class="md-nav__link">
+      07 playbook apache
     </a>
   </li>
 
@@ -6800,42 +6836,71 @@
               
                 
                 
-                  <h1>02 Inventory 01</h1>
+                  <h1>05 playbook</h1>
                 
-                <pre><code>ansible (ホスト名)
-ansible web
-ansible db 
-ansible all
-
-i オプションで Inventory ファイルの場所を指定します。
-
-そのあとに実行するコマンドを書いていくのですが、コマンド自体はモジュールというもので管理されていたりするので、「-m」として何かのモジュールを指定してください。
-
-毎回 Inventory ファイルの場所を指定してもいいのですが、ansible.config というファイルに場所を書いておくと省略することができるので、それをやってしまいましょう。
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-vi hosts
------ 編集開始
-[web]
-192.168.43.52
-
-[db]
-192.168.43.53
------ 編集終了
-ansible all -i hosts -m ping
+                <pre><code>ansible-playbook playbook.yml --syntax-check
+ansible-playbook playbook.yml --list-task
+ansible-playbook playbook.yml --check
 
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+【 playbook.yml 】
+============================================
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: add a new user
+      user: name=taguchi state=absent
+============================================
 
-vi ansible.cfg
------ 編集開始
-[defaults]
-hostfile = ./hosts
------ 編集終了
-ansible all -m ping
-
+さて、続きをやっていきましょう。
+0:05
+前回は Playbook を使っていろいろやっていきましたが、今回はその中で使ったモジュールについて見ていきましょう。
+0:13
+例えば user モジュールを使ったのですが、他にどのようなオプションがあるか、user 以外にどういうモジュールがあるかというのを見ていきたいと思います。
+0:20
+どこに一覧があるかというと…、Ansible ドキュメントに一覧があります。
+0:26
+左側に「Module Index」というのがあるので、こちらを見ていきましょう。
+0:29
+カテゴリに分かれていますが、この中にたくさんモジュールが詰まっているので、詳細を見たい場合はこちらから探していってください。
+0:39
+ユーザの場合は、System Modules の user のところにあるかと思います。
+0:45
+それぞれのオプションが必須なのかどうか、それぞれどういった値を取り得るか、というのが書かれていたりします。
+0:51
+例えば name は必須なので必ず付けなくてはいけません、となっています。
+0:56
+せっかくなので、他のオプションも使ってみましょう。
+0:58
+よく使うのは state というものです。
+1:01
+state は、それが存在するかどうかを指定することができます。
+1:05
+例えば「taguchi ユーザがいない」としたい場合には、Playbook を編集して、「user: name=taguchi state=absent」とすれば削除がされるはずです。
+1:24
+これで実行してみましょう。
+1:26
+実行すると、サーバの状態が変わりましたと出ています。
+1:31
+「ssh web」で Web にログインして、「cat /etc/passwd」とすると、ユーザの一覧から taguchi がいなくなっているのが分かるかと思います。
+1:43
+こういった具合にいろいろなオプションを使うことができるので、使い方として、マニュアルの見方とともに覚えておくようにしましょう。
+1:50
+それから ansible-playbook のオプションがいくつかあるので、それを見ていきます。
+1:56
+1 つ目が「--syntax-check」で、これをオプションに付けると Playbook の文法が合っているか間違っているかを教えてくれます。
+2:06
+今回やってみると、ちゃんとエラーもなくできているのが分かるかと思います。
+2:10
+その他、「--list-task」とすると、タスクの一覧を出してくれるので、この Playbook で何をやるのかというときに使えるかと思います。
+2:23
+その他、「--check」とすると、ドライランをしてくれます。
+2:27
+ドライランは何かというと、実際に実行はしないが、実行したとするとどういった結果表示になるかというのを教えてくれるものになります。
+2:36
+この辺もオプションとして慣れておくといいかと思います。
 
 </code></pre>
                 
@@ -6858,7 +6923,7 @@ ansible all -m ping
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../01_Overview/" title="01 Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../04_playbook_01/" title="04 playbook 01" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -6867,19 +6932,19 @@ ansible all -m ping
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                01 Overview
+                04 playbook 01
               </span>
             </div>
           </a>
         
         
-          <a href="../03_playbook_01/" title="03 playbook 01" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../06_playbook_vars/" title="06 playbook vars" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                03 playbook 01
+                06 playbook vars
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -1,9 +1,9 @@
 ```
+ansible-playbook playbook03.yml
 
 
 
-
-【 playbook.yml 】
+【 playbook03.yml 】
 ============================================
 ---
 - hosts: all

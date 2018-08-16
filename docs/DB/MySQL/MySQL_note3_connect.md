@@ -1,5 +1,6 @@
 ## ログイン
 ```
+mysql -u root
 mysql -u ユーザ名 -p [データベース名]
 mysql -u root -p rootpassword
 

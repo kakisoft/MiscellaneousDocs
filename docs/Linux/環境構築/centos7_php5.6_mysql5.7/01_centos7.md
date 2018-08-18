@@ -84,6 +84,12 @@ config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox", mount
 
 ※パーミッション設定
 chmod 777 /vagrant
+
+
+【 ゲストで apache使うときの設定例 】
+config.vm.synced_folder "./shared", "/vagrant/shared", type: "virtualbox", owner: 'apache',  mount_options: ['fmode=777', 'dmode=777']
+
+※キャッシュの読み書きは、ユーザが rootもしくは apacheでなければいけないみたい。（sudo chown -R apache:apache tmp/）
 ```
 
 

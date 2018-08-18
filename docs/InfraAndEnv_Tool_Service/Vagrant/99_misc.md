@@ -1,3 +1,6 @@
+ネットワークアダプタ  
+ブリッジ
+
 ```
 vagrant ssh
 vagrant@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).

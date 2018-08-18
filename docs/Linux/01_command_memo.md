@@ -335,7 +335,10 @@ systemctl stop postfix
 systemctl disable postfix 
 
 
+## rpm
+sudo rpm -ivh https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 
+e - 削除
 
 
 

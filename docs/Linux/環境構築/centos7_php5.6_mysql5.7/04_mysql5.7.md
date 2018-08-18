@@ -62,3 +62,9 @@ set global validate_password_policy=LOW;
 set password = password('root');
 ```
 
+_______________________________________
+
+## アンインストール
+```
+sudo yum remove -y mysql*
+```

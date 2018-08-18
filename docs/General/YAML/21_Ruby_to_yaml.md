@@ -14,6 +14,12 @@ users = [
 ]
 
 puts users.to_yaml
+
+#----#
+
+File.open("created_yaml_file01.yml", "w") do |f|
+  f.puts(users.to_yaml)
+end
 ==============================
 
 

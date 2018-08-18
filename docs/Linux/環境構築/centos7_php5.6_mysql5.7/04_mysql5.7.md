@@ -64,6 +64,11 @@ set password = password('root');
 
 _______________________________________
 
+## 再起動
+```
+sudo systemctl restart httpd.service
+```
+
 ## アンインストール
 ```
 sudo yum remove -y mysql*

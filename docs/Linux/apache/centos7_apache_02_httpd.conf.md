@@ -40,7 +40,7 @@ DocumentRoot "/var/www/html"
 　　↓変更可
 
 （例）
-DocumentRoot "/vagrant/shared"
+DocumentRoot "/vagrant/shared/www"
 ```
 ## Directory 設定
 webサーバは apacheユーザでログインする？  
@@ -54,7 +54,7 @@ webサーバは apacheユーザでログインする？
 
   ↓
 
-<Directory "/vagrant/shared">
+<Directory "/vagrant/shared/www">
     AllowOverride All
     Options FollowSymLinks
     Require all granted

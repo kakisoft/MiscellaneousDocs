@@ -1,15 +1,3 @@
-## ビルトインWebサーバ起動
-```
-php -S <IP>:<Port>
-（例）
-php -S localhost:8000
-```
-
-## php.ini
-```
-php -i | grep php.ini
-```
-
 ## マルチバイト関数
 「mb_」で始まるマルチバイト関数（mb_strlenなど）を実行した時に、以下のエラーが出た時の対処。
 ```

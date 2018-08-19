@@ -1,5 +1,9 @@
 ## hostsファイルのパス
 C:\Windows\System32\drivers\etc\hosts
+```
+ファイル名を指定して実行→drivers
+で、etcフォルダの下に移動可。
+```
 
 ## スタートアップのアプリ
 shell:startup

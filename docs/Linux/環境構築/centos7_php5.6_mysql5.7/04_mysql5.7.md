@@ -66,7 +66,7 @@ _______________________________________
 
 ## 再起動
 ```
-sudo systemctl restart httpd.service
+sudo systemctl restart mysqld.service
 ```
 
 ## アンインストール

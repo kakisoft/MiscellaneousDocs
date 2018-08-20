@@ -1,9 +1,9 @@
 ## insert
 ```sql
-insert into table01 (title, body) values ('title1','body001');
+INSERT INTO table01 (title, body) VALUES ('title1','body001');
 
 
-insert into table01 (title, body) values 
+INSERT INTO table01 (title, body) VALUES 
  ('title3','body003')
 ,('title4','body004')
 ,('title5','body005')
@@ -17,13 +17,13 @@ select * from table01 order by score limit3;
 ```
 
 ```sql
-select 
+SELECT 
     * 
-from 
+FROM 
     table01 
-where true 
-order by 
-    title limit 3
+WHERE true 
+ORDER BY 
+    title LIMIT 3
 ;
 ```
 

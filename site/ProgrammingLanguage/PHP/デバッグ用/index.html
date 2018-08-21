@@ -5964,6 +5964,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#debug_backtrace" title="debug_backtrace（ファイルパス）" class="md-nav__link">
+    debug_backtrace（ファイルパス）
+  </a>
+  
+</li>
+      
       
       
       
@@ -5972,6 +5979,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ヒアドキュメント/" title="ヒアドキュメント" class="md-nav__link">
+      ヒアドキュメント
+    </a>
   </li>
 
         
@@ -6478,6 +6497,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Uncategorized/Other/2018/" title="2018" class="md-nav__link">
+      2018
+    </a>
+  </li>
+
         
           
           
@@ -7241,6 +7272,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#debug_backtrace" title="debug_backtrace（ファイルパス）" class="md-nav__link">
+    debug_backtrace（ファイルパス）
+  </a>
+  
+</li>
+      
       
       
       
@@ -7268,6 +7306,20 @@
 <pre><code>/etc/php.ini
 display_errors = Off　⇒  display_errors = On
 
+</code></pre>
+
+<h2 id="debug_backtrace">debug_backtrace（ファイルパス）</h2>
+<pre><code class="php">$traceArr = version_compare(phpversion(), '5.4.0') &gt;=0 ? debug_backtrace(false, 1) : debug_backtrace();
+$path = $traceArr[0]['file'];
+
+echo &quot;&lt;pre&gt;&quot;;
+print_r($traceArr);
+print_r($path);
+echo &quot;&lt;/pre&gt;&quot;;          
+
+
+//debug_backtrace(false, 1)    //第一引数： trueだとObject、falseだとArray。多分。
+                               //第二引数： 0 だと情報がいっぱい出てくる。
 </code></pre>
                 
                   
@@ -7304,13 +7356,13 @@ display_errors = Off　⇒  display_errors = On
           </a>
         
         
-          <a href="../日付の比較/" title="日付の比較" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ヒアドキュメント/" title="ヒアドキュメント" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                日付の比較
+                ヒアドキュメント
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

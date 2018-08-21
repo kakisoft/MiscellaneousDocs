@@ -1716,6 +1716,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/ProgrammingLanguage/PHP/ヒアドキュメント/</loc>
+     <lastmod>2018-08-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/ProgrammingLanguage/PHP/日付の比較/</loc>
      <lastmod>2018-08-21</lastmod>
      <changefreq>daily</changefreq>
@@ -1842,6 +1847,11 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/Uncategorized/English/misc/</loc>
+     <lastmod>2018-08-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Uncategorized/Other/2018/</loc>
      <lastmod>2018-08-21</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -16,6 +16,9 @@ create table table01 (
                        ,is_draft  boolean       default TRUE
                        ,created   timestamp     default 'now'
                      );
+__________________________________________________________
+
+user_id | bigint | not null default nextval('aaa_bbb_seq'::regclass)
 ```
 
 ## テーブル名変更
@@ -44,3 +47,10 @@ create index column01_index on table01(column01);
 ## インデックス削除
 drop index column01_index;
 
+______________________________________________
+
+## ユニークキー追加
+参考：<http://nfnoface.hatenablog.com/entry/2016/11/17/123000#UNIQUE-%E5%88%B6%E7%B4%84-CREATE-TABLE-%E5%BE%8C-ALTER-TABLE-%E3%81%A7%E8%BF%BD%E5%8A%A0>
+```
+ALTER TABLE example2 ADD UNIQUE(user_id, date);
+```

@@ -6,22 +6,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MongoDB/MongoDB_note1_install/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MongoDB/01_install/</loc>
      <lastmod>2018-08-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MongoDB/MongoDB_note2_start_command/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MongoDB/02_start_command/</loc>
      <lastmod>2018-08-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MongoDB/MongoDB_note3_basic/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MongoDB/03_basic/</loc>
      <lastmod>2018-08-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MongoDB/MongoDB_note4_use/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MongoDB/04_use/</loc>
      <lastmod>2018-08-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -41,42 +41,42 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/01_install/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/02_basic/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/03_connect/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/04_management/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/05_DDL/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/06_DML/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/07_dump/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/MyEnvironment/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/MySQL_note1_install/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/MySQL_note2_basic/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/MySQL_note3_connect/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/MySQL_note4_management/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/MySQL_note5_DDL/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/MySQL_note6_DML/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/MySQL/MySQL_note7_dump/</loc>
      <lastmod>2018-08-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -421,67 +421,72 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/01_install/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/02_connect/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/03_cmd_conf/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/04_basic/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/05_DDL/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/06_DML/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/07_DML_join/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/08_view/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/09_transaction/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/10_dump/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/81_tools/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/82_tools_use/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/91_manage_basic_query/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/MyEnvironment/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note01_install/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note02_connect/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note03_cmd_conf/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note04_basic/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note05_DDL/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note06_DML/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note07_DML_join/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note08_view/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note09_transaction/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note10_dump/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note90_tools/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/PostgreSQL_note91_tools_use/</loc>
      <lastmod>2018-08-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -496,17 +501,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/manage/</loc>
-     <lastmod>2018-08-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/note/</loc>
      <lastmod>2018-08-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/reference/</loc>
+     <lastmod>2018-08-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/型・制約/</loc>
      <lastmod>2018-08-23</lastmod>
      <changefreq>daily</changefreq>
     </url>

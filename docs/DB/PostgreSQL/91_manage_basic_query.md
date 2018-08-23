@@ -10,18 +10,18 @@ where  1=1
 ## テーブル情報を取得
 ```
 SELECT
-    table_name               AS "テーブル名"
-   ,ordinal_position         AS "No"
-   ,column_name              AS "カラム名"
-   ,data_type                AS "データ型"
-   ,character_maximum_length AS "文字数（文字列型）"
-   ,character_octet_length   AS "バイト数（文字列型）"
-   ,numeric_precision        AS "桁数（数値型）"
-   ,numeric_scale            AS "小数部（数値型）"
-   ,datetime_precision       AS "ミリ秒以下（日付型）"
-   ,interval_type            AS "インターバルの単位（日付型）"
-   ,is_nullable              AS "NULL_OK?"
-   ,column_default           AS "デフォルト値"
+    table_name                AS  "テーブル名"
+   ,ordinal_position          AS  "No"
+   ,column_name               AS  "カラム名"
+   ,data_type                 AS  "データ型"
+   ,character_maximum_length  AS  "文字数（文字列型）"
+   ,character_octet_length    AS  "バイト数（文字列型）"
+   ,numeric_precision         AS  "桁数（数値型）"
+   ,numeric_scale             AS  "小数部（数値型）"
+   ,datetime_precision        AS  "ミリ秒以下（日付型）"
+   ,interval_type             AS  "インターバルの単位（日付型）"
+   ,is_nullable               AS  "NULL_OK?"
+   ,column_default            AS  "デフォルト値"
 FROM
   information_schema.columns
 WHERE  1=1

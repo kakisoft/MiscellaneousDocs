@@ -62,5 +62,11 @@ s/state/State/g　　　　カーソル行のみ
 %s/state/State/g     ファイル全体、確認表示を市内
 %s/state/State/gc    ファイル全体、確認表示
 
+＜アンドゥ＞
+u
+
+＜リドゥ＞
+Ctrl + r
+
 
 ```

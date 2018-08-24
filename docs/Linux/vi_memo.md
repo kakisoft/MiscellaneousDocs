@@ -69,4 +69,14 @@ u
 Ctrl + r
 
 
+＜分割＞
+sp
+vs
+Ctrl + w        エリア移動
+:e logout.php   別ファイルを開く
+:close          エリアを閉じる
+
+
+
+
 ```

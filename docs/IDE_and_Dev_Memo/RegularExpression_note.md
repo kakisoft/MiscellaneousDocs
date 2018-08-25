@@ -81,6 +81,7 @@ bat cat hat eat
 
 ```
 
+
 ### 選択子
 ```
   |
@@ -100,6 +101,39 @@ example.net
 |  A[^A-Z0-9]CCC  |  Aで始り、２番目は半角アルファベット以外の文字で、最後はCCC  |
 |  /<\/?[^>]+>/g  |  『  <何か> 』 or  『  </何か>  』                           |
 
+
+### キャプチャ
+【 置換 】
+```
+dotinstall, https://dotinstall.com 
+google, https://google.com 
+example, https://example.com 
+
+(.+), \s?(.+)
+<a href="$2">$1</a>
+
+　⇒  <a href="https://dotinstall.com ">dotinstall</a>
+　　　<a href="https://google.com ">google</a>
+　　　<a href="https://example.com ">example</a>
+
+```
+
+### 後方参照
+```
+3, 8, 5, 4, 4, 5, 4, 1, 1, 5, 3, 3
+
+(\d),\s\1
+※最初の()でキャプチャした内容は、「1」で取り出せる。
+
+　⇒　4, 4
+　　　1, 1
+　　　3, 3
+
+```
+
 ### ＜参考サイト＞
-http://kyu-mu.net/coffeescript/regexp/#flags    
-https://msdn.microsoft.com/ja-jp/library/cc392020.aspx    
+<http://kyu-mu.net/coffeescript/regexp/#flags>    
+<https://msdn.microsoft.com/ja-jp/library/cc392020.aspx>    
+
+
+

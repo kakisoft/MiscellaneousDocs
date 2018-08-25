@@ -1,3 +1,4 @@
+vsCode
 # Visual Studio Code メモ
 
 #### ショートカット
@@ -10,7 +11,11 @@
 | 変数の参照元を検索                      |  Shift + F12   その後、↑↓でスクロール。    |
 | シンボルへ移動(「:」でグループごと)      |  Ctrl + Shift + o                         |
 | 矩形選択                               |  Shift + Alt + ドラッグ                   |
+| ファイル名を検索                        | Ctrl + p                                 |
 | グローバル検索                          |  Ctrl Shivt + f                           |
+| 正規表現検索                            |  Ctrl + f の後、右のマークを選択           |
+| 条件を指定して検索                       |  Ctrl + Shiftf + j                      |
+| 置換                                   |  Ctrl + f ⇒ 左の ▷ マーク                |
 | コメントアウト                          |  Ctrl + /                                 |
 | 警告・エラーを表示                      |  Ctrl + Shift + m                         |
 | 画面分割                               |  Ctrl + \                                 |

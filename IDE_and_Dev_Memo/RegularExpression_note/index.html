@@ -2832,28 +2832,35 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" title="量指定子" class="md-nav__link">
+  <a href="#_4" title="文字クラス" class="md-nav__link">
+    文字クラス
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="量指定子" class="md-nav__link">
     量指定子
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" title="選択子" class="md-nav__link">
+  <a href="#_6" title="選択子" class="md-nav__link">
     選択子
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" title="例" class="md-nav__link">
+  <a href="#_7" title="例" class="md-nav__link">
     例
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" title="＜参考サイト＞" class="md-nav__link">
+  <a href="#_8" title="＜参考サイト＞" class="md-nav__link">
     ＜参考サイト＞
   </a>
   
@@ -7433,28 +7440,35 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" title="量指定子" class="md-nav__link">
+  <a href="#_4" title="文字クラス" class="md-nav__link">
+    文字クラス
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="量指定子" class="md-nav__link">
     量指定子
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" title="選択子" class="md-nav__link">
+  <a href="#_6" title="選択子" class="md-nav__link">
     選択子
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" title="例" class="md-nav__link">
+  <a href="#_7" title="例" class="md-nav__link">
     例
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" title="＜参考サイト＞" class="md-nav__link">
+  <a href="#_8" title="＜参考サイト＞" class="md-nav__link">
     ＜参考サイト＞
   </a>
   
@@ -7572,12 +7586,39 @@
 <td align="left">\w の逆。</td>
 </tr>
 <tr>
+<td align="left">\r\n</td>
+<td align="left">改行（windows）</td>
+</tr>
+<tr>
+<td align="left">\r</td>
+<td align="left">改行（v9までのmacOS）</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">改行（unix、v10以降のmacOS）</td>
+</tr>
+<tr>
+<td align="left">\r\n</td>
+<td align="left">\r</td>
+</tr>
+<tr>
 <td align="left">\</td>
 <td align="left">エスケープ（例：「\/」で「/」を表現）</td>
 </tr>
+</tbody>
+</table>
+<h3 id="_4">文字クラス</h3>
+<table>
+<thead>
+<tr>
+<th align="left">パターン</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">[abc]</td>
-<td align="left">abcのどれか</td>
+<td align="left">abcのどれか１文字</td>
 </tr>
 <tr>
 <td align="left">[a-z]</td>
@@ -7589,7 +7630,22 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_4">量指定子</h3>
+<pre><code>bat cat hat eat
+  → [bch]at
+　→ [a-z]at
+  → [^bc]at
+
+
+「^」は、「[」の直後に記述した時のみ、特殊な意味を持つ。
+それ以外では、単なるリテラル。
+
+
+『　^　　-　　]　　\　』
+これらは、場合によってはエスケープが不要。
+（ 『　^　　-　』 は、特定の位置に無い場合はリテラルと解釈されるので、場合によってはエスケープ不要。）
+</code></pre>
+
+<h3 id="_5">量指定子</h3>
 <table>
 <thead>
 <tr>
@@ -7633,7 +7689,7 @@
 
 </code></pre>
 
-<h3 id="_5">選択子</h3>
+<h3 id="_6">選択子</h3>
 <pre><code>  |
 
 example.com
@@ -7644,7 +7700,7 @@ example.net
 
 </code></pre>
 
-<h3 id="_6">例</h3>
+<h3 id="_7">例</h3>
 <table>
 <thead>
 <tr>
@@ -7663,7 +7719,7 @@ example.net
 </tr>
 </tbody>
 </table>
-<h3 id="_7">＜参考サイト＞</h3>
+<h3 id="_8">＜参考サイト＞</h3>
 <p>http://kyu-mu.net/coffeescript/regexp/#flags  <br />
 https://msdn.microsoft.com/ja-jp/library/cc392020.aspx    </p>
                 

@@ -37,6 +37,12 @@ mkdir app{1..10}    #=> フォルダ「app1～10」を作成
 touch app{1..5}/test{1..3}{.txt,.jpeg,.gif}
 
 
+## 英語表示（）
+LANG=C
 
+
+## ファイル復元
+※ファイルシステムがext3かext4の場合のみ
+extundelete
 
 ```

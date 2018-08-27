@@ -237,10 +237,17 @@ ps aux
  u … 実行ユーザ名や実行ユーザのIDのプロセスを表示
  x … 制御端末の無いプロセスを表示
 
+ps afu
+ ツリー上に見る
+
 ## kill
 kill -9 <PID>
 9：Killシグナルによるプロセスの終了
 http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230806/?rt=nocnt
+
+（コマンド名が分かっている場合、この書き方でもOK）
+killall bash
+
 
 ## 接続端末のデバイスファイル名を表示
 tty
@@ -267,6 +274,16 @@ df -hT
 ＜ディレクトリごと＞
 du -h
 （調べたいディレクトリで実行）
+
+＜深さを指定して調査＞
+du -h --max-depth 3
+
+＜300MB以上のファイルを表示＞
+find . -size +300M | xargs ls -l | sort -rn
+
+
+## zip化
+zip -r "yyyymmdd.zip" *
 
 
 ## メモリ利用率を確認

@@ -55,5 +55,6 @@ select
 ,upper('Hello')          -- HELLO
 ,lower('Hello')          -- hello
 ,concat('Hello','World') -- HelloWorld
+,concat('a','b',null)    -- null （連結する文字に nullがあった場合）
 ;
 ```

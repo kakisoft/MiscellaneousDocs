@@ -24,7 +24,7 @@ sudo find /etc -name "http*" -type f -exec wc -l {} +
 sudo find /etc -name "http*" -type f | xargs wc -l
 
 
-## 解凍（tar）
+## 解凍（tar）　　　解答　回答　展開
 tar xzvf asterisk-1.8.8.1.tar.gz
 
 ## 圧縮（tar）

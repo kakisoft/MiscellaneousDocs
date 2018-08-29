@@ -56,3 +56,14 @@ WHERE 1=1
 --  AND tablename = 'table01';
 
 ```
+
+## シーケンス一覧
+```
+SELECT 
+    pg_class.relname 
+FROM
+    pg_class 
+	LEFT JOIN pg_user ON pg_class.relowner = pg_user.usesysid 
+WHERE  1=1
+  AND  pg_class.relkind = 'S'
+```

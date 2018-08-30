@@ -5952,6 +5952,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../CSRF対策/" title="CSRF対策" class="md-nav__link">
+      CSRF対策
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Composer/" title="Composer" class="md-nav__link">
       Composer
     </a>
@@ -6101,6 +6113,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stdclass" title="stdClass()" class="md-nav__link">
+    stdClass()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="プロパティ" class="md-nav__link">
+    プロパティ
+  </a>
+  
+</li>
+      
       
       
       
@@ -6119,13 +6145,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-3-15" type="checkbox" id="nav-10-3-15">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-3-16" type="checkbox" id="nav-10-3-16">
     
-    <label class="md-nav__link" for="nav-10-3-15">
+    <label class="md-nav__link" for="nav-10-3-16">
       Larabel
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-10-3-15">
+      <label class="md-nav__title" for="nav-10-3-16">
         Larabel
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -7407,6 +7433,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stdclass" title="stdClass()" class="md-nav__link">
+    stdClass()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="プロパティ" class="md-nav__link">
+    プロパティ
+  </a>
+  
+</li>
+      
       
       
       
@@ -7428,6 +7468,28 @@
                 
                 <h2 id="mvc-view">MVC の View</h2>
 <pre><code>View については、Web サーバから見られる必要があるので、よく public_html というディレクトリ名が使われる。
+</code></pre>
+
+<h2 id="stdclass">stdClass()</h2>
+<p>PHP デフォルトのクラスで宣言することなく、いきなり new して使うことができる特殊なオブジェクト。  </p>
+<h2 id="_1">プロパティ</h2>
+<p>プロパティを使用するとき、先頭の「$」は不要。</p>
+<pre><code class="php">class SpUser {
+    public $id;
+    public $user_name;
+    public $company_name;
+    public $email;
+
+}
+
+
+$userInstancd = new SpUser();
+$userInstancd-&gt;company_name = &quot;paper&quot;;
+
+echo &quot;&lt;pre&gt;&quot;;
+var_dump($userInstancd-&gt;company_name);
+echo &quot;&lt;/pre&gt;&quot;;
+
 </code></pre>
                 
                   

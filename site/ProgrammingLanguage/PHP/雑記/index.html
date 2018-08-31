@@ -6127,6 +6127,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#array" title="クラス（インスタンス）を arrayにキャストできる。" class="md-nav__link">
+    クラス（インスタンス）を arrayにキャストできる。
+  </a>
+  
+</li>
+      
       
       
       
@@ -7447,6 +7454,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#array" title="クラス（インスタンス）を arrayにキャストできる。" class="md-nav__link">
+    クラス（インスタンス）を arrayにキャストできる。
+  </a>
+  
+</li>
+      
       
       
       
@@ -7474,12 +7488,18 @@
 <p>PHP デフォルトのクラスで宣言することなく、いきなり new して使うことができる特殊なオブジェクト。  </p>
 <h2 id="_1">プロパティ</h2>
 <p>プロパティを使用するとき、先頭の「$」は不要。</p>
-<pre><code class="php">class SpUser {
+<pre><code class="php">
+class SpUser {
     public $id;
     public $user_name;
     public $company_name;
     public $email;
 
+    private $_errMessage=&quot;err&quot;;
+    public function __get($name)
+    {
+        if($name === 'errMessage') return $this-&gt;_errMessage;
+    }
 }
 
 
@@ -7490,6 +7510,20 @@ echo &quot;&lt;pre&gt;&quot;;
 var_dump($userInstancd-&gt;company_name);  #=&gt; string(5) &quot;paper&quot;
 echo &quot;&lt;/pre&gt;&quot;;
 
+
+echo &quot;&lt;pre&gt;&quot;;
+var_dump($userInstancd-&gt;errMessage);  #=&gt; string(3) &quot;err&quot;
+echo &quot;&lt;/pre&gt;&quot;;
+
+
+</code></pre>
+
+<h2 id="array">クラス（インスタンス）を arrayにキャストできる。</h2>
+<pre><code class="php">$userInstanceArray = (array)$userInstance;
+
+=================================
+
+$userInstanceArray['company_name']
 
 </code></pre>
                 

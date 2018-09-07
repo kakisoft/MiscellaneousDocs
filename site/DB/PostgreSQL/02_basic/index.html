@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/03_cmd_conf/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/02_basic/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>03 cmd conf - kakiNote</title>
+        <title>02 basic - kakiNote</title>
       
     
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                03 cmd conf
+                02 basic
               </span>
             
           
@@ -1606,18 +1606,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../02_connect/" title="02 connect" class="md-nav__link">
-      02 connect
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -1627,11 +1615,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        03 cmd conf
+        02 basic
       </label>
     
-    <a href="./" title="03 cmd conf" class="md-nav__link md-nav__link--active">
-      03 cmd conf
+    <a href="./" title="02 basic" class="md-nav__link md-nav__link--active">
+      02 basic
     </a>
     
       
@@ -1643,22 +1631,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="縦表示（元に戻す場合は、同じコマンドをもっかい入力）" class="md-nav__link">
-    縦表示（元に戻す場合は、同じコマンドをもっかい入力）
+  <a href="#_1" title="ヘルプ表示" class="md-nav__link">
+    ヘルプ表示
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="カラム表示/非表示" class="md-nav__link">
-    カラム表示/非表示
+  <a href="#db" title="DB作成" class="md-nav__link">
+    DB作成
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#postgresql" title="PostgreSQLをコマンドラインで使うときの小技" class="md-nav__link">
-    PostgreSQLをコマンドラインで使うときの小技
+  <a href="#db_1" title="DB削除" class="md-nav__link">
+    DB削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="起動" class="md-nav__link">
+    起動
   </a>
   
 </li>
@@ -1680,8 +1675,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../04_basic/" title="04 basic" class="md-nav__link">
-      04 basic
+    <a href="../03_connect/" title="03 connect" class="md-nav__link">
+      03 connect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_cmd_conf/" title="04 cmd conf" class="md-nav__link">
+      04 cmd conf
     </a>
   </li>
 
@@ -7439,22 +7446,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="縦表示（元に戻す場合は、同じコマンドをもっかい入力）" class="md-nav__link">
-    縦表示（元に戻す場合は、同じコマンドをもっかい入力）
+  <a href="#_1" title="ヘルプ表示" class="md-nav__link">
+    ヘルプ表示
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="カラム表示/非表示" class="md-nav__link">
-    カラム表示/非表示
+  <a href="#db" title="DB作成" class="md-nav__link">
+    DB作成
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#postgresql" title="PostgreSQLをコマンドラインで使うときの小技" class="md-nav__link">
-    PostgreSQLをコマンドラインで使うときの小技
+  <a href="#db_1" title="DB削除" class="md-nav__link">
+    DB削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="起動" class="md-nav__link">
+    起動
   </a>
   
 </li>
@@ -7476,14 +7490,21 @@
               
                 
                 
-                  <h1>03 cmd conf</h1>
+                  <h1>02 basic</h1>
                 
-                <h2 id="_1">縦表示（元に戻す場合は、同じコマンドをもっかい入力）</h2>
-<p>\x</p>
-<h2 id="_2">カラム表示/非表示</h2>
-<p>\t</p>
-<h2 id="postgresql">PostgreSQLをコマンドラインで使うときの小技</h2>
-<p>https://qiita.com/kiyodori/items/b9b34c7abe7e45f65c46</p>
+                <h2 id="_1">ヘルプ表示</h2>
+<pre><code>help
+\?
+</code></pre>
+
+<h2 id="db">DB作成</h2>
+<p>createdb blogapp01</p>
+<h2 id="db_1">DB削除</h2>
+<p>dropdb blogapp01</p>
+<h2 id="_2">起動</h2>
+<pre><code>sudo service postgresql start
+sudo service postgresql-9.6 start
+</code></pre>
                 
                   
                 
@@ -7504,7 +7525,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../02_connect/" title="02 connect" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../01_install/" title="01 install" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -7513,19 +7534,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                02 connect
+                01 install
               </span>
             </div>
           </a>
         
         
-          <a href="../04_basic/" title="04 basic" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../03_connect/" title="03 connect" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                04 basic
+                03 connect
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

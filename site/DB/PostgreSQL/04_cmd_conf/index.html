@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/02_connect/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/04_cmd_conf/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>02 connect - kakiNote</title>
+        <title>04 cmd conf - kakiNote</title>
       
     
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                02 connect
+                04 cmd conf
               </span>
             
           
@@ -1606,6 +1606,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../02_basic/" title="02 basic" class="md-nav__link">
+      02 basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_connect/" title="03 connect" class="md-nav__link">
+      03 connect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -1615,11 +1639,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        02 connect
+        04 cmd conf
       </label>
     
-    <a href="./" title="02 connect" class="md-nav__link md-nav__link--active">
-      02 connect
+    <a href="./" title="04 cmd conf" class="md-nav__link md-nav__link--active">
+      04 cmd conf
     </a>
     
       
@@ -1631,42 +1655,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="接続" class="md-nav__link">
-    接続
+  <a href="#_1" title="縦表示（元に戻す場合は、同じコマンドをもっかい入力）" class="md-nav__link">
+    縦表示（元に戻す場合は、同じコマンドをもっかい入力）
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="終了" class="md-nav__link">
-    終了
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="バージョン確認" class="md-nav__link">
-    バージョン確認
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="一覧確認" class="md-nav__link">
-    一覧確認
+  <a href="#_2" title="カラム表示/非表示" class="md-nav__link">
+    カラム表示/非表示
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="とりあえずの動作確認にでも" class="md-nav__link">
-    とりあえずの動作確認にでも
+  <a href="#postgresql" title="PostgreSQLをコマンドラインで使うときの小技" class="md-nav__link">
+    PostgreSQLをコマンドラインで使うときの小技
   </a>
   
 </li>
@@ -1679,30 +1683,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../03_cmd_conf/" title="03 cmd conf" class="md-nav__link">
-      03 cmd conf
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../04_basic/" title="04 basic" class="md-nav__link">
-      04 basic
-    </a>
   </li>
 
         
@@ -7459,42 +7439,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="接続" class="md-nav__link">
-    接続
+  <a href="#_1" title="縦表示（元に戻す場合は、同じコマンドをもっかい入力）" class="md-nav__link">
+    縦表示（元に戻す場合は、同じコマンドをもっかい入力）
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="終了" class="md-nav__link">
-    終了
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="バージョン確認" class="md-nav__link">
-    バージョン確認
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="一覧確認" class="md-nav__link">
-    一覧確認
+  <a href="#_2" title="カラム表示/非表示" class="md-nav__link">
+    カラム表示/非表示
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="とりあえずの動作確認にでも" class="md-nav__link">
-    とりあえずの動作確認にでも
+  <a href="#postgresql" title="PostgreSQLをコマンドラインで使うときの小技" class="md-nav__link">
+    PostgreSQLをコマンドラインで使うときの小技
   </a>
   
 </li>
@@ -7516,22 +7476,14 @@
               
                 
                 
-                  <h1>02 connect</h1>
+                  <h1>04 cmd conf</h1>
                 
-                <h2 id="_1">接続</h2>
-<p>(su - postgres)
-psql blogapp01</p>
-<h2 id="_2">終了</h2>
-<p>\q</p>
-<h3 id="_3">バージョン確認</h3>
-<p>psql --version</p>
-<h2 id="_4">一覧確認</h2>
-<pre><code>psql -l
-\l
-</code></pre>
-
-<h2 id="_5">とりあえずの動作確認にでも</h2>
-<p>select now();</p>
+                <h2 id="_1">縦表示（元に戻す場合は、同じコマンドをもっかい入力）</h2>
+<p>\x</p>
+<h2 id="_2">カラム表示/非表示</h2>
+<p>\t</p>
+<h2 id="postgresql">PostgreSQLをコマンドラインで使うときの小技</h2>
+<p>https://qiita.com/kiyodori/items/b9b34c7abe7e45f65c46</p>
                 
                   
                 
@@ -7552,7 +7504,7 @@ psql blogapp01</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../01_install/" title="01 install" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../03_connect/" title="03 connect" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -7561,19 +7513,19 @@ psql blogapp01</p>
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                01 install
+                03 connect
               </span>
             </div>
           </a>
         
         
-          <a href="../03_cmd_conf/" title="03 cmd conf" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../05_DDL/" title="05 DDL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                03 cmd conf
+                05 DDL
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

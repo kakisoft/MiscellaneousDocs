@@ -46,3 +46,11 @@ select ramdom()
 select * from table01 order by random() limit 1;
 ```
 
+## キャスト
+```
+SELECT
+    user_id                  AS num_user_id
+   ,CAST(user_id AS VARCHAR) AS user_id
+FROM
+    users
+```

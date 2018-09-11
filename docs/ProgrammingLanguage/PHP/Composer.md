@@ -13,4 +13,5 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
+インストールというより、git clone に近いのか？
 

@@ -1,12 +1,5 @@
 <https://laravel.com/>
 
-## 仮想マシン
-<https://laravel.com/docs/5.1/homestead>  
-<https://readouble.com/laravel/5.4/ja/homestead.html>
-```
-vagrant box add laravel/homestead
-```
-
 
 ## インストール
 ```

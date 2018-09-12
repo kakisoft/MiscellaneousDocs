@@ -18,7 +18,7 @@ sudo service mysql start
 sudo service mysql stop
 
 ## 再起動
-sudo service mysql restart
+sudo service mysqld restart
 
 ## サービスの状態確認
 ```

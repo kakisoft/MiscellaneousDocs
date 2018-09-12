@@ -12,17 +12,28 @@ ___________________________
 help;
 
 ## 開始
-sudo service mysql start
+```
+sudo service mysql  start
+sudo service mysqld start
+```
 
 ## 停止
-sudo service mysql stop
+```
+sudo service mysql  stop
+sudo service mysqld stop
+```
 
 ## 再起動
+```
+sudo service mysql  restart
 sudo service mysqld restart
+
+```
 
 ## サービスの状態確認
 ```
-sudo service mysql status
+sudo service mysql  status
+sudo service mysqld status
 
 RedHat系だと「mysqld」？
 ```

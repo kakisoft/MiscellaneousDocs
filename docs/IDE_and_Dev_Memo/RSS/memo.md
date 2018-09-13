@@ -1,3 +1,7 @@
+## RSS チェックサイト
+<https://validator.w3.org/feed/>
+
+
 ## RSS1.0    
 ```
 RDF（Resource Description Framework）   

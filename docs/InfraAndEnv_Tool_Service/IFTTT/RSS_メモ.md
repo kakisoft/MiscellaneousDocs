@@ -14,8 +14,47 @@ URI でチェックできたり、配信する内容をコピペしてチェッ�
 A top-level feed title and a unique link
 A GUID and date for each entry
 
-itemタグ内の link
+itemタグ内の link(これが無いと、登録時に IFTTTがエラーが出るケースがある。RSSのURLによってはスルーされたりと、よくわからない。)
+チェックが走るのは初回登録時のみで、以降は linkタグがない itemを追加しても問題なく認識されたりと、何だかよくわからない動きをする。
+
+
+【注意点】
+・itemごとのguidは、ユニークな値にしなければ、投稿されない模様。
+・titleはユニークであること
+・description の重複は？⇒重複OK
+
+
+itemの追記は、上下のどちらでもいい。
+
+
+
+SS2.0のguidは、isPermaLink="false"が指定されていない限り、
+(isPermaLink="true"、もしくは、無指定の場合)
+エントリのリンクとして使ってよい。
+
+
+<guid isPermaLink="false">
+<guid isPermaLink="true">
+trueにして URL書いても、認識されない？
+・・・と思いきや、ちゃんと認識された。
+ただ、リンク名が「ift.tt/2Nbjweo 」と、変な名前になってる。
+
+
 ```
+
+
+## 手動チェック
+```
+Check Now
+
+それでも RSSはリアルタイムに更新されない。
+
+構文に記述ミスがあるから投稿されないのか、追記した内容が配信済みと判断されて投稿されてないのか判別がつかないので、
+ちょっと苦労する。
+
+```
+
+
 
 ## メッセージ
 ```

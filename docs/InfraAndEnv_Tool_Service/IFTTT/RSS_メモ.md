@@ -1,6 +1,8 @@
 ## RSS チェックサイト
 <https://validator.w3.org/feed/>
-
+```
+URI でチェックできたり、配信する内容をコピペしてチェックする事ができます。
+```
 
 ## 構造
 <http://phpjavascriptroom.com/?t=topic&p=rss_format>

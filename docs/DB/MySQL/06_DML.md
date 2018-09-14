@@ -58,3 +58,67 @@ select
 ,concat('a','b',null)    -- null （連結する文字に nullがあった場合）
 ;
 ```
+
+## 日付の計算
+```
+SELECT
+ DATE_ADD(CURRENT_DATE(),INTERVAL 3 MONTH)
+
+```
+
+
+## 日付型への変換（キャスト）
+```
+SELECT 
+    CAST('20180823' AS DATE)                AS DATE01      -- 2018-08-23
+   ,CAST('2018-08-23 11:20:00' AS DATETIME) AS DATETIME01  -- 2018-08-23 11:20:00
+   ,STR_TO_DATE('2018-02-01',  '%Y-%M-%D')  AS X1
+
+```
+## 文字列から日付への変換・計算
+```
+SELECT
+    DATE_ADD(CAST('2018/02/28' AS DATE), INTERVAL 1 MONTH) AS "2/28 の１か月後"
+   ,DATE_ADD(CAST('2018/02/29' AS DATE), INTERVAL 1 MONTH) AS "2/29 の１か月後"
+   ,DATE_ADD(CAST('2018/02/30' AS DATE), INTERVAL 1 MONTH) AS "2/30 の１か月後"
+   ,DATE_ADD(CAST('2018/02/31' AS DATE), INTERVAL 1 MONTH) AS "2/31 の１か月後"
+
+   ,DATE_ADD(CAST('2018/03/28' AS DATE), INTERVAL 1 MONTH) AS "3/28 の１か月前"
+   ,DATE_ADD(CAST('2018/03/29' AS DATE), INTERVAL 1 MONTH) AS "3/29 の１か月前"
+   ,DATE_ADD(CAST('2018/03/30' AS DATE), INTERVAL 1 MONTH) AS "3/30 の１か月前"
+   ,DATE_ADD(CAST('2018/03/31' AS DATE), INTERVAL 1 MONTH) AS "3/31 の１か月前"
+
+   ,DATE_ADD(CAST('2020/02/28' AS DATE), INTERVAL 1 MONTH) AS "2/28 の１か月後（うるう年）"
+   ,DATE_ADD(CAST('2020/02/29' AS DATE), INTERVAL 1 MONTH) AS "2/29 の１か月後（うるう年）"
+   ,DATE_ADD(CAST('2020/02/30' AS DATE), INTERVAL 1 MONTH) AS "2/30 の１か月後（うるう年）"
+   ,DATE_ADD(CAST('2020/02/31' AS DATE), INTERVAL 1 MONTH) AS "2/31 の１か月後（うるう年）"
+
+   ,DATE_ADD(CAST('2020/03/28' AS DATE), INTERVAL 1 MONTH) AS "3/28 の１か月前（うるう年）"
+   ,DATE_ADD(CAST('2020/03/29' AS DATE), INTERVAL 1 MONTH) AS "3/29 の１か月前（うるう年）"
+   ,DATE_ADD(CAST('2020/03/30' AS DATE), INTERVAL 1 MONTH) AS "3/30 の１か月前（うるう年）"
+   ,DATE_ADD(CAST('2020/03/31' AS DATE), INTERVAL 1 MONTH) AS "3/31 の１か月前（うるう年）"
+   
+   
+2018-03-28
+2020-03-29
+
+
+2/28 の１か月後	2018/03/28
+2/29 の１か月後	NULL
+2/30 の１か月後	NULL
+2/31 の１か月後	NULL
+3/28 の１か月前	2018/02/28
+3/29 の１か月前	2018/02/28
+3/30 の１か月前	2018/02/28
+3/31 の１か月前	2018/02/28
+2/28 の１か月後（うるう年）	2020/03/28
+2/29 の１か月後（うるう年）	2020/03/29
+2/30 の１か月後（うるう年）	NULL
+2/31 の１か月後（うるう年）	NULL
+3/28 の１か月前（うるう年）	2020/02/28
+3/29 の１か月前（うるう年）	2020/02/29
+3/30 の１か月前（うるう年）	2020/02/29
+3/31 の１か月前（うるう年）	2020/02/29
+
+```
+

@@ -15,3 +15,20 @@ php -r "unlink('composer-setup.php');"
 
 インストールというより、git clone に近いのか？
 
+```
+＜Globally＞
+mv composer.phar /usr/local/bin/composer
+```
+
+## インストール
+php composer-setup.php --install-dir=bin --filename=composer
+
+
+
+## パッケージスト
+composer を使ってインストールできる定番パッケージリスト。  
+<https://packagist.org/>
+
+
+https://twitteroauth.com/
+

@@ -295,6 +295,13 @@ cat /proc/cpuinfo
 ## 画面クリア
 Ctrl + l（エル）
 
+## 日付確認
+date
+
+## ズレた日付の修正
+sudo yum -y install ntpdate  
+sudo ntpdate ntp.nict.jp  
+
 ## リダイレクト
 echo "date" > cmd.txt
 echo "free" >> cmd.txt

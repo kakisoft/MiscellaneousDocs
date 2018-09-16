@@ -69,3 +69,28 @@ where  1=1
   and  COLUMN2 like '%' || '検索文字' || '%'
 ```
 
+## 日付
+```sql
+SELECT
+    ADD_MONTHS(TO_DATE('2018/01/28'), 1) AS "1/28 の１か月後"
+   ,ADD_MONTHS(TO_DATE('2018/01/29'), 1) AS "1/29 の１か月後"
+   ,ADD_MONTHS(TO_DATE('2018/01/30'), 1) AS "1/30 の１か月後"
+   ,ADD_MONTHS(TO_DATE('2018/01/31'), 1) AS "1/31 の１か月後"
+    
+   ,ADD_MONTHS(TO_DATE('2018/03/31'), -1) AS "3/28 の１か月前"
+   ,ADD_MONTHS(TO_DATE('2018/03/31'), -1) AS "3/29 の１か月前"
+   ,ADD_MONTHS(TO_DATE('2018/03/31'), -1) AS "3/30 の１か月前"
+   ,ADD_MONTHS(TO_DATE('2018/03/31'), -1) AS "3/31 の１か月前"
+   
+   ,ADD_MONTHS(TO_DATE('2020/01/28'), 1) AS "1/28 の１か月後(閏年)"
+   ,ADD_MONTHS(TO_DATE('2020/01/29'), 1) AS "1/29 の１か月後(閏年)"
+   ,ADD_MONTHS(TO_DATE('2020/01/30'), 1) AS "1/30 の１か月後(閏年)"
+   ,ADD_MONTHS(TO_DATE('2020/01/31'), 1) AS "1/31 の１か月後(閏年)"
+    
+   ,ADD_MONTHS(TO_DATE('2020/03/31'), -1) AS "3/28 の１か月前(閏年)"
+   ,ADD_MONTHS(TO_DATE('2020/03/31'), -1) AS "3/29 の１か月前(閏年)"
+   ,ADD_MONTHS(TO_DATE('2020/03/31'), -1) AS "3/30 の１か月前(閏年)"
+   ,ADD_MONTHS(TO_DATE('2020/03/31'), -1) AS "3/31 の１か月前(閏年)"
+FROM 
+    DUAL
+```

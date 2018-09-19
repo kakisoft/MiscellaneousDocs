@@ -85,8 +85,11 @@ if($functionKey == "update"){
 {/php}
 
 
-
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 日付を整形して出力 】
+https://www.smarty.net/docs/ja/language.modifier.date.format.tpl
+
+{strtotime($userParameters.update_date)|date_format:"%G/%m/%d %H:%M:%S"}
+
 
 ```

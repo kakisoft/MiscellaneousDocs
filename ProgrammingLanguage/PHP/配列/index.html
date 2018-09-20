@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/ProgrammingLanguage/PHP/日付の比較/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/ProgrammingLanguage/PHP/配列/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>日付の比較 - kakiNote</title>
+        <title>配列 - kakiNote</title>
       
     
     
@@ -99,7 +99,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                日付の比較
+                配列
               </span>
             
           
@@ -6152,18 +6152,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../API/" title="API" class="md-nav__link">
-      API
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../ApacheがPHPを認識しない/" title="ApacheがPHPを認識しない" class="md-nav__link">
       ApacheがPHPを認識しない
     </a>
@@ -6330,18 +6318,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="日付の比較" class="md-nav__link md-nav__link--active">
-      日付の比較
+  <li class="md-nav__item">
+    <a href="../日付/" title="日付" class="md-nav__link">
+      日付
     </a>
-    
   </li>
 
         
@@ -6366,6 +6347,25 @@
     <a href="../確認ダイアログ/" title="確認ダイアログ" class="md-nav__link">
       確認ダイアログ
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="配列" class="md-nav__link md-nav__link--active">
+      配列
+    </a>
+    
   </li>
 
         
@@ -7712,14 +7712,15 @@
               
                 
                 
-                  <h1>日付の比較</h1>
+                  <h1>配列</h1>
                 
-                <p>unix_time</p>
-<pre><code>$timestamp1 = time();
-$timestamp2 = strtotime($recordInstance[0]['exec_date']);  //postgers:TIMESTAMP
-$secdiff = abs($timestamp1 - $timestamp2);
-$mindiff = $secdiff/(60);           
-$dif_days = $secdiff/(60*60*24);
+                <pre><code class="php">//文字列⇒配列化
+$piecesUserId = explode(&quot; &quot;, preg_replace('/\s+/', ' ', trim($_GET['user_id'])));
+
+//配列⇒文字列
+$separatedArray = implode(&quot;,&quot;, $pieces);
+
+
 
 </code></pre>
                 
@@ -7742,7 +7743,7 @@ $dif_days = $secdiff/(60*60*24);
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ライブラリメモ/" title="ライブラリメモ" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../確認ダイアログ/" title="確認ダイアログ" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -7751,19 +7752,19 @@ $dif_days = $secdiff/(60*60*24);
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                ライブラリメモ
+                確認ダイアログ
               </span>
             </div>
           </a>
         
         
-          <a href="../正規表現/" title="正規表現" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../雑記/" title="雑記" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                正規表現
+                雑記
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

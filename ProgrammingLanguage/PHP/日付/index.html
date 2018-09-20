@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/ProgrammingLanguage/PHP/API/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/ProgrammingLanguage/PHP/日付/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>API - kakiNote</title>
+        <title>日付 - kakiNote</title>
       
     
     
@@ -77,6 +77,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../../#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -99,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                API
+                日付
               </span>
             
           
@@ -6150,25 +6154,6 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="API" class="md-nav__link md-nav__link--active">
-      API
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
     <a href="../ApacheがPHPを認識しない/" title="ApacheがPHPを認識しない" class="md-nav__link">
@@ -6337,11 +6322,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../日付の比較/" title="日付の比較" class="md-nav__link">
-      日付の比較
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        日付
+      </label>
+    
+    <a href="./" title="日付" class="md-nav__link md-nav__link--active">
+      日付
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="日付を指定フォーマットに変換" class="md-nav__link">
+    日付を指定フォーマットに変換
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="日付の比較" class="md-nav__link">
+    日付の比較
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -6365,6 +6391,18 @@
   <li class="md-nav__item">
     <a href="../確認ダイアログ/" title="確認ダイアログ" class="md-nav__link">
       確認ダイアログ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../配列/" title="配列" class="md-nav__link">
+      配列
     </a>
   </li>
 
@@ -7706,145 +7744,68 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="日付を指定フォーマットに変換" class="md-nav__link">
+    日付を指定フォーマットに変換
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="日付の比較" class="md-nav__link">
+    日付の比較
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>API</h1>
+                  <h1>日付</h1>
                 
-                <pre><code>&lt;?php
-$base_url = 'https://qiita.com';
+                <pre><code>strtotime
+(PHP 4, PHP 5, PHP 7)
 
-$tag = 'PHP';
-$query = ['page'=&gt;'1','per_page'=&gt;'5'];
-
-$response = file_get_contents(
-                  $base_url.'/api/v2/tags/'.$tag.'/items?' .
-                  http_build_query($query)
-            );
-// https://qiita.com/api/v2/tags/PHP/items?page=1&amp;per_page=5
-
-// 結果はjson形式で返されるので
-$result = json_decode($response,true);
+strtotime — 英文形式の日付を Unix タイムスタンプに変換する
 </code></pre>
 
-<pre><code>&lt;?php
-$data = [
-    'title' =&gt; '送信テスト',
-    'body' =&gt; 'テスト',
-];
-
-$opts = [
-    'http' =&gt; [
-        'method' =&gt; 'POST',
-        'header' =&gt; implode(&quot;\r\n&quot;, [ 
-            &quot;User-Agent: hogehoge&quot;,
-            &quot;Accept-Language: ja&quot;,
-            &quot;Cookie: test=hoge&quot;,
-        ]),
-    ],
-    'data' =&gt; http_build_query($data)
-];
-
-$ctx = stream_context_create($opts);
-
-$response = file_get_contents('http://example.com/inquiry', false, $ctx);
-
+<h2 id="_1">日付を指定フォーマットに変換</h2>
+<pre><code>$a4 =  date('Y/m/d H:i',strtotime('2018-09-18 16:58:33.159892+09'));
+echo $a4 . &quot;&lt;br&gt;&quot;;   //=&gt;  2018/09/18 16:58
 </code></pre>
 
-<hr />
-<p><a href="http://tototoshi.hatenablog.com/entry/2014/06/10/011223">http://tototoshi.hatenablog.com/entry/2014/06/10/011223</a></p>
-<pre><code>&lt;?php
-$content = json_decode(file_get_contents(&quot;http://localhost:5000/api/note/161&quot;));
-</code></pre>
-
-<pre><code>&lt;?php
-$context = stream_context_create(
-    array(
-        'http' =&gt; array(
-            'method'=&gt; 'POST',
-            'header'=&gt; 'Content-type: application/json; charset=UTF-8',
-            'content' =&gt; json_encode(
-                array(
-                    'title' =&gt; 'file_get_contents で POST',
-                    'raw' =&gt; &quot;file_get_contents で POST\nPHP すごい...\n&quot;
-                )
-            )
-        )
-    )
-);
-
-file_get_contents('http://localhost:5000/api/note', false, $context);
-</code></pre>
-
-<hr />
-<pre><code>//$posted ：渡すパラメータ（Array）
-$url = &quot;http://challenge-your-limits.herokuapp.com/call/me&quot;;
-//$posted = {&quot;challenge_users&quot;:&quot;yama&quot;};
-$posted = [&quot;taguchi&quot; =&gt; 200];
-
-        $post = http_build_query($posted, &quot;&quot;, &quot;&amp;&quot;);
-
-        $header = array(
-                    'Content-Type: application/x-www-form-urlencoded',
-                    'Content-Length: ' . strlen($post)
-                );
-
-        $context = array(
-                    'http' =&gt; array(
-                            'method' =&gt; 'POST',
-                            'header' =&gt; implode(&quot;\r\n&quot;, $header),
-                            'content' =&gt; $post
-                        ),
-                    'ssl' =&gt; array(
-                        'verify_peer' =&gt; false,
-                        'verify_peer_name' =&gt; false
-                    )
-                );
-
-
-        $data = file_get_contents($url, false, stream_context_create($context));
-
-//$http_response_header
-
-
-echo &quot;&lt;br&gt;=======================&lt;br&gt;&quot;;
-var_dump($data);
-echo &quot;&lt;br&gt;=======================&lt;br&gt;&quot;;
-var_dump($http_response_header);
-echo &quot;&lt;br&gt;=======================&lt;br&gt;&quot;;
-
-</code></pre>
-
-<hr />
-<pre><code>$posted ：渡すパラメータ（Array）
-
-
-        $post = http_build_query($posted, &quot;&quot;, &quot;&amp;&quot;);
-
-        $header = array(
-                    'Content-Type: application/x-www-form-urlencoded',
-                    'Content-Length: ' . strlen($post)
-                );
-
-        $context = array(
-                    'http' =&gt; array(
-                            'method' =&gt; 'POST',
-                            'header' =&gt; implode(&quot;\r\n&quot;, $header),
-                            'content' =&gt; $post
-                        ),
-                    'ssl' =&gt; array(
-                        'verify_peer' =&gt; false,
-                        'verify_peer_name' =&gt; false
-                    )
-                );
-
-        $data = file_get_contents($url, false, stream_context_create($context));
-
-$http_response_header
-
+<h2 id="_2">日付の比較</h2>
+<p>unix_time</p>
+<pre><code class="php">$timestamp1 = time();
+$timestamp2 = strtotime($recordInstance[0]['exec_date']);  //postgers:TIMESTAMP
+$secdiff = abs($timestamp1 - $timestamp2);
+$mindiff = $secdiff/(60);           
+$dif_days = $secdiff/(60*60*24);
 
 </code></pre>
                 
@@ -7867,7 +7828,7 @@ $http_response_header
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../02_php.ini/" title="02 php.ini" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ライブラリメモ/" title="ライブラリメモ" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -7876,19 +7837,19 @@ $http_response_header
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                02 php.ini
+                ライブラリメモ
               </span>
             </div>
           </a>
         
         
-          <a href="../ApacheがPHPを認識しない/" title="ApacheがPHPを認識しない" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../正規表現/" title="正規表現" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                ApacheがPHPを認識しない
+                正規表現
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

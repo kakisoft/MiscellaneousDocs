@@ -1,14 +1,27 @@
 ## テーブル一覧を取得
-```
+```sql
 select 
 	relname as TABLE_NAME
 from 
 	pg_stat_user_tables
 where  1=1
 ```
+## テーブル一覧を取得（コメント付き）
+```sql
+select
+    pg_stat_user_tables.relname as TABLE_NAME
+   ,pg_description.description  as TABLE_COMMENT
+from
+    pg_stat_user_tables
+	left join pg_description on pg_stat_user_tables.relid = pg_description.objoid
+	                        and pg_description.objsubid=0
+where  true
+  and  pg_stat_user_tables.relname like 'xi%'
+order by 1
+```
 
 ## テーブル情報を取得
-```
+```sql
 SELECT
     table_name                AS  "テーブル名"
    ,ordinal_position          AS  "No"
@@ -32,7 +45,7 @@ ORDER BY
 ```
 
 ## 制約情報を確認
-```
+```sql
 SELECT 
     constraint_name
    ,table_name
@@ -45,7 +58,7 @@ WHERE 1=1
 ```
 
 ## インデックス確認
-```
+```sql
 SELECT 
     tablename
 	,indexname
@@ -58,7 +71,7 @@ WHERE 1=1
 ```
 
 ## シーケンス一覧
-```
+```sql
 SELECT 
     pg_class.relname 
 FROM
@@ -66,4 +79,41 @@ FROM
 	LEFT JOIN pg_user ON pg_class.relowner = pg_user.usesysid 
 WHERE  1=1
   AND  pg_class.relkind = 'S'
+```
+
+## テーブル情報を取得（psql）
+```
+\d+ talbe01;
+```
+
+## カラム情報を取得
+```sql
+select 
+	* 
+from 
+	information_schema.columns 
+where  true
+--  and  table_catalog='データベース名' 
+--  and = table_name='テーブル名' 
+order by 
+	ordinal_position
+;
+```
+
+
+## カラムコメント一覧を取得（未完成）
+```sql
+SELECT
+    pg_stat_all_tables.relname  AS TABLE_NAME
+   ,pg_attribute.attname        AS COLUMN_NAME
+   ,pg_description.description  AS COLUMN_COMMENT
+FROM
+    pg_stat_all_tables
+    left join pg_description on pg_stat_all_tables.relid = pg_description.objoid
+    left join pg_attribute   on pg_description.objoid    = pg_attribute.attrelid
+                            and pg_description.objsubid  = pg_attribute.attnum
+WHERE  1=1
+--	pg_stat_all_tables.relname='テーブル名'
+ORDER BY
+	pg_description.objsubid
 ```

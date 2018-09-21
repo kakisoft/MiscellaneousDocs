@@ -26,6 +26,7 @@ alter table table01 rename to table02;
 
 ## テーブル削除
 drop table table02;
+drop table if exists table03;
 
 ## カラム追加
 alter table table01 add column01 varchar(255);

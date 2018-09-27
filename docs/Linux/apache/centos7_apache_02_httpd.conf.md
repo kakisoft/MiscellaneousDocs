@@ -77,6 +77,10 @@ Options Indexes FollowSymLinks を設定
 
 禁止する場合、
 Options -Indexes FollowSymLinks
+
+もしくは、
+Options Indexes FollowSymLinks
+を、コメントアウト。
 ```
 
 ## セッション情報（PHP）

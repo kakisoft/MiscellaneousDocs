@@ -298,6 +298,16 @@ Ctrl + l（エル）
 ## 日付確認
 date
 
+## 日付修正（手動  ）
+sudo date -s "2018/09/27 09:39:00"
+
+## タイムゾーンの確認
+timedatectl
+
+UTC（協定世界時）
+
+
+
 ## ズレた日付の修正
 sudo yum -y install ntpdate  
 sudo ntpdate ntp.nict.jp  

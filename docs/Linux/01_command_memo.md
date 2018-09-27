@@ -298,6 +298,10 @@ Ctrl + l（エル）
 ## 日付確認
 date
 
+## タイムゾーンを日本に設定
+sudo rm /etc/localtime
+sudo ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
 ## 日付修正（手動  ）
 sudo date -s "2018/09/27 09:39:00"
 
@@ -305,7 +309,7 @@ sudo date -s "2018/09/27 09:39:00"
 timedatectl
 
 UTC（協定世界時）
-
+JST(日本標準時)
 
 
 ## ズレた日付の修正

@@ -1,5 +1,5 @@
 ## insert
-```
+```sql
 insert into users (id, name, score) values (1, 'kaki'  , 5.8 );
 
 
@@ -12,7 +12,7 @@ insert into users (id, name, score, rank) values
 enumへの insertは数値でも可。（1～　開始する）
 
 ## like
-```
+```sql
 select * from users where name like 'K%'
 小文字の「k」も検索対象となる。
 
@@ -32,7 +32,7 @@ select * from users order by score desc limit 3;
 ```
 
 ## 組み込み関数
-```
+```sql
 select
  round(5.355)    -- 5
 ,round(5.355, 1) -- 5.4
@@ -42,41 +42,57 @@ select
 ```
 
 ## ランダムな値を抽出
-```
+```sql
 select * from users order by rand() limit 1;
 ```
 
 ## 文字列の演算
-```
+```sql
 select
  length('Hello')         -- 5
 ,substr('Hello', 2)      -- ello
 ,substr('Hello', 2, 3)   -- ell
 ,upper('Hello')          -- HELLO
 ,lower('Hello')          -- hello
-,concat('Hello','World') -- HelloWorld
+,concat('Hello','World') -- HelloWorld  文字列の連結
 ,concat('a','b',null)    -- null （連結する文字に nullがあった場合）
 ;
 ```
 
-## 日付の計算
-```
+## ユーティリティ
+```sql
 SELECT
- DATE_ADD(CURRENT_DATE(),INTERVAL 3 MONTH)
+    REPLACE(my_content, CHAR(9), ' ') AS "タブをスペースに変換"
 
 ```
 
+## キャスト
+```sql
+SELECT
+    CAST(created_at AS CHAR)
+   ,CONCAT(CAST(date_from_yyyy AS CHAR), '/', CAST(date_from_mm AS CHAR), '/', CAST(date_from_dd AS CHAR)) AS "開始日"
+   ,CONCAT(CAST(date_to_yyyy   AS CHAR), '/', CAST(date_to_mm   AS CHAR), '/', CAST(date_to_dd   AS CHAR)) AS "終了日"
+
+```
 
 ## 日付型への変換（キャスト）
-```
+```sql
 SELECT 
     CAST('20180823' AS DATE)                AS DATE01      -- 2018-08-23
    ,CAST('2018-08-23 11:20:00' AS DATETIME) AS DATETIME01  -- 2018-08-23 11:20:00
    ,STR_TO_DATE('2018-02-01',  '%Y-%M-%D')  AS X1
 
 ```
-## 文字列から日付への変換・計算
+
+## 日付の計算
+```sql
+SELECT
+ DATE_ADD(CURRENT_DATE(),INTERVAL 3 MONTH)
+
 ```
+
+## 文字列から日付への変換・計算
+```sql
 SELECT
     DATE_ADD(CAST('2018/01/28' AS DATE), INTERVAL 1 MONTH) AS "1/28 の１か月後"
    ,DATE_ADD(CAST('2018/01/29' AS DATE), INTERVAL 1 MONTH) AS "1/29 の１か月後"

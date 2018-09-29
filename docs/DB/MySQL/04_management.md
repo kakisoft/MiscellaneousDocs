@@ -1,3 +1,7 @@
+mysql.log  
+slow query ログ
+
+
 ## 設定内容確認
 ```
 show variables;

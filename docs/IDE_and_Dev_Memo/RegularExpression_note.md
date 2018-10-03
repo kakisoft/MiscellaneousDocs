@@ -143,6 +143,16 @@ example, https://example.com
 
 ```
 
+### PHP記述例
+```php
+
+$str = preg_replace('#^[ 　]+#u', '', $str);
+$str = preg_replace('#[ 　]+$#u', '', $str);
+
+// #　・・・デリミタとして使用できる。「/」と同義。
+// u　・・・utf8 で処理。
+```
+
 ### ＜参考サイト＞
 <http://kyu-mu.net/coffeescript/regexp/#flags>    
 <https://msdn.microsoft.com/ja-jp/library/cc392020.aspx>    

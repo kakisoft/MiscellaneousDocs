@@ -8035,6 +8035,13 @@ echo &quot;&lt;/pre&gt;&quot;;
 &lt;/ul&gt;
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 foreach（キーを含む） 】
+
+{foreach $userParameters as $value}
+   &lt;li&gt;{$value@key}: {$value}&lt;/li&gt;
+{/foreach}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ＜smartyで渡された内容は、{php}内では参照できない？＞
 
         functionKey：{$functionKey}&lt;br&gt;

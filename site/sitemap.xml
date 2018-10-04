@@ -2136,12 +2136,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/scribble/20170819_Microsoft 最新技術 ！インフラ、クラウド、アプリまで一挙紹介！！ /</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/scribble/20170819_Microsoft/</loc>
      <lastmod>2018-10-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/scribble/20170819_Microsoft/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/scribble/20170819_Microsoft最新技術 _インフラ、クラウド、アプリまで一挙紹介 /</loc>
      <lastmod>2018-10-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -2337,6 +2337,11 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/scribble/20180929_Fukuoka.NET Conf 2018/</loc>
+     <lastmod>2018-10-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/scribble/20181003_LINE/</loc>
      <lastmod>2018-10-04</lastmod>
      <changefreq>daily</changefreq>
     </url>

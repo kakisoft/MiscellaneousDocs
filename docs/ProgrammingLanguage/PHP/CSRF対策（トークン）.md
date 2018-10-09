@@ -25,4 +25,12 @@
 function h($s) {
   return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
 }
+
+〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓
+
+	public static function genToken() {
+		return uniqid(mt_rand() . '_', true);
+	}
+
+
 ```

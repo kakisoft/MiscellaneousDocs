@@ -27,6 +27,21 @@ ORDER BY
 ;
 ```
 
+## case
+```sql
+SELECT
+    id
+   ,email
+   ,is_admin
+   ,CASE 
+      WHEN is_admin='0' then '管理者'
+      WHEN is_admin='1' then '一般'
+      ELSE ' '
+    END AS user_type
+FROM
+    users
+```
+
 ## offset
 ```sql
 select * from table01 order by title limit 3 offset 3;

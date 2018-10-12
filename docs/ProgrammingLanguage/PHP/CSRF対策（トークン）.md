@@ -32,5 +32,40 @@ function h($s) {
 		return uniqid(mt_rand() . '_', true);
 	}
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONST MYTOKEN = "_my_token_";
+
+			if(count($_POST) <= 0){
+          $token = MyUtils::genToken();
+          session_start();
+          $_SESSION[self::MYTOKEN] = $token;
+
+          $divideId = 0;
+			}else{
+
+        if ($_SESSION[self::MYTOKEN] != $_POST['my_token']) {
+            if (/* 本番モード */) {
+            //403
+          }
+
+          /* 編集モード */
+          echo "Tokenチェックエラー"
+
+          unset($_SESSION[self::REGTOKEN]);
+
+				}else{
+					  $token = $_POST['register_token'];
+				}
+			}
+
+			//ログイン成功
+			if($divideId == 1){
+        $statusCode = 302;
+        $targetUrl  = "http://www.example.com/";
+
+        header("HTTP", true,  $statusCode);
+        header("Location: " . $targetUrl );
+      }
+		}
 
 ```

@@ -9,4 +9,7 @@ Shift ＋ F5
 Networkタブ→[Disable cache] を ON  
 ※Developer Toolsが起動しているとき、cacheが無効
 
+## キャッシュの消去
+上段の urlが表示されている列の更新ボタンにて、右クリック→[キャッシュの消去とハード再読み込み]
+
 

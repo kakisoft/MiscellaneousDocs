@@ -1,3 +1,6 @@
+## SSL
+![alt](SSL.png)
+
 ```
 ・SSH：公開鍵認証
 ・SSL：共通鍵認証

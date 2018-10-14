@@ -8,12 +8,17 @@ vim /etc/httpd/conf.modules.d/00-base.conf
 ## mod_cache
 キャッシュの扱い方を設定するモジュール
 
-## mod_cache_disk
+## mod_disk_cache
 どのキャッシュをどこへ保存するかを設定するモジュール
 
 ## mod_expires
-キャッシュの期限を設定するモジュール
+キャッシュの期限を設定するモジュール。  
+どんなディストリビューションのものでも最初から有効。
+```
 
+以下の記述があれば、有効。
+LoadModule expires_module modules/mod_expires.so
+```
 ______________________________________________________________
 ### 参考サイト
 <https://www.ritolab.com/entry/4>  

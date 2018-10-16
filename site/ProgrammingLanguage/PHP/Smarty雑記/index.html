@@ -2509,10 +2509,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
     
     <label class="md-nav__link" for="nav-3-2">
-      Web
+      SVN
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-2">
+        SVN
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../General/SVN/01_use_note/" title="01 use note" class="md-nav__link">
+      01 use note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
         Web
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2549,13 +2585,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-3" type="checkbox" id="nav-3-3-3">
     
-    <label class="md-nav__link" for="nav-3-2-3">
+    <label class="md-nav__link" for="nav-3-3-3">
       API
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-3">
+      <label class="md-nav__title" for="nav-3-3-3">
         API
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2585,13 +2621,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-4" type="checkbox" id="nav-3-3-4">
     
-    <label class="md-nav__link" for="nav-3-2-4">
+    <label class="md-nav__link" for="nav-3-3-4">
       Slack
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-4">
+      <label class="md-nav__title" for="nav-3-3-4">
         Slack
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2626,13 +2662,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
-    <label class="md-nav__link" for="nav-3-3">
+    <label class="md-nav__link" for="nav-3-4">
       YAML
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
+      <label class="md-nav__title" for="nav-3-4">
         YAML
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8048,13 +8084,13 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【 ワンライナーで書く方法 】
 
-{if $userParameters[&quot;auth_gen&quot;]  == &quot;1&quot;}checked{/if}
+{if $userParameters[&quot;email&quot;]  == &quot;1&quot;}checked{/if}
 
-&lt;input type='checkbox' name='auth_gen'  id='auth_gen'  value='1' {if $userParameters[&quot;auth_gen&quot;]  == &quot;1&quot;}checked{/if}&gt;一般&quot;;
+&lt;input type='checkbox' name='email'  id='email'  value='1' {if $userParameters[&quot;email&quot;]  == &quot;1&quot;}checked{/if}&gt;一般&quot;;
 
 
-&lt;input type=&quot;radio&quot; name=&quot;use_lang_cd&quot; id=&quot;use_lang_cd&quot; value=&quot;0&quot; {if $userParameters[&quot;use_lang_cd&quot;] != &quot;1&quot;}checked{/if}&gt;日本語
-&lt;input type=&quot;radio&quot; name=&quot;use_lang_cd&quot; id=&quot;use_lang_cd&quot; value=&quot;1&quot; {if $userParameters[&quot;use_lang_cd&quot;] == &quot;1&quot;}checked{/if}&gt;英語
+&lt;input type=&quot;radio&quot; name=&quot;lang_cd&quot; id=&quot;lang_cd&quot; value=&quot;0&quot; {if $userParameters[&quot;lang_cd&quot;] != &quot;1&quot;}checked{/if}&gt;日本語
+&lt;input type=&quot;radio&quot; name=&quot;lang_cd&quot; id=&quot;lang_cd&quot; value=&quot;1&quot; {if $userParameters[&quot;lang_cd&quot;] == &quot;1&quot;}checked{/if}&gt;英語
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -8063,7 +8099,7 @@
 {/if}
 
 
-{if $userParameters['auth_gen'] == true}
+{if $userParameters['is_admin'] == true}
 
 {else}}
 
@@ -8097,6 +8133,12 @@ echo &quot;&lt;/pre&gt;&quot;;
     count_POST_OVER 0
 {/if}
 
+=============================================================================
+
+{if ($divideId == &quot;2&quot; &amp;&amp; $is_admin == true)}
+{else}
+{/if}
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【 foreach 】
 
@@ -8112,6 +8154,15 @@ echo &quot;&lt;/pre&gt;&quot;;
 {foreach $userParameters as $value}
    &lt;li&gt;{$value@key}: {$value}&lt;/li&gt;
 {/foreach}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 for 】
+
+&lt;ul&gt;
+{for $foo=1 to 3}
+    &lt;li&gt;{$foo}&lt;/li&gt;
+{/for}
+&lt;/ul&gt;
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ＜smartyで渡された内容は、{php}内では参照できない？＞

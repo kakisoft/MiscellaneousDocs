@@ -9,13 +9,13 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【 ワンライナーで書く方法 】
 
-{if $userParameters["auth_gen"]  == "1"}checked{/if}
+{if $userParameters["email"]  == "1"}checked{/if}
 
-<input type='checkbox' name='auth_gen'  id='auth_gen'  value='1' {if $userParameters["auth_gen"]  == "1"}checked{/if}>一般";
+<input type='checkbox' name='email'  id='email'  value='1' {if $userParameters["email"]  == "1"}checked{/if}>一般";
 
 
-<input type="radio" name="use_lang_cd" id="use_lang_cd" value="0" {if $userParameters["use_lang_cd"] != "1"}checked{/if}>日本語
-<input type="radio" name="use_lang_cd" id="use_lang_cd" value="1" {if $userParameters["use_lang_cd"] == "1"}checked{/if}>英語
+<input type="radio" name="lang_cd" id="lang_cd" value="0" {if $userParameters["lang_cd"] != "1"}checked{/if}>日本語
+<input type="radio" name="lang_cd" id="lang_cd" value="1" {if $userParameters["lang_cd"] == "1"}checked{/if}>英語
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -24,7 +24,7 @@
 {/if}
 
 
-{if $userParameters['auth_gen'] == true}
+{if $userParameters['is_admin'] == true}
 
 {else}}
 
@@ -56,6 +56,12 @@ echo "</pre>";
 
 {if count($_POST) > 0}
     count_POST_OVER 0
+{/if}
+
+=============================================================================
+
+{if ($divideId == "2" && $is_admin == true)}
+{else}
 {/if}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

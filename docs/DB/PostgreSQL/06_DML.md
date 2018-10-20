@@ -53,6 +53,8 @@ FROM
 ## offset
 ```sql
 select * from table01 order by title limit 3 offset 3;
+
+※ 1件目から開始させる場合、offset は 0
 ```
 
 ```

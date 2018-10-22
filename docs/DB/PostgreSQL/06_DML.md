@@ -89,6 +89,10 @@ select
    ,current_time                           -- "14:11:39.286429+09"
    ,current_timestamp                      -- "2018-10-22 14:11:39.286429+09"
    ,date_trunc('hour', current_timestamp)  -- "2018-10-22 14:00:00+09"
+
+
+where  1=1
+  and  event_start_date >= current_date
 ```
 
 ## 日付計算

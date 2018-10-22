@@ -72,13 +72,23 @@ select * from table01 order by random() limit 1;
 ```
 
 ## キャスト（文字列・日付）
-```
+```sql
 SELECT
     user_id                  AS num_user_id
    ,CAST(user_id AS VARCHAR) AS user_id
    ,CAST(NOW() AS VARCHAR)   AS date_to_char01
 FROM
     USERS
+```
+
+## 現在の日時
+```sql
+select
+    now()                                  -- "2018-10-22 14:11:39.286429+09"
+   ,current_date                           -- "2018-10-22"
+   ,current_time                           -- "14:11:39.286429+09"
+   ,current_timestamp                      -- "2018-10-22 14:11:39.286429+09"
+   ,date_trunc('hour', current_timestamp)  -- "2018-10-22 14:00:00+09"
 ```
 
 ## 日付計算

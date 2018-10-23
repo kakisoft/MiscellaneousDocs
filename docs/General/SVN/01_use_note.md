@@ -11,4 +11,4 @@ export SVN_EDITOR=vim
 svn status
 
 ## ファイル追加
-svn add FILE_NAME
+svn add <FILE_NAME>

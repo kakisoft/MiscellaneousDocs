@@ -73,6 +73,7 @@ SELECT
    ,CONCAT(CAST(date_from_yyyy AS CHAR), '/', CAST(date_from_mm AS CHAR), '/', CAST(date_from_dd AS CHAR)) AS "開始日"
    ,CONCAT(CAST(date_to_yyyy   AS CHAR), '/', CAST(date_to_mm   AS CHAR), '/', CAST(date_to_dd   AS CHAR)) AS "終了日"
 
+   ,CAST(CONCAT(date_from_yyyy, date_from_mm, date_from_dd)  AS SIGNED) -- (数値に変換)20180115  など
 ```
 
 ## 日付型への変換（キャスト）
@@ -81,7 +82,6 @@ SELECT
     CAST('20180823' AS DATE)                AS DATE01      -- 2018-08-23
    ,CAST('2018-08-23 11:20:00' AS DATETIME) AS DATETIME01  -- 2018-08-23 11:20:00
    ,STR_TO_DATE('2018-02-01',  '%Y-%M-%D')  AS X1
-
 ```
 
 ## 日付の計算

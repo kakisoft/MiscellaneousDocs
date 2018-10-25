@@ -8080,6 +8080,11 @@
 
 
 </code></pre>
+
+<pre><code class="php">
+$this-&gt;sortId = MY_UTIL::escHtml($_GET['sort_id']) ?? &quot;0&quot;;
+$this-&gt;page   = is_numeric(MY_UTIL::escHtml($_GET['page']))  ? MSM_Utils_Text::escHtml($_GET['page'])  : &quot;1&quot;;
+</code></pre>
                 
                   
                 

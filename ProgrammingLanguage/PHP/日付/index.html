@@ -6504,6 +6504,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" title="日付取得" class="md-nav__link">
+    日付取得
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="日付の妥当性チェック" class="md-nav__link">
+    日付の妥当性チェック
+  </a>
+  
+</li>
+      
       
       
       
@@ -8129,6 +8143,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" title="日付取得" class="md-nav__link">
+    日付取得
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="日付の妥当性チェック" class="md-nav__link">
+    日付の妥当性チェック
+  </a>
+  
+</li>
+      
       
       
       
@@ -8166,7 +8194,37 @@ $timestamp2 = strtotime($recordInstance[0]['exec_date']);  //postgers:TIMESTAMP
 $secdiff = abs($timestamp1 - $timestamp2);
 $mindiff = $secdiff/(60);           
 $dif_days = $secdiff/(60*60*24);
+</code></pre>
 
+<h2 id="_3">日付取得</h2>
+<pre><code class="php">$date = '2015-12-31';
+date('Y年m月d日',  strtotime($date));  // 2015年12月31日
+
+$today = date('Y-m-d');              //2018-10-16
+$lastDayOfThisMonth = date('Y-m-t'); //2018-10-31
+
+$thisYear = date('Y');
+$lastYear = $thisYear -1;
+
+//特定年月の最終日を取得
+$month = '2014-02'; 
+$firstDate = date('Y-m-d', strtotime('first day of ' . $month));
+$lastDate = date('Y-m-d', strtotime('last day of ' . $month));
+</code></pre>
+
+<h2 id="_4">日付の妥当性チェック</h2>
+<pre><code class="php">$date = &quot;2018/01/32&quot;;
+
+//何と、2018/02/01 と判定してしまう。
+$d = DateTime::createFromFormat('Y/m/d', $date);
+
+
+
+if(checkdate(2, 29, 2016)) {
+  echo '受け付けました。';
+} else {
+  echo '存在しない日付です。';
+}
 </code></pre>
                 
                   

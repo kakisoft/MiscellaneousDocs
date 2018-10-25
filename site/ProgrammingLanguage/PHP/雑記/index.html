@@ -8479,7 +8479,16 @@ explode   splitに相当（splitは廃止された）
 
 empty    &quot;&quot;, 0, &quot;0&quot;　が Trueだよ！
 
+sprintf('%02d', 1); // 01
+sprintf('%03d', 1); // 001
+sprintf('あなたのIDは%04dです', 1); // あなたのIDは0001です
 
+
+$value = rtrim($value, '/');
+
+
+boolean型は、echoで出力できない？
+var_dump を使用する。
 </code></pre>
                 
                   

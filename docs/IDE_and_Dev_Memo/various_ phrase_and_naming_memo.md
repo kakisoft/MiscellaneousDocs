@@ -14,6 +14,10 @@ TimeToCountDown
 elapsedTime ： 経過時間
 timeLeft：残り時間
 
+
+composite : 複合、混合
+mix up
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                        ShowDialogWithLoadingMessage
 処理中ダイアログ終了    CloseProccssingDialog

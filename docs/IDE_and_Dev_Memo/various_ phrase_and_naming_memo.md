@@ -4,6 +4,8 @@ on click：クリック時
 explicit：明示的な
 implicit：暗黙の
 
+doSometing
+
 Trailing Commas：後続カンマ
 
 プレビューを表示する：show_preview
@@ -17,6 +19,11 @@ timeLeft：残り時間
 
 composite : 複合、混合
 mix up
+
+
+× Anquete
+○ Enquete
+
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                        ShowDialogWithLoadingMessage

@@ -16,6 +16,7 @@ TimeToCountDown
 elapsedTime ： 経過時間
 timeLeft：残り時間
 
+残数：The number of remaining
 
 composite : 複合、混合
 mix up

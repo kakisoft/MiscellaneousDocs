@@ -81,6 +81,18 @@ WHERE  1=1
   AND  pg_class.relkind = 'S'
 ```
 
+## シーケンスの値を取得
+```sql
+select 
+    nextval('my_sequence01')
+```
+
+## シーケンスの値を設定
+```sql
+SELECT 
+    setval('my_sequence01', 200)
+```
+
 ## テーブル情報を取得（psql）
 ```
 \d+ talbe01;
@@ -117,3 +129,6 @@ WHERE  1=1
 ORDER BY
 	pg_description.objsubid
 ```
+
+
+

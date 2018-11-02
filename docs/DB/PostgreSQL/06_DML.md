@@ -95,6 +95,18 @@ where  1=1
   and  event_start_date >= current_date
 ```
 
+## merge/upsert　：無ければ insert、あれば update
+```
+INSERT INTO mytable01 (id, target_yymm, category, count, created_at, update_date) VALUES (4, '2018', '1', 1, now())
+ON CONFLICT ON CONSTRAINT my_table01_pkey
+DO UPDATE SET count = mytable01.count + 1
+
+１行目：普通の INSERT文
+２行目：制約名
+３行目：INSERTが実行できなかった時の UPDATE文
+※制約名は、information_schema.table_constraints から参照。
+```
+
 ## 日付計算
 ```
 SELECT

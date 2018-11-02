@@ -1805,6 +1805,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_7" title="シーケンスの値を取得" class="md-nav__link">
+    シーケンスの値を取得
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="シーケンスの値を設定" class="md-nav__link">
+    シーケンスの値を設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#psql" title="テーブル情報を取得（psql）" class="md-nav__link">
     テーブル情報を取得（psql）
   </a>
@@ -1812,14 +1826,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" title="カラム情報を取得" class="md-nav__link">
+  <a href="#_9" title="カラム情報を取得" class="md-nav__link">
     カラム情報を取得
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" title="カラムコメント一覧を取得（未完成）" class="md-nav__link">
+  <a href="#_10" title="カラムコメント一覧を取得（未完成）" class="md-nav__link">
     カラムコメント一覧を取得（未完成）
   </a>
   
@@ -8207,6 +8221,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_7" title="シーケンスの値を取得" class="md-nav__link">
+    シーケンスの値を取得
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="シーケンスの値を設定" class="md-nav__link">
+    シーケンスの値を設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#psql" title="テーブル情報を取得（psql）" class="md-nav__link">
     テーブル情報を取得（psql）
   </a>
@@ -8214,14 +8242,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" title="カラム情報を取得" class="md-nav__link">
+  <a href="#_9" title="カラム情報を取得" class="md-nav__link">
     カラム情報を取得
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" title="カラムコメント一覧を取得（未完成）" class="md-nav__link">
+  <a href="#_10" title="カラムコメント一覧を取得（未完成）" class="md-nav__link">
     カラムコメント一覧を取得（未完成）
   </a>
   
@@ -8324,11 +8352,21 @@ WHERE  1=1
   AND  pg_class.relkind = 'S'
 </code></pre>
 
+<h2 id="_7">シーケンスの値を取得</h2>
+<pre><code class="sql">select 
+    nextval('my_sequence01')
+</code></pre>
+
+<h2 id="_8">シーケンスの値を設定</h2>
+<pre><code class="sql">SELECT 
+    setval('my_sequence01', 200)
+</code></pre>
+
 <h2 id="psql">テーブル情報を取得（psql）</h2>
 <pre><code>\d+ talbe01;
 </code></pre>
 
-<h2 id="_7">カラム情報を取得</h2>
+<h2 id="_9">カラム情報を取得</h2>
 <pre><code class="sql">select 
     * 
 from 
@@ -8341,7 +8379,7 @@ order by
 ;
 </code></pre>
 
-<h2 id="_8">カラムコメント一覧を取得（未完成）</h2>
+<h2 id="_10">カラムコメント一覧を取得（未完成）</h2>
 <pre><code class="sql">SELECT
     pg_stat_all_tables.relname  AS TABLE_NAME
    ,pg_attribute.attname        AS COLUMN_NAME

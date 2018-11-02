@@ -1748,6 +1748,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mergeupsert-insert-update" title="merge/upsert　：無ければ insert、あれば update" class="md-nav__link">
+    merge/upsert　：無ければ insert、あれば update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" title="日付計算" class="md-nav__link">
     日付計算
   </a>
@@ -8247,6 +8254,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mergeupsert-insert-update" title="merge/upsert　：無ければ insert、あれば update" class="md-nav__link">
+    merge/upsert　：無ければ insert、あれば update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" title="日付計算" class="md-nav__link">
     日付計算
   </a>
@@ -8357,6 +8371,17 @@ FROM
 
 where  1=1
   and  event_start_date &gt;= current_date
+</code></pre>
+
+<h2 id="mergeupsert-insert-update">merge/upsert　：無ければ insert、あれば update</h2>
+<pre><code>INSERT INTO mytable01 (id, target_yymm, category, count, created_at, update_date) VALUES (4, '2018', '1', 1, now())
+ON CONFLICT ON CONSTRAINT my_table01_pkey
+DO UPDATE SET count = mytable01.count + 1
+
+１行目：普通の INSERT文
+２行目：制約名
+３行目：INSERTが実行できなかった時の UPDATE文
+※制約名は、information_schema.table_constraints から参照。
 </code></pre>
 
 <h2 id="_6">日付計算</h2>

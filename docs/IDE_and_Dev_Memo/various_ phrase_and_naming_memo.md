@@ -37,7 +37,9 @@ GetPrivateProfileString
 SetPrivateProfileString
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-検索条件：SearchExpression
+検索条件：Search Expression
+検索条件：Search criteria（Jetro）
+
 
 ## 「検索条件」
 SearchExpression

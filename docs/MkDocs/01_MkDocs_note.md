@@ -5,6 +5,14 @@ choco install pip
 pip install mkdocs
 ※power shellでは上手く行かず。
 ```
+## インストール（Cent OS）
+```
+sudo yum install python-pip
+sudo pip install pip --upgrade
+sudo pip install mkdocs
+
+sudo pip install mkdocs-windmill
+```
 
 ## 操作
 ひな形を作成（以下、「sample01」という名前で作成しています。）

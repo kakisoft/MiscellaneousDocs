@@ -1,7 +1,7 @@
 # MiscellaneousNotes
 https://kakisoft.github.io/MiscellaneousDocs/    
 福岡で物流系エンジニアをやっている、kakisoftの個人メモです。  
-　  　
+
 勉強会で得た知識や趣味の調べものをしていて、メモとして残しておきたい事を記録しています。  
 ブログ記事にするほど纏まっていないものを放り込んでいます。  
 　  

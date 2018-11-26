@@ -1,4 +1,4 @@
-## Windows環境にて Dockerを使用する（Hyper-V）
+# Windows環境にて Dockerを使用する（Hyper-V）
 
 ## Hyper-V を有効化
 コントロールパネル → プログラムと機能 → Windowsの機能の有効化または無効化  

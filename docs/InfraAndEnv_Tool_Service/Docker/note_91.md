@@ -31,6 +31,6 @@ docker run -p 8080:3000 -dti redmine
 
 
 ## 留意しておいたほうがいい点
- * Hyper-V を ONにすると、virtualbox等の他の仮想環境ツールが上手く動かなくなる。
+ * Hyper-V を ONにすると、virtualbox等の他の仮想環境ツールが上手く動かなくなる。（OFFにすると、再び使用できる。）
  * Hyper-V を仮想マシンとして Vagrantを使う場合、設定が結構面倒。また、Hyper-Vに対応していない Boxも多い。
 

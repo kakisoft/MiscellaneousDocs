@@ -2,13 +2,14 @@
 
 ## Hyper-V を有効化
 コントロールパネル → プログラムと機能 → Windowsの機能の有効化または無効化  
-にて、[Hyper-V] のチェックをON。
+にて、「Hyper-V」 のチェックをON。
 
 その後、再起動。
 
 
 ## dockerをインストール
 Chocolatey（パッケージマネージャー） を使用しています。  
+Chocolateyのインストールは[こんな感じ](https://kakistamp.hatenadiary.jp/entry/2017/03/21/230940)で。  
 コマンドラインより実行して下さい。
 ```
 choco install -y docker

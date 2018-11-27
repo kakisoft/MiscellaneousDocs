@@ -40,6 +40,12 @@ pip install pygments
 ```
 pip install mkdocs-material
 ```
+#### テーマ変更
+mkdocs.yml
+```
+theme: readthedocs
+```
+
 
 ## GitHubPages　にデプロイ
  1. GitHubにて、「gh-pages」というブランチを作成。

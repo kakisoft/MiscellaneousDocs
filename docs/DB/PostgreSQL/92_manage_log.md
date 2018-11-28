@@ -26,3 +26,10 @@ log_filename = 'postgresql-%a.log'
 
 「%a」は曜日を表すアルファベット3文字
 ```
+
+## 内容確認
+```
+sudo view  /var/lib/pgsql/9.6/data/pg_log/postgresql-Wed.log
+
+など
+```

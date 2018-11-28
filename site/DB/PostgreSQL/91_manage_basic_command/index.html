@@ -13,7 +13,7 @@
         <meta name="description" content="kakisoft 個人用メモ">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/91_manage_basic_query/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/DB/PostgreSQL/91_manage_basic_command/">
       
       
         <meta name="author" content="kakisoft">
@@ -42,7 +42,7 @@
     
     
       
-        <title>91 manage basic query - kakiNote</title>
+        <title>91 manage basic command - kakiNote</title>
       
     
     
@@ -103,7 +103,7 @@
                 kakiNote
               </span>
               <span class="md-header-nav__topic">
-                91 manage basic query
+                91 manage basic command
               </span>
             
           
@@ -1747,11 +1747,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        91 manage basic query
+        91 manage basic command
       </label>
     
-    <a href="./" title="91 manage basic query" class="md-nav__link md-nav__link--active">
-      91 manage basic query
+    <a href="./" title="91 manage basic command" class="md-nav__link md-nav__link--active">
+      91 manage basic command
     </a>
     
       
@@ -1763,78 +1763,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="テーブル一覧を取得" class="md-nav__link">
-    テーブル一覧を取得
+  <a href="#_1" title="起動" class="md-nav__link">
+    起動
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="テーブル一覧を取得（コメント付き）" class="md-nav__link">
-    テーブル一覧を取得（コメント付き）
+  <a href="#_2" title="再起動" class="md-nav__link">
+    再起動
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="テーブル情報を取得" class="md-nav__link">
-    テーブル情報を取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="制約情報を確認" class="md-nav__link">
-    制約情報を確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="インデックス確認" class="md-nav__link">
-    インデックス確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" title="シーケンス一覧" class="md-nav__link">
-    シーケンス一覧
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="シーケンスの値を取得" class="md-nav__link">
-    シーケンスの値を取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" title="シーケンスの値を設定" class="md-nav__link">
-    シーケンスの値を設定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#psql" title="テーブル情報を取得（psql）" class="md-nav__link">
-    テーブル情報を取得（psql）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" title="カラム情報を取得" class="md-nav__link">
-    カラム情報を取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" title="カラムコメント一覧を取得（未完成）" class="md-nav__link">
-    カラムコメント一覧を取得（未完成）
+  <a href="#_3" title="設定ファイル再読み込み" class="md-nav__link">
+    設定ファイル再読み込み
   </a>
   
 </li>
@@ -1847,6 +1791,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../92_manage_basic_query/" title="92 manage basic query" class="md-nav__link">
+      92 manage basic query
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../92_manage_log/" title="92 manage log" class="md-nav__link">
+      92 manage log
+    </a>
   </li>
 
         
@@ -8227,78 +8195,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="テーブル一覧を取得" class="md-nav__link">
-    テーブル一覧を取得
+  <a href="#_1" title="起動" class="md-nav__link">
+    起動
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="テーブル一覧を取得（コメント付き）" class="md-nav__link">
-    テーブル一覧を取得（コメント付き）
+  <a href="#_2" title="再起動" class="md-nav__link">
+    再起動
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="テーブル情報を取得" class="md-nav__link">
-    テーブル情報を取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="制約情報を確認" class="md-nav__link">
-    制約情報を確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="インデックス確認" class="md-nav__link">
-    インデックス確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" title="シーケンス一覧" class="md-nav__link">
-    シーケンス一覧
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="シーケンスの値を取得" class="md-nav__link">
-    シーケンスの値を取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" title="シーケンスの値を設定" class="md-nav__link">
-    シーケンスの値を設定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#psql" title="テーブル情報を取得（psql）" class="md-nav__link">
-    テーブル情報を取得（psql）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" title="カラム情報を取得" class="md-nav__link">
-    カラム情報を取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" title="カラムコメント一覧を取得（未完成）" class="md-nav__link">
-    カラムコメント一覧を取得（未完成）
+  <a href="#_3" title="設定ファイル再読み込み" class="md-nav__link">
+    設定ファイル再読み込み
   </a>
   
 </li>
@@ -8320,127 +8232,18 @@
               
                 
                 
-                  <h1>91 manage basic query</h1>
+                  <h1>91 manage basic command</h1>
                 
-                <h2 id="_1">テーブル一覧を取得</h2>
-<pre><code class="sql">select 
-    relname as TABLE_NAME
-from 
-    pg_stat_user_tables
-where  1=1
+                <h2 id="_1">起動</h2>
+<pre><code>sudo service postgresql-9.6 start
 </code></pre>
 
-<h2 id="_2">テーブル一覧を取得（コメント付き）</h2>
-<pre><code class="sql">select
-    pg_stat_user_tables.relname as TABLE_NAME
-   ,pg_description.description  as TABLE_COMMENT
-from
-    pg_stat_user_tables
-    left join pg_description on pg_stat_user_tables.relid = pg_description.objoid
-                            and pg_description.objsubid=0
-where  true
-  and  pg_stat_user_tables.relname like 'xi%'
-order by 1
+<h2 id="_2">再起動</h2>
+<pre><code>sudo service postgresql-9.6 restart
 </code></pre>
 
-<h2 id="_3">テーブル情報を取得</h2>
-<pre><code class="sql">SELECT
-    table_name                AS  &quot;テーブル名&quot;
-   ,ordinal_position          AS  &quot;No&quot;
-   ,column_name               AS  &quot;カラム名&quot;
-   ,data_type                 AS  &quot;データ型&quot;
-   ,character_maximum_length  AS  &quot;文字数（文字列型）&quot;
-   ,character_octet_length    AS  &quot;バイト数（文字列型）&quot;
-   ,numeric_precision         AS  &quot;桁数（数値型）&quot;
-   ,numeric_scale             AS  &quot;小数部（数値型）&quot;
-   ,datetime_precision        AS  &quot;ミリ秒以下（日付型）&quot;
-   ,interval_type             AS  &quot;インターバルの単位（日付型）&quot;
-   ,is_nullable               AS  &quot;NULL_OK?&quot;
-   ,column_default            AS  &quot;デフォルト値&quot;
-FROM
-  information_schema.columns
-WHERE  1=1
-  AND  table_name = 'table01'
-ORDER BY
-   ordinal_position
-  ,table_name
-</code></pre>
-
-<h2 id="_4">制約情報を確認</h2>
-<pre><code class="sql">SELECT 
-    constraint_name
-   ,table_name
-   ,constraint_type
-FROM 
-    information_schema.table_constraints
-WHERE 1=1 
---  AND  table_schema = 'public'
-  AND table_name = 'table01'
-</code></pre>
-
-<h2 id="_5">インデックス確認</h2>
-<pre><code class="sql">SELECT 
-    tablename
-    ,indexname
-    ,indexdef
-FROM 
-    pg_indexes
-WHERE 1=1
---  AND tablename = 'table01';
-
-</code></pre>
-
-<h2 id="_6">シーケンス一覧</h2>
-<pre><code class="sql">SELECT 
-    pg_class.relname 
-FROM
-    pg_class 
-    LEFT JOIN pg_user ON pg_class.relowner = pg_user.usesysid 
-WHERE  1=1
-  AND  pg_class.relkind = 'S'
-</code></pre>
-
-<h2 id="_7">シーケンスの値を取得</h2>
-<pre><code class="sql">select 
-    nextval('my_sequence01')
-</code></pre>
-
-<h2 id="_8">シーケンスの値を設定</h2>
-<pre><code class="sql">SELECT 
-    setval('my_sequence01', 200)
-</code></pre>
-
-<h2 id="psql">テーブル情報を取得（psql）</h2>
-<pre><code>\d+ talbe01;
-</code></pre>
-
-<h2 id="_9">カラム情報を取得</h2>
-<pre><code class="sql">select 
-    * 
-from 
-    information_schema.columns 
-where  true
---  and  table_catalog='データベース名' 
---  and = table_name='テーブル名' 
-order by 
-    ordinal_position
-;
-</code></pre>
-
-<h2 id="_10">カラムコメント一覧を取得（未完成）</h2>
-<pre><code class="sql">SELECT
-    pg_stat_all_tables.relname  AS TABLE_NAME
-   ,pg_attribute.attname        AS COLUMN_NAME
-   ,pg_description.description  AS COLUMN_COMMENT
-FROM
-    pg_stat_all_tables
-    left join pg_description on pg_stat_all_tables.relid = pg_description.objoid
-    left join pg_attribute   on pg_description.objoid    = pg_attribute.attrelid
-                            and pg_description.objsubid  = pg_attribute.attnum
-WHERE  1=1
---  pg_stat_all_tables.relname='テーブル名'
-ORDER BY
-    pg_description.objsubid
+<h2 id="_3">設定ファイル再読み込み</h2>
+<pre><code>sudo service postgresql-9.6 reload
 </code></pre>
                 
                   
@@ -8477,13 +8280,13 @@ ORDER BY
           </a>
         
         
-          <a href="../MyEnvironment/" title="MyEnvironment" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../92_manage_basic_query/" title="92 manage basic query" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                MyEnvironment
+                92 manage basic query
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

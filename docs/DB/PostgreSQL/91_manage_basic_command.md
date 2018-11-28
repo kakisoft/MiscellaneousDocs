@@ -11,6 +11,6 @@ sudo service postgresql-9.6 restart
 
 ## 設定ファイル再読み込み
 ```
-sudo service postgresql-9.6 reloa
+sudo service postgresql-9.6 reload
 ```
 

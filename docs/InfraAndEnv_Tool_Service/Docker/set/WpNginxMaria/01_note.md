@@ -13,10 +13,74 @@ mkdir db-data logs nginx wordpress
 ```
 vi nginx/wordpress.conf
 ```
+```
+server {
+    listen 80;
+    server_name hoge;
+ 
+    root /var/www/html;
+    index index.php;
+ 
+    access_log /var/log/nginx/hoge.log;
+    error_log /var/log/nginx/hoge.log;
+ 
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+    }
+ 
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass wordpress:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+}
+```
 
 ## docker-compose.yml
 ```
-
+version: '2.0'
+ 
+services:
+    nginx:
+        image: nginx
+        ports:
+            - '8080:80'
+        volumes:
+            - ./nginx:/etc/nginx/conf.d
+            - ./logs/nginx:/var/log/nginx
+            - ./wordpress:/var/www/html
+        links:
+            - wordpress
+        restart: always
+    mysql:
+        image: mariadb 
+        ports:
+            - '3306:3306'
+        volumes:
+            - ./db-data:/var/lib/mysql 
+        environment:
+            - MYSQL_ROOT_PASSWORD=pass
+        restart: always
+    wordpress:
+        image: wordpress:4.9-php7.1-fpm
+        ports:
+            - '9000:9000'
+        volumes:
+            - ./wordpress:/var/www/html
+        environment:
+            WORDPRESS_DB_NAME: wpdb
+            WORDPRESS_TABLE_PREFIX: wp_
+            WORDPRESS_DB_HOST: mysql
+            WORDPRESS_DB_PASSWORD: pass
+        links:
+            - mysql
+        depends_on:
+            - mysql
+        restart: always
 ```
 
 ## 実行

@@ -5,7 +5,7 @@
 (Amazon) cat /etc/system-release
 
 ## sshログイン
-ssh -i <AccessKey> UserName@<IPアドレス>  [-p <ポート番号>]
+ssh -i <AccessKey> UserName@<IPアドレス>  [-p <ポート番号>]  
 chmod 600 <AccessKey>
 
 （GUIモード）

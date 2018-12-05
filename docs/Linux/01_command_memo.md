@@ -240,6 +240,10 @@ ps aux
 ps afu
  ツリー上に見る
 
+＜コマンド例＞
+ps aux | grep odoo
+
+
 ## kill
 kill -9 <PID>
 9：Killシグナルによるプロセスの終了

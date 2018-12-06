@@ -12,6 +12,3 @@ IPの横に出てくるポート番号をクリックすると、ブラウザか
 https://training.play-with-docker.com/
 
 
-
-
-

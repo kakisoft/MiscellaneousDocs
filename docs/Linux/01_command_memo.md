@@ -5,7 +5,7 @@
 (Amazon) cat /etc/system-release
 
 ## sshログイン
-ssh -i <AccessKey> UserName@<IPアドレス>
+ssh -i <AccessKey> UserName@<IPアドレス>  [-p <ポート番号>]  
 chmod 600 <AccessKey>
 
 （GUIモード）
@@ -239,6 +239,10 @@ ps aux
 
 ps afu
  ツリー上に見る
+
+＜コマンド例＞
+ps aux | grep odoo
+
 
 ## kill
 kill -9 <PID>

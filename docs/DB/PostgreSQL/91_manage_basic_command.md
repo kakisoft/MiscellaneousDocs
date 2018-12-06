@@ -13,4 +13,3 @@ sudo service postgresql-9.6 restart
 ```
 sudo service postgresql-9.6 reload
 ```
-

@@ -9,6 +9,7 @@ psql blogapp01
 psql --version
 
 ## 一覧確認
+※ポスグレに接続していなくてもOK
 ```
 psql -l
 \l

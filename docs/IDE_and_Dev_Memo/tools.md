@@ -2,6 +2,7 @@
 ## Postman
 https://www.getpostman.com/
 
+# ツール
 
 ## Chrome拡張
 Instant Translate（右クリック）
@@ -18,4 +19,15 @@ https://fast.com/ja/
 
 ### 負荷ツール
  * Apache JMeter
+
+
+ ### メール送信テスト
+ MailTrap
+ https://mailtrap.io/
+
+
+ メールの絡む開発にはmailtrapがおすすめ
+ https://qiita.com/konkon/items/c6c36f1251c7f5961eed
 ```
+
+ 

@@ -981,6 +981,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/WinSCP/</loc>
+     <lastmod>2018-12-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/AWS/20170517_JAWS Festa/</loc>
      <lastmod>2018-12-07</lastmod>
      <changefreq>daily</changefreq>
@@ -1376,11 +1381,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/03_key/</loc>
-     <lastmod>2018-12-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/03_misc_note/</loc>
      <lastmod>2018-12-07</lastmod>
      <changefreq>daily</changefreq>
@@ -1422,6 +1422,11 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/hard_info/</loc>
+     <lastmod>2018-12-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/key/</loc>
      <lastmod>2018-12-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1492,6 +1497,11 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/firewall/centos7_firewall/</loc>
+     <lastmod>2018-12-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/ubuntu_desktop/18/01_basic/</loc>
      <lastmod>2018-12-07</lastmod>
      <changefreq>daily</changefreq>
     </url>

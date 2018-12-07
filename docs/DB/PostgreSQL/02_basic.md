@@ -14,5 +14,6 @@ dropdb blogapp01
 ## 起動
 ```
 sudo service postgresql start
+とか
 sudo service postgresql-9.6 start
 ```

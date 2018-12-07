@@ -13,3 +13,11 @@ sudo service postgresql-9.6 restart
 ```
 sudo service postgresql-9.6 reload
 ```
+
+## テーブル一覧表示
+```
+\dt
+
+（検索する場合）
+\dt account*
+```

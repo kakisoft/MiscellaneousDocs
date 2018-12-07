@@ -21,3 +21,12 @@ sudo service postgresql-9.6 reload
 （検索する場合）
 \dt account*
 ```
+
+## 接続と同時に色々
+```
+psql -U tslai -d toaw6 -c "UPDATE res_users SET password='admin' where id=1" 
+
+-U    ユーザ
+-d    パスワード？
+-c    実行内容
+```

@@ -5,11 +5,15 @@ help
 ```
 
 ## DB作成
+※ ターミナルから実行
+```
 createdb blogapp01
+```
 
 ## DB削除
+```
 dropdb blogapp01
-
+```
 
 ## 起動
 ```

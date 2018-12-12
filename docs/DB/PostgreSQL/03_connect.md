@@ -2,6 +2,11 @@
 (su - postgres)
 psql blogapp01
 
+## 接続と同時に色々
+```
+psql -U postgres -h localhost
+```
+
 ## 終了
 \q
 

@@ -8,6 +8,8 @@ help
 ※ ターミナルから実行
 ```
 createdb blogapp01
+
+createdb kakidb01 -U postgres -h localhost
 ```
 
 ## DB削除

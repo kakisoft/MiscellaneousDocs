@@ -16,10 +16,19 @@ git help <コマンド>
 git reset --hard HEAD^
 
 
-## ユーザ名を指定してclone
+## ユーザ名とパスワードを指定してclone
 git clone https://username:password@github.com/kakisoft/tmp001.git
 パスワードは省略可。（ダイアログが出る）
 何回かミスると、一定時間ダイアログは出ない？（not found扱い）
+※リポジトリの前に、usernameを記述。
+
+
+## clone 最新の履歴のみ 
+git clone --depth 1 https://github.com/redmine/redmine.git
+
+
+## clone バージョン指定
+git clone -b 10.0 https://github.com/odoo/odoo.git
 
 
 ## 用語など

@@ -31,17 +31,12 @@ HEAD^2     ヘッドの２人目の親
 origin     clone元のリモートリポジトリ
 upstream   作業しているブランチの上流
 
+
 ## メモ
 pull     fetch と merge をまとめて実行。
 fetch    リモートブランチ→（ローカルの）リモート追跡ブランチ　の取得
 merge    （ローカルの）リモート追跡ブランチ→ローカルブランチ　の取得
 merge    ブランチのマージ（masterにて実行。ブランチをmasterに統合。）　・・・mergeには２種類あるの？
-
-## コンフィグ
-git config --global user.name "kakisoft"
-git config --global user.email "hoge@gmail.com"
-git config --global color.ul true
-git config -list  # 設定一覧を表示 
 
 
 # 初期化
@@ -85,8 +80,6 @@ git pull origin master
 
 ## リモートリポジトリ削除
 git remote rm origin
-
-
 
 
 

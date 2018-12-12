@@ -24,3 +24,13 @@ git push -u origin master
 
 以降、Visual Studioから、コミット・プッシュが実行できる。
 ```
+
+
+## 2018_note
+```
+## リモート登録（「work」という名称で登録）
+git remote add work https://github.com/kakiq
+
+## push「work」登録済み
+git push work edit-function
+```

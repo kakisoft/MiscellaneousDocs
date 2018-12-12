@@ -2,7 +2,7 @@
 (su - postgres)
 psql blogapp01
 
-## 接続と同時に色々
+## 接続（ユーザ名とホスト名を指定）
 ```
 psql -U postgres -h localhost
 ```

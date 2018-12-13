@@ -29,7 +29,7 @@ sudo service postgresql-9.6 reload
 psql -U tslai -d toaw6 -c "UPDATE res_users SET password='admin' where id=1" 
 
 -U    ユーザ
--d    パスワード？
+-d    DB？
 -c    実行内容
 -h    hostname
 -W    password

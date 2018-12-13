@@ -383,5 +383,10 @@ sudo rpm -ivh https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.r
 e - 削除
 
 
+## cp
+cp -a basefile targetfile
+
+-a  更新時刻などもコピー元と同じになる。（属性もコピー元と同一）
+-r
 
 ```

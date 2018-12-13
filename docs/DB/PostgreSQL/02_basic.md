@@ -12,6 +12,11 @@ createdb blogapp01
 createdb kakidb01 -U postgres -h localhost
 ```
 
+## DBコピー
+```
+createdb -T basedb targetdb
+```
+
 ## DB削除
 ```
 dropdb blogapp01

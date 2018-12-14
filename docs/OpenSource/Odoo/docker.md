@@ -20,7 +20,11 @@ sudo docker run db
 sudo docker run odoo
 ```
 
-
+## 削除
+```
+sudo docker rm -f odoo
+sudo docker rm -f db
+```
 
 ## 起動エラー
 ```

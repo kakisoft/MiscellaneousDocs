@@ -10,6 +10,16 @@ docker pull odoo
 sudo docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10
 sudo docker run -p 8069:8069 --name odoo --link db:db -t odoo
 ```
+## 停止・起動
+```
+sudo docker stop odoo
+sudo docker stop db
+
+
+sudo docker run db
+sudo docker run odoo
+```
+
 
 
 ## 起動エラー

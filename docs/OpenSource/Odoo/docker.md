@@ -14,10 +14,10 @@ sudo docker run -p 8069:8069 --name odoo --link db:db -t odoo
 
 ## 起動エラー
 ```
-docker: Error response from daemon: Conflict. The container name "/db" is already in use by container "a6
+docker: Error response from daemon: Conflict. The container name "/db" is already in use by container "a6（略）
 ```
 プロセス終了
 ```
-sudo docker ps
-sudo docker rmi -f <imageId>
+sudo docker ps -a
+sudo docker rm -f <imageId>
 ```

@@ -80,4 +80,3 @@ https://localhost:8069/web/database/selector
 [options]
 addons_path = odoo/addons,prj01-custom
 ```
-

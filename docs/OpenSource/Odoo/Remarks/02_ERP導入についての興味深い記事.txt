@@ -1,0 +1,34 @@
+ERP導入についての興味深い記事（個人用）
+
+
+## ERP導入で失敗する理由を徹底解説
+https://www.cloudtimes.jp/dynamics365/blog/erp-failure-reason.html
+
+* ERP導入の代表的な失敗の声
+* 導入計画や要件定義が曖昧で「こんなはずではなかった」と理想と現実が乖離する
+* 期待と投資の理解不足によりEPR導入効果を実感できない
+* 現場に定着されず「利用されないERP」を生んでしまった
+* 表面上のメリットにとらわれ間違ったERP選定をしている
+* ERP導入プロジェクトにおいて社内関係者とのコミュニケーションが極端に少ない
+*  **デモ利用やトレーニング受講を行わないがために実際の使用感が掴めていない**
+* カスタマイズ頼りでERP全体が複雑化してしまった
+ * 定期的なメンテナンス戦略を怠り業務形態の変化についていけなくなった
+
+## クラウドERPを導入する10のメリットと選ばれている理由
+https://www.clouderp.jp/blog/10-advantage-implementation-clouderp.html
+
+クラウドERP
+日本オラクル株式会社
+
+## ERP導入で失敗する13の原因 まずは知ることから始めましょう～
+https://www.clouderp.jp/blog/cause-of-13-to-fail-in-erp-implementation.html
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+dev02_開発環境へdumpコピー
+
+
+##　準備
+
+※pycham停止しておく
+
+#### プロジェクトのルートに、「restore」フォルダを作成し、そこで実行。
+mkdir restore
+cd restore
+mkdir -p data/filestore
+
+## 対象のDBを検索
+### sshログイン
+※suで実行
+```
+ssh -i id_rsa kaki@10.163.13.111 -p 60897
+```
+ログイン先情報は、以下で確認。
+https://docs.google.com/spreadsheets/d/infoooooooooooooooo/edit#gid=1
+
+
+### DBを検索
+sudo su odoo
+psql -l
+
+⇒（例）copy-production_181206
+を使用
+
+
+## 鍵登録
+```
+（内容確認）
+cat ~/.ssh/id_rsa.pub
+
+
+・鍵情報をコピー
+ssh -i id_rsa -p 60897 kaki@108.160.132.159 
+
+
+・鍵を置く
+（odoo@nrq-staging:/home/kaki$）
+echo "ssh-rsa hogeeeeAA1Ap9bizz3X6atTa5 root@dev" >> ~/.ssh/authorized_keys 
+※↑で確認した「rsa.pub」の内容
+
+chmod 600 ~/.ssh/authorized_keys
+```
+
+## スクリプトを設定
+```
+#!/bin/bash
+
+#=====================================
+#   Parameters that need to be set
+#=====================================
+
+#----------
+#  local
+#----------
+LOCAL_USR="kaki"
+LOCAL_DB="knrq01"
+LOCAL_PROJECT_NAME="nrq01"
+
+#----------
+#  remote
+#----------
+REMOTE_DB="copy-production_181206"
+REMOTE_IP="108.160.132.159"
+REMOTE_SSH_PORT="60897"
+REMOTE_DB_PORT="5432"
+REMOTE_USR="odoo"
+
+##########################################################################
+
+#=================================================
+#  It does not have to be changed Parameter
+#=================================================
+# local
+LOCAL_FS_PATH="/home/${LOCAL_USR}/ws/${LOCAL_PROJECT_NAME}/data/filestore"
+LOCAL_TMP_DR="/home/${LOCAL_USR}/ws/${LOCAL_PROJECT_NAME}/restore"
+
+# remote
+REMOTE_FS_PATH="/odoo/data/filestore/${REMOTE_DB}"
+RSYNC_FS_PATH="${REMOTE_USR}@${REMOTE_IP}:${REMOTE_FS_PATH}"
+
+##########################################################################
+
+#=================================================
+#                     Execute
+#=================================================
+#Commands
+ssh=$(which ssh)
+sudo_cmd=$(which sudo)
+sudo="$sudo_cmd -u $LOCAL_USR"
+psql_cmd=$(which psql)
+psql="$sudo $psql_cmd"
+createdb_cmd=$(which createdb)
+createdb="$sudo $createdb_cmd"
+dropdb_cmd=$(which dropdb)
+dropdb="$sudo $dropdb_cmd"
+
+
+#Get DB dump from remote server
+echo `date +%Y-%m-%d" "%H:%M:%S` $$ "Starts pg_dump ${REMOTE_DB} to ${REMOTE_DB}.sql"
+###### not cool
+$ssh -p $REMOTE_SSH_PORT $REMOTE_USR@$REMOTE_IP "pg_dump $REMOTE_DB" >> $LOCAL_TMP_DR/$REMOTE_DB.sql
+echo `date +%Y-%m-%d" "%H:%M:%S` $$ "DB dump ${REMOTE_DB}.sql has been taken."
+
+#Create and restore DB
+exist_db=`su -c "psql -lqt" postgres | cut -d "|" -f1 | grep $LOCAL_DB`
+if [ $exist_db  == $LOCAL_DB ]; then
+  $dropdb $LOCAL_DB
+  echo `date +%Y-%m-%d" "%H:%M:%S` $$ "Exist ${LOCAL_DB} is dropped."
+fi
+$createdb --encoding=UTF-8 $LOCAL_DB
+echo `date +%Y-%m-%d" "%H:%M:%S` $$ "DB ${LOCAL_DB} has been created."
+su -c "psql $LOCAL_DB < $LOCAL_TMP_DR/$REMOTE_DB.sql" ${LOCAL_USR} &> /dev/null
+rm $LOCAL_TMP_DR/$REMOTE_DB.sql
+echo `date +%Y-%m-%d" "%H:%M:%S` $$ "DB dump ${REMOTE_DB}.sql has been restored to ${LOCAL_DB}."
+
+#Rsync filestore from remote to local
+rm -rf $LOCAL_FS_PATH/$LOCAL_DB
+echo `date +%Y-%m-%d" "%H:%M:%S` $$ "Start transfer filestore to ${LOCAL_FS_PATH}"
+rsync -cavzP --delete -e "ssh -p $REMOTE_SSH_PORT" $RSYNC_FS_PATH $LOCAL_FS_PATH &> /dev/null
+mv $LOCAL_FS_PATH/$REMOTE_DB $LOCAL_FS_PATH/$LOCAL_DB
+chown $LOCAL_USR: -R $LOCAL_FS_PATH/$LOCAL_DB
+echo `date +%Y-%m-%d" "%H:%M:%S` $$ "Backup filestore has been recovered to ${LOCAL_FS_PATH}"
+
+exit 0
+```
+
+
+## スクリプト実行
+```
+chmod 777 restore.sh 
+
+sudo ./restore.sh
+```
+
+
+# 備考
+odooユーザが、odooサーバを実行してる。
+odooユーザなら、odooの操作が全て可能。
+

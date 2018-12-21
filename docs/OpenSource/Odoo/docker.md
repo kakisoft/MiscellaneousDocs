@@ -16,8 +16,8 @@ sudo docker stop odoo
 sudo docker stop db
 
 
-sudo docker run db
-sudo docker run odoo
+sudo docker start db
+sudo docker start odoo
 ```
 
 ## 削除
@@ -34,4 +34,9 @@ docker: Error response from daemon: Conflict. The container name "/db" is alread
 ```
 sudo docker ps -a
 sudo docker rm -f <imageId>
+```
+
+## access
+```
+http://localhost:8069/web
 ```

@@ -64,6 +64,11 @@ ctrl+C でコンテナを再びバックグランドに戻す。
 sudo docker exec -it <CONTAINER ID> /bin/bash
 ```
 
+### ユーザ名を指定してログイン
+```
+sudo docker exec -u root -it odoo /bin/bash
+```
+
 ### 実行中のコンテナを停止
 ```
 sudo docker kill <CONTAINER ID>

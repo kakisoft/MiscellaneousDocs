@@ -349,6 +349,13 @@ alias apast='sudo systemctl restart httpd.service'
 ## ポートの空きを確認
 nmap <HOSTNAME>
 
+## ping：ポート番号を指定
+ping にそういうオプションは無いんで、代わりにこれで。
+
+nc -v -w 1 <IP address> -z <port>
+nc -v -w 1 10.0.1.45 -z 5432
+
+
 ＜ssコマンド＞
 ss
 

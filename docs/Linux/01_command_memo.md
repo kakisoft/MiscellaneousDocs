@@ -399,7 +399,7 @@ sudo netstat -ltup4
 # 起動中のサービスの一覧を表示 (--all を付けると全サービス)
 systemctl -t service
 
-## ファイアウォール（Ubuuntu）
+## ファイアウォール（Ubuuntu） Debian
 ufw enable                ufwを有効化
 ufw disable               ufwを無効化
 ufw status                ufwの状態とルールを表示
@@ -414,6 +414,37 @@ sudo ufw default deny
 sudo ufw allow 80
 sudo ufw enable
 sudo ufw reload
+
+
+## ファイアウォール（共通。古い書き方）
+【iptales】
+
+（全てのフィルターを消去）
+sudo iptables --table filter --flush
+
+（インバウンドを全て不許可、アウトバウンドと中継は全て許可）
+sudo iptables --policy INPUT DROP
+sudo iptables --policy OUTPUT ACCEPT
+sudo iptables --policy FORWARD ACCEPT
+
+（許可するポートを設定）
+sudo iptables --append INPUT --protocol tcp --match state --state NEW --dport 22 --jump ACCEPT
+sudo iptables --append INPUT --protocol tcp --match state --state NEW --dport 80 --jump ACCEPT
+
+（ループバック（内部同士の通信）は許可）
+sudo iptables --append INPUT --in-interface lo --jump ACCEPT
+
+（通信確立と、確立済みの通信に関連する内容も許可）
+sudo iptables --append INPUT --match state --state ESTABLISHED,RELATED --jump ACCEPT
+
+（ICMP を許可）
+sudo iptables --append INPUT --protocol icmp --jump ACCEPT
+
+（保存）
+sudo iptables-save -c
+「service iptables save」は古い書き方？エラー出た。
+
+
 
 ## postfix
 systemctl status postfix.service

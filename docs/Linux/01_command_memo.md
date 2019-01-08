@@ -486,4 +486,9 @@ cp -a basefile targetfile
 -a  更新時刻などもコピー元と同じになる。（属性もコピー元と同一）
 -r
 
+
+## 備考
+init.d スクリプト     古いバージョン
+service コマンド      やや古めの環境
+systemctl コマンド    systemd 採用環境
 ```

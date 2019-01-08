@@ -365,18 +365,25 @@ alias apast='sudo systemctl restart httpd.service'
 
 unalias apast  # 削除
 
+
 ## エイリアスを保持
 sudo vi ~/.bashrc
 alias apast='sudo systemctl restart httpd.service'
 
+
 ## ポートの空きを確認
 nmap <HOSTNAME>
+
 
 ## ping：ポート番号を指定
 ping にそういうオプションは無いんで、代わりにこれで。
 
 nc -v -w 1 <IP address> -z <port>
 nc -v -w 1 10.0.1.45 -z 5432
+
+
+## どのサービスがポートを使用しているかチェック
+sudo lsof -i :5432
 
 
 ＜ssコマンド＞
@@ -415,6 +422,15 @@ sudo ufw allow 80
 sudo ufw enable
 sudo ufw reload
 
+## ファイアウォール（CentOS） RedHat
+※未検証
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+firewall-cmd --set-default-zone=public
+firewall-cmd --add-port=80/tcp --zone=public --permanent
+firewall-cmd --add-port=22/tcp --zone=public --permanent
+firewall-cmd --remove-port=80/tcp --zone=public --permanent
+firewall-cmd --reload
 
 ## ファイアウォール（共通。古い書き方）
 【iptales】
@@ -444,6 +460,11 @@ sudo iptables --append INPUT --protocol icmp --jump ACCEPT
 sudo iptables-save -c
 「service iptables save」は古い書き方？エラー出た。
 
+（内容確認）
+sudo iptables --list
+
+（全削除）
+sudo iptables --flush
 
 
 ## postfix

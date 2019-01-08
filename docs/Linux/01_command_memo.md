@@ -66,6 +66,29 @@ sudo apt-get install sysv-rc-conf
 ip a
 ifconfig  （inet addr:xxxx の部分）
 
+nm-connection-editor
+というコマンドで、グラフィカルになんかいい感じに見れる。
+
+
+## IPアドレス変更
+＜Debian＞
+/etc/network/interfaces    古いシステム？
+
+sudo ifdown eth0
+sudo ifup eth0
+で、設定を反映。
+
+
+＜Red Hat＞
+/etc/sysconfig/network-scripts/ifcfg-eth0
+                                     （インターフェース名）
+
+＜共通？＞
+新しめのバージョンでは、
+nmcli
+が使えるみたい。
+nmcli device
+
 ## デフォルトゲートウェイ確認
 ip route show
 
@@ -152,6 +175,10 @@ grep -E -R "(etc|root|report)" /var/log/syslog.1
 -E  検索に正規表現を使う
 -r  サブディレクトリも含めて検索
 -R  サブディレクトリ、シンボリックリンク先も含めて検索
+
+
+## 圧縮したテキストも検索
+zgrep
 
 
 ## 環境変数（パスの確認）
@@ -342,18 +369,25 @@ alias apast='sudo systemctl restart httpd.service'
 
 unalias apast  # 削除
 
+
 ## エイリアスを保持
 sudo vi ~/.bashrc
 alias apast='sudo systemctl restart httpd.service'
 
+
 ## ポートの空きを確認
 nmap <HOSTNAME>
+
 
 ## ping：ポート番号を指定
 ping にそういうオプションは無いんで、代わりにこれで。
 
 nc -v -w 1 <IP address> -z <port>
 nc -v -w 1 10.0.1.45 -z 5432
+
+
+## どのサービスがポートを使用しているかチェック
+sudo lsof -i :5432
 
 
 ＜ssコマンド＞
@@ -376,8 +410,82 @@ sudo netstat -ltup4
 # 起動中のサービスの一覧を表示 (--all を付けると全サービス)
 systemctl -t service
 
+## ファイアウォール（Ubuuntu） Debian
+ufw enable                ufwを有効化
+ufw disable               ufwを無効化
+ufw status                ufwの状態とルールを表示
+ufw status verbose        ufwの状態とルールを表示
+ufw allow [xxx]           ポートを開くルールの追加
+ufw delete allow [xxx]    不要なルールを削除する
+ufw app list              アプリケーションの一覧表示
+ufw help                  ヘルプ表示
 
-## postfix
+＜設定例＞
+sudo ufw default deny
+sudo ufw allow 80
+sudo ufw enable
+sudo ufw reload
+
+## ファイアウォール（CentOS） RedHat
+※未検証
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+firewall-cmd --set-default-zone=public
+firewall-cmd --add-port=80/tcp --zone=public --permanent
+firewall-cmd --add-port=22/tcp --zone=public --permanent
+firewall-cmd --remove-port=80/tcp --zone=public --permanent
+firewall-cmd --reload
+
+## ファイアウォール（共通。古い書き方）
+【iptales】
+
+（全てのフィルターを消去）
+sudo iptables --table filter --flush
+
+（インバウンドを全て不許可、アウトバウンドと中継は全て許可）
+sudo iptables --policy INPUT DROP
+sudo iptables --policy OUTPUT ACCEPT
+sudo iptables --policy FORWARD ACCEPT
+
+（許可するポートを設定）
+sudo iptables --append INPUT --protocol tcp --match state --state NEW --dport 22 --jump ACCEPT
+sudo iptables --append INPUT --protocol tcp --match state --state NEW --dport 80 --jump ACCEPT
+
+（ループバック（内部同士の通信）は許可）
+sudo iptables --append INPUT --in-interface lo --jump ACCEPT
+
+（通信確立と、確立済みの通信に関連する内容も許可）
+sudo iptables --append INPUT --match state --state ESTABLISHED,RELATED --jump ACCEPT
+
+（ICMP を許可）
+sudo iptables --append INPUT --protocol icmp --jump ACCEPT
+
+（保存）
+sudo iptables-save -c
+「service iptables save」は古い書き方？エラー出た。
+
+（内容確認）
+sudo iptables --list
+
+（全削除）
+sudo iptables --flush
+
+## アクセスログの確認
+＜Debian＞
+/var/log/auth.log
+
+＜RedHad＞
+/var/log/secure
+
+
+less /var/log/auth.log
+
+
+## アクセス状況を動的に見る
+tail -F /var/log/auth.log
+
+
+## postfix （メールサーバ）
 systemctl status postfix.service
 
 systemctl stop postfix 
@@ -396,4 +504,9 @@ cp -a basefile targetfile
 -a  更新時刻などもコピー元と同じになる。（属性もコピー元と同一）
 -r
 
+
+## 備考
+init.d スクリプト     古いバージョン
+service コマンド      やや古めの環境
+systemctl コマンド    systemd 採用環境
 ```

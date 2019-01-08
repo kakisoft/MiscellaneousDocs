@@ -66,6 +66,24 @@ sudo apt-get install sysv-rc-conf
 ip a
 ifconfig  （inet addr:xxxx の部分）
 
+nm-connection-editor
+というコマンドで、グラフィカルになんかいい感じに見れる。
+
+
+## IPアドレス変更
+＜Debian＞
+/etc/network/interfaces    古いシステム？
+
+sudo ifdown eth0
+sudo ifup eth0
+で、設定を反映。
+
+
+＜Red Hat＞
+/etc/sysconfig/network-scripts/ifcfg-eth0
+                                     （インターフェース名）
+
+
 ## デフォルトゲートウェイ確認
 ip route show
 
@@ -375,6 +393,16 @@ sudo netstat -ltup4
 
 # 起動中のサービスの一覧を表示 (--all を付けると全サービス)
 systemctl -t service
+
+## ファイアウォール（Ubuuntu）
+ufw enable                ufwを有効化
+ufw disable               ufwを無効化
+ufw status                ufwの状態とルールを表示
+ufw status verbose        ufwの状態とルールを表示
+ufw allow [xxx]           ポートを開くルールの追加
+ufw delete allow [xxx]    不要なルールを削除する
+ufw app list              アプリケーションの一覧表示
+ufw help                  ヘルプ表示
 
 
 ## postfix

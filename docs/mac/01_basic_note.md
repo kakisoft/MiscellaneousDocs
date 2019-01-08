@@ -32,6 +32,10 @@ command + c ⇒ command + v
 command + control + F
 
 
+## 中断（ターミナル）
+control + C
+
+
 ## デスクトップを表示
 fn + F11
 

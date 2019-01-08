@@ -177,6 +177,10 @@ grep -E -R "(etc|root|report)" /var/log/syslog.1
 -R  サブディレクトリ、シンボリックリンク先も含めて検索
 
 
+## 圧縮したテキストも検索
+zgrep
+
+
 ## 環境変数（パスの確認）
 printenv
 
@@ -466,8 +470,22 @@ sudo iptables --list
 （全削除）
 sudo iptables --flush
 
+## アクセスログの確認
+＜Debian＞
+/var/log/auth.log
 
-## postfix
+＜RedHad＞
+/var/log/secure
+
+
+less /var/log/auth.log
+
+
+## アクセス状況を動的に見る
+tail -F /var/log/auth.log
+
+
+## postfix （メールサーバ）
 systemctl status postfix.service
 
 systemctl stop postfix 

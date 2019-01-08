@@ -83,6 +83,11 @@ sudo ifup eth0
 /etc/sysconfig/network-scripts/ifcfg-eth0
                                      （インターフェース名）
 
+＜共通？＞
+新しめのバージョンでは、
+nmcli
+が使えるみたい。
+nmcli device
 
 ## デフォルトゲートウェイ確認
 ip route show
@@ -404,6 +409,11 @@ ufw delete allow [xxx]    不要なルールを削除する
 ufw app list              アプリケーションの一覧表示
 ufw help                  ヘルプ表示
 
+＜設定例＞
+sudo ufw default deny
+sudo ufw allow 80
+sudo ufw enable
+sudo ufw reload
 
 ## postfix
 systemctl status postfix.service

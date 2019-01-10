@@ -88,5 +88,10 @@ services:
 docker-compose up
 ```
 
+## 停止
+```
+docker-compose stop
+```
+
 ログ、Wordpressの構成ファイル、DBのデータはそれぞれlog, wordpress, db-dataに保存される。
 

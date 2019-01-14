@@ -1,6 +1,6 @@
 ## 起動・終了
 ```
-docker-compose -d up
+docker-compose up -d
 docker-compose down
 
 ※バックグラウンドで起動

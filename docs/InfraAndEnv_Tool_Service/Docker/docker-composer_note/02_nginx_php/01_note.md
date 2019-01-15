@@ -75,7 +75,8 @@ server {
 PHP-FPMはデフォルトでポート 9000番で起動するのでfastcgi_passではapp:9000と指定すれば、docker内で名前解決してくれます。
 
 
-## index.html
+## ndex.php
+※php
 ```
 <h1>Hello Docker Compose!</h1>
 
@@ -91,6 +92,10 @@ docker-compose up -d
 ※Linuxの場合、sudo で。
 ```
 
+## アクセス
+```
+http://localhost:8000/
+```
 
 ____________________________
 ＜参考サイト＞

@@ -61,6 +61,10 @@ docker-compose up -d
 ※Linuxの場合、sudo で。
 ```
 
+## アクセス
+```
+http://localhost:8000/
+```
 
 ____________________________
 ＜参考サイト＞

@@ -1,8 +1,8 @@
 ## _
 ```
-mkdir nginx_php_mysql_larabel
+mkdir laravel-docker-workspace
 
-cd nginx_php_mysql_larabel
+cd laravel-docker-workspace
 ```
 
 ## 構成

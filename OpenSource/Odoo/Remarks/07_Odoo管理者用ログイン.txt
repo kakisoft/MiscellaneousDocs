@@ -1,0 +1,18 @@
+Odoo管理者用ログイン
+
+
+kaki
+odoopwd
+
+5432
+
+## なんちゃってログイン
+※緊急用
+nrq01=> select login,password from res_users where login like '%admin%';
+  login  | password 
+---------+----------
+ qtadmin | admin
+(1 row)
+
+通常は空白（通常は、ハッシュを利用）。
+が、ここに適当な値を入れておくと、その内容でログインできる。

@@ -1,0 +1,114 @@
+dev01_開発用の環境構築
+
+
+# 共通準備
+
+## ポスグレのインストール
+（省略）
+
+
+## 共通準備
+mkdir ws
+cd ws
+
+
+## 各種バージョン情報
+https://docs.google.com/spreadsheets/d/1Vp5wZA8Pl_QanSKkiiniyYlOQw96sA8dhtmVnS8HAhY/edit#gid=1
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# プロジェクト個別設定
+
+##  ワーキングディレクトリを作成し、ソースをローカルに落とす。
+mkdir nrq01
+cd nrq01
+git clone -b 10.0 https://github.com/odoo/odoo.git
+
+## （必要があれば）モジュールをコピー
+https://github.com/module-x01/rqn-custom.git
+
+
+## PyCharm 起動
+pycharm-community
+
+
+## プロジェクトを開く
+上記の場合
+/home/kaki/ws/nrq01
+など
+
+## コンフィグファイルをコピー
+/debian/odoo.conf
+を、
+プロジェクトのルートにコピー
+（上記では、nqr01 の直下）
+
+## コピーしたコンフィグファイルを編集
+編集例
+```
+[options]
+; This is the password that allows database operations:
+; admin_passwd = admin
+db_host = localhost
+db_port = False
+db_user = kaki
+db_password = odoopwd
+addons_path = odoo/addons
+;MYCONF
+dbfilter = knrq01
+```
+db_host, db_user は、使用するポスグレの設定に準拠。
+dbfilter は、各種プロジェクトごとに変更。
+※dbfilterの先頭は、「k」。垣花の場合は。
+
+## 起動設定
+Run → Edit Configrations → Click the [+] の プラスボタンを選択 → Python
+
+#### 設定
+![image.png (111.0 kB)](https://img.esa.io/uploads/production/attachments/5752/2018/12/07/47421/f4428196-679d-4d36-962e-fa419ed6da92.png)
+```
+Script path:    odoo/odoo-bin
+Parameters:     --config=odoo.conf --db-filter=ksst01
+
+Environment variables:    PYTHONUNBUFFERED=1  （デフォルト）
+Python interpreter:       Python 3.6
+Interpreter options:      （なし）
+Working directory:        /home/kaki/ws/nrq01
+```
+※db-filter は、odoo.conf で設定していてもOK。どっちでも行ける。
+
+
+## RUN
+右上のメニューから起動
+
+
+## ブラウザから入力確認
+https://localhost/web/database/selector
+
+DB名を入力し、DBを作成。
+
+
+## DB マネージャーを入力
+https://localhost/web/database/manager
+URLに、
+「web/database/manager」
+を付けて叩く。
+
+『set a master password』
+
+→ odoo.conf に、パラメータが追加される。
+
+
+## 独自モジュール追加
+必要があれば、odoo.conf に追記
+```
+（例）
+[options]
+addons_path = odoo/addons,rqn-custom
+```
+
+next
+https://qtl.esa.io/posts/491
+
+
+

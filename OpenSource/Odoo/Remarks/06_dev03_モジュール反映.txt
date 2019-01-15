@@ -1,0 +1,55 @@
+dev03_モジュール反映
+
+## モジュールをローカルにコピー
+git clone -b 10.0 https://github.com/OCA/server-tools.git
+
+
+## 必要な分だけプロジェクトに反映
+（例。以下は、プロジェクトのルートにて実行している。）
+cp -r server-tools/base_user_role/ rqn-custom/
+
+
+
+## 内容確認
+（base_user_role）
+rpn-custom/base_user_role/views/__manifest__.py
+```
+# -*- coding: utf-8 -*-
+# Copyright 2014 ABF OSIELL <http://osiell.com>
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+{
+    'name': 'User roles',
+    'version': '10.0.1.0.2',
+    'category': 'Tools',
+    'author': 'ABF OSIELL, Odoo Community Association (OCA)',
+    'license': 'AGPL-3',
+    'maintainer': 'ABF OSIELL',
+    'website': 'http://www.osiell.com',
+    'depends': [
+        'base',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/ir_module_category.xml',
+        'data/ir_cron.xml',
+        'views/role.xml',
+        'views/user.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+}
+```
+
+## 依存関係について
+【 depends 】依存関係
+'base'の場合、'base'モジュールに依存している。
+Odoo本体が持っている
+
+
+
+## 備考
+モジュールは、有償のものと無償のものがある。
+無償を custom、
+有償を private
+と、ディレクトリを分けたりしている。

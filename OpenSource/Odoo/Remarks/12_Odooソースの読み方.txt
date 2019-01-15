@@ -1,0 +1,5 @@
+（クラス名）
+    _name = "account.account.type"
+⇒
+（DB名）
+account_account_type

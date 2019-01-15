@@ -37,7 +37,7 @@ services:
       - ./docker/web/default.conf:/etc/nginx/conf.d/default.conf    # ホスト側のパス:コンテナ側のパス　
       - .:/var/www/html
   ########################## 今回追加した部分 #################################
-  app:    # サービス名はappとします
+  app:    # サービス名はappとする
     image: php:7.2.12-fpm
     volumes:
       - .:/var/www/html
@@ -72,12 +72,16 @@ server {
     #############################################################################
 }
 ```
+PHP-FPMはデフォルトでポート 9000番で起動するのでfastcgi_passではapp:9000と指定すれば、docker内で名前解決してくれます。
+
 
 ## index.html
 ```
 <h1>Hello Docker Compose!</h1>
 
 <p>I love Laravel and Docker!</p>
+
+<?php phpinfo();?>
 ```
 
 ## 起動

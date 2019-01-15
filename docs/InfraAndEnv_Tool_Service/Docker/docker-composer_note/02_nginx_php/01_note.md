@@ -1,8 +1,8 @@
 ## _
 ```
-mkdir nginx
+mkdir nginx_php
 
-cd nginx
+cd nginx_php
 ```
 
 ## 構成
@@ -29,9 +29,19 @@ services:
     image: nginx:1.15.6    # 公式で配布されているnginxを指定
     ports:
       - "8000:80"          # ホスト側のポート:コンテナ側のポート（ホストの 8000 を、コンテナの 80 にリダイレクト）
+  ########################## 今回追加した部分 #################################
+    depends_on:   # 依存関係を定義するオプション。今回の場合、NginxがPHPを実行するため、NginxがPHPに依存。
+      - app
+  #############################################################################
     volumes:               # Dockerコンテナに共有（マウントと言います）したいファイル群を指定
       - ./docker/web/default.conf:/etc/nginx/conf.d/default.conf    # ホスト側のパス:コンテナ側のパス　
       - .:/var/www/html
+  ########################## 今回追加した部分 #################################
+  app:    # サービス名はappとします
+    image: php:7.2.12-fpm
+    volumes:
+      - .:/var/www/html
+  #############################################################################
 ```
 
 ## docker/web/default.conf
@@ -40,10 +50,26 @@ server {
     listen 80;
 
     root  /var/www/html;
-    index index.html;
+    index index.php index.html index.htm;
 
     access_log /var/log/nginx/access.log;
     error_log  /var/log/nginx/error.log;
+
+    ########################## 今回追加した部分 #################################
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+          fastcgi_split_path_info ^(.+\.php)(/.+)$;
+          fastcgi_pass   app:9000;
+          fastcgi_index  index.php;
+
+          include        fastcgi_params;
+          fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+          fastcgi_param  PATH_INFO $fastcgi_path_info;
+      }
+    #############################################################################
 }
 ```
 
@@ -74,4 +100,3 @@ https://qiita.com/syou007/items/3e2d410bbe65a364b603
 
 ## nginxについてまとめ(設定編)
 https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967
-

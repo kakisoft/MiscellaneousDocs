@@ -13,6 +13,7 @@ cd nginx_php
 │
 ├── docker-compose.yml
 └── index.html # 配信する静的コンテンツ
+└── index.php  # 配信する静的コンテンツ
 ```
 
 ## 備考

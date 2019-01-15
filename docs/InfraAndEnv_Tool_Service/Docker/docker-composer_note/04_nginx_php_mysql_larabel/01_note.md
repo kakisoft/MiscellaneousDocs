@@ -1,25 +1,47 @@
 ## _
 ```
-mkdir nginx_php_mysql
+mkdir nginx_php_mysql_larabel
 
-cd nginx_php_mysql
+cd nginx_php_mysql_larabel
 ```
 
 ## 構成
 ```
-├── docker/
-│   └── web/
-│       └── default.conf　# Nginxの設定ファイル
-│
+├── docker
+│   ├── php
+│   │   └── Dockerfile
+│   └── web
+│       └── default.conf    # Nginxの設定ファイル
 ├── docker-compose.yml
-└── index.html # 配信する静的コンテンツ
-└── index.php  # 配信する静的コンテンツ
+├── index.html               # 配信する静的コンテンツ
+└── index.php                # 配信する静的コンテンツ
 ```
 
 ## 備考
 ```
 nginx の設定ファイルはローカルにて編集し、
 コンテナ起動時にコンテナにコピーする。
+```
+
+## Dockerfile
+※追加
+```
+FROM php:7.2.12-fpm
+
+# install composer
+RUN cd /usr/bin && curl -s http://getcomposer.org/installer | php && ln -s /usr/bin/composer.phar /usr/bin/composer
+RUN apt-get update \
+&& apt-get install -y \
+git \
+zip \
+unzip \
+vim
+
+RUN apt-get update \
+    && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo_mysql pdo_pgsql
+
+WORKDIR /var/www/html
 ```
 
 ## docker-compose.yml 
@@ -36,14 +58,14 @@ services:
       - ./docker/web/default.conf:/etc/nginx/conf.d/default.conf    # ホスト側のパス:コンテナ側のパス　
       - .:/var/www/html
   app:    # サービス名はappとする
-    image: php:7.2.12-fpm
-  ########################## 今回追加した部分 #################################
+  ########################## 今回変更した部分 #################################
+  #  image: php:7.2.12-fpm
+    build: ./docker/php #定義したDockerfileを元にイメージを作るように変更
+  #############################################################################
     depends_on:
     - mysql
-  #############################################################################
     volumes:
       - .:/var/www/html
-  ########################## 今回追加した部分 #################################
   mysql:
     image: mysql:5.7
     environment:
@@ -57,7 +79,6 @@ services:
       - mysql-data:/var/lib/mysql
 volumes:
   mysql-data:
-  #############################################################################
 ```
  * environmentによって、MySQLの情報を定義している。
  * volumesによって、mysqlのデータの永続化を行なっている。

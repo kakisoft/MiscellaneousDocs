@@ -129,6 +129,14 @@ docker-compose up -d
 ※Linuxの場合、sudo で。
 ```
 
+## コンテナにタッチして作業
+``
+docker-compose exec app bash
+
+composer create-project --prefer-dist laravel/laravel my-laravel-app
+``
+
+
 ## アクセス
 ```
 http://localhost:8000/

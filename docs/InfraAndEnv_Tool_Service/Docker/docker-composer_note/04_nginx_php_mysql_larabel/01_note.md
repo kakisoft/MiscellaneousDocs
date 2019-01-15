@@ -130,11 +130,55 @@ docker-compose up -d
 ```
 
 ## コンテナにタッチして作業
+※Ubuntu だと composer が not found だった。
 ``
 docker-compose exec app bash
 
 composer create-project --prefer-dist laravel/laravel my-laravel-app
 ``
+
+## docker/web/default.conf 編集
+```
+#    root  /var/www/html;
+    root  /var/www/html/my-laravel-app/public;
+```
+
+## 再起動
+```
+docker-compose restart
+```
+
+## LaravelをMySQLと接続
+.envファイルを編集。（上記では、/my-laravel-app/.env ）
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+
+     ↓
+
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=sample
+DB_USERNAME=user
+DB_PASSWORD=password
+```
+
+## 再起動
+```
+docker-compose restart
+```
+
+## マイグレーション
+```
+docker-compose exec app bash
+cd my-laravel-app
+php artisan migrate
+```
 
 
 ## アクセス

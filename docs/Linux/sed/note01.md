@@ -6,6 +6,11 @@
 sed --version
 
 
+## コメント
+```
+#
+```
+
 ##
 ```
 -e    expression    処理の内容が 1 つしかない場合は、「-e」を省略することもできる
@@ -123,7 +128,7 @@ s    置換
 「sed 's/[0-5]/【&】/' items.txt」    0-5 → 【0】〜【5】
 ```
 
-````
+```
 =というコマンドを使えば行番号を出力させることも可能です。
 # "dotinstall"が出てくる行の行番号を出力
 sed -n '/dotinstall/=' names.txt
@@ -131,5 +136,42 @@ sed -n '/dotinstall/=' names.txt
 
 
 
+## ホールドスペース
+対象ファイル
+```
+#main {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    background: green;
+}
+```
+
+sed
+```
+# color change
+
+/color: / {
+    h
+    s/color: /background: /
+    x
+}
+/background: / {
+    g
+}
+```
+
+メモ
+```
+h    hold        パターンスペースの中身をホールドスペースに退避させることができる。
+g    get         ホールドスペースに一時的に退避させた中身を、作業領域であるパターンスペースに戻すことができる。
+x    exchange    両者を交換する。
 
 
+「sed -f ex2.sed style.css」
+
+color の設定内容が background にも反映されているのが分かるかと思います。
+
+「color: red;」から取った値が「background: 」の値になる。
+
+```

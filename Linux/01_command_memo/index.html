@@ -3922,15 +3922,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../InfraAndEnv_Tool_Service/Docker/docker-composer_note/note01/" title="Note01" class="md-nav__link">
+      Note01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-10-1" type="checkbox" id="nav-5-6-10-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-10-2" type="checkbox" id="nav-5-6-10-2">
     
-    <label class="md-nav__link" for="nav-5-6-10-1">
+    <label class="md-nav__link" for="nav-5-6-10-2">
       01 nginx
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-5-6-10-1">
+      <label class="md-nav__title" for="nav-5-6-10-2">
         01 nginx
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3960,13 +3972,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-10-2" type="checkbox" id="nav-5-6-10-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-10-3" type="checkbox" id="nav-5-6-10-3">
     
-    <label class="md-nav__link" for="nav-5-6-10-2">
+    <label class="md-nav__link" for="nav-5-6-10-3">
       02 nginx php
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-5-6-10-2">
+      <label class="md-nav__title" for="nav-5-6-10-3">
         02 nginx php
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3996,13 +4008,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-10-3" type="checkbox" id="nav-5-6-10-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-10-4" type="checkbox" id="nav-5-6-10-4">
     
-    <label class="md-nav__link" for="nav-5-6-10-3">
+    <label class="md-nav__link" for="nav-5-6-10-4">
       03 nginx php mysql
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-5-6-10-3">
+      <label class="md-nav__title" for="nav-5-6-10-4">
         03 nginx php mysql
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4032,13 +4044,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-10-4" type="checkbox" id="nav-5-6-10-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-10-5" type="checkbox" id="nav-5-6-10-5">
     
-    <label class="md-nav__link" for="nav-5-6-10-4">
+    <label class="md-nav__link" for="nav-5-6-10-5">
       04 nginx php mysql larabel
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-5-6-10-4">
+      <label class="md-nav__title" for="nav-5-6-10-5">
         04 nginx php mysql larabel
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -8941,6 +8953,7 @@
 (redhat) cat /etc/redhat-release
 (Amazon) cat /etc/system-release
 
+
 ## sshログイン
 ssh -i &lt;AccessKey&gt; UserName@&lt;IPアドレス&gt;  [-p &lt;ポート番号&gt;]  
 chmod 600 &lt;AccessKey&gt;
@@ -8957,12 +8970,14 @@ locate &quot;filename&quot;　　　※updatedb。ファイル名データベー
 sudo find /etc -name &quot;http*&quot; -type f    # （ファイルのみ。ディレクトリは除く。）
 sudo find /etc -name &quot;http*&quot; -type f -exec wc -l {} +
 
+
 ## コマンドAの実行結果を引数にしてコマンドBを実行（xargs）
 sudo find /etc -name &quot;http*&quot; -type f | xargs wc -l
 
 
 ## 解凍（tar）　　　解答　回答　展開
 tar xzvf asterisk-1.8.8.1.tar.gz
+
 
 ## 圧縮（tar）
 tar czvf xxxx.tar.gz directory
@@ -8972,6 +8987,7 @@ tar czvf xxxx.tar.gz directory
  f - 指定したアーカイブを利用する
  x - アーカイブからファイルを取得する
  c - アーカイブを作成する
+
 
 ## Zipアーカイブ
 zip a.zip b.txt
@@ -8988,6 +9004,7 @@ su [オプション] [ユーザー名]
 
 「su」 のみを実行すると、rootユーザとなる。
 
+
 ## マシン起動時に自動的にstart
 （例：apache2、mongodb）
 sysv-rc-conf apache2 on
@@ -8998,6 +9015,7 @@ sudo apt-get install sysv-rc-conf
 
 ## ファイルの内容を１画面ごとに表示
 ～～ | more
+
 
 ## IPアドレス確認
 ip a
@@ -9026,28 +9044,36 @@ nmcli
 が使えるみたい。
 nmcli device
 
+
 ## デフォルトゲートウェイ確認
 ip route show
+
 
 ## DNS確認
 cat /etc/resolv.conf
 
+
 ## viを読み取り専用で開く
 view &lt;ファイル名&gt;
 
+
 ## debパッケージインストール
 dpkg -i &lt;ファイル名&gt;
+
 
 ## シンボリックリンク作成
 ln -s &lt;リンク先ディレクトリ名 or ファイル名&gt; &lt;作成するリンク名&gt;
 
 内容確認は　ls -l
 
+
 ## シンボリックリンク削除
 unlink &lt;リンク名&gt;
 
+
 ## シンボリックリンクのコピー
 ln -s &lt;リンク先ディレクトリ名 or ファイル名&gt; &lt;作成するリンク名&gt;
+
 
 ## ユーザ一覧
 cat /etc/passwd
@@ -9056,14 +9082,15 @@ vagrant:x:900:900:vagrant,,,:/home/vagrant:/bin/bash
 ユーザ名:x:ユーザID:グループ:コメント:ホームディレクトリ:シェル
 （xは、パスワードが必要という意味）
 
+
 ## グループ一覧
 cat /etc/group
 グループ名:x:グループID:グループ所属のユーザ名
 （xは、グループログインにパスワードが必要という意味）
 
+
 ## 自分が所属しているグループの確認
 groups
-
 
 
 ## chmodメモ
@@ -9121,6 +9148,7 @@ zgrep
 ## 環境変数（パスの確認）
 printenv
 
+
 ## パスを確認するだけなら、これでOK
 echo $PATH
 
@@ -9133,24 +9161,38 @@ export PATH=$PATH:/usr/pgsql-9.6/bin
 等はデフォルトで入ってる。
 
 
+## set
+http://linuxcommand.org/lc3_man_pages/seth.html
+
+set - Set or unset values of shell options and positional parameters.
+
+-e  Exit immediately if a command exits with a non-zero status.
+
+
+
 ## リモート端末のファイルをコピー
 （下記は ec2への接続）
 scp -i secret_key.pem ec2-user@hostname:/home/ec2-user/file_name.txt ~/
+
 
 ## リモート端末のディレクトリをコピー
 （下記は ec2への接続）
 scp -r -i secret_key.pem ec2-user@hostname:/home/ec2-user/dir_name/ ~/
 
+
 ## 中身ごとディレクトリを中身削除
 rm -rf
 
+
 ## ログインユーザ確認
 whoami 
+
 
 ## 現在の作業をバックグラウンドに移動
 [ctrl] + z
 復帰する場合
 fg
+
 
 ## 画面を分割して作業
 ＜tmux＞
@@ -9163,16 +9205,20 @@ fg
 分割を解除
 分割された画面にて exit
 
+
 ## Windowsのメモ帳チックなエディタ起動
 gegit
 
+
 ## 再起動
 sudo shutdown -r now
+
 
 ## 文字コードを識別
 file -i &lt;FILE-NAME&gt;
 nkf -g &lt;FILE-NAME&gt;
 ※半角英数のみで構成されたファイルの場合、「ASCII」と推測される。
+
 
 ## 文字コード変換
 nkf -e file.txt &gt; euc.txt
@@ -9190,10 +9236,12 @@ e … EUC-JP
 s … SJIS
 w … UTF-8
 
+
 ## 失敗したコマンドを強制的に実行
 --force
 --f
-とかで、強制インストール/アンインストール（エラーを無視して実行）できるコマンドがある。
+とかで、強制インストール/アンインストール（エラーを無視して実行）できるオプションがある。
+
 
 ## プロセス
 ps aux
@@ -9257,21 +9305,27 @@ zip -r &quot;yyyymmdd.zip&quot; *
 ## メモリ利用率を確認
 free -m
 
+
 ## マシン情報を確認
 cat /proc/cpuinfo
+
 
 ## 画面クリア
 Ctrl + l（エル）
 
+
 ## 日付確認
 date
+
 
 ## タイムゾーンを日本に設定
 sudo rm /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
+
 ## 日付修正（手動  ）
 sudo date -s &quot;2018/09/27 09:39:00&quot;
+
 
 ## タイムゾーンの確認
 timedatectl
@@ -9284,9 +9338,11 @@ JST(日本標準時)
 sudo yum -y install ntpdate  
 sudo ntpdate ntp.nict.jp  
 
+
 ## リダイレクト
 echo &quot;date&quot; &gt; cmd.txt
 echo &quot;free&quot; &gt;&gt; cmd.txt
+
 
 ## ファイルの内容をコマンドに渡す
 bash &lt; cmd.txt
@@ -9329,6 +9385,7 @@ sudo lsof -i :5432
 
 ＜ssコマンド＞
 ss
+
 
 ＜netstat は、CentOs7からは非推奨？＞
 netstat -nap

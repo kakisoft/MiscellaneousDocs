@@ -116,6 +116,11 @@ s    置換
 
 「sed 's/apple/Ringo/ig' items.txt」    大文字小文字を問わず、apple → Ringo
       [aA]pple/Ringo/g
+
+
+
+＜マッチした文字列を置換後の文字列に使用。「&」＞
+「sed 's/[0-5]/【&】/' items.txt」    0-5 → 【0】〜【5】
 ```
 
 ````
@@ -123,6 +128,7 @@ s    置換
 # "dotinstall"が出てくる行の行番号を出力
 sed -n '/dotinstall/=' names.txt
 ```
+
 
 
 

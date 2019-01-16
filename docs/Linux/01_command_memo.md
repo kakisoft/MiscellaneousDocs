@@ -213,9 +213,13 @@ export PATH=$PATH:/usr/pgsql-9.6/bin
 
 
 ## set
+http://linuxcommand.org/lc3_man_pages/seth.html
+
 set - Set or unset values of shell options and positional parameters.
 
-http://linuxcommand.org/lc3_man_pages/seth.html
+-e  Exit immediately if a command exits with a non-zero status.
+
+
 
 ## リモート端末のファイルをコピー
 （下記は ec2への接続）

@@ -73,7 +73,8 @@ p    表示（print）
 q    quit
 i    insert
 a    append
-y    位置文字ずつ置換
+y    １文字ずつ置換
+s    置換
 ```
 
 ## p
@@ -96,7 +97,7 @@ y    位置文字ずつ置換
 ```
 
 
-## y（）
+## y
 ```
 「sed 'y/t/T/' names.txt」    t が全て大文字
 
@@ -105,8 +106,24 @@ y    位置文字ずつ置換
 「sed 'y/to/OT/' names.txt」   t を O 、o を T
 
 ```
+
+
+## s
+```
+「sed 's/apple/Apple/g' items.txt」    apple → Apple
+
+「sed 's/apple/Apple/2' items.txt」    ２番目だけが置換される。
+
+「sed 's/apple/Ringo/ig' items.txt」    大文字小文字を問わず、apple → Ringo
+      [aA]pple/Ringo/g
+```
+
+````
 =というコマンドを使えば行番号を出力させることも可能です。
 # "dotinstall"が出てくる行の行番号を出力
 sed -n '/dotinstall/=' names.txt
 ```
+
+
+
 

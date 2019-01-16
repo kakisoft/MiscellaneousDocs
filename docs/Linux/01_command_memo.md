@@ -4,6 +4,7 @@
 (redhat) cat /etc/redhat-release
 (Amazon) cat /etc/system-release
 
+
 ## sshログイン
 ssh -i <AccessKey> UserName@<IPアドレス>  [-p <ポート番号>]  
 chmod 600 <AccessKey>
@@ -20,12 +21,14 @@ locate "filename"　　　※updatedb。ファイル名データベースから�
 sudo find /etc -name "http*" -type f    # （ファイルのみ。ディレクトリは除く。）
 sudo find /etc -name "http*" -type f -exec wc -l {} +
 
+
 ## コマンドAの実行結果を引数にしてコマンドBを実行（xargs）
 sudo find /etc -name "http*" -type f | xargs wc -l
 
 
 ## 解凍（tar）　　　解答　回答　展開
 tar xzvf asterisk-1.8.8.1.tar.gz
+
 
 ## 圧縮（tar）
 tar czvf xxxx.tar.gz directory
@@ -35,6 +38,7 @@ tar czvf xxxx.tar.gz directory
  f - 指定したアーカイブを利用する
  x - アーカイブからファイルを取得する
  c - アーカイブを作成する
+
 
 ## Zipアーカイブ
 zip a.zip b.txt
@@ -51,6 +55,7 @@ su [オプション] [ユーザー名]
 
 「su」 のみを実行すると、rootユーザとなる。
 
+
 ## マシン起動時に自動的にstart
 （例：apache2、mongodb）
 sysv-rc-conf apache2 on
@@ -61,6 +66,7 @@ sudo apt-get install sysv-rc-conf
 
 ## ファイルの内容を１画面ごとに表示
 ～～ | more
+
 
 ## IPアドレス確認
 ip a
@@ -89,28 +95,36 @@ nmcli
 が使えるみたい。
 nmcli device
 
+
 ## デフォルトゲートウェイ確認
 ip route show
+
 
 ## DNS確認
 cat /etc/resolv.conf
 
+
 ## viを読み取り専用で開く
 view <ファイル名>
 
+
 ## debパッケージインストール
 dpkg -i <ファイル名>
+
 
 ## シンボリックリンク作成
 ln -s <リンク先ディレクトリ名 or ファイル名> <作成するリンク名>
 
 内容確認は　ls -l
 
+
 ## シンボリックリンク削除
 unlink <リンク名>
 
+
 ## シンボリックリンクのコピー
 ln -s <リンク先ディレクトリ名 or ファイル名> <作成するリンク名>
+
 
 ## ユーザ一覧
 cat /etc/passwd
@@ -119,14 +133,15 @@ vagrant:x:900:900:vagrant,,,:/home/vagrant:/bin/bash
 ユーザ名:x:ユーザID:グループ:コメント:ホームディレクトリ:シェル
 （xは、パスワードが必要という意味）
 
+
 ## グループ一覧
 cat /etc/group
 グループ名:x:グループID:グループ所属のユーザ名
 （xは、グループログインにパスワードが必要という意味）
 
+
 ## 自分が所属しているグループの確認
 groups
-
 
 
 ## chmodメモ
@@ -184,6 +199,7 @@ zgrep
 ## 環境変数（パスの確認）
 printenv
 
+
 ## パスを確認するだけなら、これでOK
 echo $PATH
 
@@ -196,24 +212,38 @@ export PATH=$PATH:/usr/pgsql-9.6/bin
 等はデフォルトで入ってる。
 
 
+## set
+http://linuxcommand.org/lc3_man_pages/seth.html
+
+set - Set or unset values of shell options and positional parameters.
+
+-e  Exit immediately if a command exits with a non-zero status.
+
+
+
 ## リモート端末のファイルをコピー
 （下記は ec2への接続）
 scp -i secret_key.pem ec2-user@hostname:/home/ec2-user/file_name.txt ~/
+
 
 ## リモート端末のディレクトリをコピー
 （下記は ec2への接続）
 scp -r -i secret_key.pem ec2-user@hostname:/home/ec2-user/dir_name/ ~/
 
+
 ## 中身ごとディレクトリを中身削除
 rm -rf
 
+
 ## ログインユーザ確認
 whoami 
+
 
 ## 現在の作業をバックグラウンドに移動
 [ctrl] + z
 復帰する場合
 fg
+
 
 ## 画面を分割して作業
 ＜tmux＞
@@ -226,16 +256,20 @@ fg
 分割を解除
 分割された画面にて exit
 
+
 ## Windowsのメモ帳チックなエディタ起動
 gegit
 
+
 ## 再起動
 sudo shutdown -r now
+
 
 ## 文字コードを識別
 file -i <FILE-NAME>
 nkf -g <FILE-NAME>
 ※半角英数のみで構成されたファイルの場合、「ASCII」と推測される。
+
 
 ## 文字コード変換
 nkf -e file.txt > euc.txt
@@ -253,10 +287,12 @@ e … EUC-JP
 s … SJIS
 w … UTF-8
 
+
 ## 失敗したコマンドを強制的に実行
 --force
 --f
-とかで、強制インストール/アンインストール（エラーを無視して実行）できるコマンドがある。
+とかで、強制インストール/アンインストール（エラーを無視して実行）できるオプションがある。
+
 
 ## プロセス
 ps aux
@@ -320,21 +356,27 @@ zip -r "yyyymmdd.zip" *
 ## メモリ利用率を確認
 free -m
 
+
 ## マシン情報を確認
 cat /proc/cpuinfo
+
 
 ## 画面クリア
 Ctrl + l（エル）
 
+
 ## 日付確認
 date
+
 
 ## タイムゾーンを日本に設定
 sudo rm /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
+
 ## 日付修正（手動  ）
 sudo date -s "2018/09/27 09:39:00"
+
 
 ## タイムゾーンの確認
 timedatectl
@@ -347,9 +389,11 @@ JST(日本標準時)
 sudo yum -y install ntpdate  
 sudo ntpdate ntp.nict.jp  
 
+
 ## リダイレクト
 echo "date" > cmd.txt
 echo "free" >> cmd.txt
+
 
 ## ファイルの内容をコマンドに渡す
 bash < cmd.txt
@@ -392,6 +436,7 @@ sudo lsof -i :5432
 
 ＜ssコマンド＞
 ss
+
 
 ＜netstat は、CentOs7からは非推奨？＞
 netstat -nap

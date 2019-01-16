@@ -20,6 +20,8 @@ sed -e '3d' names.txt        #  names.txt の 3行目を削除
 sed '3d' names.txt           # ↑と同義（-e を省略できるため）
 sed -i.bak '3d' names.txt    # 3行目を削除。bak 拡張子のバックアップを作成
 sed -f ex1.sed names.txt     # 外部コマンド実行。『ex1.sed』の内容が「3d」の場合、namex.txt に対し、3d を実行。
+
+sed '3p' names.txt           # 3 行目を print 
 ```
 
 ## 構成
@@ -64,7 +66,47 @@ sed -f ex1.sed names.txt     # 外部コマンド実行。『ex1.sed』の内容
 $       最後の行
 ```
 
+## コマンド
+```
+d    削除（delete）
+p    表示（print）
+q    quit
+i    insert
+a    append
+y    位置文字ずつ置換
+```
+
+## p
+```
+「sed -n '3p' names.txt」とすると、3 行目だけを表示できる。
+
+※p コマンドは、-n とよく使われる。
+
+このオプションがない場合、標準動作のパターンスペースの内容表示も出力される。
+（「全内容 + pオプションして指定した内容」が、出力内容となる。）
+```
+
+## q 
+```
+「sed '3q' names.txt」    3行目で処理を終了
+```
+
+## i
+```
+```
 
 
+## y（）
+```
+「sed 'y/t/T/' names.txt」    t が全て大文字
 
+「sed 'y/to/TO/' names.txt」   t と o を大文字
+
+「sed 'y/to/OT/' names.txt」   t を O 、o を T
+
+```
+=というコマンドを使えば行番号を出力させることも可能です。
+# "dotinstall"が出てくる行の行番号を出力
+sed -n '/dotinstall/=' names.txt
+```
 

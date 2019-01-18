@@ -98,6 +98,7 @@ command + control + F
 command + space -> 「ter」
 
 
+
 ## 中断（ターミナル）
 control + C
 

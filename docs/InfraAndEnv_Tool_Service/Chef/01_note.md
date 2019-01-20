@@ -17,7 +17,7 @@ Node Server（仮装マシンとか）
 ※2 番目を含めない構成も可
 
 ## Cookbook
-
+設定ファイル（みたいなもの）
 
 ## Knife、Knife solo
 コマンド

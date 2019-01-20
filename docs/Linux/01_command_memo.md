@@ -419,6 +419,19 @@ sudo vi ~/.bashrc
 alias apast='sudo systemctl restart httpd.service'
 
 
+## エイリアスを作成（max）
+vi ~/.bashrc
+alias ll='ls -la'
+
+
+vi .bash_profile
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+
+source ~/.bashrc
+
 ## ポートの空きを確認
 nmap <HOSTNAME>
 

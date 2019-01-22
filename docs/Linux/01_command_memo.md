@@ -183,6 +183,7 @@ wc /var/log/syslog.1
 
 
 ## テキストの中身を検索
+grep wordddd *
 grep 'etc' /var/log/syslog.1
 grep (etc|cd|root) /var/log/syslog.1
 grep -E -R "(etc|root|report)" /var/log/syslog.1
@@ -190,10 +191,19 @@ grep -E -R "(etc|root|report)" /var/log/syslog.1
 -E  検索に正規表現を使う
 -r  サブディレクトリも含めて検索
 -R  サブディレクトリ、シンボリックリンク先も含めて検索
+-n  行番号を表示
+-dskip   grep: XXX: Is a directory  といった行をカット
+
+色々と参考になるもの
+https://wa3.i-3-i.info/word11252.html
 
 
 ## 圧縮したテキストも検索
 zgrep
+
+
+## 先頭１行を出力
+head -n 1 user_info.rb >> aaa.txt
 
 
 ## 環境変数（パスの確認）

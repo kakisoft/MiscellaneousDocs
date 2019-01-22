@@ -4393,10 +4393,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11" type="checkbox" id="nav-4-11">
     
     <label class="md-nav__link" for="nav-4-11">
-      SVN
+      LibreOffice
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-4-11">
+        LibreOffice
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../InfraAndEnv_Tool_Service/LibreOffice/mac/" title="Mac" class="md-nav__link">
+      Mac
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-12" type="checkbox" id="nav-4-12">
+    
+    <label class="md-nav__link" for="nav-4-12">
+      SVN
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-12">
         SVN
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4426,13 +4462,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-12" type="checkbox" id="nav-4-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-13" type="checkbox" id="nav-4-13">
     
-    <label class="md-nav__link" for="nav-4-12">
+    <label class="md-nav__link" for="nav-4-13">
       Slack
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-12">
+      <label class="md-nav__title" for="nav-4-13">
         Slack
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4462,13 +4498,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-13" type="checkbox" id="nav-4-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-14" type="checkbox" id="nav-4-14">
     
-    <label class="md-nav__link" for="nav-4-13">
+    <label class="md-nav__link" for="nav-4-14">
       Twitter
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-13">
+      <label class="md-nav__title" for="nav-4-14">
         Twitter
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4498,13 +4534,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-14" type="checkbox" id="nav-4-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-15" type="checkbox" id="nav-4-15">
     
-    <label class="md-nav__link" for="nav-4-14">
+    <label class="md-nav__link" for="nav-4-15">
       VMware
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-14">
+      <label class="md-nav__title" for="nav-4-15">
         VMware
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4534,13 +4570,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-15" type="checkbox" id="nav-4-15">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-16" type="checkbox" id="nav-4-16">
     
-    <label class="md-nav__link" for="nav-4-15">
+    <label class="md-nav__link" for="nav-4-16">
       Vagrant
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-15">
+      <label class="md-nav__title" for="nav-4-16">
         Vagrant
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4714,13 +4750,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-16" type="checkbox" id="nav-4-16">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-17" type="checkbox" id="nav-4-17">
     
-    <label class="md-nav__link" for="nav-4-16">
+    <label class="md-nav__link" for="nav-4-17">
       Heroku
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-16">
+      <label class="md-nav__title" for="nav-4-17">
         Heroku
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -9144,6 +9180,7 @@ wc /var/log/syslog.1
 
 
 ## テキストの中身を検索
+grep wordddd *
 grep 'etc' /var/log/syslog.1
 grep (etc|cd|root) /var/log/syslog.1
 grep -E -R &quot;(etc|root|report)&quot; /var/log/syslog.1
@@ -9151,10 +9188,19 @@ grep -E -R &quot;(etc|root|report)&quot; /var/log/syslog.1
 -E  検索に正規表現を使う
 -r  サブディレクトリも含めて検索
 -R  サブディレクトリ、シンボリックリンク先も含めて検索
+-n  行番号を表示
+-dskip   grep: XXX: Is a directory  といった行をカット
+
+色々と参考になるもの
+https://wa3.i-3-i.info/word11252.html
 
 
 ## 圧縮したテキストも検索
 zgrep
+
+
+## 先頭１行を出力
+head -n 1 user_info.rb &gt;&gt; aaa.txt
 
 
 ## 環境変数（パスの確認）

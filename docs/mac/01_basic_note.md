@@ -57,6 +57,9 @@ shift + -
 command + space ⇒ 「ter」
 
 
+## ターミナルを分割
+command + t
+
 ## ファイル削除
 command + delete
 

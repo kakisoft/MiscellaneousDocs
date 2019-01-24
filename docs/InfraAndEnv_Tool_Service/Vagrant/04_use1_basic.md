@@ -15,6 +15,11 @@ vagrant up
 ```
 virtualboxを立ち上げると、仮想マシンが起動中であることを確認できる。
 
+## 詳細メッセージ付きで起動（起動エラー原因の調査などに）
+```
+vagrant up --debug
+```
+
 ### 仮想マシンの状態確認
 ```
 vagrant status

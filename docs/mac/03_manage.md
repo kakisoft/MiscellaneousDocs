@@ -7,3 +7,10 @@
 
 アカウントを「管理者」
 ```
+
+## セーフモード起動
+https://support.apple.com/kb/PH25617?locale=ja_JP
+
+
+## _
+アルフレッド

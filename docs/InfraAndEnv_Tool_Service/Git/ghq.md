@@ -6,9 +6,12 @@ git cloneの代わりにghq get <repository URL>
 
 ## インストール
 ```
+brew install ghq
+
+
+または、
 brew install go
 sudo chown -R $(whoami) /usr/local/lib/pkgconfig
-
 
 go get github.com/motemen/ghq
 ```

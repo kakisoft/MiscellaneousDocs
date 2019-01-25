@@ -150,6 +150,10 @@ control + ↑
 command + r
 
 
+## Chrome スーパーリロード
+command + shift + r
+
+
 ## 変換
 ひらがな	ctrl + j
 カタカナ	ctrl + k

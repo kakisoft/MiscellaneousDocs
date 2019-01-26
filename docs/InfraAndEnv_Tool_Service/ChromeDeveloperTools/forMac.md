@@ -22,8 +22,13 @@ command + option + i
 Elements  -> Styles 
 タブにて、css の内容を確認できる
 
-
 css ソースファイル名も確認可。
+
+「Inherited」と書かれたスタイルは、親要素からの。
+
+□チェックボックスの on/off で、スタイルの有効/無効 を設定できる。
+
+padidng/mergin の内容を確認できる。
 ```
 
 

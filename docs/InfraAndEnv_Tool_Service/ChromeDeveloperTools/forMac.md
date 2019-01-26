@@ -1,4 +1,4 @@
-# Google Chrome
+# Google Chrome Developer Tools
 
 ## ソースを表示
 command + option + u

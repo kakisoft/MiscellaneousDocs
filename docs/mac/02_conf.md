@@ -27,6 +27,8 @@ killall Finder
 defaults write com.apple.finder AppleShowAllFiles FALSE
 killall Finder
 ```
+「.DS_Store」は、これでも見えない？
+
 
 ## コンピュータ名
 システム環境設定 -> 共有 -> 「コンピュータ名」を編集

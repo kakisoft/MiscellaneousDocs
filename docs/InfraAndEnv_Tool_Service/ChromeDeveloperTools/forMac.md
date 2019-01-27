@@ -1,4 +1,6 @@
 # Google Chrome Developer Tools
+https://developers.google.com/web/tools/chrome-devtools/?hl=ja
+
 
 ## ソースを表示
 command + option + u
@@ -82,8 +84,43 @@ javascript や css が編集可。
 ```
 エラー：　　右上の●に、エラーの数が出る。クリックすると、その内容を表示。
 
+ブレークポイントを設置可能。
+変数名にカーソルを合わせると、中身を見る事が出来る。
 
+ステップイン、ステップオーバー可能。（上段：右の矢印のアイコン）
 ```
 
+# Performance
 
+
+# Memory
+
+
+# Application
+旧名：Resouces  
+```
+Local Storage
+Session Storage
+Cookies
+```
+
+# Audits
+パフォーマンスについての提案
+
+
+# Console
+JavaScript をそのまま試す事ができる。  
+
+左上の●（止まれマーク）で、現在出力中の内容をクリア。
+```
+Elementsパネルと一緒に使う。
+選択→
+$0        → 現在洗濯中の要素を表示
+$1        →１つ前
+$('h1')
+$('p')    →最初のp
+$$('p')    →全部のp
+
+copy($0)   →クリップボードにコピーされる
+```
 

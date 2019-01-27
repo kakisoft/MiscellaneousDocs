@@ -16,6 +16,18 @@
 Finder -> 左上メニュー -> すべてのファイル名拡張子を表示
 
 
+## 隠しファイルを表示（恒久的に）
+ターミナルにて、
+```
+defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+```
+解除
+```
+defaults write com.apple.finder AppleShowAllFiles FALSE
+killall Finder
+```
+
 ## コンピュータ名
 システム環境設定 -> 共有 -> 「コンピュータ名」を編集
 

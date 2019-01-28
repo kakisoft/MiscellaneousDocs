@@ -181,6 +181,16 @@ command + shift + r
 fn + ↑↓
 
 
+## アプリケーションの強制終了
+option + command + esc
+
+
+## アクティビティモニタ
+command + space  -> 「act」
+または
+アプリケーション -> ユーティリティ -> アクティブモニタ
+
+
 ## 動画キャプチャ
 QuickTimePlayer 起動 -> 上段メニューの「ファイル」 -> 新規画面収録 -> 
 　                                               新規ムービー収録

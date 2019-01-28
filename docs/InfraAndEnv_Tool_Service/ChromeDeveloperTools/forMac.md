@@ -124,6 +124,9 @@ $$('p')    →全部のp
 copy($0)   →クリップボードにコピーされる
 ```
 ## _
+Chrome のコンソールで参照できるのは、「window.xxxx」の空間。
+
+## _
 ```js
 console.table({ val1, val2, val3 })
 ```

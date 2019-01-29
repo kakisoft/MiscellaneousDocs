@@ -6,8 +6,9 @@ mkdocs build
 mkdocs serve
 
 git init
+git remote add origin https://github.com/kakisoft/newRepositoryyyyyyy.git
 git pull origin master
-git remote add https://github.com/kakisoft/newRepositoryyyyyyy.git
+
 
 ※以下、最低１回、コマンドラインで実行しておく。
 git add .
@@ -26,11 +27,14 @@ mkdocs gh-deploy
 （公開サイトのURLs）
 https://kakisoft.github.io/newRepositoryyyyyyy/
 
+
+※末尾に「.git」は付かないよ。
 ```
 
 GitHub Pages の設定などは特に不要。  
 （勝手に「gh-page」ブランチが、公開設定となる。）  
-・・・なんだけど、ちゃんと公開されなかったんで、settingでちゃんと設定した方がよさそう。
+・・・なんだけど、ちゃんと公開されなかったんで、settingでちゃんと設定した方がよさそう。  
+あと、Proにしないと、Privateリポジトリは公開できないみたい。
 
 
 ___________________________________________________________________________

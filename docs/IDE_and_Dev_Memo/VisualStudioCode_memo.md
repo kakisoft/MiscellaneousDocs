@@ -50,18 +50,25 @@ vsCode
 
 # プラグイン
 
-### Live HTML Previewer
+## Live HTML Previewer
 HTMLのプレビュー  
 横にプレビューを表示　　Ctrl + q → s  
 エディタ全体にプレビューを表示　　Ctrl +q → f  
 ブラウザで表示　Ctrl +q → w  
 
-### スニペット
+## スニペット
 HTML Snippets
 
-### インデントのハイライト
+
+## インデントのハイライト
 indent-rainbow
 
-### PHP
+
+## PHP
 公式のやつを２つぐらいブチ込む程度でいい感じ。（雑）
+
+
+## Git History
+Git の履歴管理がいい感じ。
+
 

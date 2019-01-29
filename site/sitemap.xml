@@ -706,52 +706,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/RegularExpression_note/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/VisualStudioCode_memo/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/VisualStudio_memo/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/eclipse_memo/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/firefox_memo/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/google_Chrome_memo/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/tools/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/various_ phrase_and_naming_memo/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/キャッシュについて/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/JS_Env/パッケージマネージャー/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Eclipse/eclipse_memo/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Key/SSH_KEY_memo/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Key/key_memo/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -787,11 +757,6 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/NetworkNote/Windows/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/NetworkNote/key_memo/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -836,6 +801,21 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/OherNote/Term_programming/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/OherNote/file_pass/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/OherNote/various_ phrase_and_naming_memo/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/RSS/01_構造とチェック/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
@@ -846,7 +826,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/RegularExpression/RegularExpression_note/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Security/note01/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/VisualStudio/VisualStudio_memo/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/VisualStudioCode/VisualStudioCode_memo/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -916,12 +911,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/その他雑記/file_pass/</loc>
-     <lastmod>2019-01-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/用語集/programming/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/markdown/markdown/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -942,6 +932,11 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Cyberduck/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/OtherTools/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1086,7 +1081,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/ChromeDeveloperTools/forMac/</loc>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Chrome/ChromeDeveloperToolsforMac/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Chrome/Plugin/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Chrome/google_Chrome_memo/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1171,7 +1176,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/FireFox/firefox_memo/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Git/01_git_basic_command/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Git/02_dev_note/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1246,6 +1261,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/GitHub/memo/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Hyper-V/01_有効化/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
@@ -1271,7 +1291,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/JavaScript/JavaScript_note/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/LibreOffice/mac/</loc>
+     <lastmod>2019-01-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Ruby/Ruby_note/</loc>
      <lastmod>2019-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -57,18 +57,3 @@ theme: readthedocs
 ```
 
 
-## GitHubPages　にデプロイ
- 1. GitHubにて、「gh-pages」というブランチを作成。
- 2. clone
- 3. ローカルにて、「mkdocs gh-deploy」を実行。
- 4. 対象のリポジトリにて、Setting→GitHub Pagesを設定。対象ブランチは「gh-pages」とする
-
-以降、ローカル側にて
-```
-mkdocs gh-deploy
-```
-実行でデプロイ。
-　  
-・・・ブランチ名は「gh-pages」でなきゃいけないのかと思ったが、何でもいいみたい。  
-masterでも可。  
-

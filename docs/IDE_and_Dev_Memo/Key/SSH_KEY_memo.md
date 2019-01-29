@@ -78,3 +78,8 @@ ssh-rsa ＜公開鍵の内容＞ your_email@example.com
 
 Githubに登録すると、メール送信される。
 ```
+
+## __
+```
+ssh -T git@github.com
+```

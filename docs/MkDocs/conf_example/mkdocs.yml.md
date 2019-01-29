@@ -24,8 +24,8 @@ theme:
 #theme: windmill
 #theme: cluster  # 白黒。なんか地味。検索がない。
 #theme: rtd-dropdown # Sphinxっぽい
+#theme: readthedocs  # 
 ### theme: bootstrap  # 緑が基本色。ヘッダが紺色。 error
-
 
 extra:
   search:

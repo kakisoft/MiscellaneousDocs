@@ -24,6 +24,11 @@ sudo pip install mkdocs
 sudo pip install mkdocs-windmill
 ```
 
+## プライグイン
+```
+pip install pygments
+```
+
 ## 操作
 ひな形を作成（以下、「sample01」という名前で作成しています。）
 ```
@@ -38,22 +43,5 @@ mkdocs build
 mkdocs serve
 ```
 リロードせずに編集内容が反映される。
-
-
-## プライグイン
-```
-pip install pygments
-```
-
-## 追加テーマ
-#### マテリアルデザインのテーマ
-```
-pip install mkdocs-material
-```
-#### テーマ変更
-mkdocs.yml
-```
-theme: readthedocs
-```
 
 

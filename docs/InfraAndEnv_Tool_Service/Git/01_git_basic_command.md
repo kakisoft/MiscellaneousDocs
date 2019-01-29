@@ -99,6 +99,7 @@ git log --oneline
 git log -p         #変更された場所も見る
 git log --stat      #変更されたファイルの一覧
 git log --oneline --graph --all  ## ツリー表示
+git log -p public_html/js/common/components.min.js
 
 
 ## 状態確認

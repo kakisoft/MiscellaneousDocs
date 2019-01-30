@@ -414,6 +414,11 @@ echo "date" > cmd.txt
 echo "free" >> cmd.txt
 
 
+## echo
+-n    改行しない
+-e    エスケープ有効（echo -e "a\tb"）
+
+
 ## ファイルの内容をコマンドに渡す
 bash < cmd.txt
 

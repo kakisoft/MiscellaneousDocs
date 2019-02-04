@@ -187,12 +187,15 @@ grep wordddd *
 grep 'etc' /var/log/syslog.1
 grep (etc|cd|root) /var/log/syslog.1
 grep -E -R "(etc|root|report)" /var/log/syslog.1
+grep --include='*.js' -r option * | grep type
+
 
 -E  検索に正規表現を使う
 -r  サブディレクトリも含めて検索
 -R  サブディレクトリ、シンボリックリンク先も含めて検索
 -n  行番号を表示
 -dskip   grep: XXX: Is a directory  といった行をカット
+--include='*.js'    ファイル名を指定
 
 色々と参考になるもの
 https://wa3.i-3-i.info/word11252.html

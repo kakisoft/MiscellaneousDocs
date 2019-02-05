@@ -9688,12 +9688,15 @@ grep wordddd *
 grep 'etc' /var/log/syslog.1
 grep (etc|cd|root) /var/log/syslog.1
 grep -E -R &quot;(etc|root|report)&quot; /var/log/syslog.1
+grep --include='*.js' -r option * | grep type
+
 
 -E  検索に正規表現を使う
 -r  サブディレクトリも含めて検索
 -R  サブディレクトリ、シンボリックリンク先も含めて検索
 -n  行番号を表示
 -dskip   grep: XXX: Is a directory  といった行をカット
+--include='*.js'    ファイル名を指定
 
 色々と参考になるもの
 https://wa3.i-3-i.info/word11252.html
@@ -9840,6 +9843,7 @@ curl -X POST http://kakiaaa.herokuapp.com/challenge_users -d name=tanaka -d emai
 <p>curl -s {https://lolipop.jp/manual/tos/?} -o /dev/null -w '%{http_code}\n'</p>
 <p>-w (write out)で http_code を指定しつつ、他は -o (output)で /dev/null にでも捨てる。
 そして -s (silent)を指定して「進捗どうですか？」を表示しないようにする。</p>
+<p>-k    sslエラーを無視</p>
 <pre><code>
 ______________________________________________________________
 

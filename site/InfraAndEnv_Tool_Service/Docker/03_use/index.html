@@ -9805,6 +9805,8 @@ sudo docker pull centos
 
 <p>または</p>
 <pre><code>sudo docker run &lt;IMAGE ID&gt;
+
+sudo docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo --name db postgres:10
 </code></pre>
 
 <p>オプション無しで runを実行した場合、起動後にすぐに終了する。<br />
@@ -9814,6 +9816,10 @@ sudo docker pull centos
 -d：コンテナをバックグラウンドで実行（デタッチドモード）
 -i：コンテナの STDIN にアタッチ
 -p：コンテナのポートをホスト側に公開
+
+--env , -e    Set environment variables
+--name        Assign a name to the container
+--link        Add link to another container
 </code></pre>
 
 <h3 id="_3">実行中のコンテナ一覧を表示</h3>
@@ -9853,6 +9859,8 @@ CONTAINER ID を指定する時は、先頭X文字を入力するだけでも判
 
 <h3 id="_11">停止したコンテナを再開</h3>
 <pre><code>sudo docker start &lt;CONTAINER ID&gt;
+
+--attach , -a       Attach STDOUT/STDERR and forward signals
 </code></pre>
 
 <h3 id="_12">コンテナの削除</h3>

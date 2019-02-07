@@ -21,6 +21,8 @@ sudo docker run <REPOSITORY:TAG>
 または
 ```
 sudo docker run <IMAGE ID>
+
+sudo docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo --name db postgres:10
 ```
 オプション無しで runを実行した場合、起動後にすぐに終了する。  
 バックグラウンドで動作させたい場合、```-td```オプションを使用する。  
@@ -30,6 +32,10 @@ sudo docker run <IMAGE ID>
 -d：コンテナをバックグラウンドで実行（デタッチドモード）
 -i：コンテナの STDIN にアタッチ
 -p：コンテナのポートをホスト側に公開
+
+--env , -e    Set environment variables
+--name		  Assign a name to the container
+--link		  Add link to another container
 ```
 
 ### 実行中のコンテナ一覧を表示
@@ -77,6 +83,8 @@ sudo docker kill <CONTAINER ID>
 ### 停止したコンテナを再開
 ```
 sudo docker start <CONTAINER ID>
+
+--attach , -a		Attach STDOUT/STDERR and forward signals
 ```
 
 ### コンテナの削除

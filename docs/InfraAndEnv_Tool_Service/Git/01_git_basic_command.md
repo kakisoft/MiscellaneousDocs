@@ -1,9 +1,10 @@
+メモ  
+<http://kakistamp.hatenadiary.jp/entry/2017/04/17/032953>
+
 ```
 【公式サイト】
 https://git-scm.com/
 
-メモ
-http://kakistamp.hatenadiary.jp/entry/2017/04/17/032953
 
 ## 用語
 ・作業ツリー

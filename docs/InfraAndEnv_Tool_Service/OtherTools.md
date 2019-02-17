@@ -27,6 +27,8 @@ https://www.getpostman.com/
 
 ## 負荷ツール
  * Apache JMeter
+ 
+<http://tech-blog.rakus.co.jp/entry/2017/08/24/111332>
 
 
 ## 画像編集

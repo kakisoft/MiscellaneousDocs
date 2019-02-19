@@ -34,6 +34,8 @@ git pushしただけでアプリを公開できるサービス。
 簡単に増減できる。
 基本的に破棄される物なので、永続的なファイルを保持する事は出来ない。
 データを永続的に保持する場合、アドオンや外部ストレージを使用する。
+（Addmon:Databaseとか）
+
 　  
 ## Dependencies
 ライブラリの依存関係を示したファイル。
@@ -42,7 +44,8 @@ Rubyならgem、Node.jsならpackege.jsonだったり。
 ## Procfile（プロックファイル）
 Heroku上で動かしたいコマンドの一覧。
 Webからのリクエストを処理するためのプロセスや、
-バックグラウンドで処理するプロセス。
+バックグラウンドで処理するプロセス。  
+gitコマンド１発でHerokuに送ることができる。
 　  
 　  
 # 準備
@@ -115,12 +118,14 @@ C:\Users\uskaki002>
 /bin/bash: 
 C:\Users\uskaki002\AppData\Roaming\npm\node_modules\heroku-cli\bin\run: そのようなファイルやディレクトリはあ りません
 
-
+## アドオン
+```
 Addon:Logging
 Addon:Mail
 Addon:Analytics
 --
 Addon:DataBase
+```
 
 
 # アプリ開発に手間取ってない？Herokuでこれからの開発手法を手に入れよう！

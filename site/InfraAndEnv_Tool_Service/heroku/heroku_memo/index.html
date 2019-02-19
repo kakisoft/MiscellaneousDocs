@@ -3383,8 +3383,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../OtherTools/" title="サービス" class="md-nav__link">
-      サービス
+    <a href="../../OtherTools/" title="OtherTools" class="md-nav__link">
+      OtherTools
     </a>
   </li>
 
@@ -9597,6 +9597,8 @@ git pushしただけでアプリを公開できるサービス。
 簡単に増減できる。
 基本的に破棄される物なので、永続的なファイルを保持する事は出来ない。
 データを永続的に保持する場合、アドオンや外部ストレージを使用する。
+（Addmon:Databaseとか）
+
 　  
 ## Dependencies
 ライブラリの依存関係を示したファイル。
@@ -9605,7 +9607,8 @@ Rubyならgem、Node.jsならpackege.jsonだったり。
 ## Procfile（プロックファイル）
 Heroku上で動かしたいコマンドの一覧。
 Webからのリクエストを処理するためのプロセスや、
-バックグラウンドで処理するプロセス。
+バックグラウンドで処理するプロセス。  
+gitコマンド１発でHerokuに送ることができる。
 　  
 　  
 # 準備
@@ -9678,13 +9681,15 @@ C:\Users\uskaki002&gt;
 /bin/bash: 
 C:\Users\uskaki002\AppData\Roaming\npm\node_modules\heroku-cli\bin\run: そのようなファイルやディレクトリはあ りません
 
+## アドオン
+</code></pre>
 
-Addon:Logging
+<p>Addon:Logging
 Addon:Mail
 Addon:Analytics
 --
-Addon:DataBase
-
+Addon:DataBase</p>
+<pre><code>
 
 # アプリ開発に手間取ってない？Herokuでこれからの開発手法を手に入れよう！
 # 岡本 充洋 [セールスフォース・ドットコム]/稲葉 洋幸 [セールスフォース・ドットコム]

@@ -42,7 +42,6 @@ gitコマンド１発でHerokuに送ることができる。
 ```
 brew tap heroku/brew && brew install heroku
 ```
-
 コマンドラインで操作するためのツールをインストールします。[公式サイトを参照して下さい。](https://devcenter.heroku.com/articles/heroku-cli)  
 npmを使う方法が OSごとの変化がないので、一番お手軽ではないでしょうか。（Node.jsが要りますが。）
 ```
@@ -54,6 +53,7 @@ npmのインストールメッセージを参考に、パスを通す場所を�
 ```
 choco install heroku-cli
 ```
+
 バージョン確認は以下のコマンド
 ```
 heroku --version

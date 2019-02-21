@@ -135,6 +135,17 @@ git reset --hard HEAD^
 Git History リロード。
 
 
+## push 取り消し
+git reset --hard HEAD^
+git push -f
+
+（master	ブランチの場合）
+it push -f origin master
+
+http://www-creators.com/archives/2020
+
+
+
 ## ブランチ
 git branch                 #ブランチ一覧
 git checkout <ブランチ名>   #ブランチ切り替え

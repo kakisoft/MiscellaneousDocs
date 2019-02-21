@@ -73,6 +73,11 @@ heroku login
 ログインと同時に公開鍵がアップされる。
 
 
+## CLIログイン
+```
+heroku login -i
+```
+
 
 
 rails new mymemo -d postgresql

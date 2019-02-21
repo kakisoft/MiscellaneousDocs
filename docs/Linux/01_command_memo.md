@@ -345,6 +345,12 @@ curl -s {https://lolipop.jp/manual/tos/?} -o /dev/null -w '%{http_code}\n'
 
 -k    sslエラーを無視
 ```
+ヘッダ情報を取得
+```
+curl -I https://admin.dummy.localdev/
+
+-I  Fetch the headers only! 
+```
 
 ______________________________________________________________
 

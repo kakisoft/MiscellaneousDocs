@@ -40,7 +40,8 @@ https://www.getpostman.com/
  * Apache JMeter
 
 
-
+## DB GUIツール
+Sequel Pro
 
 
  

@@ -519,6 +519,7 @@ sudo ufw allow 80
 sudo ufw enable
 sudo ufw reload
 
+
 ## ファイアウォール（CentOS） RedHat
 ※未検証
 sudo systemctl start firewalld
@@ -528,6 +529,35 @@ firewall-cmd --add-port=80/tcp --zone=public --permanent
 firewall-cmd --add-port=22/tcp --zone=public --permanent
 firewall-cmd --remove-port=80/tcp --zone=public --permanent
 firewall-cmd --reload
+
+
+## httpdデーモン再起動(CentOS7)
+sudo systemctl start httpd
+sudo systemctl start httpd.service
+
+
+## httpdデーモン起動確認(CentOS7)
+[vagrant@user ~]$ ps aux | grep http
+root     10502  0.0  1.1 249308 11624 ?        Ss   12:49   0:00 /usr/sbin/httpd
+apache   10519  0.0  0.7 249308  7352 ?        S    12:49   0:00 /usr/sbin/httpd
+apache   10520  0.0  0.7 249308  7344 ?        S    12:49   0:00 /usr/sbin/httpd
+apache   10521  0.0  0.7 249308  7344 ?        S    12:49   0:00 /usr/sbin/httpd
+apache   10522  0.0  0.7 249308  7344 ?        S    12:49   0:00 /usr/sbin/httpd
+apache   10523  0.0  0.7 249308  7344 ?        S    12:49   0:00 /usr/sbin/httpd
+vagrant  10626  0.0  0.0 107484   920 pts/0    R+   12:50   0:00 grep http
+
+
+
+## ファイアウォール起動確認（CentOS7）
+systemctl status firewalld.service
+firewall-cmd --state
+
+
+https://qiita.com/kenjjiijjii/items/1057af2dddc34022b09e
+
+
+
+
 
 ## ファイアウォール（共通。古い書き方）
 【iptales】

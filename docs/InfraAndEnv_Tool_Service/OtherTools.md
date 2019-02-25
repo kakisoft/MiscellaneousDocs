@@ -22,6 +22,8 @@ https://mailtrap.io/
 https://qiita.com/konkon/items/c6c36f1251c7f5961eed  
 
 
+## nslookup(dig)テスト【DNSサーバ接続確認】
+https://www.cman.jp/network/support/nslookup.html
 
 _____________________________________
 
@@ -42,6 +44,9 @@ https://www.getpostman.com/
 
 ## DB GUIツール
 Sequel Pro
+
+### markdown形式にペーストできるプラグイン
+<https://github.com/hypermkt/CopyAsMarkdownForSequelProBundle>
 
 
  

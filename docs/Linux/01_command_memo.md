@@ -654,4 +654,18 @@ iftop
 init.d スクリプト     古いバージョン
 service コマンド      やや古めの環境
 systemctl コマンド    systemd 採用環境
+
+
+## quota (クォータ)機能
+quota 機能とは、一般ユーザが作成できる「ファイル数」および「ブロック数」の合計をユーザごとに制限する機能です。この機能により、個々のユーザのファイルシステム資源の浪費を防止することができます。
+
+
+[root@users694 ~]# quota -u main.jp-castle2
+Disk quotas for user main.jp-castle2 (uid 790327):
+     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
+      /dev/sdd1 4279900  10485760 10485760          149330  150543  150543
+[root@users694 ~]#
+
+
+
 ```

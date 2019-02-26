@@ -5294,6 +5294,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-23-16" type="checkbox" id="nav-4-23-16">
+    
+    <label class="md-nav__link" for="nav-4-23-16">
+      Tmp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-23-16">
+        Tmp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../InfraAndEnv_Tool_Service/Vagrant/tmp/plugin/" title="Plugin" class="md-nav__link">
+      Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -5915,6 +5951,20 @@
         <li class="md-nav__item">
   <a href="#_1" title="シェルスクリプトの実行" class="md-nav__link">
     シェルスクリプトの実行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bash_profile" title=".bash_profile" class="md-nav__link">
+    .bash_profile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bashrc" title=".bashrc" class="md-nav__link">
+    .bashrc
   </a>
   
 </li>
@@ -9711,6 +9761,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bash_profile" title=".bash_profile" class="md-nav__link">
+    .bash_profile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bashrc" title=".bashrc" class="md-nav__link">
+    .bashrc
+  </a>
+  
+</li>
+      
       
       
       
@@ -9736,6 +9800,20 @@
 <h2 id="_1">シェルスクリプトの実行</h2>
 <p>権限付与。
 ubuntuだと、tabで候補に出てこない。</p>
+<h2 id="bash_profile">.bash_profile</h2>
+<p>.bash_profile はログイン時にのみ実行されます。具体的な用途は:<br />
+<br />
+環境変数を設定する (export する変数)<br />
+環境変数はプロセス間で勝手に受け継がれるのでログイン時のみ設定すれば十分です。  </p>
+<h2 id="bashrc">.bashrc</h2>
+<p>.bashrc は対話モードの bash を起動する時に毎回実行されます。具体的な用途は:</p>
+<ul>
+<li>環境変数でない変数を設定する (export しない変数)</li>
+<li>エイリアスを定義する</li>
+<li>シェル関数を定義する</li>
+<li>コマンドライン補完の設定をする</li>
+</ul>
+<p>これらは bash を起動する度に毎回設定する必要があるものです。</p>
                 
                   
                 

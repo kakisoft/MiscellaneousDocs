@@ -5290,6 +5290,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-23-16" type="checkbox" id="nav-4-23-16">
+    
+    <label class="md-nav__link" for="nav-4-23-16">
+      Tmp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-23-16">
+        Tmp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../InfraAndEnv_Tool_Service/Vagrant/tmp/plugin/" title="Plugin" class="md-nav__link">
+      Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -10173,6 +10209,7 @@ sudo ufw allow 80
 sudo ufw enable
 sudo ufw reload
 
+
 ## ファイアウォール（CentOS） RedHat
 ※未検証
 sudo systemctl start firewalld
@@ -10182,6 +10219,35 @@ firewall-cmd --add-port=80/tcp --zone=public --permanent
 firewall-cmd --add-port=22/tcp --zone=public --permanent
 firewall-cmd --remove-port=80/tcp --zone=public --permanent
 firewall-cmd --reload
+
+
+## httpdデーモン再起動(CentOS7)
+sudo systemctl start httpd
+sudo systemctl start httpd.service
+
+
+## httpdデーモン起動確認(CentOS7)
+[vagrant@user ~]$ ps aux | grep http
+root     10502  0.0  1.1 249308 11624 ?        Ss   12:49   0:00 /usr/sbin/httpd
+apache   10519  0.0  0.7 249308  7352 ?        S    12:49   0:00 /usr/sbin/httpd
+apache   10520  0.0  0.7 249308  7344 ?        S    12:49   0:00 /usr/sbin/httpd
+apache   10521  0.0  0.7 249308  7344 ?        S    12:49   0:00 /usr/sbin/httpd
+apache   10522  0.0  0.7 249308  7344 ?        S    12:49   0:00 /usr/sbin/httpd
+apache   10523  0.0  0.7 249308  7344 ?        S    12:49   0:00 /usr/sbin/httpd
+vagrant  10626  0.0  0.0 107484   920 pts/0    R+   12:50   0:00 grep http
+
+
+
+## ファイアウォール起動確認（CentOS7）
+systemctl status firewalld.service
+firewall-cmd --state
+
+
+https://qiita.com/kenjjiijjii/items/1057af2dddc34022b09e
+
+
+
+
 
 ## ファイアウォール（共通。古い書き方）
 【iptales】
@@ -10278,6 +10344,21 @@ iftop
 init.d スクリプト     古いバージョン
 service コマンド      やや古めの環境
 systemctl コマンド    systemd 採用環境
+
+
+## quota (クォータ)機能
+quota 機能とは、一般ユーザが作成できる「ファイル数」および「ブロック数」の合計をユーザごとに制限する機能です。  
+この機能により、個々のユーザのファイルシステム資源の浪費を防止することができます。
+
+
+[root@users694 ~]# quota -u main.jp-castle2
+Disk quotas for user main.jp-castle2 (uid 790327):
+     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
+      /dev/sdd1 4279900  10485760 10485760          149330  150543  150543
+[root@users694 ~]#
+
+
+
 </code></pre>
                 
                   

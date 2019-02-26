@@ -10,3 +10,7 @@ Ansible 全体の設定
 ## Playbook
 どういった構成にしたいのか
 
+
+## Ansible Galaxy
+<https://galaxy.ansible.com/>
+

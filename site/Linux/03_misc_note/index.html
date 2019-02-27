@@ -5969,6 +5969,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" title="設定が反映されないけど？" class="md-nav__link">
+    設定が反映されないけど？
+  </a>
+  
+</li>
+      
       
       
       
@@ -9775,6 +9782,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" title="設定が反映されないけど？" class="md-nav__link">
+    設定が反映されないけど？
+  </a>
+  
+</li>
+      
       
       
       
@@ -9801,19 +9815,28 @@
 <p>権限付与。
 ubuntuだと、tabで候補に出てこない。</p>
 <h2 id="bash_profile">.bash_profile</h2>
-<p>.bash_profile はログイン時にのみ実行されます。具体的な用途は:<br />
-<br />
-環境変数を設定する (export する変数)<br />
-環境変数はプロセス間で勝手に受け継がれるのでログイン時のみ設定すれば十分です。  </p>
+<p>ログイン時に1回、実行される。<br />
+例えば、ターミナル.appを起動した際に読み込まれる。<br />
+環境変数を設定する (export する変数)といった用途に使用する。  </p>
 <h2 id="bashrc">.bashrc</h2>
-<p>.bashrc は対話モードの bash を起動する時に毎回実行されます。具体的な用途は:</p>
-<ul>
-<li>環境変数でない変数を設定する (export しない変数)</li>
-<li>エイリアスを定義する</li>
-<li>シェル関数を定義する</li>
-<li>コマンドライン補完の設定をする</li>
-</ul>
-<p>これらは bash を起動する度に毎回設定する必要があるものです。</p>
+<p>シェル起動時に１回、実行される。<br />
+コマンドライン上でbashと叩くと再度.bashrcが読み込まれる。（.bash_profileは読まれない）  </p>
+<p>用途：<br />
+ * 環境変数でない変数を設定する (export しない変数)
+ * エイリアスを定義する
+ * シェル関数を定義する
+ * コマンドライン補完の設定をする</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>設定が反映されない場合、
+bash でログインしなおしてみる。</p>
+</div>
+<p><a href="https://qiita.com/magicant/items/d3bb7ea1192e63fba850">https://qiita.com/magicant/items/d3bb7ea1192e63fba850</a>  </p>
+<h2 id="_2">設定が反映されないけど？</h2>
+<p>.bashrc に書いた設定が反映されないけど .bash_profile に書くといける場合は、 .bash_profile から .bashrc を読み込む処理が抜けてます。</p>
+<pre><code># .bash_profile の最後に
+test -r ~/.bashrc &amp;&amp; . ~/.bashrc
+</code></pre>
                 
                   
                 

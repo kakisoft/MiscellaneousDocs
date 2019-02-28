@@ -2543,7 +2543,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ssl" title="SSL" class="md-nav__link">
+  <a href="#ssl" title="SSLサーバ証明書" class="md-nav__link">
+    SSLサーバ証明書
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl_1" title="共有SSL" class="md-nav__link">
+    共有SSL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl_2" title="独自SSL" class="md-nav__link">
+    独自SSL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-encrypt" title="Let's Encrypt" class="md-nav__link">
+    Let's Encrypt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sslssl-ssl" title="共有SSLと独自SSLの違い！ sslサーバ証明書とは" class="md-nav__link">
+    共有SSLと独自SSLの違い！ sslサーバ証明書とは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssllets-encrypt" title="【無料SSL入門】「Let’s Encrypt」とは？設定で挫折しない！使い方解説" class="md-nav__link">
+    【無料SSL入門】「Let’s Encrypt」とは？設定で挫折しない！使い方解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl_3" title="SSL" class="md-nav__link">
     SSL
   </a>
   
@@ -9729,7 +9771,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ssl" title="SSL" class="md-nav__link">
+  <a href="#ssl" title="SSLサーバ証明書" class="md-nav__link">
+    SSLサーバ証明書
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl_1" title="共有SSL" class="md-nav__link">
+    共有SSL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl_2" title="独自SSL" class="md-nav__link">
+    独自SSL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-encrypt" title="Let's Encrypt" class="md-nav__link">
+    Let's Encrypt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sslssl-ssl" title="共有SSLと独自SSLの違い！ sslサーバ証明書とは" class="md-nav__link">
+    共有SSLと独自SSLの違い！ sslサーバ証明書とは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssllets-encrypt" title="【無料SSL入門】「Let’s Encrypt」とは？設定で挫折しない！使い方解説" class="md-nav__link">
+    【無料SSL入門】「Let’s Encrypt」とは？設定で挫折しない！使い方解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl_3" title="SSL" class="md-nav__link">
     SSL
   </a>
   
@@ -9754,9 +9838,7 @@
                 
                   <h1>Key memo</h1>
                 
-                <h2 id="ssl">SSL</h2>
-<p><img alt="alt" src="../SSL.png" /></p>
-<pre><code>・SSH：公開鍵認証
+                <pre><code>・SSH：公開鍵認証
 ・SSL：共通鍵認証
 
 
@@ -9774,6 +9856,57 @@ http://knowledge.sakura.ad.jp/beginner/3543/
 ## OpenSSL
 SSLとTLSの機能を実装したオープンソースライブラリ
 </code></pre>
+
+<h2 id="ssl">SSLサーバ証明書</h2>
+<p>公的認証機関（CA）から発行された電子証明書。<br />
+SSLを導入する場合に必要になる。<br />
+<br />
+通信の暗号化に必要な鍵を持っており、ブラウザとサーバ間で暗号化通信を行う。<br />
+ドメインと、ドメインを所有する組織の身元情報も証明する。<br />
+<br />
+要するに、SSLサーバ証明書があることで、
+送信情報が暗号化されることを確認でき、安全に情報を送ることができます。
+　
+レンタルサーバーでは、<br />
+共用SSLを標準サービスとして、提供されてる場合が多い。  </p>
+<h2 id="ssl_1">共有SSL</h2>
+<p>レンタルサーバー会社で取得代行したもの。<br />
+SSLサーバー証明書を、複数のユーザと使うことになる。<br />
+<br />
+サーバー会社で発行したものなので、いくつかの制約があったりする。  </p>
+<ul>
+<li>身元保証の信頼性が取れない</li>
+<li>独自ドメインが使えない</li>
+</ul>
+<p>など。</p>
+<h2 id="ssl_2">独自SSL</h2>
+<p>自分の持っているドメインに対して、SSL証明を行う。<br />
+ECサイトや、重要な個人情報を扱うサイトでは、独自SSLを使うのがほとんど。</p>
+<ul>
+<li>
+<p>ドメイン認証型：DV（Domain Validation）
+無料のもある。<br />
+コーポレートサイトやブログ・メディアサイトなど。</p>
+</li>
+<li>
+<p>企業認証型：OV（Organization Validation）
+おもに法人サイトで使用される。</p>
+</li>
+<li>
+<p>EV認証型：EV（Extended Validation）
+知名度のあるブランドサイトや銀行サイト。</p>
+</li>
+</ul>
+<h2 id="lets-encrypt">Let's Encrypt</h2>
+<p>無料でSSL証明書を発行できる。</p>
+<hr />
+<h2 id="sslssl-ssl">共有SSLと独自SSLの違い！ sslサーバ証明書とは</h2>
+<p><a href="https://www.nkshopping.biz/">https://www.nkshopping.biz/</a></p>
+<h2 id="ssllets-encrypt">【無料SSL入門】「Let’s Encrypt」とは？設定で挫折しない！使い方解説</h2>
+<p><a href="https://www.kagoya.jp/howto/webhomepage/lets-encrypt/">https://www.kagoya.jp/howto/webhomepage/lets-encrypt/</a></p>
+<hr />
+<h2 id="ssl_3">SSL</h2>
+<p><img alt="alt" src="../SSL.png" /></p>
                 
                   
                 

@@ -2,6 +2,11 @@
 ## インストール（Windows）
 choco install sqlite
 
+
+## インストール（Mac）
+brew install sqlite
+
+
 ## GUI管理ツール
 DB Browser for SQLite
 ```

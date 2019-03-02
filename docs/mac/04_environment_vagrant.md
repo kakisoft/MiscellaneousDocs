@@ -11,9 +11,13 @@ brew cask install virtualbox --verbose --debug
 その後、
 「システム環境設定」→「セキュリティとプライバシー」→「一般」
 ```
-_
+
+## VirtualBOXのインストール
 ```
 brew cask install virtualbox
+```
+## ↑がエラーだった場合、こっちで。
+```
 brew cask install --force virtualbox
 ```
 

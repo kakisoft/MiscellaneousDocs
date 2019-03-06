@@ -48,5 +48,11 @@ Sequel Pro
 ### markdown形式にペーストできるプラグイン
 <https://github.com/hypermkt/CopyAsMarkdownForSequelProBundle>
 
-
+_________________________________________________________________________________
+## コーディングをするときに鼻血がでるほど便利なwebツールリスト
+https://qiita.com/isuke/items/7fcc5eb0b985005b7b7c
  
+
+## 複数ブラウザ/端末を同期してくれるBrowserSyncが便利
+https://qiita.com/yuichiroharai/items/b3daf45ff209f303bf50
+

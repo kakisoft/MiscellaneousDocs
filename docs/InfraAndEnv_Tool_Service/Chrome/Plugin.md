@@ -7,3 +7,10 @@ Lighthouse  ウェブサイトのパフォーマンスチェック
 ColorPick Eyedropper    色選択
 ```
 
+## FireShot
+Webページのスクリーンショットを撮る。  
+https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=ja
+
+
+
+

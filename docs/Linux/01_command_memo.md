@@ -668,5 +668,17 @@ Disk quotas for user main.jp-castle2 (uid 790327):
 [root@users694 ~]#
 
 
+## パスワード生成
+brew install pwgen
+sudo apt-get install pwgen
+
+pwgen
+
+（16桁のパスワードを１つ）
+pwgen 16 1
+https://qiita.com/speg03/items/ec404c217e417160e2d5
+
+
+## _
 
 ```

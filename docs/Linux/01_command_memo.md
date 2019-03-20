@@ -14,6 +14,9 @@ ssh -Y -C
 nautilus
 
 
+## ssh-add
+
+
 ## ファイル検索
 sudo find / -name "filename" 
 locate "filename"　　　※updatedb。ファイル名データベースから検索。

@@ -66,6 +66,35 @@ SELECT
 
 ```
 
+## 日付の差分
+```sql
+SELECT
+ DATE_FORMAT(NOW(), '%Y%m%d') -- => 20190325
+,DATE_FORMAT(NOW(), '%Y%m')   -- => 201903
+
+-- // 開始日 と 終了日 までの日数を取得 //
+,DATEDIFF('2019-3-10','2019-03-20')     -- => -10
+,DATEDIFF('2019-3-10', CURRENT_DATE())  -- => -15（とか）
+
+-- // 開始時刻 と 終了時刻 までの時刻の差を取得 //
+,TIMEDIFF('2019:02:01 13:00:00','2019:02:01 00:00:00') -- => 13:00:00
+,TIMEDIFF('11:30:00','00:00:00')                       -- => 11:30:00
+,TIMEDIFF('2019-02-27 00:00:00',CURRENT_TIMESTAMP())   -- => -637:02:09（など）
+
+-- // 開始日 と 終了日 までの月数の差を取得 //
+,PERIOD_DIFF('201902','201912')  -- => -10
+,PERIOD_DIFF('9802','9512')      -- => 26
+
+-- // 開始日 と 終了日 までのタイムスタンプの差を取得 //
+,TIMESTAMPDIFF(MONTH,'2013-02-01','2014-03-01')  -- => 13
+,TIMESTAMPDIFF(YEAR,'2013-02-01','2014-03-01')   -- => 1
+,TIMESTAMPDIFF(HOUR,'2014-02-01','2014-02-03')   -- => 48
+
+
+-- WHERE service_expiry_date >= DATE_FORMAT(NOW(), '%Y%m%d') -- 期限切れを対象外とする
+```
+
+
 ## キャスト
 ```sql
 SELECT
@@ -138,3 +167,12 @@ SELECT
 
 ```
 
+
+## 特定のステータスをカウント
+```
+select
+    IF(count(prpject_state = 1 OR NULL) > 0, 1, 0) AS Todo
+   ,IF(count(prpject_state = 2 OR NULL) > 0, 1, 0) AS Working
+   ,IF(count(prpject_state = 3 OR NULL) > 0, 1, 0) AS Done
+
+```

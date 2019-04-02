@@ -9768,12 +9768,32 @@ $1 は、同じ行で使われている「正規表現の()で括った部分に
 <hr />
 <hr />
 <h1 id="ssl">常時 SSL化</h1>
-<p>末尾にこれを追加した。</p>
 <pre><code># BEGIN SSL CONF
 RewriteEngine On
 RewriteCond %{HTTPS} !on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # END SSL CONF
+</code></pre>
+
+<h4 id="htaccess-full">.htaccess   FULL</h4>
+<pre><code>RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+SetEnvIf Request_URI &quot;.*&quot; Ngx_Cache_NoCacheMode=off
+SetEnvIf Request_URI &quot;.*&quot; Ngx_Cache_StaticMode
+
+# BEGIN WordPress
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+&lt;/IfModule&gt;
+
+# END WordPress
 </code></pre>
                 
                   

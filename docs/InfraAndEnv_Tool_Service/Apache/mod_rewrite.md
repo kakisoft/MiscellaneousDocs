@@ -1,4 +1,6 @@
 # mod_rewrite モジュール
+https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html
+
 
 ## RewriteRuleディレクティブ
 

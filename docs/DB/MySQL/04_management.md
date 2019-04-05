@@ -56,6 +56,10 @@ mysql -u root -p  < create_myqpp01.sql
 source create_myqpp01.sql
 ```
 
+## スレーブの状態確認
+```
+show slave status\G
+```
 __________________________________________
 
 【 CentOS 】

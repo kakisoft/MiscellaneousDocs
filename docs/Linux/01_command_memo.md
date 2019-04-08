@@ -355,6 +355,14 @@ curl -I https://admin.dummy.localdev/
 -I  Fetch the headers only! 
 ```
 
+ヘッダ情報を表示（ALL）
+```
+curl -i http://challenge-your-limits.herokuapp.com/call/me
+curl -i https://geoapi.heartrails.com/api/json
+
+
+「Access-Control-Allow-Origin:*」とかみたい場合、こっち。
+```
 ______________________________________________________________
 
 ## cd

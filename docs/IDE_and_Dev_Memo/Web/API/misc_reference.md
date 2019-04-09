@@ -1,10 +1,10 @@
 ## CORS おっけー
-var targerUrl = 'https://qiita.com/api/v2/items?page=2&per_page=20';
+var targerUrl = 'https://qiita.com/api/v2/items?page=2&per_page=20';  
 
 ## CORS エラー発生
 
-var targerUrl = 'http://challenge-your-limits.herokuapp.com/call/me';
-var targerUrl = 'https://geoapi.heartrails.com/api/json?method=getAreas';
+var targerUrl = 'http://challenge-your-limits.herokuapp.com/call/me';  
+var targerUrl = 'https://geoapi.heartrails.com/api/json?method=getAreas';  
 
 ##### 郵便番号
 http://zip.cgis.biz/xml/zip.php?zn=1120014

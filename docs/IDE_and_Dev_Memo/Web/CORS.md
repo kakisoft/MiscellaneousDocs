@@ -1,3 +1,14 @@
+## CORS（Cross-Origin Resource Sharing）
+CSRF（Cross-Site Request Forgery）などのセキュリティ攻撃を防止するために、  
+異なるオリジンのリソースへのアクセスに制約をかける仕組み。  
+　  
+あるオリジン (site-a.example.com) から、他のオリジン (site-b.example.com) で生成された  
+データを読み出そうとしても、同一生成元ポリシー(Same-Origin Policy) によりアクセスは拒否される。
+
+
+## Same-Origin Policy(同一生成元ポリシー)
+
+_________________________________________________________
 ## CORS
 http://dotnsf.blog.jp/archives/1063051117.html  
 

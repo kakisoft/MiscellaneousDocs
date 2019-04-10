@@ -1,7 +1,7 @@
 ## CORS おっけー
 ```
-https://qiita.com/api/v2/items?page=2&per_page=20
 https://api.github.com/users/jeresig
+https://qiita.com/api/v2/items?page=2&per_page=20
 ```
 
 ## CORS エラー発生

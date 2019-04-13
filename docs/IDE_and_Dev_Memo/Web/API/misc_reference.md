@@ -2,6 +2,8 @@
 ```
 https://api.github.com/users/jeresig
 https://qiita.com/api/v2/items?page=2&per_page=20
+
+https://qiita.com/wakaba130/items/5f54aed913156dc4438f.json
 ```
 
 ## CORS エラー発生

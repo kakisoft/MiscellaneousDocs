@@ -363,6 +363,25 @@ curl -i https://geoapi.heartrails.com/api/json
 
 「Access-Control-Allow-Origin:*」とかみたい場合、こっち。
 ```
+
+＜使用例＞
+curl -k -s https://localhost:44364/api/Products/3 | python -m json.tool
+
+-k    sslエラーを無視
+-s    silent
+JSON は、より適切に表示するため、Python の json.tool モジュールに送信されます。
+　
+
+
+curl -v -k \
+    -H "Content-Type: application/json" \
+    -d "{\"name\":\"Plush Squirrel\",\"price\":0.00}" \
+    https://localhost:44364/api/Products
+
+
+-d は、HTTP POST 操作を意味し、要求本文を定義します。
+-H は、要求本文が JSON 形式であることを示します。 ヘッダーの値で、既定のコンテンツ タイプ application/x-www-form-urlencoded がオーバーライドされます。
+
 ______________________________________________________________
 
 ## cd

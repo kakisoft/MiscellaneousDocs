@@ -1,0 +1,7 @@
+## OAuth
+認可サーバがクライアントアプリにアクセストークンを発行する仕組みの標準版。
+
+### 一番分かりやすい OAuth の説明
+<https://qiita.com/TakahikoKawasaki/items/e37caf50776e00e733be>
+
+

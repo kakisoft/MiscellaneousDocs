@@ -38,6 +38,11 @@ LoadModule expires_module modules/mod_expires.so
 
 ## mod_ssl
 HTTPS 化に必要。
+
+
+## DSO（dynamic shared object）動的共有オブジェクト 
+https://httpd.apache.org/docs/2.2/ja/dso.html
+
 ______________________________________________________________
 ### 参考サイト
 <https://www.ritolab.com/entry/4>  

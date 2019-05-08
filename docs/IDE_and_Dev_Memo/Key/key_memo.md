@@ -103,7 +103,7 @@ Subject Alternative Names(SANs)によるコモンネーム(CN)の別名機能を
 
 
 ## コモンネーム
-https://cspssl.jp/guide/commonname.php
+<https://cspssl.jp/guide/commonname.php>
 ![alt](common-name.png)
 
 

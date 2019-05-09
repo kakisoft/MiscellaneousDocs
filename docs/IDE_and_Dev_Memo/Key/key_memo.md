@@ -135,6 +135,10 @@ Subject Alternative Names(SANs)によるコモンネーム(CN)の別名機能を
 ## 認証局を立ててぼろもうけしたいんですが＞無理な理由を理解しよう
 <https://qiita.com/kawaz/items/f90810b9ea823b6556a8>
 
+
+## mod_ssl
+apache モジュール
+
 _________________________________________________
 ## 共有SSLと独自SSLの違い！ sslサーバ証明書とは
 <https://www.nkshopping.biz/>

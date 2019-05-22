@@ -709,6 +709,7 @@ pwgen 16 1
 https://qiita.com/speg03/items/ec404c217e417160e2d5
 
 
-## _
+## dig
+dig +noedns
 
 ```

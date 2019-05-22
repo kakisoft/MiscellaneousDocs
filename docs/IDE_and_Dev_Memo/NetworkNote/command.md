@@ -1,0 +1,4 @@
+## dig
+dig +noedns
+
+

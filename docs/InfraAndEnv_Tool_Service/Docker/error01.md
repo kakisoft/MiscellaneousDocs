@@ -7,3 +7,17 @@ docker: Error response from daemon: Conflict. The container name "/db" is alread
 sudo docker ps -a
 sudo docker rm -f <imageId>
 ```
+
+
+## _
+```
+docker kill (docker ps -q)
+でもダメなら、
+docker rm (docker ps -qa)
+
+
+
+docker kill --help
+docker rm --help
+
+```

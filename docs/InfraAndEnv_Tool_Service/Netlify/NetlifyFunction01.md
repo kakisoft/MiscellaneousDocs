@@ -1,4 +1,3 @@
-
 https://flaviocopes.com/netlify-functions/
 
 
@@ -70,5 +69,11 @@ __________________________________________________________________
 ## Node.js 過去バージョン
 <https://nodejs.org/en/download/releases/>
 
+
+
+
+_______________________________________________________________________
+## Netlify Function
+<https://ottan.xyz/netlify-functions-aws-lambda-serverless-20190115/>
 
 

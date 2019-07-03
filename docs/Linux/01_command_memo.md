@@ -654,6 +654,21 @@ sudo iptables --flush
 less /var/log/auth.log
 
 
+## http（apache）ログの確認（例）
+/var/log/httpd
+zcat error_log*gz | grep -e "May 31"
+
+cat access_log | grep -e 14.3.75.116 -e 49.239.65.139 | grep delete |grep -v GET
+cat access_log | grep -e 49.106.211.219 | grep "24/Jun"
+cat access_log | grep -e 49.106.211.219 -e 49.106.211.219
+zcat error_log*gz | grep -e 114.157.38.153
+zcat error_log*gz | grep -e "Jun 24" | grep -e 49.106.211.219
+zcat access_log*gz | grep -e 114.157.38.153 -e 49.106.211.219 -e 49.106.213.212 -e 49.98.88.145 -e 49.96.22.136 | grep -v GET
+cat error_log | grep 114.157.38.153
+
+
+
+
 ## アクセス状況を動的に見る
 tail -F /var/log/auth.log
 

@@ -472,6 +472,19 @@ CentOS6    chkconfig --list
 CentOS7    systemctl list-unit-files -t service
 
 
+
+## service（centOS 6 まで）
+（nginxが起動しているかどうか確認）
+service nginx status
+
+
+## systemctl（centOS 7 以降）
+（nginxが起動しているかどうか確認）
+systemctl status nginx
+
+
+
+
 ## エイリアス
 alias  # 引数なしで実行すると、一覧を確認
 alias apast='sudo systemctl restart httpd.service'
@@ -496,6 +509,13 @@ fi
 
 
 source ~/.bashrc
+
+
+## 一般的な変数
+COMMON_NAME=www.google.co.jp
+
+echo $COMMON_NAME
+
 
 ## ポートの空きを確認
 nmap <HOSTNAME>
@@ -710,6 +730,27 @@ https://qiita.com/speg03/items/ec404c217e417160e2d5
 
 
 ## dig
+ドメインからIPアドレスを調べる。
+dig www.npmjs.com npmjs.com
+
+dig npmjs.com mx
+
 dig +noedns
+
+リフレッシュ時間
+
+
+ヘッダ・フッタを除くと最大で4つのセクションが表示される。
+　・QUESTION：実行した検索内容
+　・ANSWER：検索結果
+　・AUTHORITY：ANSWERに権威を持つDNSサーバ（NSレコード）
+　・ADDITIONAL：追加情報
+
+
+
+## whois
+whois npmjs.com
+
+
 
 ```

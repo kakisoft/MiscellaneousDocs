@@ -167,8 +167,7 @@ Aとは逆に「このIPアドレスはこのドメイン」と教えてあげ�
 (例) aaa.bbb.ccc.ddd.in-addr.arpa. 86400 IN PTR ns.example.com. 
 
 
-___
-
+____________________________________________________________________________________
 ## その他
 
 ### TTL（Time To Live）
@@ -182,3 +181,20 @@ http://wa3.i-3-i.info
 
 □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 http://pocketstudio.jp/log3/2012/03/31/migrationg_an_existing_domain_to_route53/
+
+
+
+____________________________________________________________________________________
+## DNSを利用してドメイン名を問い合わせ
+```
+dig www.kakiflow.com kakiflow.com
+
+;; QUESTION SECTION:
+;www.kakiflow.com.	IN	A
+
+;; ANSWER SECTION:
+www.kakiflow.com.	3467	IN	A	202.254.236.128
+
+サブドメインが複数存在するかどうかは、SANs の内容を見る。
+```
+

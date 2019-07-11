@@ -20,3 +20,11 @@ sudo systemctl stop mysqld.service
 mysqld_safe --skip-grant-tables &
 mysql -u root
 ```
+
+## kill しても復活
+```
+Mac の launchctl という機能。
+
+ローカルで動いているMysqlを停止しようとしても停止できず、プロセスをkillしても復活する。
+brew service stop mysql でインストールした時に発生する。
+```

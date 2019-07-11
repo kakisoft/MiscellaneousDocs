@@ -2536,6 +2536,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../IDE_and_Dev_Memo/Key/SSL_install/" title="SSL install" class="md-nav__link">
+      SSL install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../IDE_and_Dev_Memo/Key/SSL証明書発行手順/" title="SSL証明書発行手順" class="md-nav__link">
       SSL証明書発行手順
     </a>
@@ -2718,6 +2730,18 @@
   <li class="md-nav__item">
     <a href="../../IDE_and_Dev_Memo/NetworkNote/DNS_operation_memo/" title="DNS operation memo" class="md-nav__link">
       DNS operation memo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../IDE_and_Dev_Memo/NetworkNote/DNS_ref/" title="DNS ref" class="md-nav__link">
+      DNS ref
     </a>
   </li>
 
@@ -10496,6 +10520,19 @@ CentOS6    chkconfig --list
 CentOS7    systemctl list-unit-files -t service
 
 
+
+## service（centOS 6 まで）
+（nginxが起動しているかどうか確認）
+service nginx status
+
+
+## systemctl（centOS 7 以降）
+（nginxが起動しているかどうか確認）
+systemctl status nginx
+
+
+
+
 ## エイリアス
 alias  # 引数なしで実行すると、一覧を確認
 alias apast='sudo systemctl restart httpd.service'
@@ -10520,6 +10557,13 @@ fi
 
 
 source ~/.bashrc
+
+
+## 一般的な変数
+COMMON_NAME=www.google.co.jp
+
+echo $COMMON_NAME
+
 
 ## ポートの空きを確認
 nmap &lt;HOSTNAME&gt;
@@ -10658,6 +10702,21 @@ sudo iptables --flush
 less /var/log/auth.log
 
 
+## http（apache）ログの確認（例）
+/var/log/httpd
+zcat error_log*gz | grep -e &quot;May 31&quot;
+
+cat access_log | grep -e 14.3.75.116 -e 49.239.65.139 | grep delete |grep -v GET
+cat access_log | grep -e 49.106.211.219 | grep &quot;24/Jun&quot;
+cat access_log | grep -e 49.106.211.219 -e 49.106.211.219
+zcat error_log*gz | grep -e 114.157.38.153
+zcat error_log*gz | grep -e &quot;Jun 24&quot; | grep -e 49.106.211.219
+zcat access_log*gz | grep -e 114.157.38.153 -e 49.106.211.219 -e 49.106.213.212 -e 49.98.88.145 -e 49.96.22.136 | grep -v GET
+cat error_log | grep 114.157.38.153
+
+
+
+
 ## アクセス状況を動的に見る
 tail -F /var/log/auth.log
 
@@ -10734,7 +10793,28 @@ https://qiita.com/speg03/items/ec404c217e417160e2d5
 
 
 ## dig
+ドメインからIPアドレスを調べる。
+dig www.npmjs.com npmjs.com
+
+dig npmjs.com mx
+
 dig +noedns
+
+リフレッシュ時間
+
+
+ヘッダ・フッタを除くと最大で4つのセクションが表示される。
+　・QUESTION：実行した検索内容
+　・ANSWER：検索結果
+　・AUTHORITY：ANSWERに権威を持つDNSサーバ（NSレコード）
+　・ADDITIONAL：追加情報
+
+
+
+## whois
+whois npmjs.com
+
+
 
 </code></pre>
                 

@@ -2544,6 +2544,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../SSL_install/" title="SSL install" class="md-nav__link">
+      SSL install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../SSL証明書発行手順/" title="SSL証明書発行手順" class="md-nav__link">
       SSL証明書発行手順
     </a>
@@ -2774,6 +2786,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_11" title="証明書確認" class="md-nav__link">
+    証明書確認
+  </a>
+  
+</li>
+      
       
       
       
@@ -2949,6 +2968,18 @@
   <li class="md-nav__item">
     <a href="../../NetworkNote/DNS_operation_memo/" title="DNS operation memo" class="md-nav__link">
       DNS operation memo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NetworkNote/DNS_ref/" title="DNS ref" class="md-nav__link">
+      DNS ref
     </a>
   </li>
 
@@ -10449,6 +10480,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_11" title="証明書確認" class="md-nav__link">
+    証明書確認
+  </a>
+  
+</li>
+      
       
       
       
@@ -10501,9 +10539,11 @@ key   秘密鍵
 <p>↑の身元を保証してくれる立場の人。<br />
 そして、「認証局自身の身元」も保証されていなければならない。</p>
 <h2 id="_4">認証局の身元保証</h2>
-<p>２種類
- 1. 厳しい審査や世間の目にさらされることによって身元を保証される
- 2. 他の認証局に保証してもらうことで身元が保証される</p>
+<p>２種類  </p>
+<ol>
+<li>厳しい審査や世間の目にさらされることによって身元を保証される</li>
+<li>他の認証局に保証してもらうことで身元が保証される</li>
+</ol>
 <h2 id="_5">ルート認証局</h2>
 <p>↑の「1」<br />
 厳しい審査やあれやこれやの苦難を乗り越えることで、認証局自身が「自分は良い人ですよ～」と自己主張してOKな認証局となる。<br />
@@ -10632,6 +10672,13 @@ Subject Alternative Names(SANs)によるコモンネーム(CN)の別名機能を
 <hr />
 <h2 id="ssl_5">SSL</h2>
 <p><img alt="alt" src="../SSL.png" /></p>
+<hr />
+<h2 id="_11">証明書確認</h2>
+<pre><code>cert www.kakiflow.com kakiflow.com
+
+
+サブドメインが複数存在するかどうかは、SANs の内容を見る。
+</code></pre>
                 
                   
                 

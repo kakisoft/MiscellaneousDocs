@@ -492,6 +492,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#kill" title="kill しても復活" class="md-nav__link">
+    kill しても復活
+  </a>
+  
+</li>
+      
       
       
       
@@ -2585,6 +2592,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../IDE_and_Dev_Memo/Key/SSL_install/" title="SSL install" class="md-nav__link">
+      SSL install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../IDE_and_Dev_Memo/Key/SSL証明書発行手順/" title="SSL証明書発行手順" class="md-nav__link">
       SSL証明書発行手順
     </a>
@@ -2767,6 +2786,18 @@
   <li class="md-nav__item">
     <a href="../../../IDE_and_Dev_Memo/NetworkNote/DNS_operation_memo/" title="DNS operation memo" class="md-nav__link">
       DNS operation memo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../IDE_and_Dev_Memo/NetworkNote/DNS_ref/" title="DNS ref" class="md-nav__link">
+      DNS ref
     </a>
   </li>
 
@@ -10085,6 +10116,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#kill" title="kill しても復活" class="md-nav__link">
+    kill しても復活
+  </a>
+  
+</li>
+      
       
       
       
@@ -10123,6 +10161,13 @@ ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: N
 sudo systemctl stop mysqld.service
 mysqld_safe --skip-grant-tables &amp;
 mysql -u root
+</code></pre>
+
+<h2 id="kill">kill しても復活</h2>
+<pre><code>Mac の launchctl という機能。
+
+ローカルで動いているMysqlを停止しようとしても停止できず、プロセスをkillしても復活する。
+brew service stop mysql でインストールした時に発生する。
 </code></pre>
                 
                   

@@ -2542,6 +2542,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Key/SSL_install/" title="SSL install" class="md-nav__link">
+      SSL install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Key/SSL証明書発行手順/" title="SSL証明書発行手順" class="md-nav__link">
       SSL証明書発行手順
     </a>
@@ -2912,6 +2924,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dns_7" title="DNSを利用してドメイン名を問い合わせ" class="md-nav__link">
+    DNSを利用してドメイン名を問い合わせ
+  </a>
+  
+</li>
+      
       
       
       
@@ -2931,6 +2950,18 @@
   <li class="md-nav__item">
     <a href="../DNS_operation_memo/" title="DNS operation memo" class="md-nav__link">
       DNS operation memo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DNS_ref/" title="DNS ref" class="md-nav__link">
+      DNS ref
     </a>
   </li>
 
@@ -10413,6 +10444,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dns_7" title="DNSを利用してドメイン名を問い合わせ" class="md-nav__link">
+    DNSを利用してドメイン名を問い合わせ
+  </a>
+  
+</li>
+      
       
       
       
@@ -10603,6 +10641,18 @@ http://server.change.jp/5-minibird/5-minibird_5/<br />
 http://wa3.i-3-i.info</p>
 <p>□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 http://pocketstudio.jp/log3/2012/03/31/migrationg_an_existing_domain_to_route53/</p>
+<hr />
+<h2 id="dns_7">DNSを利用してドメイン名を問い合わせ</h2>
+<pre><code>dig www.kakiflow.com kakiflow.com
+
+;; QUESTION SECTION:
+;www.kakiflow.com.  IN  A
+
+;; ANSWER SECTION:
+www.kakiflow.com.   3467    IN  A   202.254.236.128
+
+サブドメインが複数存在するかどうかは、SANs の内容を見る。
+</code></pre>
                 
                   
                 

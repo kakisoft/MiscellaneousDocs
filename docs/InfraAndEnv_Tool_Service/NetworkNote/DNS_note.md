@@ -183,6 +183,10 @@ http://wa3.i-3-i.info
 http://pocketstudio.jp/log3/2012/03/31/migrationg_an_existing_domain_to_route53/
 
 
+____________________________________________________________________________________
+## TLDの概要検索
+<https://www.gonbei.jp/reg/domain_detail.cgi?p1=inc>
+<https://www.gonbei.jp/reg/domain_detail.cgi?p1=xxx>
 
 ____________________________________________________________________________________
 ## DNSを利用してドメイン名を問い合わせ

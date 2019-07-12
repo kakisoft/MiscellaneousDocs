@@ -99,10 +99,17 @@ git fetch + git rebase
 ## プル
 git pull origin master
 
+
 ## リモートリポジトリ削除
 git remote rm origin
 
 
+## リモートブランチを含めて表示
+git branch -a
+
+
+## リモートリポジトリの変更を取得
+git fetch
 
 
 ## ログ

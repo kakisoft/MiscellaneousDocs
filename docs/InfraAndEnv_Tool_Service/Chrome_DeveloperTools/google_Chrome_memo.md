@@ -1,6 +1,10 @@
 ## google検索オプション
 設定→
 特定キーワードを含めない、
+
+## Googleセーフブラウジング
+https://transparencyreport.google.com/safe-browsing/search?url=http:%2F%2Fgloyah.net%2F-36721LNUE%2FCF9L%3Frndad%3D1986475809-1563273758
+
 _______________________________________________________________________________________
 _______________________________________________________________________________________
 # Developer Tool
@@ -29,3 +33,7 @@ Cache-Control などのステータスを確認できる。
 ```
 document.designMode = 'on';
 ```
+
+## curlコマンドとしてコピー
+Networkタブ -> All -> Name  -> 項目を選択して右クリック -> Copy -> Copy as cURL
+

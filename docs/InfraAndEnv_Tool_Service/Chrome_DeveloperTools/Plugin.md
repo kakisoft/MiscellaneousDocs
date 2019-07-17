@@ -17,3 +17,34 @@ https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfn
 <https://github.com/callumlocke/json-formatter>
 
 
+_______________________________________________________________
+# REST Client
+https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+```
+command + option + R
+```
+
+## 使用例
+```
+GET https://api.github.com/users/jeresig HTTP/1.1
+```
+
+## GET
+```
+GET http://challenge-your-limits.herokuapp.com/call/me
+```
+
+## POST
+```
+POST http://challenge-your-limits.herokuapp.com/challenge_users
+Content-Type: application/json
+
+{
+    "name": "foo",
+    "email" : "foo@baa.com"
+}
+```
+
+_______________________________________________________________
+

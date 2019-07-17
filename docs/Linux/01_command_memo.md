@@ -655,6 +655,7 @@ less /var/log/auth.log
 
 
 ## http（apache）ログの確認（例）
+（圧縮されたファイルの中身を見る）
 /var/log/httpd
 zcat error_log*gz | grep -e "May 31"
 
@@ -765,6 +766,12 @@ dig +noedns
 
 ## whois
 whois npmjs.com
+
+
+
+## graceful
+/etc/init.d/httpd configtest
+/etc/init.d/httpd graceful
 
 
 

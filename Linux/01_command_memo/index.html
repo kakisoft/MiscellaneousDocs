@@ -10428,27 +10428,29 @@ tty
 ## curl
 curl -X POST http://kakiaaa.herokuapp.com/challenge_users -d name=tanaka -d email=tanaka@gmail.com  
 　  
-ステータスコードのみを取得
-</code></pre>
+#### ステータスコードのみを取得
+curl -s {https://lolipop.jp/manual/tos/?} -o /dev/null -w '%{http_code}\n'
 
-<p>curl -s {https://lolipop.jp/manual/tos/?} -o /dev/null -w '%{http_code}\n'</p>
-<p>-w (write out)で http_code を指定しつつ、他は -o (output)で /dev/null にでも捨てる。
-そして -s (silent)を指定して「進捗どうですか？」を表示しないようにする。</p>
-<p>-k    sslエラーを無視</p>
-<pre><code>ヘッダ情報を取得
-</code></pre>
+ -w (write out)で http_code を指定しつつ、他は -o (output)で /dev/null にでも捨てる。
+そして -s (silent)を指定して「進捗どうですか？」を表示しないようにする。
 
-<p>curl -I https://admin.dummy.localdev/</p>
-<p>-I  Fetch the headers only! </p>
-<pre><code>
-ヘッダ情報を表示（ALL）
-</code></pre>
+-k    sslエラーを無視
 
-<p>curl -i http://challenge-your-limits.herokuapp.com/call/me
-curl -i https://geoapi.heartrails.com/api/json</p>
-<p>「Access-Control-Allow-Origin:*」とかみたい場合、こっち。</p>
-<pre><code>
-＜使用例＞
+#### ヘッダ情報を取得
+curl -I https://admin.dummy.localdev/
+
+-I  Fetch the headers only! 
+
+
+### ヘッダ情報を表示（ALL）
+curl -i http://challenge-your-limits.herokuapp.com/call/me
+curl -i https://geoapi.heartrails.com/api/json
+
+
+「Access-Control-Allow-Origin:*」とかみたい場合、こっち。
+
+
+### ＜使用例＞
 curl -k -s https://localhost:44364/api/Products/3 | python -m json.tool
 
 -k    sslエラーを無視

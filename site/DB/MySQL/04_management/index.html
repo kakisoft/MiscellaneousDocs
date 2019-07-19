@@ -476,6 +476,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_10" title="テーブル名とカラム名を抽出" class="md-nav__link">
+    テーブル名とカラム名を抽出
+  </a>
+  
+</li>
+      
       
       
       
@@ -10257,6 +10264,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_10" title="テーブル名とカラム名を抽出" class="md-nav__link">
+    テーブル名とカラム名を抽出
+  </a>
+  
+</li>
+      
       
       
       
@@ -10328,6 +10342,28 @@ source create_myqpp01.sql
 <p>【 CentOS 】</p>
 <h2 id="_9">再起動</h2>
 <pre><code>sudo systemctl restart mysqld.service
+</code></pre>
+
+<hr />
+<h2 id="_10">テーブル名とカラム名を抽出</h2>
+<pre><code class="sql">select 
+    table_name
+   ,column_name
+from
+    information_schema.columns 
+where  1=1
+--  and  table_schema=&quot;db01&quot;
+--  and  table_name = 'teble01'
+  and  column_name like '%mail%' 
+order by
+    table_name
+   ,column_name 
+;
+
+/*
+use information_schema;
+としておくと、スキーマ名を省略可。
+*/
 </code></pre>
                 
                   

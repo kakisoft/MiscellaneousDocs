@@ -339,32 +339,29 @@ tty
 ## curl
 curl -X POST http://kakiaaa.herokuapp.com/challenge_users -d name=tanaka -d email=tanaka@gmail.com  
 　  
-ステータスコードのみを取得
-```
+#### ステータスコードのみを取得
 curl -s {https://lolipop.jp/manual/tos/?} -o /dev/null -w '%{http_code}\n'
 
  -w (write out)で http_code を指定しつつ、他は -o (output)で /dev/null にでも捨てる。
 そして -s (silent)を指定して「進捗どうですか？」を表示しないようにする。
 
 -k    sslエラーを無視
-```
-ヘッダ情報を取得
-```
+
+#### ヘッダ情報を取得
 curl -I https://admin.dummy.localdev/
 
 -I  Fetch the headers only! 
-```
 
-ヘッダ情報を表示（ALL）
-```
+
+### ヘッダ情報を表示（ALL）
 curl -i http://challenge-your-limits.herokuapp.com/call/me
 curl -i https://geoapi.heartrails.com/api/json
 
 
 「Access-Control-Allow-Origin:*」とかみたい場合、こっち。
-```
 
-＜使用例＞
+
+### ＜使用例＞
 curl -k -s https://localhost:44364/api/Products/3 | python -m json.tool
 
 -k    sslエラーを無視

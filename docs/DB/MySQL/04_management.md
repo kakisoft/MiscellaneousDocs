@@ -67,3 +67,26 @@ __________________________________________
 ```
 sudo systemctl restart mysqld.service
 ```
+
+__________________________________________
+## テーブル名とカラム名を抽出
+```sql
+select 
+    table_name
+   ,column_name
+from
+    information_schema.columns 
+where  1=1
+--  and  table_schema="db01"
+--  and  table_name = 'teble01'
+  and  column_name like '%mail%' 
+order by
+    table_name
+   ,column_name 
+;
+ 
+/*
+use information_schema;
+としておくと、スキーマ名を省略可。
+*/
+```

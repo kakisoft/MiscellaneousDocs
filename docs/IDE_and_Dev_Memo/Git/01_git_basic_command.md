@@ -28,6 +28,10 @@ git <コマンド> -h
 git help <コマンド>
 
 
+## masterブランチの変更内容を、現在のブランチに反映。
+git merge master
+
+
 ## ユーザ名とパスワードを指定してclone
 git clone https://username:password@github.com/kakisoft/tmp001.git
 パスワードは省略可。（ダイアログが出る）

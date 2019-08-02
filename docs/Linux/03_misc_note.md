@@ -39,4 +39,34 @@ test -r ~/.bashrc && . ~/.bashrc
 ```
 
 
+## 【 source 】コマンド／【 . 】コマンド――シェルの設定を即座に反映させる
+https://www.atmarkit.co.jp/ait/articles/1712/21/news015.html
+
+
+## パス
+```
+printenv
+echo $PATH
+```
+
+ * PATHの設定は .bash_profile か .bashrc で調整
+ * PATHへの設定順序は /etc/paths 等で調整
+ * PATHの設定を変えたら、ターミナルを再起動
+
+（ /etc/paths.d 、/etc/manpaths.d 、 /etc/paths 、/etc/manpaths、など複数パターンあるらしい。）
+
+```
+kaki@PMAC465S ~/tmp/phpenv/ver01> which php
+/usr/bin/php
+```
+
+## _
+.bash_profile -> bashrcの順に実行される。
+```
+~/.bash_profile
+~/.bashrc
+```
+
+
+
 

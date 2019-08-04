@@ -4451,7 +4451,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dig" title="dig" class="md-nav__link">
+  <a href="#dig" title="dig コマンドのインストール" class="md-nav__link">
+    dig コマンドのインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whois" title="whois コマンドのインストール" class="md-nav__link">
+    whois コマンドのインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dig_1" title="dig" class="md-nav__link">
     dig
   </a>
   
@@ -5232,6 +5246,18 @@
   <li class="md-nav__item">
     <a href="../../NetworkNote/Windows/" title="Windows" class="md-nav__link">
       Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../NetworkNote/ip_check/" title="Ip check" class="md-nav__link">
+      Ip check
     </a>
   </li>
 
@@ -10101,6 +10127,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../scribble/20190725_logi/" title="20190725 logi" class="md-nav__link">
+      20190725 logi
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -10125,7 +10163,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dig" title="dig" class="md-nav__link">
+  <a href="#dig" title="dig コマンドのインストール" class="md-nav__link">
+    dig コマンドのインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whois" title="whois コマンドのインストール" class="md-nav__link">
+    whois コマンドのインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dig_1" title="dig" class="md-nav__link">
     dig
   </a>
   
@@ -10150,8 +10202,34 @@
                 
                   <h1>Command</h1>
                 
-                <h2 id="dig">dig</h2>
+                <h2 id="dig">dig コマンドのインストール</h2>
+<p>yum -y install bind-utils</p>
+<h2 id="whois">whois コマンドのインストール</h2>
+<p>yum install -y jwhois</p>
+<hr />
+<h2 id="dig_1">dig</h2>
 <p>dig +noedns</p>
+<pre><code>dig github.com
+dig github.com a +short
+
+whois 216.239.34.21
+whois tigerkyoro.jp
+</code></pre>
+
+<pre><code>kaki@PMAC465S ~&gt; dig mojimo.jp a +short
+203.216.221.150
+kaki@PMAC465S ~&gt; whois 203.216.221.150
+
+-------
+descr:
+</code></pre>
+
+<pre><code>kaki@PMAC465S ~&gt; dig nintendo.co.jp mx +short
+10 nintendo-co-jp.mail.protection.outlook.com.
+
+
+dig nintendo-co-jp.mail.protection.outlook.com a +short
+</code></pre>
                 
                   
                 

@@ -16,3 +16,17 @@
 日付あたりをクリック。  
 （「12 days ago」とか「32 minutes ago」といったの。）
 
+
+## 折りたたみコメント
+```
+<details>
+<summary>landware55.conf</summary>
+<pre>
+<code>
+
+書く内容
+
+</code>
+</pre>
+</details>
+```

@@ -5204,6 +5204,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../InfraAndEnv_Tool_Service/NetworkNote/ip_check/" title="Ip check" class="md-nav__link">
+      Ip check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../InfraAndEnv_Tool_Service/NetworkNote/machine/" title="Machine" class="md-nav__link">
       Machine
     </a>
@@ -6596,6 +6608,27 @@
         <li class="md-nav__item">
   <a href="#_2" title="設定が反映されないけど？" class="md-nav__link">
     設定が反映されないけど？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" title="【 source 】コマンド／【 . 】コマンド――シェルの設定を即座に反映させる" class="md-nav__link">
+    【 source 】コマンド／【 . 】コマンド――シェルの設定を即座に反映させる
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="パス" class="md-nav__link">
+    パス
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_" title="_" class="md-nav__link">
+    _
   </a>
   
 </li>
@@ -10127,6 +10160,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scribble/20190725_logi/" title="20190725 logi" class="md-nav__link">
+      20190725 logi
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -10185,6 +10230,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#source" title="【 source 】コマンド／【 . 】コマンド――シェルの設定を即座に反映させる" class="md-nav__link">
+    【 source 】コマンド／【 . 】コマンド――シェルの設定を即座に反映させる
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="パス" class="md-nav__link">
+    パス
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_" title="_" class="md-nav__link">
+    _
+  </a>
+  
+</li>
+      
       
       
       
@@ -10232,6 +10298,29 @@ bash でログインしなおしてみる。</p>
 <p>.bashrc に書いた設定が反映されないけど .bash_profile に書くといける場合は、 .bash_profile から .bashrc を読み込む処理が抜けてます。</p>
 <pre><code># .bash_profile の最後に
 test -r ~/.bashrc &amp;&amp; . ~/.bashrc
+</code></pre>
+
+<h2 id="source">【 source 】コマンド／【 . 】コマンド――シェルの設定を即座に反映させる</h2>
+<p>https://www.atmarkit.co.jp/ait/articles/1712/21/news015.html</p>
+<h2 id="_3">パス</h2>
+<pre><code>printenv
+echo $PATH
+</code></pre>
+
+<ul>
+<li>PATHの設定は .bash_profile か .bashrc で調整</li>
+<li>PATHへの設定順序は /etc/paths 等で調整</li>
+<li>PATHの設定を変えたら、ターミナルを再起動</li>
+</ul>
+<p>（ /etc/paths.d 、/etc/manpaths.d 、 /etc/paths 、/etc/manpaths、など複数パターンあるらしい。）</p>
+<pre><code>kaki@PMAC465S ~/tmp/phpenv/ver01&gt; which php
+/usr/bin/php
+</code></pre>
+
+<h2 id="_">_</h2>
+<p>.bash_profile -&gt; bashrcの順に実行される。</p>
+<pre><code>~/.bash_profile
+~/.bashrc
 </code></pre>
                 
                   

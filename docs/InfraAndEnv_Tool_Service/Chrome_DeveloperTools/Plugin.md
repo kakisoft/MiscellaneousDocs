@@ -6,6 +6,7 @@ weblioポップアップ英和辞典
 Lighthouse  ウェブサイトのパフォーマンスチェック
 ColorPick Eyedropper    色選択
 FireShot  ウェブページをスクリーンショット（pdfとか）
+テキストエンコーディング 　　　右クリックで変更可。
 ```
 
 ## FireShot

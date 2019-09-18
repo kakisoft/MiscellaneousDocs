@@ -77,10 +77,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#_1" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -2130,50 +2126,9 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        SQLServer basic note
-      </label>
-    
     <a href="./" title="SQLServer basic note" class="md-nav__link md-nav__link--active">
       SQLServer basic note
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="よく使う構文" class="md-nav__link">
-    よく使う構文
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#with" title="＜with副問い合わせ＞" class="md-nav__link">
-    ＜with副問い合わせ＞
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="＜結合前にテーブルのレコードを絞る＞" class="md-nav__link">
-    ＜結合前にテーブルのレコードを絞る＞
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -10151,49 +10106,6 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="よく使う構文" class="md-nav__link">
-    よく使う構文
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#with" title="＜with副問い合わせ＞" class="md-nav__link">
-    ＜with副問い合わせ＞
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="＜結合前にテーブルのレコードを絞る＞" class="md-nav__link">
-    ＜結合前にテーブルのレコードを絞る＞
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -10202,42 +10114,7 @@
                 
                   <h1>SQLServer basic note</h1>
                 
-                <h2 id="_1">よく使う構文</h2>
-<pre><code class="sql">select
- getdate() as &quot;本日の日付&quot;
-
-,cast(12345 as varchar) as &quot;文字列に変換&quot;
-,cast(getdate() as varchar) as &quot;本日の日付&quot;
-,cast('2018/01/01' as datetime)  as &quot;datetime&quot;  --ミリ秒まで
-,cast('2018/01/01' as datetime2) as &quot;datetime2&quot; -- マイクロ秒まで
-,convert(datetime, left(convert(varchar, dateadd(month, 0, getdate()), 112), 6) + '01') as &quot;月初1&quot;
-,dateadd( day,1-datepart(day, getdate()), getdate()) as &quot;月初2&quot;
-,eomonth(getdate()) as &quot;月末の日にち&quot;
-,datediff(month, cast('2018/01/01' as date), cast('2018/05/15' as date))  as  &quot;月の差分&quot;  --(結果：4)
-
-,convert(varchar(5), 12345) as &quot;convert1&quot;
-,convert(varchar, getdate(), 112) as &quot;yyyymmdd&quot;
-,convert(varchar, getdate(), 11) as &quot;yy/mm/dd&quot;
-,convert(varchar, getdate(), 111) as &quot;yyyy/mm/dd&quot;
-
-,right('   ' + '1' , 4) as &quot;先頭スペース埋め&quot;
-,left('12' + '   ' , 4) as &quot;後方スペース埋め&quot;
-
-,format(1, '0000') as &quot;先頭0埋め1&quot;
-,format(1, 'D4')   as &quot;先頭0埋め2&quot; -- 1と同じ
-
-,cast('1' as varchar) + 1   as &quot;結果：2&quot;   -- 勝手に数値型に変換される
-,cast('1' as varchar) + '1' as &quot;結果：11&quot;  -- 連結させたい場合、文字列である事を明示する
-
-,convert(varchar(2),'あいうえお')  as  &quot;byte単位で切り出し&quot; --型変換を利用して、擬似的に実現する
-,convert(varchar(10),reverse('あいうえお'))  as &quot;末尾から切り出し&quot;
-,substring(cast('あいうえお' as text), 3, 4)  as &quot;途中からバイト単位で切り出し&quot; --(先頭は1)
-
-,LEN('あいうえお') as &quot;長さ&quot; -- 5
-,DATALENGTH('あいうえお') as &quot;バイト長&quot; --10
-</code></pre>
-
-<pre><code>/*
+                <pre><code>/*
 
 varchar
 　Unicodeでない可変長の文字列。
@@ -10298,41 +10175,6 @@ SET @string1 = N'UniCodeの文字列'
 SET @string2 = '非UniCodeの文字列'
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-</code></pre>
-
-<h2 id="with">＜with副問い合わせ＞</h2>
-<pre><code class="sql">
-with alias1 as (
-                  select
-                   *
-                  from
-                   database.table1
-               )
-    ,alias2 as (
-                  select
-                   *
-                  from
-                   database.table2
-               )
-select
-    *
-from
-    alias1
-    left join alias2 on alias1.code_a = alias2.code_a
-where  1=1
-</code></pre>
-
-<h2 id="_2">＜結合前にテーブルのレコードを絞る＞</h2>
-<pre><code class="sql">from
-   table1   
-   left join table2 on table1.code_A  = table2.code_A
-                   and table1.code_B  = table2.code_B
-                   and table2.colomn1 = '0000'
-                   and table2.colomn2 = 0
-
--- Oracleの
---    table2.colomn1(+) = '0000'
--- に相当。
 </code></pre>
                 
                   

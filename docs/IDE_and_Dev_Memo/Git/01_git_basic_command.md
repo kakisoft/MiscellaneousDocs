@@ -178,6 +178,14 @@ add line
 git commit -m "conflict fixed"
 
 
+## stash（一時退避）
+git stash save               # セーブ
+git stash list               # リスト表示
+git stash apply stash@{0}    # 元に戻す
+git stash drop stash@{0}     # 退避した作業を消す
+git stash clear              # 退避した作業を全て消す
+
+
 ## 削除
 git rm [削除したいファイル]
 git rm -r [削除したいディレクトリ]

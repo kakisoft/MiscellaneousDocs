@@ -11,6 +11,27 @@ insert into users (id, name, score, rank) values
 ```
 enumへの insertは数値でも可。（1～　開始する）
 
+
+## insert : LAST_INSERT_ID()
+```sql
+use database01;
+
+INSERT INTO contracts 
+(
+  type, bill_id, plan_id, term, start_date   , end_date    , created_at
+) VALUES (
+  0   , 269231 , 1      , 0   , '2019-01-01' , '2019-12-31', NOW()
+);
+
+
+insert into users (
+(
+  first_name, last_name, contract_id
+) VALUES (
+  'YAMADA'  , 'TARO'   , LAST_INSERT_ID()
+);
+```
+
 ## like
 ```sql
 select * from users where name like 'K%'

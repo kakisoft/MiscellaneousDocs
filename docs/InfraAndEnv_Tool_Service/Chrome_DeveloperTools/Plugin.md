@@ -6,7 +6,8 @@ weblioポップアップ英和辞典
 Lighthouse  ウェブサイトのパフォーマンスチェック
 ColorPick Eyedropper    色選択
 FireShot  ウェブページをスクリーンショット（pdfとか）
-テキストエンコーディング 　　　右クリックで変更可。
+テキストエンコーディング 　　　右クリックで変更可。（文字コード変更。文字化け対策）
+Advanced REST client    APIクライアント
 ```
 
 ## FireShot

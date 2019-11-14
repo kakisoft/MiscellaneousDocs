@@ -438,6 +438,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#insert-last_insert_id" title="insert : LAST_INSERT_ID()" class="md-nav__link">
+    insert : LAST_INSERT_ID()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#like" title="like" class="md-nav__link">
     like
   </a>
@@ -10276,6 +10283,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#insert-last_insert_id" title="insert : LAST_INSERT_ID()" class="md-nav__link">
+    insert : LAST_INSERT_ID()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#like" title="like" class="md-nav__link">
     like
   </a>
@@ -10390,6 +10404,25 @@ insert into users (id, name, score, rank) values
 </code></pre>
 
 <p>enumへの insertは数値でも可。（1～　開始する）</p>
+<h2 id="insert-last_insert_id">insert : LAST_INSERT_ID()</h2>
+<pre><code class="sql">use database01;
+
+INSERT INTO contracts 
+(
+  type, bill_id, plan_id, term, start_date   , end_date    , created_at
+) VALUES (
+  0   , 269231 , 1      , 0   , '2019-01-01' , '2019-12-31', NOW()
+);
+
+
+insert into users (
+(
+  first_name, last_name, contract_id
+) VALUES (
+  'YAMADA'  , 'TARO'   , LAST_INSERT_ID()
+);
+</code></pre>
+
 <h2 id="like">like</h2>
 <pre><code class="sql">select * from users where name like 'K%'
 小文字の「k」も検索対象となる。

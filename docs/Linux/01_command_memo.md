@@ -508,6 +508,11 @@ fi
 source ~/.bashrc
 
 
+### 再読み込み
+source ~/.bashrc
+source ~/.bash_profile
+
+
 ## 一般的な変数
 COMMON_NAME=www.google.co.jp
 

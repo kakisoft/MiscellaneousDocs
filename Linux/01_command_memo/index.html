@@ -10925,6 +10925,13 @@ whois npmjs.com
 /etc/init.d/httpd graceful
 
 
+## ファイルを空にする
+: &gt; access_log             # サイズが0になる。
+
+echo '' &gt; access_log       # これだとサイズが0にならない。
+
+
+
 
 </code></pre>
                 

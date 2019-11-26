@@ -98,3 +98,39 @@ from
 ```
 
 
+## MERGE (upsert)
+```sql
+MERGE INTO my_table_01
+USING 
+(
+   SELECT 
+       795554    AS id
+      ,'PENGUIN' AS name
+      ,'BOX'     AS category
+      , 230      AS price
+      , 10       AS point
+) AS dummy ON (       1=1
+                 AND  my_table_01.id = dummy.id
+              )
+WHEN MATCHED THEN
+UPDATE 
+   SET category = dummy.category
+      ,price    = dummy.price
+      ,point    = dummy.point
+WHEN NOT MATCHED THEN 
+INSERT 
+(
+    name
+   ,category
+   ,price
+   ,point
+)
+VALUES
+(
+    dummy.name
+   ,dummy.category
+   ,dummy.price
+   ,dummy.point
+);
+```
+

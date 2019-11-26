@@ -2162,6 +2162,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#merge-upsert" title="MERGE (upsert)" class="md-nav__link">
+    MERGE (upsert)
+  </a>
+  
+</li>
+      
       
       
       
@@ -2217,6 +2224,18 @@
   <li class="md-nav__item">
     <a href="../T-SQL_memo/" title="T SQL memo" class="md-nav__link">
       T SQL memo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../View/" title="View" class="md-nav__link">
+      View
     </a>
   </li>
 
@@ -10182,6 +10201,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../scribble/20191116_フロントエンドカンファレンス福岡/" title="20191116 フロントエンドカンファレンス福岡" class="md-nav__link">
+      20191116 フロントエンドカンファレンス福岡
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -10229,6 +10260,13 @@
         <li class="md-nav__item">
   <a href="#_3" title="＜結合前にテーブルのレコードを絞る＞" class="md-nav__link">
     ＜結合前にテーブルのレコードを絞る＞
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-upsert" title="MERGE (upsert)" class="md-nav__link">
+    MERGE (upsert)
   </a>
   
 </li>
@@ -10343,6 +10381,41 @@ where  1=1
 -- Oracleの
 --    table2.colomn1(+) = '0000'
 -- に相当。
+</code></pre>
+
+<h2 id="merge-upsert">MERGE (upsert)</h2>
+<pre><code class="sql">MERGE INTO my_table_01
+USING 
+(
+   SELECT 
+       795554    AS id
+      ,'PENGUIN' AS name
+      ,'BOX'     AS category
+      , 230      AS price
+      , 10       AS point
+) AS dummy ON (       1=1
+                 AND  my_table_01.id = dummy.id
+              )
+WHEN MATCHED THEN
+UPDATE 
+   SET category = dummy.category
+      ,price    = dummy.price
+      ,point    = dummy.point
+WHEN NOT MATCHED THEN 
+INSERT 
+(
+    name
+   ,category
+   ,price
+   ,point
+)
+VALUES
+(
+    dummy.name
+   ,dummy.category
+   ,dummy.price
+   ,dummy.point
+);
 </code></pre>
                 
                   

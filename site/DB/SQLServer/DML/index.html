@@ -10213,6 +10213,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../scribble/20191129_GCP/" title="20191129 GCP" class="md-nav__link">
+      20191129 GCP
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -10294,8 +10306,9 @@
 <pre><code class="sql">select
  getdate() as &quot;本日の日付&quot;
 
+,cast('00789' as int) as &quot;文字列を数値に変換&quot;
 ,cast(12345 as varchar) as &quot;文字列に変換&quot;
-,cast(getdate() as varchar) as &quot;本日の日付&quot;
+,cast(getdate() as varchar) as &quot;本日の日付(文字列)&quot;
 ,cast('2018/01/01' as datetime)  as &quot;datetime&quot;  --ミリ秒まで
 ,cast('2018/01/01' as datetime2) as &quot;datetime2&quot; -- マイクロ秒まで
 ,convert(datetime, left(convert(varchar, dateadd(month, 0, getdate()), 112), 6) + '01') as &quot;月初1&quot;

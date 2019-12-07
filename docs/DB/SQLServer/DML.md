@@ -3,8 +3,9 @@
 select
  getdate() as "本日の日付"
 
+,cast('00789' as int) as "文字列を数値に変換"
 ,cast(12345 as varchar) as "文字列に変換"
-,cast(getdate() as varchar) as "本日の日付"
+,cast(getdate() as varchar) as "本日の日付(文字列)"
 ,cast('2018/01/01' as datetime)  as "datetime"  --ミリ秒まで
 ,cast('2018/01/01' as datetime2) as "datetime2" -- マイクロ秒まで
 ,convert(datetime, left(convert(varchar, dateadd(month, 0, getdate()), 112), 6) + '01') as "月初1"

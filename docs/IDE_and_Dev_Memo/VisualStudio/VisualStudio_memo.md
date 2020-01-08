@@ -32,6 +32,9 @@ Common Language Runtime Exceptions（共通言語ランタイム例外）
 |  メソッド切り出し                     |  選択→ Ctrl +  r → m     |
 
 
+## Gitメニューの表示
+（上段メニュー）表示 → チームエクスプローラ
+
 
 ## 設定
 ツール→オプション→環境→キーボード→「Visual C# 2005」

@@ -30,6 +30,7 @@ Common Language Runtime Exceptions（共通言語ランタイム例外）
 |  クイックウォッチ                     |  Ctrl d → q               |
 |  リネーム                             |  選択→ Ctrl + r → r      |
 |  メソッド切り出し                     |  選択→ Ctrl +  r → m     |
+|  ファイル名を検索して開く               |  Ctrl + ,（カンマ）     |
 
 
 ## Gitメニューの表示

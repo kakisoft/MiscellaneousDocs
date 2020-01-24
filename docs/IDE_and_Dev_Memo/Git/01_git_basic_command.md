@@ -112,8 +112,12 @@ git remote rm origin
 git branch -a
 
 
-## リモートリポジトリの変更を取得
+## リモートリポジトリの変更を取得（リモートで追加されたブランチを取得）
 git fetch
+
+
+## 過去のコミット状態に（一時的に）戻す
+git checkout e45661bf83da2982fcc33e08dc0eaacfa64b2128
 
 
 ## ログ

@@ -116,6 +116,10 @@ git branch -a
 git fetch
 
 
+## 過去のコミット状態に（一時的に）戻す
+git checkout e45661bf83da2982fcc33e08dc0eaacfa64b2128
+
+
 ## ログ
 git log
 git log --oneline

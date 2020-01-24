@@ -112,7 +112,7 @@ git remote rm origin
 git branch -a
 
 
-## リモートリポジトリの変更を取得
+## リモートリポジトリの変更を取得（リモートで追加されたブランチを取得）
 git fetch
 
 

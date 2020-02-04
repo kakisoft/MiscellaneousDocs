@@ -135,3 +135,12 @@ VALUES
 );
 ```
 
+
+## 改行付き
+```sql
+INSERT INTO [dbo].[my_table_01] (common_id,detail_id,param1,param2) 
+VALUES (986,5,'異常なし','異常' + CHAR(13) + CHAR(10) + 'なし');
+```
+
+
+A5SQLは、末尾に「;」が付いているとエラーとなる？

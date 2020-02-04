@@ -2169,6 +2169,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" title="改行付き" class="md-nav__link">
+    改行付き
+  </a>
+  
+</li>
+      
       
       
       
@@ -10307,6 +10314,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" title="改行付き" class="md-nav__link">
+    改行付き
+  </a>
+  
+</li>
+      
       
       
       
@@ -10454,6 +10468,13 @@ VALUES
    ,dummy.point
 );
 </code></pre>
+
+<h2 id="_4">改行付き</h2>
+<pre><code class="sql">INSERT INTO [dbo].[my_table_01] (common_id,detail_id,param1,param2) 
+VALUES (986,5,'異常なし','異常' + CHAR(13) + CHAR(10) + 'なし');
+</code></pre>
+
+<p>A5SQLは、末尾に「;」が付いているとエラーとなる？</p>
                 
                   
                 

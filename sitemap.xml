@@ -716,6 +716,21 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Chrome_DeveloperTools/Plugin/</loc>
+     <lastmod>2020-02-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Chrome_DeveloperTools/forMac/</loc>
+     <lastmod>2020-02-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Chrome_DeveloperTools/google_Chrome_memo/</loc>
+     <lastmod>2020-02-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Deploy/capistrano/</loc>
      <lastmod>2020-02-27</lastmod>
      <changefreq>daily</changefreq>
@@ -811,6 +826,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/HTTP/01_method/</loc>
+     <lastmod>2020-02-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Marketing/Advance01/</loc>
      <lastmod>2020-02-27</lastmod>
      <changefreq>daily</changefreq>
@@ -892,6 +912,11 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/OnlineTools/01/</loc>
+     <lastmod>2020-02-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kakisoft.github.io/MiscellaneousDocs/IDE_and_Dev_Memo/Postman/01/</loc>
      <lastmod>2020-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1251,21 +1276,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Chrome_DeveloperTools/Plugin/</loc>
-     <lastmod>2020-02-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Chrome_DeveloperTools/forMac/</loc>
-     <lastmod>2020-02-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Chrome_DeveloperTools/google_Chrome_memo/</loc>
-     <lastmod>2020-02-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Cyberduck/Cyberduck/</loc>
      <lastmod>2020-02-27</lastmod>
      <changefreq>daily</changefreq>
@@ -1372,11 +1382,6 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/FireFox/firefox_memo/</loc>
-     <lastmod>2020-02-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/HTTP/01_method/</loc>
      <lastmod>2020-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1502,11 +1507,6 @@
     </url>
     <url>
      <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/NetworkNote/用語/</loc>
-     <lastmod>2020-02-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/Postman/01/</loc>
      <lastmod>2020-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>

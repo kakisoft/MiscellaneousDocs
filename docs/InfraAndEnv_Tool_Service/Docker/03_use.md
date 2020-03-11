@@ -108,3 +108,7 @@ sudo docker run -it <REPOSITORY:TAG> /bin/bash/bin/bash
 sudo docker run -p 8080:80 -d <イメージ名>
 ```
 
+## 実行中以外のコンテナの残骸をまとめて削除
+```
+docker container prune
+```

@@ -33,6 +33,12 @@ select
 
 ,LEN('あいうえお') as "長さ" -- 5
 ,DATALENGTH('あいうえお') as "バイト長" --10
+
+,CASE
+    WHEN category_id = '男' THEN 1
+    WHEN category_id = '女' THEN 2
+    ELSE 99
+ END
 ```
 
 

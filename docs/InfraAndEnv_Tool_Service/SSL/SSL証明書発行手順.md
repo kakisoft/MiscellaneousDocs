@@ -1,6 +1,6 @@
 
 ## SSL証明書発行手順
-http://d.hatena.ne.jp/install-memo/20110906/1315291837  
+<http://d.hatena.ne.jp/install-memo/20110906/1315291837>  
 
 
 
@@ -48,15 +48,8 @@ $ openssl req -in ssl_example_jp.201109.csr -pubkey -noout -out pubkey2.txt
 $ diff pubkey1.txt pubkey2.txt
 ```
 
-
-
 ## CRTファイル
 SSL証明書会社がCSRファイルに情報を付加して秘密鍵で暗号化したもの。  
 サーバ証明書などとも呼ばれます。
-
-
-
-
-
 
 

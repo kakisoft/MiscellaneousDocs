@@ -1,11 +1,13 @@
 メモ  
-<http://kakistamp.hatenadiary.jp/entry/2017/04/17/032953>
+<http://kakistamp.hatenadiary.jp/entry/2017/04/17/032953>  
+
+
+各種コマンドのオプション詳細は、-h （使用例：git checkout -h）  
+
+## 【公式サイト】
+<https://git-scm.com/>
 
 ```
-【公式サイト】
-https://git-scm.com/
-
-
 ## 用語
 ・作業ツリー
 実際い利用者が編集するファイル。チェックアウトにより他のブランチに切り替えたり、特定のコミット状態に戻したりする。
@@ -182,12 +184,17 @@ add line
 git commit -m "conflict fixed"
 
 
-## stash（一時退避）
+## stash（スタッシュ：一時退避）
 git stash save               # セーブ
 git stash list               # リスト表示
 git stash apply stash@{0}    # 元に戻す
 git stash drop stash@{0}     # 退避した作業を消す
 git stash clear              # 退避した作業を全て消す
+
+
+git stash save "your comment"  # コメントを付ける場合
+git stash apply                # これでもOK
+
 
 
 ## 削除
@@ -215,4 +222,56 @@ git config --global alias.ci commit
 git config -l    #リストアップ
 
 
+## _
+git merge --squash issue1
+
 ```
+
+## コミットをまとめる
+git rebase -i HEAD~3
+
+#### エディタが開くので編集
+```
+pick feb0588 3rd commit 
+pick 1ac0fed 3rd commit2
+pick 6b763a8 3rd commit3
+```
+　　　↓
+```
+pick feb0588 3rd commit 
+s 1ac0fed 3rd commit2
+s 6b763a8 3rd commit 3
+```
+「s」でなく、「squash」でも可。  
+
+
+#### エディタが開くので編集２
+```
+# This is a combination of 3 commits.
+# This is the 1st commit message:
+
+3rd commit
+
+# This is the commit message #2:
+
+3rd commit2
+
+# This is the commit message #3:
+
+3rd commit 3
+```
+　　　↓
+
+```
+# This is a combination of 3 commits.
+# This is the 1st commit message:
+
+3rd commit squshed
+```
+
+完了。  
+
+後はリモートリポジトリに push する。コミットハッシュが変わるので -f が必要。  
+※共同開発のリモートリポジトリ・ブランチに安易に git push -f するのは御法度  
+
+

@@ -2,9 +2,9 @@
 
 ## Hyper-V を有効化
 コントロールパネル → プログラムと機能 → Windowsの機能の有効化または無効化  
-にて、「Hyper-V」 のチェックをON。
+にて、「Hyper-V」 のチェックをON。  
 
-その後、再起動。
+その後、再起動。  
 
 
 ## dockerをインストール
@@ -19,9 +19,9 @@ choco install -y docker-for-windows
 
 完了。  
 　  
-dockerコマンドが使用できるようになっています。
+dockerコマンドが使用できるようになっています。  
 
-試しに Redmineのコンテナを動かしてみました。
+試しに Redmineのコンテナを動かしてみました。  
 
 ## Redmineコンテナ起動
 ```

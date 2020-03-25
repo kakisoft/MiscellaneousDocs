@@ -5573,6 +5573,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SSH/other_note/" title="Other note" class="md-nav__link">
+      Other note
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -10355,8 +10367,8 @@
                 <h1 id="windows-dockerhyper-v">Windows環境にて Dockerを使用する（Hyper-V）</h1>
 <h2 id="hyper-v">Hyper-V を有効化</h2>
 <p>コントロールパネル → プログラムと機能 → Windowsの機能の有効化または無効化<br />
-にて、「Hyper-V」 のチェックをON。</p>
-<p>その後、再起動。</p>
+にて、「Hyper-V」 のチェックをON。  </p>
+<p>その後、再起動。  </p>
 <h2 id="docker">dockerをインストール</h2>
 <p>Chocolatey（パッケージマネージャー） を使用しています。<br />
 Chocolateyのインストールは<a href="https://kakistamp.hatenadiary.jp/entry/2017/03/21/230940">こんな感じ</a>で。<br />
@@ -10368,8 +10380,8 @@ choco install -y docker-for-windows
 
 <p>完了。<br />
 <br />
-dockerコマンドが使用できるようになっています。</p>
-<p>試しに Redmineのコンテナを動かしてみました。</p>
+dockerコマンドが使用できるようになっています。  </p>
+<p>試しに Redmineのコンテナを動かしてみました。  </p>
 <h2 id="redmine">Redmineコンテナ起動</h2>
 <pre><code>docker pull redmine
 docker run -p 8080:3000 -dti redmine

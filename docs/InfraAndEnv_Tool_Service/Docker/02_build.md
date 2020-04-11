@@ -12,18 +12,24 @@ sudo docker commit <CONTAINER ID> <イメージ名>
 ```
 # 何のイメージかを表す
 FROM centos
+
 # 誰が書いたかを表す
 MAINTAINER kakisoft <sample@gmail.com>
+
 # RUN: buildする時に実行される
 RUN echo "now building..."
 RUN yum install -y httpd
+
 # ADD: ローカルのファイルをコンテナにコピー
 ADD ./index.html /var/www/html/
+
 # EXPOSE: 起動時に指定ポートをLISTEN 
 EXPOSE 80
+
 # CMD: runする時に実行される
 CMD ["echo", "now running..."]
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
 ```
 Dockerfile作成後、以下を実行
 ```

@@ -17,8 +17,8 @@ docker-compose restart
 
 _____________________________________________________________________________________
 ## Docs > Docker Compose > コマンドライン・リファレンス > up
-https://docs.docker.com/compose/reference/up/
-http://docs.docker.jp/compose/reference/up.html
+<https://docs.docker.com/compose/reference/up/>  
+<http://docs.docker.jp/compose/reference/up.html>  
 ```
 オプション:
     -d     デタッチド・モード: バックグラウンドでコンテナを実行し、新しいコンテナ名を表示

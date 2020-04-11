@@ -10,9 +10,6 @@ dig +noedns
 ```
 dig github.com
 dig github.com a +short
-
-whois 216.239.34.21
-whois tigerkyoro.jp
 ```
 
 ```
@@ -23,6 +20,9 @@ kaki@PMAC465S ~> whois 203.216.221.150
 -------
 descr:
 ```
+## whois
+whois 216.239.34.21
+whois tigerkyoro.jp
 
 
 ```

@@ -73,3 +73,42 @@ where  1=1
 order by
  1,2
 ```
+
+## オブジェクト一覧
+```sql
+SELECT  CASE type
+            WHEN 'AF' THEN '集計関数 (CLR)'
+            WHEN 'C'  THEN 'CHECK 制約'
+            WHEN 'D'  THEN 'DEFAULT (制約またはスタンドアロン)'
+            WHEN 'F'  THEN 'FOREIGN KEY 制約'
+            WHEN 'FN' THEN 'SQL スカラー関数'
+            WHEN 'FS' THEN 'アセンブリ (CLR) スカラー関数'
+            WHEN 'FT' THEN 'アセンブリ (CLR) テーブル値関数'
+            WHEN 'IF' THEN 'SQL インライン テーブル値関数'
+            WHEN 'IT' THEN '内部テーブル'
+            WHEN 'P'  THEN 'SQL ストアド プロシージャ'
+            WHEN 'PC' THEN 'アセンブリ (CLR) ストアド プロシージャ'
+            WHEN 'PG' THEN 'プラン ガイド'
+            WHEN 'PK' THEN 'PRIMARY KEY 制約'
+            WHEN 'R'  THEN 'ルール (旧形式、スタンドアロン)'
+            WHEN 'RF' THEN 'レプリケーション フィルター プロシージャ'
+            WHEN 'S'  THEN 'システム ベース テーブル'
+            WHEN 'SN' THEN 'シノニム'
+            WHEN 'SQ' THEN 'サービス キュー'
+            WHEN 'TA' THEN 'アセンブリ (CLR) DML トリガー'
+            WHEN 'TF' THEN 'SQL テーブル値関数'
+            WHEN 'TR' THEN 'SQL DML トリガー'
+            WHEN 'TT' THEN 'テーブルの種類'
+            WHEN 'U'  THEN 'テーブル (ユーザー定義)'
+            WHEN 'UQ' THEN 'UNIQUE 制約'
+            WHEN 'V'  THEN 'ビュー'
+            WHEN 'X'  THEN '拡張ストアド プロシージャ'
+        END AS type_detail
+        ,*
+FROM
+    sys.objects
+WHERE  1=1
+  AND  name like '%DF__some_table_junk__0B6ACA3E%'
+```
+
+

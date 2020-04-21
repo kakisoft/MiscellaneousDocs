@@ -1,3 +1,6 @@
+**※重要※**  
+Google アカウントは、接続元・接続先を同一にしておく！
+
 ## Chromeリモートデスクトップ
 https://dekiru.net/article/19597/
 

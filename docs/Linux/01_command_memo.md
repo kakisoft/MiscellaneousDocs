@@ -338,19 +338,25 @@ tty
 
 ## curl
 curl -X POST http://kakiaaa.herokuapp.com/challenge_users -d name=tanaka -d email=tanaka@gmail.com  
-　  
+
+
+curl -X POST [url] -d "name=hoge"
+curl -X POST [url] -d "name=hoge&age=20"
+
+
 #### ステータスコードのみを取得
 curl -s {https://lolipop.jp/manual/tos/?} -o /dev/null -w '%{http_code}\n'
 
- -w (write out)で http_code を指定しつつ、他は -o (output)で /dev/null にでも捨てる。
-そして -s (silent)を指定して「進捗どうですか？」を表示しないようにする。
+ -w (write out)で http_code を指定しつつ、
+ -o (output)で、不要な情報は /dev/null にでも捨てる。
+ -s (silent)を指定して「進捗どうですか？」を表示しないようにする。
 
--k    sslエラーを無視
+ -k    sslエラーを無視
 
 #### ヘッダ情報を取得
 curl -I https://admin.dummy.localdev/
 
--I  Fetch the headers only! 
+-I  Fetch the headers only!
 
 
 ### ヘッダ情報を表示（ALL）

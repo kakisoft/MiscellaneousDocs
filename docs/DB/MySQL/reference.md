@@ -1,5 +1,5 @@
 ## 公式サイト
-https://www.mysql.com/jp/
+<https://www.mysql.com/jp/>
 
 
 ## データ型

@@ -17,3 +17,18 @@ git config --global core.excludesfile $HOME/.gitexclude
 echo ".DS_Store" >> $HOME/.gitexclude
 ```
 
+## git ignore
+vscode 使ってるなら、右クリックで追加。  
+
+#### ignore に追加したはずのファイルが出てくる
+キャッシュに残ってるのが原因。
+```
+git rm -r --cached .              # 全部
+git rm -r --cached [ファイル名]     # ファイル名を指定
+
+
+（使用例）
+git rm -r --cached assets/.DS_Store
+```
+
+

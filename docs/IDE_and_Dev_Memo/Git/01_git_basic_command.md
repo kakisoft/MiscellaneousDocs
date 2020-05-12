@@ -140,6 +140,11 @@ git diff           #ワーキングエリアとステージングエリアの差
 git diff --cashed  #ステージングエリアとリポジトリの差分
 
 
+## 差分チェック（ブランチ同士）
+git diff [ブランチ名A] [ブランチ名B]
+git diff master feature_a
+
+
 ## リセット
 git reset --hard HEAD
 git reset --hard HEAD^

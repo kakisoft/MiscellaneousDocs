@@ -80,3 +80,9 @@ HTTPリクエストの操作を便利にしてくれる。
 
 ## マークダウンのLint
 markdownlint
+
+
+## Draw.io Integration
+<https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio>  
+
+

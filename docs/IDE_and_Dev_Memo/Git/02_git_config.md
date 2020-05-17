@@ -29,6 +29,7 @@ git rm -r --cached [ファイル名]     # ファイル名を指定
 
 （使用例）
 git rm -r --cached assets/.DS_Store
+git rm -r --cached .DS_Store
 ```
 
 

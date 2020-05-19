@@ -51,3 +51,7 @@ vsCode
     }
 ```
 
+#### 画面の分割
+上段メニュー View -> Editor Layout -> slip up  
+
+

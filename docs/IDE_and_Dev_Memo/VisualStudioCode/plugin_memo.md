@@ -86,3 +86,9 @@ markdownlint
 <https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio>  
 
 
+
+## Bookmarks
+Ctrl + alt + k  でしおりを挟む。  
+左メニューからしおりを呼び出し。  
+<https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks>  
+

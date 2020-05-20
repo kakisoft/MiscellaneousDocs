@@ -71,7 +71,8 @@ CSV色分け
 
 
 ## REST Client
-HTTPリクエストの操作を便利にしてくれる。
+HTTPリクエストの操作を便利にしてくれる。  
+<https://marketplace.visualstudio.com/items?itemName=humao.rest-client>
 
 
 ## GitHub Pull Requests

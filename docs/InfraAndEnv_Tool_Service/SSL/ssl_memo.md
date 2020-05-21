@@ -227,3 +227,8 @@ cert www.kakiflow.com kakiflow.com
 サブドメインが複数存在するかどうかは、SANs の内容を見る。
 ```
 
+_________________________________________________
+
+https://www.cman.jp/network/term/url/
+https://ferret-plus.com/8736
+

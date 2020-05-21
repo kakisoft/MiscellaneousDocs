@@ -192,13 +192,13 @@ git commit -m "conflict fixed"
 ## stash（スタッシュ：一時退避）
 git stash save               # セーブ
 git stash list               # リスト表示
-git stash apply stash@{0}    # 元に戻す
+git stash apply stash@{0}    # 元に戻す（apply の引数は、list で出てきた値）
 git stash drop stash@{0}     # 退避した作業を消す
 git stash clear              # 退避した作業を全て消す
 
 
 git stash save "your comment"  # コメントを付ける場合
-git stash apply                # これでもOK
+git stash apply                # apply の引数を省略した場合、直近の stash save の内容を戻す。
 
 
 

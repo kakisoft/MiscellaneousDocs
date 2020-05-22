@@ -93,3 +93,12 @@ Ctrl + alt + k  でしおりを挟む。
 左メニューからしおりを呼び出し。  
 <https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks>  
 
+
+
+## Swagger
+Swagger Viewer  
+https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer 
+```
+Shift + Alt + p
+```
+

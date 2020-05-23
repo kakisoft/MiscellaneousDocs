@@ -27,6 +27,7 @@ vsCode
 | ターミナルを表示                        |  Ctrl + Shift @                                |
 | メソッドをリストアップ                   |  Ctrl + Shift + o →  :                         |
 | 大文字に置換                           |  範囲指定 → Ctrl + p → > Tranfform to Uppercase  |
+| ページ移動（Mac）                       |  Option + Command + ←　or →                    |
 
  
 　  
@@ -54,4 +55,7 @@ vsCode
 #### 画面の分割
 上段メニュー View -> Editor Layout -> slip up  
 
+
+#### ショートカットキーの設定呼び出し
+Ctrl + K → Ctrl + S
 

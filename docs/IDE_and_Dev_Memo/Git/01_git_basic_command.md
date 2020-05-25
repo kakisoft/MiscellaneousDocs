@@ -227,6 +227,12 @@ git config --global alias.ci commit
 git config -l    #リストアップ
 
 
+## チェリーピック / cherry pick
+現在のブランチに、他のブランチの特定コミットを反映させる。
+git cherry-pick コミットID
+git cherry-pick e2d1ef78a619cc0542b40e156f39040fe724c690
+
+
 ## _
 git merge --squash issue1
 

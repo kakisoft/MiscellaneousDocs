@@ -29,6 +29,22 @@ vsCode
 | 大文字に置換                           |  範囲指定 → Ctrl + p → > Tranfform to Uppercase  |
 | ページ移動（Mac）                       |  Option + Command + ←　or →                    |
 
+
+#### 折り畳み
+<https://motamemo.com/vscode/vscode-tips/fold-unfold/>  
+
+
+|　　操作                                |　　キー                                        |
+|:--------------------------------------|:-----------------------------------------------|
+| 折りたたみ                             |  Ctrl+Shift+[                                  |
+| 展開                                   |  Ctrl+Shift+]                                  |
+| すべて折りたたみ                        |  Ctrl+k Ctrl+0                                 |
+| すべて展開                              |  Ctrl+k Ctrl+j                                |
+| すべて展開                              |  Ctrl+k Ctrl+j                                |
+| レベル1で折りたたみ                      |  Ctrl+k Ctrl+1                                |
+| レベル2で折りたたみ                      |  Ctrl+k Ctrl+2                                |
+
+
  
 　  
 　  

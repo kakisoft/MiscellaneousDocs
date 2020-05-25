@@ -239,13 +239,15 @@ __________________________________________________________________
 git rebase -i HEAD~3
 ```
 
-#### エディタが開くので編集
+#### コマンドを打つと、エディタが開くので編集する。
+こんな感じの内容になっている
 ```
 pick feb0588 3rd commit 
 pick 1ac0fed 3rd commit2
 pick 6b763a8 3rd commit3
 ```
-　　　↓
+　　　↓  
+こんな感じで「pick」の文字を修正する。
 ```
 pick feb0588 3rd commit 
 s 1ac0fed 3rd commit2
@@ -254,7 +256,8 @@ s 6b763a8 3rd commit 3
 「s」でなく、「squash」でも可。  
 
 
-#### エディタが開くので編集２
+#### その後、再びエディタが開くので編集。
+こんな感じの内容になっている
 ```
 # This is a combination of 3 commits.
 # This is the 1st commit message:
@@ -269,8 +272,8 @@ s 6b763a8 3rd commit 3
 
 3rd commit 3
 ```
-　　　↓
-
+　　　↓  
+こんな感じに、コメントを１つにしておく。
 ```
 # This is a combination of 3 commits.
 # This is the 1st commit message:

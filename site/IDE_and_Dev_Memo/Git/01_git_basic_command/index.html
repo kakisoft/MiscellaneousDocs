@@ -356,8 +356,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../DB/MySQL/02_basic/" title="02 basic" class="md-nav__link">
-      02 basic
+    <a href="../../../DB/MySQL/02_for_admin/" title="02 for admin" class="md-nav__link">
+      02 for admin
     </a>
   </li>
 
@@ -10202,13 +10202,13 @@ git commit -m &quot;conflict fixed&quot;
 ## stash（スタッシュ：一時退避）
 git stash save               # セーブ
 git stash list               # リスト表示
-git stash apply stash@{0}    # 元に戻す
+git stash apply stash@{0}    # 元に戻す（apply の引数は、list で出てきた値）
 git stash drop stash@{0}     # 退避した作業を消す
 git stash clear              # 退避した作業を全て消す
 
 
 git stash save &quot;your comment&quot;  # コメントを付ける場合
-git stash apply                # これでもOK
+git stash apply                # apply の引数を省略した場合、直近の stash save の内容を戻す。
 
 
 
@@ -10237,6 +10237,12 @@ git config --global alias.ci commit
 git config -l    #リストアップ
 
 
+## チェリーピック / cherry pick
+現在のブランチに、他のブランチの特定コミットを反映させる。
+git cherry-pick コミットID
+git cherry-pick e2d1ef78a619cc0542b40e156f39040fe724c690
+
+
 ## _
 git merge --squash issue1
 
@@ -10246,23 +10252,27 @@ git merge --squash issue1
 <hr />
 <hr />
 <h1 id="squash">コミットをまとめる / スカッシュ / squash</h1>
+<p>例：先頭から３つ分までを纏める</p>
 <pre><code>git rebase -i HEAD~3
 </code></pre>
 
-<h4 id="_2">エディタが開くので編集</h4>
+<h4 id="_2">コマンドを打つと、エディタが開くので編集する。</h4>
+<p>こんな感じの内容になっている</p>
 <pre><code>pick feb0588 3rd commit 
 pick 1ac0fed 3rd commit2
 pick 6b763a8 3rd commit3
 </code></pre>
 
-<p>↓</p>
+<p>↓<br />
+こんな感じで「pick」の文字を修正する。</p>
 <pre><code>pick feb0588 3rd commit 
 s 1ac0fed 3rd commit2
 s 6b763a8 3rd commit 3
 </code></pre>
 
 <p>「s」でなく、「squash」でも可。  </p>
-<h4 id="2">エディタが開くので編集２</h4>
+<h4 id="_3">その後、再びエディタが開くので編集。</h4>
+<p>こんな感じの内容になっている</p>
 <pre><code># This is a combination of 3 commits.
 # This is the 1st commit message:
 
@@ -10277,7 +10287,8 @@ s 6b763a8 3rd commit 3
 3rd commit 3
 </code></pre>
 
-<p>↓</p>
+<p>↓<br />
+こんな感じに、コメントを１つにしておく。</p>
 <pre><code># This is a combination of 3 commits.
 # This is the 1st commit message:
 

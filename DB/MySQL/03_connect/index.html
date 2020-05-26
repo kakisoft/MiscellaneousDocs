@@ -360,8 +360,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../02_basic/" title="02 basic" class="md-nav__link">
-      02 basic
+    <a href="../02_for_admin/" title="02 for admin" class="md-nav__link">
+      02 for admin
     </a>
   </li>
 
@@ -10115,11 +10115,16 @@
 mysql -u ユーザ名 -p [データベース名]
 mysql -u root -p rootpassword
 
+
+mysql -u user --password=mypass
+※コマンドラインからのパスワード入力は推奨されない？　デフォルトでエラーとなってる？
+
+
 （ユーザ名：dbuser01、DB：mydb01　で接続）
 mysql -u dbuser01 -p mydb01
 
 （リモート）
-mysql -h hostname -u remoteusername -p
+mysql -h &lt;hostname&gt; -u &lt;remoteusername&gt; -p
 ※hostnameは、IPでも可。
 </code></pre>
 
@@ -10159,7 +10164,7 @@ mysql -h 127.0.0.1 -u root -P 4306 -p
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../02_basic/" title="02 basic" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../02_for_admin/" title="02 for admin" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -10168,7 +10173,7 @@ mysql -h 127.0.0.1 -u root -P 4306 -p
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                02 basic
+                02 for admin
               </span>
             </div>
           </a>

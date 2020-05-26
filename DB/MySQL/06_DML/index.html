@@ -360,8 +360,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../02_basic/" title="02 basic" class="md-nav__link">
-      02 basic
+    <a href="../02_for_admin/" title="02 for admin" class="md-nav__link">
+      02 for admin
     </a>
   </li>
 
@@ -10236,7 +10236,17 @@
                 
                   <h1>06 DML</h1>
                 
-                <h2 id="insert">insert</h2>
+                <p>MySQLのクエリでは、大文字・小文字が区別されない。    <br />
+（like検索とかでも）</p>
+<hr />
+<p>※注意点</p>
+<pre><code>-- コメントの後ろには、半角スペースが必要。付けない場合、「--」の演算子として評価される。（+の計算）
+
+# これもコメント
+</code></pre>
+
+<hr />
+<h2 id="insert">insert</h2>
 <pre><code class="sql">insert into users (id, name, score) values (1, 'kaki'  , 5.8 );
 
 

@@ -4,11 +4,16 @@ mysql -u root
 mysql -u ユーザ名 -p [データベース名]
 mysql -u root -p rootpassword
 
+
+mysql -u user --password=mypass
+※コマンドラインからのパスワード入力は推奨されない？　デフォルトでエラーとなってる？
+
+
 （ユーザ名：dbuser01、DB：mydb01　で接続）
 mysql -u dbuser01 -p mydb01
 
 （リモート）
-mysql -h hostname -u remoteusername -p
+mysql -h <hostname> -u <remoteusername> -p
 ※hostnameは、IPでも可。
 ```
 ## データベース選択

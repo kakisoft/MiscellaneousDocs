@@ -14,7 +14,7 @@ _________________________________________________
 <https://www.cman.jp/network/term/url/>  
 　  
 ![alt](img/domain_03.jpg)  
-
+　  
 
 ## URLとURIの違い
 ![alt](img/term_url.jpg)  

@@ -171,7 +171,7 @@ Subject Alternative Names(SANs)によるコモンネーム(CN)の別名機能を
 
 ## コモンネーム
 <https://cspssl.jp/guide/commonname.php>
-![alt](common-name.png)
+![alt](img/common-name.png)
 
 
 ## FQDN（Fully Qualified Domain Name）
@@ -216,7 +216,7 @@ _________________________________________________
 
 _________________________________________________
 ## SSL
-![alt](SSL.png)
+![alt](img/SSL.png)
 
 _________________________________________________
 ## 証明書確認
@@ -226,9 +226,4 @@ cert www.kakiflow.com kakiflow.com
 
 サブドメインが複数存在するかどうかは、SANs の内容を見る。
 ```
-
-_________________________________________________
-
-https://www.cman.jp/network/term/url/
-https://ferret-plus.com/8736
 

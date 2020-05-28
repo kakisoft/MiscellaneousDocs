@@ -15,13 +15,12 @@ MySQLでも使用するには、追加プラグインが必要。
 
 ## １．コネクタドライバをダウンロード
 <https://dev.mysql.com/downloads/connector/j/>  
-
-
+　  
 Platform Independent → Zip  
 
 
 ## ２．SQL Developer にインストール
-ツール→プリファレンス→データベース→サード・パーティJDBCドライバにて、「エントリの追加」
+ツール → プリファレンス → データベース → サード・パーティJDBCドライバにて、「エントリの追加」
 
 
 ## ３．接続

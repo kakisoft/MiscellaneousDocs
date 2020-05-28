@@ -18,3 +18,15 @@ Cyberduck
 鍵を選択
 ```
 
+
+## S3への接続
+サーバ ： s3.amazonaws.com  
+ポート : 443  
+Path ： バケット名  
+アクセスキーID ： <YOUR_ACCESS_KEY>  
+シークレットアクセスキー ： <YOUR_SECRET_ACCESS_KEY>  
+　  
+左下にも、接続情報追加のボタンがある。
+
+
+

@@ -817,3 +817,9 @@ echo '' > access_log       # これだとサイズが0にならない。
 
 
 ```
+
+## シェルを変更
+bash → zsh
+```
+chsh -s /bin/zsh
+```

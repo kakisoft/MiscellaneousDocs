@@ -535,6 +535,16 @@ source ~/.bashrc
 source ~/.bash_profile
 
 
+## エイリアスを保持（zsh）
+vi ~/.bashrc
+
+alias ll='ls -la'
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export DOCKER_CONTENT_TRUST=1
+
+source ~/.zshrc
+
+
 ## 一般的な変数
 COMMON_NAME=www.google.co.jp
 

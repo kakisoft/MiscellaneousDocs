@@ -1,6 +1,6 @@
 ```
 ## ディストリ確認
-(debian）cat /etc/issue
+(debian) cat /etc/issue
 (redhat) cat /etc/redhat-release
 (Amazon) cat /etc/system-release
 

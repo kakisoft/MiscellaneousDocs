@@ -1,12 +1,12 @@
 ## CREATE TABLE
 ```sql
 CREATE TABLE [dbo].[promoters] (
-    [promoter_id] [INT] NOT NULL PRIMARY KEY,
-    [promoter_name] [NVARCHAR] NOT NULL,
-    [log_url] [NVARCHAR] NOT NULL,
-    [del_flg] [TINYINT] NOT NULL,
-    [create_date] [DATETIME] NOT NULL,
-    [update_date] [DATETIME] NOT NULL
+	[promoter_id] [INT] NOT NULL PRIMARY KEY,
+	[promoter_name] [NVARCHAR](50) NOT NULL,
+	[log_url] [NVARCHAR](100) NOT NULL,
+	[del_flg] [TINYINT] NOT NULL,
+	[create_date] [DATETIME] NOT NULL,
+	[update_date] [DATETIME] NOT NULL
 );
 ```
 

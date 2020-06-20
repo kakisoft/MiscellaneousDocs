@@ -819,7 +819,23 @@ echo '' > access_log       # これだとサイズが0にならない。
 ```
 
 ## シェルを変更
-bash → zsh
+bash → zsh  
 ```
 chsh -s /bin/zsh
 ```
+
+
+## bin/sh
+bash のシンボリックリンク  
+
+<https://linuxjm.osdn.jp/html/GNU_bash/man1/bash.1.html>  
+ -c オプション - コマンドが string から読み込まれます。 string の後に引き数があれば、これらは 位置パラメータ (positional parameter: $0 から始まるパラメータ) に代入されます。  
+　  
+→ 引数が必要な時に使え、って事？
+
+
+## sh
+最も基本的なシェル  
+
+
+

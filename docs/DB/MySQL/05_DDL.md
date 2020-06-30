@@ -37,7 +37,9 @@ create table users (
 ```
 
 ## テーブル削除
+```
 drop table テーブル名;
+```
 
 ## カラム追加
 ```
@@ -47,11 +49,14 @@ alter table users add column email varchar(255) after name;
 ```
 
 ## カラム削除
+```
 alter table users drop column email;
+```
 
 ## カラム名変更
+```
 alter table users change email user_email varchar(80) default 'no';
-
+```
 
 
 

@@ -38,5 +38,9 @@ sudo systemctl status httpd.service
 ps aux | grep httpd
 ```
 
-
+## リロード
+単に設定を変更しているだけなら、Apache のコネクションを落とさずにリロードできる。
+```
+sudo systemctl reload httpd
+```
 

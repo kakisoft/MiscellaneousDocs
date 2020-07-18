@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#2018_note" tabindex="1" class="md-skip">
+      <a href="../../../#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -2685,6 +2685,40 @@
   
     <label class="md-nav__title" for="__toc">目次</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="リモート追加" class="md-nav__link">
+    リモート追加
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="エラー１" class="md-nav__link">
+    エラー１
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="エラー２" class="md-nav__link">
+    エラー２
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio" title="リモート追加： Visual Studio" class="md-nav__link">
+    リモート追加： Visual Studio
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#2018_note" title="2018_note" class="md-nav__link">
@@ -10125,6 +10159,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" title="リモート追加" class="md-nav__link">
+    リモート追加
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="エラー１" class="md-nav__link">
+    エラー１
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="エラー２" class="md-nav__link">
+    エラー２
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio" title="リモート追加： Visual Studio" class="md-nav__link">
+    リモート追加： Visual Studio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2018_note" title="2018_note" class="md-nav__link">
     2018_note
   </a>
@@ -10150,8 +10218,9 @@
                 
                   <h1>AddRemoteRepo note</h1>
                 
-                <pre><code>## リモート追加
-git init
+                <p><strong>Gatsby new 等のコマンドでリポジトリを作成する場合、Github にリポジトリを作成する時に、「README.md」を追加しない方がよさそう</strong>  </p>
+<h2 id="_1">リモート追加</h2>
+<pre><code>git init
 git remote add origin https://github.com/kakisoft/test003.git
 git pull origin master
 
@@ -10161,10 +10230,34 @@ git commit -m &quot;first commit&quot;
 git push -u origin master
 
 以降、vsCodeから、通常使用できるようになる。
+</code></pre>
 
+<h4 id="1">エラー１</h4>
+<pre><code>warning: Pulling without specifying how to reconcile divergent branches is
+discouraged. You can squelch this message by running one of the following
+commands sometime before your next pull:
 
+  git config pull.rebase false  # merge (the default strategy)
+  git config pull.rebase true   # rebase
+  git config pull.ff only       # fast-forward only
 
-━━━＜Visual Studio 2017＞━━
+---------------------------------
+→
+git config pull.rebase false
+など
+---------------------------------
+</code></pre>
+
+<h4 id="2">エラー２</h4>
+<pre><code>fatal: refusing to merge unrelated histories
+---------------------------------
+→
+git merge --allow-unrelated-histories origin/master
+---------------------------------
+</code></pre>
+
+<h2 id="visual-studio">リモート追加： Visual Studio</h2>
+<pre><code>━━━＜Visual Studio 2017＞━━
 プロジェクト作成後
 git remote add origin https://github.com/kakisoft/tmp01.git
 git pull origin master
@@ -10176,6 +10269,7 @@ git push -u origin master
 以降、Visual Studioから、コミット・プッシュが実行できる。
 </code></pre>
 
+<hr />
 <h2 id="2018_note">2018_note</h2>
 <pre><code>## リモート登録（「work」という名称で登録）
 git remote add work https://github.com/kakiq

@@ -40,7 +40,6 @@ vsCode
 | 展開                                   |  Ctrl+Shift+]                                  |
 | すべて折りたたみ                        |  Ctrl+k Ctrl+0                                 |
 | すべて展開                              |  Ctrl+k Ctrl+j                                |
-| すべて展開                              |  Ctrl+k Ctrl+j                                |
 | レベル1で折りたたみ                      |  Ctrl+k Ctrl+1                                |
 | レベル2で折りたたみ                      |  Ctrl+k Ctrl+2                                |
 

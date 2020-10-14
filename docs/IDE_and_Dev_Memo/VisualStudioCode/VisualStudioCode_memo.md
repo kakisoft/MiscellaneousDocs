@@ -28,6 +28,12 @@ vsCode
 | メソッドをリストアップ                   |  Ctrl + Shift + o →  :                         |
 | 大文字に置換                           |  範囲指定 → Ctrl + p → > Tranfform to Uppercase  |
 | ページ移動（Mac）                       |  Option + Command + ←　or →                    |
+| json整形(Win)                       |  (Win) Shift + Alt + F                    |
+| json整形(Mac)                       |  (Mac) Shift + Option + F                    |
+
+
+
+
 
 
 #### 折り畳み

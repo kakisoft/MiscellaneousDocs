@@ -61,6 +61,9 @@ ALT + Z
 ## Rainbow CSV
 CSV色分け
 
+## Edit csv
+CSV と TSV をいい感じに編集できる
+
 
 ## Trailing Spaces
 不要なスペースを警告

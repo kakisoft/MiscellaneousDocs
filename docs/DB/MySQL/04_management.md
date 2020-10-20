@@ -20,8 +20,8 @@ show databases
 ## テーブル一覧表示（SQL） +コメント
 ```
 select 
-    table_name
-   ,table_comment
+    trim(table_name)     as  table_name
+   ,trim(table_comment)  as  table_comment
 from 
     information_schema.tables
 where  1=1
@@ -77,9 +77,9 @@ __________________________________________
 ## テーブル名とカラム名を抽出
 ```sql
 select 
-    table_name
-   ,column_name
-   ,column_comment
+    trim(trimtable_name)  as  trimtable_name
+   ,trim(column_name)     as  column_name
+   ,trim(column_comment)  as  column_comment
 from
     information_schema.columns 
 where  1=1

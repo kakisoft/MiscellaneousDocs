@@ -77,12 +77,13 @@ __________________________________________
 ## テーブル名とカラム名を抽出
 ```sql
 select 
-    trim(trimtable_name)  as  trimtable_name
+    trim(table_name)      as  table_name
    ,trim(column_name)     as  column_name
    ,trim(column_comment)  as  column_comment
 from
     information_schema.columns 
 where  1=1
+  and  table_schema = database()
 --  and  table_schema="db01"
 --  and  table_name = 'teble01'
   and  column_name like '%mail%' 

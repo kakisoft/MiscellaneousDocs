@@ -79,6 +79,7 @@ __________________________________________
 select 
     table_name
    ,column_name
+   ,column_comment
 from
     information_schema.columns 
 where  1=1

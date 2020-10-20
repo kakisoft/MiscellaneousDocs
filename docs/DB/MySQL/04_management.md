@@ -89,7 +89,8 @@ where  1=1
   and  column_name like '%mail%' 
 order by
     table_name
-   ,column_name 
+   ,ordinal_position
+--   ,column_name
 ;
  
 /*

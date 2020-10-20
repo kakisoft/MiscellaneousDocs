@@ -428,8 +428,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql" title="データベース一覧表示（SQL）" class="md-nav__link">
-    データベース一覧表示（SQL）
+  <a href="#sql" title="テーブル一覧表示（SQL） +コメント" class="md-nav__link">
+    テーブル一覧表示（SQL） +コメント
   </a>
   
 </li>
@@ -2038,6 +2038,18 @@
   <li class="md-nav__item">
     <a href="../../RDB全般/ロック制御/" title="ロック制御" class="md-nav__link">
       ロック制御
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RDB全般/処理の順番/" title="処理の順番" class="md-nav__link">
+      処理の順番
     </a>
   </li>
 
@@ -6200,6 +6212,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../Life/Logistics/Marketing_note/" title="Marketing note" class="md-nav__link">
+      Marketing note
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../Life/Logistics/Revo/" title="Revo" class="md-nav__link">
       Revo
     </a>
@@ -10216,8 +10240,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql" title="データベース一覧表示（SQL）" class="md-nav__link">
-    データベース一覧表示（SQL）
+  <a href="#sql" title="テーブル一覧表示（SQL） +コメント" class="md-nav__link">
+    テーブル一覧表示（SQL） +コメント
   </a>
   
 </li>
@@ -10302,12 +10326,17 @@ show variables like ‘port’;
 <p>/etc/my.cnf</p>
 <h2 id="_3">データベース一覧表示</h2>
 <p>show databases</p>
-<h2 id="sql">データベース一覧表示（SQL）</h2>
+<h2 id="sql">テーブル一覧表示（SQL） +コメント</h2>
 <pre><code>select 
-    TABLE_NAME 
+    trim(table_name)     as  table_name
+   ,trim(table_comment)  as  table_comment
 from 
     information_schema.tables
 where  1=1
+  and  table_schema = database()
+order by
+    table_name
+;
 </code></pre>
 
 <h2 id="_4">前回のエラー内容を表示</h2>
@@ -10347,17 +10376,20 @@ source create_myqpp01.sql
 <hr />
 <h2 id="_10">テーブル名とカラム名を抽出</h2>
 <pre><code class="sql">select 
-    table_name
-   ,column_name
+    trim(table_name)      as  table_name
+   ,trim(column_name)     as  column_name
+   ,trim(column_comment)  as  column_comment
 from
     information_schema.columns 
 where  1=1
+  and  table_schema = database()
 --  and  table_schema=&quot;db01&quot;
 --  and  table_name = 'teble01'
   and  column_name like '%mail%' 
 order by
     table_name
-   ,column_name 
+   ,ordinal_position
+--   ,column_name
 ;
 
 /*

@@ -17,13 +17,18 @@ show variables like ‘port’;
 show databases
 
 
-## データベース一覧表示（SQL）
+## テーブル一覧表示（SQL） +コメント
 ```
 select 
-    TABLE_NAME 
+    table_name
+   ,table_comment
 from 
     information_schema.tables
 where  1=1
+  and  table_schema = database()
+order by
+    table_name
+;
 ```
 
 ## 前回のエラー内容を表示

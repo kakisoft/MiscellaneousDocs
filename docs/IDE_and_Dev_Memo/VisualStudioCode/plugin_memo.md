@@ -29,6 +29,10 @@ Git の履歴管理がいい感じ。
  * vscode-pdf
 
 
+## CSVを編集。TSVも行ける。
+Edit csv
+
+
 ## vscode-icons
 左のツリーにいい感じのアイコンつけてくれる。
 
@@ -61,9 +65,6 @@ ALT + Z
 ## Rainbow CSV
 CSV色分け
 
-## Edit csv
-CSV と TSV をいい感じに編集できる
-
 
 ## Trailing Spaces
 不要なスペースを警告
@@ -79,7 +80,7 @@ HTTPリクエストの操作を便利にしてくれる。
 
 
 ## GitHub Pull Requests
-公式による拡張
+
 
 
 ## マークダウンのLint

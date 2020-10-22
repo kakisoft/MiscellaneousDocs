@@ -18,7 +18,7 @@ show databases
 
 
 ## テーブル一覧表示（SQL） +コメント
-```
+```sql
 select 
     trim(table_name)     as  table_name
    ,trim(table_comment)  as  table_comment
@@ -30,6 +30,20 @@ order by
     table_name
 ;
 ```
+
+
+## テーブルと件数をチェック
+```sql
+select
+    table_name
+   ,table_rows
+from
+    information_schema.TABLES
+where  1=1
+  and  table_schema = database()
+;
+```
+
 
 ## 前回のエラー内容を表示
 show errors

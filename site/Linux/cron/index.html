@@ -1940,6 +1940,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../DB/RDB全般/処理の順番/" title="処理の順番" class="md-nav__link">
+      処理の順番
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../DB/RDB全般/基本用語/" title="基本用語" class="md-nav__link">
       基本用語
     </a>
@@ -6092,6 +6104,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Life/Logistics/Marketing_note/" title="Marketing note" class="md-nav__link">
+      Marketing note
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Life/Logistics/Revo/" title="Revo" class="md-nav__link">
       Revo
     </a>
@@ -6620,7 +6644,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" title="参考" class="md-nav__link">
+  <a href="#_7" title="ユーザを指定して実行" class="md-nav__link">
+    ユーザを指定して実行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="参考" class="md-nav__link">
     参考
   </a>
   
@@ -10207,7 +10238,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" title="参考" class="md-nav__link">
+  <a href="#_7" title="ユーザを指定して実行" class="md-nav__link">
+    ユーザを指定して実行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="参考" class="md-nav__link">
     参考
   </a>
   
@@ -10272,8 +10310,24 @@
 30 * * * * /usr/bin/php /vagrant/shared/www/PracticePHP/06_twitter_bot/bot.php
 </code></pre>
 
-<h2 id="_7">参考</h2>
-<p>https://www.server-memo.net/tips/crontab.html  </p>
+<h2 id="_7">ユーザを指定して実行</h2>
+<p><a href="https://qiita.com/katsukii/items/d5f90a6e4592d1414f99">https://qiita.com/katsukii/items/d5f90a6e4592d1414f99</a>  </p>
+<pre><code>0 0 * * * root sh /usr/local/bin/backup.sh
+</code></pre>
+
+<p>フォーマット</p>
+<pre><code># Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+</code></pre>
+
+<h2 id="_8">参考</h2>
+<p><a href="https://www.server-memo.net/tips/crontab.html">https://www.server-memo.net/tips/crontab.html</a>  </p>
                 
                   
                 

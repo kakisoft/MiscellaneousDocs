@@ -37,13 +37,6 @@ Edit csv
 左のツリーにいい感じのアイコンつけてくれる。
 
 
-## 折り返しの切り替え
-「表示」->「折り返しの切り替え」　　
-
-ALT + Z   
-（masなら、Option + Z ）　　
-
-
 ## Partial Dill
 部分比較  
 「>compare」  
@@ -101,7 +94,7 @@ Ctrl + alt + k  でしおりを挟む。
 
 ## Swagger
 Swagger Viewer  
-https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer 
+<https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer> 
 ```
 Shift + Alt + p
 ```

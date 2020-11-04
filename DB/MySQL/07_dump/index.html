@@ -463,6 +463,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" title="テーブルを全部入れ替え" class="md-nav__link">
+    テーブルを全部入れ替え
+  </a>
+  
+</li>
+      
       
       
       
@@ -10183,6 +10190,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" title="テーブルを全部入れ替え" class="md-nav__link">
+    テーブルを全部入れ替え
+  </a>
+  
+</li>
+      
       
       
       
@@ -10203,13 +10217,27 @@
                   <h1>07 dump</h1>
                 
                 <h2 id="dump">dumpファイル作成</h2>
-<p>mysqldump -u root -p DATABASE_NAME &gt; dump_file.sql </p>
+<pre><code>mysqldump -u root -p DATABASE_NAME &gt; dump_file.sql 
+</code></pre>
+
 <h2 id="dump_1">dumpファイルから復元</h2>
-<p>mysql -u root -p DATABASE_NAME &lt; dump_file.sql </p>
+<pre><code>mysql -u root -p DATABASE_NAME &lt; dump_file.sql 
+</code></pre>
+
 <h2 id="dump_2">dumpファイルから復元（文字コードを指定）</h2>
-<p>mysql -u root -p database_name --default-character-set=utf8 &lt; dump_file.sql 
-　<br />
-※上記では utf8を指定。インポート時に「Unknown command '\".」と出ていたら、これで回避できた。</p>
+<pre><code>mysql -u root -p database_name --default-character-set=utf8 &lt; dump_file.sql 
+</code></pre>
+
+<p>※上記では utf8を指定。インポート時に「Unknown command '\".」と出ていたら、これで回避できた。</p>
+<hr />
+<h2 id="_1">テーブルを全部入れ替え</h2>
+<pre><code>drop database DATABASE_NAME;
+create database DATABASE_NAME;
+
+--( ログアウト )
+
+mysql -u root -p DATABASE_NAME &lt; dump_file.sql
+</code></pre>
                 
                   
                 

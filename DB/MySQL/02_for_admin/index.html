@@ -10347,11 +10347,17 @@ create user remoteuser identified by 'password';
 </code></pre>
 
 <h2 id="_8">ユーザ一覧確認</h2>
-<p>select Host, User, Password from mysql.user;</p>
+<pre><code>select Host, User, Password from mysql.user;
+</code></pre>
+
 <h2 id="_9">ユーザ削除</h2>
-<p>drop user dbuser01@localhost;</p>
+<pre><code>drop user dbuser01@localhost;
+</code></pre>
+
 <h2 id="_10">権限付与</h2>
-<p>grant all on mydb01.* to dbuser01@localhost;</p>
+<pre><code>grant all on mydb01.* to dbuser01@localhost;
+</code></pre>
+
 <hr />
 <h2 id="root">rootパスワード変更</h2>
 <p>/installdir/mysql/bin/mysqladmin -p -u root password NEW_PASSWORD </p>

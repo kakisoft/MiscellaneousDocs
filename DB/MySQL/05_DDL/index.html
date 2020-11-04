@@ -10301,18 +10301,26 @@
                   <h1>05 DDL</h1>
                 
                 <h2 id="_1">データベース作成</h2>
-<p>create database DATABASE_NAME;</p>
+<pre><code>create database DATABASE_NAME;
+</code></pre>
+
 <h2 id="_2">データベース削除</h2>
-<p>drop database DATABASE_NAME;</p>
+<pre><code>drop database DATABASE_NAME;
+</code></pre>
+
 <h2 id="_3">現在選択中のデータベースを表示</h2>
-<p>select database();</p>
+<pre><code>select database();
+</code></pre>
+
 <h2 id="_4">テーブル一覧表示</h2>
 <pre><code>show tables from データベース名
 （「from データベース名」はデータベース選択後なら省略可）
 </code></pre>
 
 <h2 id="_5">スキーマ確認</h2>
-<p>desc テーブル名;</p>
+<pre><code>desc テーブル名;
+</code></pre>
+
 <h2 id="_6">テーブル作成</h2>
 <pre><code>drop table if exists users;
 create table users (

@@ -1,10 +1,14 @@
 # MySQL：バージョンを指定してインストール（5.7 系）
 
 ## 検索
+```
 brew search mysql@5.7
+```
 
 ## インストール
+```
 brew install mysql@5.7
+```
 
 ```
 （メッセージ）
@@ -22,16 +26,19 @@ source ~/.bash_profile
 ```
 
 ## バージョン確認
+```
 mysql --version
-
+```
 
 ## 起動
+```
 brew services start mysql@5.7
-
+```
 
 ## 接続
+```
 mysql -uroot
-
+```
 
 
 

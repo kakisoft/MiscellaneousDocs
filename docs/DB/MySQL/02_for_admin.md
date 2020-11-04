@@ -38,13 +38,20 @@ create user remoteuser identified by 'password';
 ```
 
 ## ユーザ一覧確認
+```
 select Host, User, Password from mysql.user;
+```
 
 ## ユーザ削除
+```
 drop user dbuser01@localhost;
+```
 
 ## 権限付与
+```
 grant all on mydb01.* to dbuser01@localhost;
+```
+
 ___________________________________________________
 
 ## rootパスワード変更

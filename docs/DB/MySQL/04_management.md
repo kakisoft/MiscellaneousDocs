@@ -116,3 +116,30 @@ use information_schema;
 としておくと、スキーマ名を省略可。
 */
 ```
+
+__________________________________________
+## テーブル名（論理・物理）とカラム名（論理・物理）を抽出
+```sql
+select 
+    trim(information_schema.columns.table_name)      as  table_name
+   ,trim(information_schema.tables.table_comment)    as  table_comment
+   ,trim(information_schema.columns.column_name)     as  column_name
+   ,trim(information_schema.columns.column_comment)  as  column_comment
+from
+    information_schema.columns
+    left join information_schema.tables on information_schema.columns.table_name = information_schema.tables.table_name
+where  1=1
+  and  information_schema.columns.table_schema = database()
+--  and  information_schema.columns.table_schema="db01"
+  and  information_schema.columns.table_name in (
+ 'table_01'
+,'table_02'
+,'table_03'
+) 
+order by
+    information_schema.columns.table_name
+--   ,information_schema.columns.ordinal_position
+   ,information_schema.columns.column_name
+```
+
+

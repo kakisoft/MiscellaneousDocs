@@ -99,3 +99,8 @@ Swagger Viewer
 Shift + Alt + p
 ```
 
+
+## スペルチェッカー
+Code Spell Checker
+<https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker>
+

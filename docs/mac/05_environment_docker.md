@@ -3,7 +3,8 @@ https://docs.docker.com/docker-for-mac/
 
 ## インストール
 ```
-brew cask install docker
+ X brew cask install docker
+brew install --cask docker
 open /Applications/Docker.app
 ```
 

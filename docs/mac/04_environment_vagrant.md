@@ -28,7 +28,8 @@ brew install ——cask -—force virtualbox
 
 ## Vagrant
 ```
-brew cask install vagrant
+ X brew cask install vagrant
+brew install --cask vagrant
 ```
 ### Vagrant : add CentOS
 ```

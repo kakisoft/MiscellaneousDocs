@@ -21,6 +21,11 @@ brew cask install virtualbox
 brew cask install --force virtualbox
 ```
 
+## 今はこっち。（cask がオプション扱いになった）
+```
+brew install ——cask -—force virtualbox
+```
+
 ## Vagrant
 ```
 brew cask install vagrant

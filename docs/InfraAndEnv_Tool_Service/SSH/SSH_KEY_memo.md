@@ -10,17 +10,13 @@ ssh-keygen -t rsa -C "sample@gmail.com"
 
 ## 暗号強度を指定して鍵を作成（今はこっちが推奨？）
 ```
-ssh-keygen -t rsa -b 4096 -C "sample@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "kakisttab@gmail.com"
 
 # -t 暗号化方式を指定
 # -b 暗号化強度を指定
 # -C コメントを設定 
 
 ```
-
-```
-## 作成できたファイルを確認
-
 
 ## パスフレーズ
 パスワードの長い版。単語を繋ぎ合わせて作る的な意味合いを含む？
@@ -32,7 +28,7 @@ ssh-keygen -t rsa -b 4096 -C "sample@gmail.com"
 
 ______________________________________________________________________
 ______________________________________________________________________
-## SSH Keysの確認
+## （作成された）SSH Keysの確認
 ```
 ls -al ~/.ssh
 ```
@@ -91,6 +87,11 @@ https://kakisoft.github.io/MiscellaneousDocs/Linux/ssh_key_nemo/
 ______________________________________________________________________
 
 # GitHub への登録
+
+## クリップボードにコピー
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
 
 ## 登録方法
 ```

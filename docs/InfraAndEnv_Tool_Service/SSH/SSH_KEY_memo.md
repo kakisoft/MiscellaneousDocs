@@ -94,55 +94,21 @@ pbcopy < ~/.ssh/id_rsa.pub
 ```
 
 ## 登録方法
-```
-ssh-rsa AAAArareioaubar
-
-・・・と、「ssh-ra」から始まる内容からコピー。
-ではなく、
-
-
-cat ~/.ssh/id_rsa.pub
-
-ssh-rsa ＜公開鍵の内容＞ your_email@example.com
+ 1. GitHubにログイン --> Settings
+ 2. 左メニュー「SSH and GPG keys」
+ 3. New SSH key
+ 4. Titleに識別できる文字列を入力
+ 5. Bodyに先ほどクリップボードに入れた値をペースト
+ 6. Add Key
 
 
-・・・らしいんだけど、こうなった。
-```
-Key is invalid. It must begin with 'ssh-ed25519', 'ssh-rsa', 'ssh-dss', 'ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', or 'ecdsa-sha2-nistp521'. Check that you're copying the public half of the key
-```
-仕様が変わった？  
-　  
-試しに末尾の「 kaki@hogehoge」を削除して登録したら、  
-```
-Key is already in use
-```
-となった。（最初に、全体のものを登録していた）  
-　  
-### **（結論）**    
-「全部含めてコピー」でおけ？   
-　  
-Githubに登録すると、メール送信される。  
+ その後、ターミナルで以下を実行。  
+ ```
+ ssh -T git@github.com
+ ```
 
+## VSCode
+その後、VSCodeからアクセスすると、トークン発行画面が起動する。  
+発行されたトークンをコピーし、VSCode の左下あたりに出てくる「Auth xxx（だったと思う）」をクリックし、トークンを入力。   
 
-## Github への ssh アクセス
-```
-ssh -T git@github.com
-
-
--T      Disable pseudo-tty allocation.
-
-
-shell accessが許可されていない端末へsshアクセスする場合する。
-githubはshell accessを許可していないため、PTY(pseudo-tty) allocation requestが通らずconnectionが閉じてしまう。
-
-```
-
-
-こっちでもいいそうな。
-```
-ssh -t git@github.com
-
-Force pseudo-terminal allocation.  This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g. when implementing
-menu services.  Multiple -t options force tty allocation, even if ssh has no local tty.
-```
 

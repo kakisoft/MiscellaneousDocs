@@ -67,4 +67,7 @@ alter table users change email user_email varchar(80) default 'no';
 ```
 
 
-
+## テーブルにコメントを追加
+```
+alter table `items` comment '商品マスタ'
+```

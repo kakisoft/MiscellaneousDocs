@@ -232,6 +232,10 @@ git config -l    #リストアップ
 git cherry-pick コミットID
 git cherry-pick e2d1ef78a619cc0542b40e156f39040fe724c690
 
+コミットIDの確認は、
+git log
+等で。
+
 
 ## _
 git merge --squash issue1

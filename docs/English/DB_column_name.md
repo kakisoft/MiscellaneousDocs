@@ -1,30 +1,102 @@
-
-
-
-|     日本語                    |      英語                |
-|:----------------------------|:-------------------------|
-|  並び順                      |  sort_order              |
-|  単価                        |  unit price              |
-|  賞味期限                     |  flavor expiration date  |
-|  消費期限                     |  expiration date         |
-|  ヘッダを使うか(CSVの扱いとか)   |  is_header_enabled       |
-|  XX回数                      |  num_XXXXX  |
-|  購入回数                     |  num_purchases  |
-
-
-|            |    |
-
-
-数量  
-quantity  
-qty  
-
 ```
 ie
 key
 code
 type
 ```
+
+```
+Please specify the argument (up/down)
+```
+
+_________________________________________________________
+## 会社とか
+
+|  論理名           |  物理名                       |
+|:---------------|:---------------------------|
+|  会社サイト         |  website                   |
+|  緊急連絡先         |  emergency_phone_number    |
+|  緊急連絡先メールアドレス  |  emergency_email_address   |
+|  緊急連絡先名        |  emergency_contact_name    |
+|  請求先事業者名       |  billing_contact_name      |
+|  請求先郵便番号       |  billing_zip_code          |
+|  請求先担当者名       |  billing_person_in_charge  |
+|  請求先担当者名       |  billing_person_name       |
+|  利用状況          |  usage_status              |
+|  代表者氏名         |  representative_name       |
+|  登録日           |  registration_date         |
+|  反社チェック依頼日     |  anti_social_check_date    |
+|  承認日           |  approval_date             |
+|  無料期日（お試し期間）   |  final_date_of_free_trial  |
+|  契約日           |  contract_date             |
+
+
+
+```
+反社  anti social forces
+forces　は「組織」
+organization は、「公的な組織」
+```
+
+## 請求・支払
+
+|  論理名            |  物理名                                         |
+|:----------------|:---------------------------------------------|
+|  支払方法           |  payment_method                              |
+|  代引手数料          |  cash_on_delivery_fee                        |
+|  割引             |  discount                                    |
+|  軽減税率対象合計額      |  reduced_tax_rates_total_amount              |
+|  非軽減税率対象合計額     |  non_reduced_tax_rates_total_amount          |
+|  商品合計額          |  total_amount_of_items / total_amount_items  |
+|  請求額計（税込）       |  amount_billed                               |
+|  商品数量計（何個買ったか）  |  total_item                                  |
+|  商品金額計          |  total_item_amount                           |
+|  金額計（税込）        |  total_amount                                |
+|  軽減税率区分         |  reduced_tax_type / reduced_tax_rate_type    |
+|  軽減税率対象合計額      |  reduced_tax_rates_total_amount              |
+|  非軽減税率対象合計額     |  non_reduced_tax_rates_total_amount          |
+
+
+## ポイント・クーポン
+
+|  論理名       |  物理名                           |
+|:-----------|:-------------------------------|
+|  ポイント利用額   |  total_amount_consumed_points  |
+|  ポイント残高    |  point_balance                 |
+|  今回取得ポイント  |  granted_point                 |
+|  今回利用ポイント  |  consumed_points_amount        |
+|  クーポン金額    |  coupon_amount                 |
+
+
+## 物流
+
+|  論理名                            |  物理名                                       |
+|:--------------------------------|:-------------------------------------------|
+|  発注No.                          |  order_no                                  |
+|  入荷予定日                          |  estimated_in_stock_date                   |
+|  入荷済数量                          |  in_stock_quantity                         |
+|  出荷限界設定日数                       |  number_of_shipment_limit_days             |
+|  出荷日                            |  shipment_date                             |
+|  個口数                            |  total_units                               |
+|  受注時間                           |  order_time                                |
+|  着日                             |  delivery_date                             |
+|  出荷予定日                          |  estimated_shipment_date                   |
+|  単価                        |  unit price              |
+|  賞味期限                     |  flavor expiration date  |
+|  消費期限                     |  expiration date         |
+|  XX回数                      |  num_XXXXX  |
+|  購入回数                     |  num_purchases  |
+|  ケース入数                          |  quantity_per_case                         |
+|  発注点数量                          |  ordering_point_quantity                   |
+|  適正在庫数量                         |  reasonable_inventory_quantity             |
+|  温度帯区分                          |  temperature_zone                          |
+|  保管料                            |  storage_fee                               |
+|  届け先                            |  destination                               |
+|  出荷可能在庫                         |  available_inventory / sellable_inventory  |
+|  総在庫（決まった日サイクルがあり、この日付にいくつあるか）  |  gross_inventory                           |
+|  総在庫（全体）                        |  total_inventory                           |
+|  引当可能か                          |  is_allocatable                            |
+|  同梱タイプ                          |  bundle_type                               |
 
 
 ```
@@ -34,7 +106,39 @@ bundled_type -> 梱包されたタイプ（「タイプ」が梱包されてい�
 bundle_type -> 梱包タイプ
 ```
 
+## 情報
 
-```
-Please specify the argument (up/down)
-```
+|  論理名       |  物理名                  |
+|:-----------|:----------------------|
+|  並び順        |  sort_order              |
+|  変換内容      |  target_text          |
+|  算出開始日     |  count_starting_date  |
+|  時制条件タイプ   |  tense_timeline_type  |
+|  ファイル保存パス  |  file_path            |
+|  ヘッダを使うか(CSVの扱いとか)   |  is_header_enabled       |
+
+
+______________________________________________
+## total と amount の使い分け
+total は全体量（明細の全体の合計金額、のような感覚）  
+amount は量（全体ではなく、個別の量）  
+
+total を使うなら「number」は無くていい  
+
+
+## 「total」は、基本的に「前」（後ろで使っても、文法的に間違いではない）
+total_units  
+total_amount_of_items  
+total_amount_items  
+total_tax  
+total_consumption_tax  
+
+
+## 「amount」も基本的に前
+amount_billed  
+consumed_points_amount  
+amount_consumed_points  
+
+## note
+最後のは混在するのはよくあります。quantityは数えられないものに対しても使えるのにないして、numberは数えれるものに対してしか使えません。qtyの略はかなり一般的なので大丈夫です！  
+

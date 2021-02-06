@@ -29,6 +29,13 @@ _________________________________________________________
 |  承認日           |  approval_date             |
 |  無料期日（お試し期間）   |  final_date_of_free_trial  |
 |  契約日           |  contract_date             |
+|  規約同意日時       |  term_agreement_date             |
+|  取扱商品       |  product_category             |
+|  利用状況       |  usage_status             |
+|  デモ提供終了日       |  demo_expiration_date             |
+|  料金滞納日       |  unpaid_fee_date             |
+|  解約日       |  closed_date             |
+|  アカウントロック日   |  account_locked_date      |
 
 
 
@@ -55,6 +62,7 @@ organization は、「公的な組織」
 |  軽減税率区分         |  reduced_tax_type / reduced_tax_rate_type    |
 |  軽減税率対象合計額      |  reduced_tax_rates_total_amount              |
 |  非軽減税率対象合計額     |  non_reduced_tax_rates_total_amount          |
+|  伝票 / 請求書           |  invoice                               |
 
 
 ## ポイント・クーポン
@@ -97,6 +105,14 @@ organization は、「公的な組織」
 |  総在庫（全体）                        |  total_inventory                           |
 |  引当可能か                          |  is_allocatable                            |
 |  同梱タイプ                          |  bundle_type                               |
+|  取扱商品（の種類）                       |  product_category                               |
+|  商品数（取り扱っている商品の数）            |  number_of_product                               |
+|  月間出荷数量                           |  number_of_monthly_shipment                               |
+|  保管坪数（広さ）                            |  storage_size                               |
+|  定期便                               |  subscription_box                               |
+|  （定期便の）次回配送日                  |  next_date_of_subscription_box                               |
+|  （定期便の）累計発送回数                  |  number_of_current_shipped_subscription_box                               |
+|  （１オーダーあたりの）平均梱包数         |  average_number_of_items / average_number_of_products     |
 
 
 ```
@@ -111,6 +127,7 @@ bundle_type -> 梱包タイプ
 |  論理名       |  物理名                  |
 |:-----------|:----------------------|
 |  並び順        |  sort_order              |
+|  適用優先順位    |  priority              |
 |  変換内容      |  target_text          |
 |  算出開始日     |  count_starting_date  |
 |  時制条件タイプ   |  tense_timeline_type  |

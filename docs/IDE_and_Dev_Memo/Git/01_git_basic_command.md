@@ -118,6 +118,9 @@ git branch -a
 git fetch
 
 
+## リモート追跡ブランチをクリア（ローカルのブランチが邪魔して、リモートブランチを取得できなかった時など）
+git remote prune origin
+
 ## 過去のコミット状態に（一時的に）戻す
 git checkout e45661bf83da2982fcc33e08dc0eaacfa64b2128
 

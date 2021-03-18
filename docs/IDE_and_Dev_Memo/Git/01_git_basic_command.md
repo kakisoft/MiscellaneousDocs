@@ -182,6 +182,9 @@ git checkout <ブランチ名>   #ブランチ切り替え
 git merge <ブランチ名>      #マージ（あらかじめmasterに切り替え）
 git branch -d <ブランチ名>  #ブランチ削除
 
+## リモートブランチを削除
+git push --delete origin keshitaibranch
+
 
 ## コンフリクト
 <<<<<<< HEAD

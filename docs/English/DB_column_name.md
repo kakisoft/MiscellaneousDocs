@@ -9,8 +9,13 @@ type
 Please specify the argument (up/down)
 ```
 
-データベース名およびカラム名、動詞は使いたくない。
-基本、名刺を使う。
+データベース名およびカラム名、動詞は使いたくない。  
+基本、名詞を使う。  
+
+is_required_to_state_delivery_statement  
+is_required_stating_delivery_statement  
+
+is_required_picking  
 
 _________________________________________________________
 ## 会社とか
@@ -34,7 +39,6 @@ _________________________________________________________
 |  契約日           |  contract_date             |
 |  規約同意日時       |  term_agreement_date             |
 |  取扱商品       |  product_category             |
-|  利用状況       |  usage_status             |
 |  デモ提供終了日       |  demo_expiration_date             |
 |  料金滞納日       |  unpaid_fee_date             |
 |  解約日       |  closed_date             |
@@ -52,20 +56,59 @@ organization は、「公的な組織」
 
 |  論理名            |  物理名                                         |
 |:----------------|:---------------------------------------------|
+|  伝票 / 請求書           |  invoice                               |
 |  支払方法           |  payment_method                              |
 |  代引手数料          |  cash_on_delivery_fee                        |
+|  消費税率           |  consumption_tax_rate                               |
 |  割引             |  discount                                    |
-|  軽減税率対象合計額      |  reduced_tax_rates_total_amount              |
-|  非軽減税率対象合計額     |  non_reduced_tax_rates_total_amount          |
+|  軽減税率区分         |  reduced_tax_type / reduced_tax_rate_type    |
+
+
+（以下、参考情報。色々考えを変えた）  
+
+|  論理名            |  物理名                                         |
+|:----------------|:---------------------------------------------|
+|  商品数量計（何個買ったか）  |  total_item                                  |
+|  金額計（税込）        |  total_amount                                |
 |  商品合計額          |  total_amount_of_items / total_amount_items  |
 |  請求額計（税込）       |  amount_billed                               |
-|  商品数量計（何個買ったか）  |  total_item                                  |
 |  商品金額計          |  total_item_amount                           |
-|  金額計（税込）        |  total_amount                                |
-|  軽減税率区分         |  reduced_tax_type / reduced_tax_rate_type    |
 |  軽減税率対象合計額      |  reduced_tax_rates_total_amount              |
-|  非軽減税率対象合計額     |  non_reduced_tax_rates_total_amount          |
-|  伝票 / 請求書           |  invoice                               |
+|  軽減税率対外象合計額     |  non_reduced_tax_rates_total_amount          |
+|  金額計（税込）           |  amount_billed                              |
+
+「total」や「amount」を、末尾に持ってきても先頭に持ってきても、文法的には正しい。  
+（先頭に持ってくる場合は、「total_amount_of_」と、"of" が入る。ただし、カラム名の "of" は省略する事も多い）  
+
+billed  
+請求する金額。（＝税込金額）  
+
+discount_rate  
+
+### 請求・支払（明細と合計）
+ヘッダにて管理する金額を  
+「 total_amount_XXXX 」   
+
+明細にて管理する金額（明細内で "単価 X 数量" の計算をする場合など）を  
+「 amount_XXXX 」   
+で管理する  
+
+#### ヘッダ
+
+|  論理名            |  物理名                                     |
+|:----------------|:---------------------------------------------|
+|  商品合計額          |  total_amount_price               |
+|  消費税計             |  total_amount_consumption_tax  |  
+|  請求額計（税込）      |  total_amount_billed  |  
+|  軽減税率対象合計額    | total_amount_reduced_tax      |
+|  軽減税率対象外合計額  | total_amount_non_reduced_tax  |
+
+#### 明細
+
+|  論理名            |  物理名                                     |
+|:----------------|:---------------------------------------------|
+|  商品金額計        |  amount_price  |
+|  消費税            |  amount_consumption_tax  |
 
 
 ## ポイント・クーポン
@@ -93,11 +136,11 @@ organization は、「公的な組織」
 |  受注時間                           |  order_time                                |
 |  着日                             |  delivery_date                             |
 |  出荷予定日                          |  estimated_shipment_date                   |
-|  単価                        |  unit price              |
-|  賞味期限                     |  flavor expiration date  |
-|  消費期限                     |  expiration date         |
-|  XX回数                      |  num_XXXXX  |
-|  購入回数                     |  num_purchases  |
+|  単価                        |  unit_price              |
+|  賞味期限                     |  flavor_expiration_date  |
+|  消費期限                     |  expiration_date         |
+|  XX回数                      |  num_XXXXX / number_of_XXXXX |
+|  購入回数                     |  num_purchases / number_of_purchases |
 |  ケース入数                          |  quantity_per_case                         |
 |  発注点数量                          |  ordering_point_quantity                   |
 |  適正在庫数量                         |  reasonable_inventory_quantity             |
@@ -118,8 +161,15 @@ organization は、「公的な組織」
 |  （定期便の）累計発送回数                  |  number_of_current_shipped_subscription_box                               |
 |  （１オーダーあたりの）平均梱包数         |  average_number_of_items / average_number_of_products     |
 |  在庫数にかかわらず、引き当て可能か         |  is_allocatable_regardless_inventory     |
-|  消費期限管理をするか         |  is_controlled_expiration_date     |
+|  消費期限管理をするか               |  is_controlled_expiration_date     |
+|  出荷予定日                        |  estimated_shipping_date     |
+|  出荷指示数量                       |  shipping_instruction_quantity     |
+|  引当数量                       |  allocation_quantity     |
 
+
+allocation_quantity -> OK  
+allocated_quantity -> NG  
+これだと「quantity」が修飾されている。  
 
 
 
@@ -159,8 +209,11 @@ bundle_type -> 梱包タイプ
 |  外部アクセスコード  |  external_access_verification_code       |
 |  必須解除設定  |  is_editable_required_attribute       |
 |  表示エラーメッセージ  |  error_message / display_error_message / disp_error_message       |
-
-
+|  再計算が必要か  |  is_required_recalculation       |
+|  必須設定が無効か  |  is_disable_required_attribute / is_disable_requirement       |
+|  定義  |  definitions       |
+|  サンプル値  |  example_value / sampled_value　（example のが自然）       |
+|  ヘッダテキスト  |  header_field       |
 
 
 #### 名詞・名詞 (concatenation_char / char_concatenation )
@@ -171,6 +224,15 @@ bundle_type -> 梱包タイプ
 
 
 ______________________________________________
+# amount / total
+amount は前に持ってきていいけど、正しくは「amount_of（"of" が省略されてる）」  
+（amount は名刺）
+後ろに持ってくる時は、of は不要。  
+
+total は形容詞  
+形容詞は必ず名刺の前  
+
+
 ## total と amount の使い分け
 total は全体量（明細の全体の合計金額、のような感覚）  
 amount は量（全体ではなく、個別の量）  

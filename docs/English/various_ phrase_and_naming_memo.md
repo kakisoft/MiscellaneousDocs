@@ -1,4 +1,31 @@
+## 変数名
+変数名は、名詞が原則。  
+動詞を使いたい場合、名詞形を使用もしくは動名詞の形式を使用する。（To不定詞の形は避ける）  
+（ただし、boolean は例外とする）  
 
+
+isRequired  
+
+## 定数名
+const FAILED_STATUS = 1
+const PROCESSING_STATUS = 2
+
+\[名称_状態]
+
+
+## メソッド
+メソッド名は、動詞で開始  
+is で開始する場合は、戻り値は boolean とする  
+is_required_(名詞)  
+
+
+registerAsn  
+updateStatusToImported  
+
+Executed month/date/hour  
+「run」の意味はいっぱいあるので、ジョブを動かすなら execute  
+
+____________________________________________________________________________________
 $maskedColumns  
 importedData - imported は "形容詞"  
 

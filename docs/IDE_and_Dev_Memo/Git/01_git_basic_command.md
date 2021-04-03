@@ -118,6 +118,9 @@ git branch -a
 git fetch
 
 
+## リモート追跡ブランチをクリア（ローカルのブランチが邪魔して、リモートブランチを取得できなかった時など）
+git remote prune origin
+
 ## 過去のコミット状態に（一時的に）戻す
 git checkout e45661bf83da2982fcc33e08dc0eaacfa64b2128
 
@@ -179,6 +182,9 @@ git checkout <ブランチ名>   #ブランチ切り替え
 git merge <ブランチ名>      #マージ（あらかじめmasterに切り替え）
 git branch -d <ブランチ名>  #ブランチ削除
 
+## リモートブランチを削除
+git push --delete origin keshitaibranch
+
 
 ## コンフリクト
 <<<<<<< HEAD
@@ -239,6 +245,27 @@ git log
 
 ## _
 git merge --squash issue1
+
+
+
+## コメントを編集
+
+### 直前のコメントの内容を修正
+git commit --amend -m "修正後のコメント内容"
+
+
+
+## コミット打ち消し / 打消し / 打消
+git revert コミットID
+git revert 46985bc20e54962ef1fe39697615147a3ee3a50b
+
+# merge を打ち消す場合、「-m」オプションを付ける
+git revert -m 1 46985bc20e54962ef1fe39697615147a3ee3a50b
+
+
+打ち消した後、git show で確認
+
+
 
 ```
 __________________________________________________________________

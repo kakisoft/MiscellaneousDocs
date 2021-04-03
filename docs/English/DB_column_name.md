@@ -84,6 +84,7 @@ organization は、「公的な組織」
 |  論理名                            |  物理名                                       |
 |:--------------------------------|:-------------------------------------------|
 |  発注No.                          |  order_no                                  |
+|  入庫                           |  inbound                   |
 |  入荷予定日                          |  estimated_in_stock_date                   |
 |  入荷済数量                          |  in_stock_quantity                         |
 |  出荷限界設定日数                       |  number_of_shipment_limit_days             |

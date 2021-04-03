@@ -1,3 +1,16 @@
+
+$maskedColumns  
+importedData - imported は "形容詞"  
+
+By と From の使い分け  
+Id を使って（ヒントとして）参照  
+From CSV は、ファイルそのものを使う。  
+
+
+## 物流
+insufficient inventory
+
+____________________________________________________________________________________
 ## 変数名とか
 ```
 on click：クリック時

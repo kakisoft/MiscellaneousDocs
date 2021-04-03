@@ -9,6 +9,9 @@ type
 Please specify the argument (up/down)
 ```
 
+データベース名およびカラム名、動詞は使いたくない。
+基本、名刺を使う。
+
 _________________________________________________________
 ## 会社とか
 
@@ -113,6 +116,19 @@ organization は、「公的な組織」
 |  （定期便の）次回配送日                  |  next_date_of_subscription_box                               |
 |  （定期便の）累計発送回数                  |  number_of_current_shipped_subscription_box                               |
 |  （１オーダーあたりの）平均梱包数         |  average_number_of_items / average_number_of_products     |
+|  在庫数にかかわらず、引き当て可能か         |  is_allocatable_regardless_inventory     |
+|  消費期限管理をするか         |  is_controlled_expiration_date     |
+
+
+
+
+stocktaking_mode_controllers  棚卸制御テーブル  
+「stocktaking_status」or「stocktaking_mode」  
+
+消費期限管理  
+is_managed_expiration_date  
+is_controlled_expiration_date  -> control は、何かしらのルールがあって、それ沿っている  
+is_managed_expiration_date  -> 経営・運営レベルの話  
 
 
 ```
@@ -122,17 +138,35 @@ bundled_type -> 梱包されたタイプ（「タイプ」が梱包されてい�
 bundle_type -> 梱包タイプ
 ```
 
-## 情報
+## システム
 
 |  論理名       |  物理名                  |
 |:-----------|:----------------------|
 |  並び順        |  sort_order              |
+|  必須設定    |  is_required              |
 |  適用優先順位    |  priority              |
-|  変換内容      |  target_text          |
+|  言語    |  lang              |
+|  変換前（変換対象）      |  target / target_text          |
+|  変換後      |  converted          |
 |  算出開始日     |  count_starting_date  |
 |  時制条件タイプ   |  tense_timeline_type  |
 |  ファイル保存パス  |  file_path            |
 |  ヘッダを使うか(CSVの扱いとか)   |  is_header_enabled       |
+|  カラム名 or キー名   |  column_name_or_key_name       |
+|  外部アクセスコード  |  external_access_verification_code       |
+|  連結文字  |  concatenation_char / char_concatenation     |
+|  外部アクセスコード  |  external_access_verification_code       |
+|  必須解除設定  |  is_editable_required_attribute       |
+|  表示エラーメッセージ  |  error_message / display_error_message / disp_error_message       |
+
+
+
+
+#### 名詞・名詞 (concatenation_char / char_concatenation )
+-> 入れ替わっても大丈夫（・・・大丈夫じゃない場合もある）  
+（例）seat belt　seat-belt  
+
+
 
 
 ______________________________________________

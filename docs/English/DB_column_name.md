@@ -135,7 +135,6 @@ discount_rate
 |  個口数                            |  total_units                               |
 |  受注時間                           |  order_time                                |
 |  着日                             |  delivery_date                             |
-|  出荷予定日                          |  estimated_shipment_date                   |
 |  単価                        |  unit_price              |
 |  賞味期限                     |  flavor_expiration_date  |
 |  消費期限                     |  expiration_date         |
@@ -147,7 +146,7 @@ discount_rate
 |  温度帯区分                          |  temperature_zone                          |
 |  保管料                            |  storage_fee                               |
 |  届け先                            |  destination                               |
-|  出荷可能在庫                         |  available_inventory / sellable_inventory  |
+|  出荷可能在庫                         |  allocatable_inventory(_quantity) / available_inventory / sellable_inventory  |
 |  総在庫（決まった日サイクルがあり、この日付にいくつあるか）  |  gross_inventory                           |
 |  総在庫（全体）                        |  total_inventory                           |
 |  引当可能か                          |  is_allocatable                            |
@@ -165,12 +164,21 @@ discount_rate
 |  出荷予定日                        |  estimated_shipping_date     |
 |  出荷指示数量                       |  shipping_instruction_quantity     |
 |  引当数量                       |  allocation_quantity     |
+|  入荷予定数                      |  estimated_inbound_quantity / estimated_in_stock_quantity  |
+|  入荷予定日                      |  estimated_inbound_date / estimated_in_stock_date          |
+|  入荷数                         |  inbound_quantity / in_stock_quantity                     |
 
 
 allocation_quantity -> OK  
 allocated_quantity -> NG  
 これだと「quantity」が修飾されている。  
 
+inbound   入庫  
+in_stock  口語で「入荷」（メジャーな表現）  
+
+**＜なまりによる差＞**  
+shipment  -> イギリス・オーストラリア・ニュージーランド  
+shipping  -> アメリカ  
 
 
 stocktaking_mode_controllers  棚卸制御テーブル  
@@ -180,6 +188,7 @@ stocktaking_mode_controllers  棚卸制御テーブル
 is_managed_expiration_date  
 is_controlled_expiration_date  -> control は、何かしらのルールがあって、それ沿っている  
 is_managed_expiration_date  -> 経営・運営レベルの話  
+
 
 
 ```
@@ -255,4 +264,18 @@ amount_consumed_points
 
 ## note
 最後のは混在するのはよくあります。quantityは数えられないものに対しても使えるのにないして、numberは数えれるものに対してしか使えません。qtyの略はかなり一般的なので大丈夫です！  
+
+
+______________________________________________
+# 論理名 / 物理名
+テーブル物理名  physical_table_name
+テーブル論理名  logical_table_name
+
+カラム物理名  physical_column_name
+カラム論理名  logical_column_name
+
+（物理名は、こっちでいいかも）
+テーブル名  table_name
+カラム名    column_name
+
 

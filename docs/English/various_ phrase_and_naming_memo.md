@@ -25,6 +25,10 @@ updateStatusToImported
 Executed month/date/hour  
 「run」の意味はいっぱいあるので、ジョブを動かすなら execute  
 
+
+## API
+Create required data
+
 ____________________________________________________________________________________
 $maskedColumns  
 importedData - imported は "形容詞"  

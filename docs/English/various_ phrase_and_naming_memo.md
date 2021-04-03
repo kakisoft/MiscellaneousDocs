@@ -27,7 +27,17 @@ Executed month/date/hour
 
 
 ## API
-Create required data
+**Create required data**  
+
+**complete notification**  
+形容詞 + 名詞  
+ -> 「通知が完了した」という意味  
+
+notice は名刺にもなれる  
+
+notice -> 注意喚起、警告、告知（良くない事を知らせる）  
+notification -> アナウンス的な内容  
+
 
 ____________________________________________________________________________________
 $maskedColumns  
@@ -39,7 +49,7 @@ From CSV は、ファイルそのものを使う。
 
 
 ## 物流
-insufficient inventory
+insufficient inventory  在庫不足
 
 ____________________________________________________________________________________
 ## 変数名とか

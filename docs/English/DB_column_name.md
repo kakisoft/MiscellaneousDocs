@@ -279,3 +279,27 @@ ______________________________________________
 カラム名    column_name
 
 
+______________________________________________
+# テーブル
+
+## 入荷予定
+advanced_shipping_notices
+advanced_shipping_notice_details
+
+## 入荷実績
+inbound_records  
+inbound_record_details  
+※返品もまとめて管理  
+
+## 出荷指示
+shipping_instructions  
+shipping_instruction_details  
+shipping_allocation_details  
+
+## 出荷実績
+shipment_records  
+shipment_record_details  
+
+______________________________________________
+
+

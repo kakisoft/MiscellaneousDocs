@@ -129,6 +129,7 @@ from
     information_schema.columns
     left join information_schema.tables on information_schema.columns.table_name = information_schema.tables.table_name
 where  1=1
+  and  information_schema.tables.table_schema  = database()
   and  information_schema.columns.table_schema = database()
 --  and  information_schema.columns.table_schema="db01"
   and  information_schema.columns.table_name in (

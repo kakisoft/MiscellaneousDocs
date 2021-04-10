@@ -21,13 +21,14 @@ show databases
 
 ## テーブル一覧表示（SQL） +コメント
 ```sql
-select 
+select
     trim(table_name)     as  table_name
    ,trim(table_comment)  as  table_comment
-from 
+from
     information_schema.tables
 where  1=1
   and  table_schema = database()
+  and  table_name not in ('failed_jobs','migrations')
 order by
     table_name
 ;
@@ -40,7 +41,7 @@ select
     table_name
    ,table_rows
 from
-    information_schema.TABLES
+    information_schema.tables
 where  1=1
   and  table_schema = database()
 ;
@@ -94,23 +95,24 @@ sudo systemctl restart mysqld.service
 __________________________________________
 ## テーブル名とカラム名を抽出
 ```sql
-select 
+select
     trim(table_name)      as  table_name
    ,trim(column_name)     as  column_name
    ,trim(column_comment)  as  column_comment
 from
-    information_schema.columns 
+    information_schema.columns
 where  1=1
   and  table_schema = database()
+  and  table_name not in ('failed_jobs','migrations')
 --  and  table_schema="db01"
 --  and  table_name = 'teble01'
-  and  column_name like '%mail%' 
+--  and  column_name like '%mail%' 
 order by
     table_name
    ,ordinal_position
 --   ,column_name
 ;
- 
+
 /*
 use information_schema;
 としておくと、スキーマ名を省略可。
@@ -131,16 +133,17 @@ from
 where  1=1
   and  information_schema.tables.table_schema  = database()
   and  information_schema.columns.table_schema = database()
+  and  information_schema.columns.table_name not in ('failed_jobs','migrations')
 --  and  information_schema.columns.table_schema="db01"
   and  information_schema.columns.table_name in (
  'table_01'
 ,'table_02'
 ,'table_03'
 ) 
-order by
-    information_schema.columns.table_name
+-- order by
+--    information_schema.columns.table_name
 --   ,information_schema.columns.ordinal_position
-   ,information_schema.columns.column_name
+--   ,information_schema.columns.column_name
 ```
 
 

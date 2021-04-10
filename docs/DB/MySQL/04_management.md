@@ -122,7 +122,7 @@ use information_schema;
 __________________________________________
 ## テーブル名（論理・物理）とカラム名（論理・物理）を抽出
 ```sql
-select 
+select
     trim(information_schema.columns.table_name)      as  table_name
    ,trim(information_schema.tables.table_comment)    as  table_comment
    ,trim(information_schema.columns.column_name)     as  column_name
@@ -139,7 +139,7 @@ where  1=1
  'table_01'
 ,'table_02'
 ,'table_03'
-) 
+)
 -- order by
 --    information_schema.columns.table_name
 --   ,information_schema.columns.ordinal_position

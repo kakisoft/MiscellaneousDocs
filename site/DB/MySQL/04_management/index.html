@@ -2673,6 +2673,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../English/various_ phrase_and_naming_memo/" title="Various  phrase and naming memo" class="md-nav__link">
+      Various  phrase and naming memo
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3357,27 +3369,15 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../IDE_and_Dev_Memo/OherNote/various_ phrase_and_naming_memo/" title="Various  phrase and naming memo" class="md-nav__link">
-      Various  phrase and naming memo
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8-14" type="checkbox" id="nav-5-8-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8-13" type="checkbox" id="nav-5-8-13">
     
-    <label class="md-nav__link" for="nav-5-8-14">
+    <label class="md-nav__link" for="nav-5-8-13">
       Scraping
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-5-8-14">
+      <label class="md-nav__title" for="nav-5-8-13">
         Scraping
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -10407,13 +10407,14 @@ show variables like ‘port’;
 </code></pre>
 
 <h2 id="sql">テーブル一覧表示（SQL） +コメント</h2>
-<pre><code class="sql">select 
+<pre><code class="sql">select
     trim(table_name)     as  table_name
    ,trim(table_comment)  as  table_comment
-from 
+from
     information_schema.tables
 where  1=1
   and  table_schema = database()
+  and  table_name not in ('failed_jobs','migrations')
 order by
     table_name
 ;
@@ -10424,7 +10425,7 @@ order by
     table_name
    ,table_rows
 from
-    information_schema.TABLES
+    information_schema.tables
 where  1=1
   and  table_schema = database()
 ;
@@ -10470,17 +10471,18 @@ source create_myqpp01.sql
 
 <hr />
 <h2 id="_11">テーブル名とカラム名を抽出</h2>
-<pre><code class="sql">select 
+<pre><code class="sql">select
     trim(table_name)      as  table_name
    ,trim(column_name)     as  column_name
    ,trim(column_comment)  as  column_comment
 from
-    information_schema.columns 
+    information_schema.columns
 where  1=1
   and  table_schema = database()
+  and  table_name not in ('failed_jobs','migrations')
 --  and  table_schema=&quot;db01&quot;
 --  and  table_name = 'teble01'
-  and  column_name like '%mail%' 
+--  and  column_name like '%mail%' 
 order by
     table_name
    ,ordinal_position
@@ -10495,7 +10497,7 @@ use information_schema;
 
 <hr />
 <h2 id="_12">テーブル名（論理・物理）とカラム名（論理・物理）を抽出</h2>
-<pre><code class="sql">select 
+<pre><code class="sql">select
     trim(information_schema.columns.table_name)      as  table_name
    ,trim(information_schema.tables.table_comment)    as  table_comment
    ,trim(information_schema.columns.column_name)     as  column_name
@@ -10504,17 +10506,19 @@ from
     information_schema.columns
     left join information_schema.tables on information_schema.columns.table_name = information_schema.tables.table_name
 where  1=1
+  and  information_schema.tables.table_schema  = database()
   and  information_schema.columns.table_schema = database()
+  and  information_schema.columns.table_name not in ('failed_jobs','migrations')
 --  and  information_schema.columns.table_schema=&quot;db01&quot;
   and  information_schema.columns.table_name in (
  'table_01'
 ,'table_02'
 ,'table_03'
-) 
-order by
-    information_schema.columns.table_name
+)
+-- order by
+--    information_schema.columns.table_name
 --   ,information_schema.columns.ordinal_position
-   ,information_schema.columns.column_name
+--   ,information_schema.columns.column_name
 </code></pre>
                 
                   

@@ -430,6 +430,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../MySQL/08_specification/" title="サイズ" class="md-nav__link">
+      サイズ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../MySQL/GUI_Tools/" title="GUI Tools" class="md-nav__link">
       GUI Tools
     </a>
@@ -539,13 +551,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-18" type="checkbox" id="nav-2-2-18">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-19" type="checkbox" id="nav-2-2-19">
     
-    <label class="md-nav__link" for="nav-2-2-18">
+    <label class="md-nav__link" for="nav-2-2-19">
       1st
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-2-2-18">
+      <label class="md-nav__title" for="nav-2-2-19">
         1st
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -599,13 +611,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-19" type="checkbox" id="nav-2-2-19">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-20" type="checkbox" id="nav-2-2-20">
     
-    <label class="md-nav__link" for="nav-2-2-19">
+    <label class="md-nav__link" for="nav-2-2-20">
       Mysqlfiles
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-2-2-19">
+      <label class="md-nav__title" for="nav-2-2-20">
         Mysqlfiles
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1990,8 +2002,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../note/" title="Note" class="md-nav__link">
-      Note
+    <a href="../port_number/" title="Port number" class="md-nav__link">
+      Port number
     </a>
   </li>
 
@@ -10391,11 +10403,17 @@
                   <h1>05 DDL</h1>
                 
                 <h2 id="_1">テーブル一覧を表示</h2>
-<p>\dt</p>
+<pre><code>\dt
+</code></pre>
+
 <h2 id="_2">スキーマ確認</h2>
-<p>\d [テーブル名]</p>
+<pre><code>\d [テーブル名]
+</code></pre>
+
 <h2 id="_3">外部ファイルからコマンドを実行</h2>
-<p>\i external_command_file01.sql</p>
+<pre><code> \i external_command_file01.sql
+</code></pre>
+
 <h2 id="_4">テーブル作成</h2>
 <pre><code class="sql">create table table01 (
                         id        serial        primary key
@@ -10410,24 +10428,40 @@ user_id | bigint | not null default nextval('aaa_bbb_seq'::regclass)
 </code></pre>
 
 <h2 id="_5">テーブル名変更</h2>
-<p>alter table table01 rename to table02;</p>
+<pre><code>alter table table01 rename to table02;
+</code></pre>
+
 <h2 id="_6">テーブル削除</h2>
-<p>drop table table02;
-drop table if exists table03;</p>
+<pre><code>drop table table02;
+drop table if exists table03;
+</code></pre>
+
 <h2 id="_7">カラム追加</h2>
-<p>alter table table01 add column01 varchar(255);</p>
+<pre><code>alter table table01 add column01 varchar(255);
+</code></pre>
+
 <h2 id="_8">カラム削除</h2>
-<p>alter table table01 drop column01;</p>
+<pre><code>alter table table01 drop column01;
+</code></pre>
+
 <h2 id="_9">カラム名変更</h2>
-<p>alter table table01 rename column01 to column02;</p>
+<pre><code>alter table table01 rename column01 to column02;
+</code></pre>
+
 <h2 id="_10">カラム定義変更</h2>
-<p>alter table table01 alter column01 type varchar(32);</p>
+<pre><code>alter table table01 alter column01 type varchar(32);
+</code></pre>
+
 <h2 id="_11">インデックス作成</h2>
 <p>（「column01」という項目で検索される事が多くなった、等  <br />
-　検索は速くなるが、upsertは遅くなる。）  <br />
-create index column01_index on table01(column01);</p>
+　検索は速くなるが、upsertは遅くなる。）    </p>
+<pre><code>create index column01_index on table01(column01);
+</code></pre>
+
 <h2 id="_12">インデックス削除</h2>
-<p>drop index column01_index;</p>
+<pre><code>drop index column01_index;
+</code></pre>
+
 <hr />
 <h2 id="_13">ユニークキー追加</h2>
 <p>参考：<a href="http://nfnoface.hatenablog.com/entry/2016/11/17/123000#UNIQUE-%E5%88%B6%E7%B4%84-CREATE-TABLE-%E5%BE%8C-ALTER-TABLE-%E3%81%A7%E8%BF%BD%E5%8A%A0">http://nfnoface.hatenablog.com/entry/2016/11/17/123000#UNIQUE-%E5%88%B6%E7%B4%84-CREATE-TABLE-%E5%BE%8C-ALTER-TABLE-%E3%81%A7%E8%BF%BD%E5%8A%A0</a></p>

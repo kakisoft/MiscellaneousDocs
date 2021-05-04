@@ -1,4 +1,4 @@
 ## 公式サイト
-https://www.postgresql.org/
+<https://www.postgresql.org/>
 
 

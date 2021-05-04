@@ -1,5 +1,5 @@
 ## HeidiSQL
-結構よさげ。
+結構よさげ。  
 <https://www.heidisql.com/>  
 　  
 chocoインストール可。
@@ -18,7 +18,7 @@ Format '"%s" の不明なデータ型 oid #%d です。%s にフォ' invalid or 
 
 
 ## TeamSQL
-https://teamsql.io/
+<https://teamsql.io/>  
 
 ```
 Ubuntu 18 でいい感じに動いてる。

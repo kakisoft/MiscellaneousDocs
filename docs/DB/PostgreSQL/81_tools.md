@@ -45,3 +45,13 @@ sudo apt-get install postgresql-9.6 pgadmin3
 <https://www.sqlmanager.net/en/products/postgresql/manager/download>  
 
 
+_______________________________________________________________________
+## TablePlus
+<https://tableplus.com/>
+
+
+## HeidiSQL
+<https://www.heidisql.com/>
+
+
+

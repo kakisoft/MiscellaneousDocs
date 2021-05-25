@@ -123,10 +123,12 @@ __________________________________________
 ## テーブル名（論理・物理）とカラム名（論理・物理）を抽出
 ```sql
 select
-    trim(information_schema.columns.table_name)      as  table_name
-   ,trim(information_schema.tables.table_comment)    as  table_comment
-   ,trim(information_schema.columns.column_name)     as  column_name
-   ,trim(information_schema.columns.column_comment)  as  column_comment
+--   information_schema.columns.*
+    trim(information_schema.columns.table_name)                as  table_name
+   ,trim(information_schema.columns.column_name)               as  column_name
+   ,trim(information_schema.columns.data_type)                 as  data_type
+   ,trim(information_schema.columns.character_maximum_length)  as  character_maximum_length
+   ,trim(information_schema.columns.column_default)            as  column_default
 from
     information_schema.columns
     left join information_schema.tables on information_schema.columns.table_name = information_schema.tables.table_name

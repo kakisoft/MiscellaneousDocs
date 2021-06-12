@@ -803,7 +803,7 @@ whois npmjs.com
 
 
 
-## graceful
+## graceful  (apache再起動)
 /etc/init.d/httpd configtest
 /etc/init.d/httpd graceful
 
@@ -818,8 +818,24 @@ echo '' > access_log       # これだとサイズが0にならない。
 
 ```
 
+## 現在のシェルを確認
+```
+echo $SHELL
+```
+ただし、この環境変数を設定しないシェルもありそれほど信頼できない。
+その場合、以下のコマンドで表示できることも。
+```
+echo $0
+```
+
+## 使用可能なシェルの一覧を表示
+```
+cat /etc/shells
+```
+
+
 ## シェルを変更
-bash → zsh  
+bash → zsh に変更する場合、以下のコマンド 
 ```
 chsh -s /bin/zsh
 ```
@@ -837,5 +853,20 @@ bash のシンボリックリンク
 ## sh
 最も基本的なシェル  
 
+## シェルの種類
+<https://xtech.nikkei.com/it/article/COLUMN/20080919/315097/>  
+シェルは大きく分けて，sh系（sh，ksh，bash，zsh）とcsh系（csh，tcsh）の2種類がある。  
+
+|  シェル   |  特徴                                                                |
+|:-------|:-------------------------------------------------------------------|
+|  sh    |  最も基本的なシェル。ここから bash や ksh に派生。                                    |
+|  bash  |  多くの Linux ディストリのデフォルト                                             |
+|  ksh   |  bash と親が同じらしいが、今一つ影が薄い。                                           |
+|  ash   |  軽量。組み込み Linux に採用。Docker ベースイメージによく使われる Alpine もこれ。Bashより機能が少ない。  |
+|  dash  |  Debian系で使われる軽量 shell。                                              |
+|  zsh   |  Catalina 以降の Mac のデフォルト                                           |
+|  fish  |  凄いらしいけど、あんま使ってない。                                                 |
+|  csh   |  C言語に似てる。                                                          |
+|  tcsh  |  csh から派生                                                          |
 
 

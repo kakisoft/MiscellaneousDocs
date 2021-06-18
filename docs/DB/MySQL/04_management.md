@@ -128,6 +128,7 @@ select
     trim(information_schema.columns.table_name)          as  table_name
    ,trim(information_schema.columns.column_name)         as  column_name
    ,information_schema.columns.data_type                 as  data_type
+   ,information_schema.columns.is_nullable               as  is_nullable
    ,information_schema.columns.character_maximum_length  as  character_maximum_length
    ,information_schema.columns.column_default            as  column_default
    ,information_schema.columns.numeric_precision         as  numeric_precision

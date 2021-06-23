@@ -154,6 +154,11 @@ git reset --hard HEAD^
 git reset --hard <ID>
 
 
+## コミットをリセット。修正内容はローカルに残す。
+git reset --soft <ID>
+git reset --soft 8de1f8f80ccf2bc6a78f6803641c6699bf709906
+
+
 ## 直前のコミットを取り消し
 git reset --hard HEAD^
 

@@ -124,6 +124,10 @@ git remote prune origin
 ## 過去のコミット状態に（一時的に）戻す
 git checkout e45661bf83da2982fcc33e08dc0eaacfa64b2128
 
+※'detached HEAD' state になる
+
+・普通の HEAD: ブランチを指している
+・detached HEAD: コミットを指している
 
 ## ログ
 git log
@@ -147,6 +151,13 @@ git diff --cashed  #ステージングエリアとリポジトリの差分
 git diff [ブランチ名A] [ブランチ名B]
 git diff master feature_a
 
+
+## HEAD の位置を確認
+git reflog
+git reflog show HEAD
+
+#### ファイルで確認
+cat .git/HEAD
 
 ## リセット
 git reset --hard HEAD
@@ -179,6 +190,11 @@ it push -f origin master
 
 http://www-creators.com/archives/2020
 
+
+## リモートの内容を強制的に過去の状態に戻す
+git reset --hard (コミットID)
+git reset --hard 3ea4d6d4
+git push -f
 
 
 ## ブランチ

@@ -25,6 +25,7 @@ vsCode
 | タブを閉じる                            |  Ctrl + w                                      |
 | タブ切替                               |  Ctrl + ↑ or ↓                                |
 | ターミナルを表示                        |  Ctrl + Shift @                                |
+| ターミナルからメインウィンドウに移動      |  Ctrl + 1                                     |
 | メソッドをリストアップ                   |  Ctrl + Shift + o →  :                         |
 | 大文字に置換                           |  範囲指定 → Ctrl + p → > Tranfform to Uppercase  |
 | ページ移動（Mac）                       |  Option + Command + ←　or →                    |

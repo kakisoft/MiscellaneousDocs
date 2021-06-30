@@ -14,6 +14,11 @@ min hour day month youbi ＜command＞
 毎朝 7 時に実行したい場合、
 0 7 * * * ＜command＞
 
+１時間ごとに実行したい場合
+* */1 * * * ＜command＞
+
+１分おきに実行したい場合
+*/1 * * * * ＜command＞
 
 ```
 

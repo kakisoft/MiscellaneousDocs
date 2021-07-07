@@ -343,6 +343,17 @@ http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230806/?rt=nocnt
 killall bash
 
 
+## 終了コード
+echo $?
+
+（例：テスト実行コマンド）
+php artisan test --testsuite=Unit
+
+0 - 成功
+0以外 - 失敗
+
+
+
 ## 接続端末のデバイスファイル名を表示
 tty
 

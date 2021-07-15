@@ -223,8 +223,17 @@ zgrep
 head -n 1 user_info.rb >> aaa.txt
 
 
-## 環境変数（パスの確認）
+## 環境変数を表示
 printenv
+
+特定の環境変数を確認（例：APP_ENV）
+printenv APP_ENV
+
+環境変数をセット
+export APP_ENV="local"
+
+環境変数を削除
+unset NAME
 
 
 ## パスを確認するだけなら、これでOK

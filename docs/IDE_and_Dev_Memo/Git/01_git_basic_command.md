@@ -256,11 +256,16 @@ git config -l    #リストアップ
 
 ## チェリーピック / cherry pick
 現在のブランチに、他のブランチの特定コミットを反映させる。
+
+ピックした内容を反映させたいブランチに移動し、以下を実行。
 git cherry-pick コミットID
+
+（例）
 git cherry-pick e2d1ef78a619cc0542b40e156f39040fe724c690
 
 コミットIDの確認は、
 git log
+git log --oneline
 等で。
 
 

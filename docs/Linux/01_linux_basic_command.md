@@ -29,6 +29,30 @@ sudo find /etc -name "http*" -type f -exec wc -l {} +
 sudo find /etc -name "http*" -type f | xargs wc -l
 
 
+## コマンド1が終了したらコマンド2を実行する（実行結果に関わらず）
+コマンド1 ; コマンド2　
+sleep 5m ; date
+
+
+## コマンド1を実行しつつコマンド2も実行（バックグラウンドでコマンド1を実行しつつ、コマンド2も実行）
+コマンド1 & コマンド2
+
+
+## コマンド1が正常終了したらコマンド2を実行（コマンド1が正常終了したときのみ、コマンド2を実行）
+コマンド1 && コマンド2
+cd /home/egawa/ && touch egawa.txt
+
+
+## コマンド1の結果をコマンド2に渡して実行
+コマンド1 | コマンド2
+ps aux | grep httpd
+
+
+## コマンド1が異常終了した時に コマンド2を実行
+コマンド1 || コマンド2
+cd /home/egawa/abc || mkdir /home/egawa/abc
+
+
 ## 解凍（tar）　　　解答　回答　展開
 tar xzvf asterisk-1.8.8.1.tar.gz
 

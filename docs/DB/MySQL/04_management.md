@@ -18,6 +18,12 @@ show variables like ‘port’;
 ```
 show databases
 ```
+SQL ver
+```sql
+select
+    DATABASE()
+```
+
 
 ## テーブル一覧表示（SQL） +コメント
 ```sql

@@ -34,3 +34,29 @@ Format         Sample
 ```
 
 
+
+## TEXT 
+https://www.dbonline.jp/mysql/type/index6.html
+```
+TEXT[(M)] [CHARACTER SET charset_name] [COLLATE collation_name]
+最大長が 65,535 (216 ? 1) 文字。
+オプションの長さ M を指定できる。
+
+MEDIUMTEXT [CHARACTER SET charset_name] [COLLATE collation_name]
+最大長が 16,777,215 (224 ? 1) 文字。
+
+LONGTEXT [CHARACTER SET charset_name] [COLLATE collation_name]
+最大長が 4,294,967,295 または 4G バイト (232 ? 1) 文字。
+```
+
+```
+$table->text('picture1')->after('name')->comment('写真1');
+$table->mediumText('picture2')->comment('写真2');
+$table->longText('picture3')->comment('写真3');
+
+
+  `picture1` text       COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '写真1',
+  `picture2` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '写真2',
+  `picture3` longtext   COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '写真3',
+```
+

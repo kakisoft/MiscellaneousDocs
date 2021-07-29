@@ -27,7 +27,6 @@ quit
 ```
 
 _________________________________________________________
-
 ## 外部からの接続設定
 https://kakistamp.hatenadiary.jp/entry/2016/12/03/225951
 
@@ -41,4 +40,19 @@ grant all privileges on *.* to root@"%" identified by 'root';
 ＜接続（ポート 4306）＞
 mysql -h 127.0.0.1 -u root -P 4306 -p
 ```
+
+
+## 権限の確認
+```
+show grants;
+show grants for <ユーザ名>;
+show grants for dbuser1;
+```
+
+## アクセス権の付与
+※rootユーザがデータベースを作成したばかりだと、他のユーザは作成したDBを参照できない
+```
+GRANT ALL PRIVILEGES ON `mydb01`.* TO 'dbuser1'@'%'
+```
+
 

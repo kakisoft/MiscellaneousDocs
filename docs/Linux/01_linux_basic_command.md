@@ -24,6 +24,13 @@ locate "filename"　　　※updatedb。ファイル名データベースから�
 sudo find /etc -name "http*" -type f    # （ファイルのみ。ディレクトリは除く。）
 sudo find /etc -name "http*" -type f -exec wc -l {} +
 
+#### 10分以内に更新されたファイルを検索
+sudo find . -type f -mmin -10
+
+-type ・・・ ファイルタイプ（f:通常ファイル、d:ディレクトリ、l:シンボリックリンク）
+-mmin <分> ・・・ 指定した分数より前に更新されたファイル。「-mmin 3」で3分前、「-mmin +3」で3分以上前、「-mmin -3」で3分以内に更新。
+-mtime <日数> ・・・・同上
+
 
 ## コマンドAの実行結果を引数にしてコマンドBを実行（xargs）
 sudo find /etc -name "http*" -type f | xargs wc -l

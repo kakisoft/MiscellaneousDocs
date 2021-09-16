@@ -291,7 +291,7 @@ http://linuxcommand.org/lc3_man_pages/seth.html
 set - Set or unset values of shell options and positional parameters.
 
 -e  Exit immediately if a command exits with a non-zero status.
-
+-x  Print commands and their arguments as they are executed.
 
 
 ## リモート端末のファイルをコピー

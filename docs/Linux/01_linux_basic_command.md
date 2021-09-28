@@ -17,6 +17,10 @@ nautilus
 ## ssh-add
 
 
+## ls コマンドで、サブディレクトリまで含めて表示（子ディレクトリまで含めて表示）
+ll -d $(find `pwd`)
+
+
 ## ファイル検索
 sudo find / -name "filename" 
 locate "filename"　　　※updatedb。ファイル名データベースから検索。

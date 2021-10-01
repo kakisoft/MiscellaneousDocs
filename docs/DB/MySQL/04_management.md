@@ -158,4 +158,22 @@ where  1=1
 --   ,information_schema.columns.column_name
 ```
 
+__________________________________________
+## インデックス一覧
+```sql
+select
+     table_name
+    ,index_name
+    ,column_name
+from
+    information_schema.statistics
+where  1=1
+  and  table_schema = database()
+  and  table_name   = 'items'
+  and  index_name   = 'PRIMARY'
 
+```
+
+```
+show index from <TABLE_NAME>
+```

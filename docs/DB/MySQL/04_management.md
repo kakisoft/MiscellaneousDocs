@@ -177,3 +177,18 @@ where  1=1
 ```
 show index from <TABLE_NAME>
 ```
+
+__________________________________________
+## ユニークキー一覧
+```sql
+select
+    TABLE_NAME
+   ,CONSTRAINT_NAME
+   ,CONSTRAINT_TYPE
+from
+    INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+where  1=1
+  and  TABLE_SCHEMA = database()
+  and  TABLE_NAME   = 'users'
+```
+

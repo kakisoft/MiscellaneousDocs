@@ -3,6 +3,12 @@
 show variables like '%time_zone%'
 ```
 
+|  Variable_name     |  Value   |
+|:-------------------|:---------|
+|  system_time_zone  |  UTC     |
+|  time_zone         |  SYSTEM  |
+
+
 
 |  変数名                            |  値       |  意味                  |
 |:--------------------------------|:---------|:---------------------|

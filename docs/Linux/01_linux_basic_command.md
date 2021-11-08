@@ -21,7 +21,7 @@ nautilus
 ll -d $(find `pwd`)
 
 
-## tree
+## tree ツリー
 （代用）
 pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/|  /g'
 
@@ -243,6 +243,8 @@ wc /var/log/syslog.1
 
 ## テキストの中身を検索
 grep wordddd *
+grep -r SEARCH_TEXT *
+
 grep 'etc' /var/log/syslog.1
 grep (etc|cd|root) /var/log/syslog.1
 grep -E -R "(etc|root|report)" /var/log/syslog.1

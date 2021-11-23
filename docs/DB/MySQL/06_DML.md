@@ -207,3 +207,16 @@ select
    ,IF(count(prpject_state = 3 OR NULL) > 0, 1, 0) AS Done
 
 ```
+
+## 空白チェック
+```sql
+select
+    id
+   ,item_code
+   ,case when (tmp_items.product_code is null)                                then 11111 else tmp_items.product_code end -- 空白が検知されない
+   ,case when (tmp_items.product_code is null or tmp_items.product_code = '') then 11111 else tmp_items.product_code end
+from
+ items
+```
+
+

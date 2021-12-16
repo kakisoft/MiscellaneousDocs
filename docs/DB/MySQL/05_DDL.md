@@ -72,3 +72,14 @@ alter table users change email user_email varchar(80) default 'no';
 alter table `items` comment '商品マスタ'
 ```
 
+## インデックス追加
+CREATE INDEX インデックス名 ON テーブル名(カラム名1, カラム名2, ...);
+```
+CREATE INDEX items_index_1 ON items (job_id)
+```
+
+## インデックス削除
+DROP INDEX インデックス名 ON テーブル名;
+```
+DROP INDEX items_index_1 ON items
+```

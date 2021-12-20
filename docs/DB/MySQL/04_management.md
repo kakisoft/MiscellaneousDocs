@@ -109,7 +109,7 @@ from
     information_schema.columns
 where  1=1
   and  table_schema = database()
-  and  table_name not in ('failed_jobs','migrations')
+  and  table_name not in ('migrations','cache','cache_locks','jobs','failed_jobs','password_resets')
 --  and  table_schema="db01"
 --  and  table_name = 'teble01'
 --  and  column_name like '%mail%' 
@@ -131,7 +131,6 @@ __________________________________________
 select
 --   information_schema.columns.*
     trim(information_schema.columns.table_name)          as  table_name
-    trim(information_schema.columns.table_name)          as  table_name
    ,trim(information_schema.columns.column_name)         as  column_name
    ,information_schema.columns.data_type                 as  data_type
    ,information_schema.columns.is_nullable               as  is_nullable
@@ -145,7 +144,8 @@ from
 where  1=1
   and  information_schema.tables.table_schema  = database()
   and  information_schema.columns.table_schema = database()
-  and  information_schema.columns.table_name not in ('failed_jobs','migrations')
+  and  information_schema.columns.table_name  not in ('migrations','cache','cache_locks','jobs','failed_jobs','password_resets')
+  and  information_schema.columns.column_name not in ('created_at','created_by','deleted_at','deleted_by','updated_at','updated_by')
 --  and  information_schema.columns.table_schema="db01"
   and  information_schema.columns.table_name in (
  'table_01'

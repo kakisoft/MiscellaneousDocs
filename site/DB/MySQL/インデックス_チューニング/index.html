@@ -700,6 +700,13 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    スロークエリ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     ログ出力例
   </a>
   
@@ -12719,6 +12726,13 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    スロークエリ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     ログ出力例
   </a>
   
@@ -12741,8 +12755,8 @@
 0.1 秒以下を指標とする。  </p>
 <h1 id="_1">スロークエリの抽出</h1>
 <h2 id="_2">スロークエリ設定確認</h2>
-<p>https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0007<br />
-https://ptune.jp/tech/how-to-check-mysql-slow-query/  </p>
+<p><a href="https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0007">https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0007</a><br />
+<a href="https://ptune.jp/tech/how-to-check-mysql-slow-query/">https://ptune.jp/tech/how-to-check-mysql-slow-query/</a>  </p>
 <pre><code class="language-sql">show variables like 'slow_query%'
 </code></pre>
 <p>出力例</p>
@@ -12764,6 +12778,14 @@ https://ptune.jp/tech/how-to-check-mysql-slow-query/  </p>
 </tr>
 </tbody>
 </table>
+<pre><code>show variables like 'long%';
+</code></pre>
+<p>+-----------------+-----------+
+| Variable_name   | Value     |
++-----------------+-----------+
+| long_query_time | 10.000000 |
++-----------------+-----------+</p>
+<p>※1秒  </p>
 <p>設定内容は、「my.cnf」でも確認可能</p>
 <h2 id="on">スロークエリ検出有効設定を ON</h2>
 <p>※MySQL を再起動すると、再び OFF に戻る</p>
@@ -12772,11 +12794,19 @@ https://ptune.jp/tech/how-to-check-mysql-slow-query/  </p>
 <h2 id="_3">スロークエリ基準時間設定</h2>
 <p>以下、「1秒以下以上のクエリを検出する」という設定</p>
 <pre><code>set global long_query_time=1;
+
+set global long_query_time=0.4;
 </code></pre>
+<p>※「show variables like 'long%'」で見ても変わっていない場合、一度コンソールを開きなおす  </p>
 <h2 id="_4">スロークエリの出力ログを設定</h2>
 <pre><code>set global slow_query_log_file ='/usr/local/var/mysql/slow_query.log';
+
+set global slow_query_log_file ='/var/lib/mysql/slow_query.log'
 </code></pre>
-<h2 id="_5">ログ出力例</h2>
+<h2 id="_5">スロークエリ</h2>
+<pre><code class="language-sql">select sleep(15)
+</code></pre>
+<h2 id="_6">ログ出力例</h2>
 <pre><code class="language-log"># cat /var/lib/mysql/dcde79b8befd-slow.log
 mysqld, Version: 5.7.35 (MySQL Community Server (GPL)). started with:
 Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
@@ -12798,7 +12828,7 @@ SET timestamp=1633320479;
 SET timestamp=1633320479;
 select `table_name`, `logical_table_name`, `column_name`, `logical_column_name`, `is_editable_required_attribute` from `table_column_definitions` where `id` in (select `table_column_definition_id` from `by_function_table_column_definitions` where `target_table_type` = '28') and `table_column_definitions`.`deleted_at` is null order by `table_name` desc, `sort_order` asc;
 </code></pre>
-<h1 id="_6">実行計画</h1>
+<h1 id="_7">実行計画</h1>
 <h2 id="explain">explain</h2>
 <p>「explain」を付けて実行</p>
 <pre><code class="language-php">explain
@@ -12866,15 +12896,15 @@ ref・・・ユニーク（PRIMARY or UNIQUE）でないインデックスを使
 range・・・インデックスを用いた範囲検索。<br />
 index・・・フルインデックススキャン。インデックス全体をスキャンする必要があるのでとても遅い。<br />
 ALL・・・フルテーブルスキャン。インデックスがまったく利用されていないことを示す。OLTP系の処理では改善必須。  </p>
-<h4 id="_7">注意点</h4>
+<h4 id="_8">注意点</h4>
 <p>index が効く範囲と、update の範囲が異なる事がある。
 （デッドロックの範囲に注意する）</p>
-<h1 id="_8">テーブルロックについて</h1>
+<h1 id="_9">テーブルロックについて</h1>
 <p>https://yoku0825.blogspot.com/2012/07/deadlock-found-when-trying-to-get-lock.html<br />
 https://qiita.com/dorarep/items/d7d767e1bceb2d5649a7</p>
 <p>update 分を発行した時、業ロックが発生する。  </p>
 <p>indexで絞れる範囲まで絞ってから、indexで絞りきれなかったrows全てにロックをかけてる。  </p>
-<h3 id="_9">例</h3>
+<h3 id="_10">例</h3>
 <p>colomn1  インデックスなし
 colomn2　インデックスあり</p>
 <pre><code class="language-sql">update  TABLE1
@@ -12897,7 +12927,7 @@ colomn2　インデックスあり</p>
 （MySQL の仕様。7では改善されてるっぽい？  MySQL 5 は悲痛な叫びがいろいろ聞こえるが、7はほとんど見られない。ユーザ数の違いによるもの？）  </p>
 <p>index を細かく張ることで回避できる。
 （同時に、「同一荷主の同一販売チャンネルの出荷指示No」と、同時に実行される可能性が極め低い単位まで、index の粒度を上げる事で回避できる）</p>
-<h3 id="_10">デッドロック発生のエラーメッセージ例</h3>
+<h3 id="_11">デッドロック発生のエラーメッセージ例</h3>
 <pre><code class="language-log">critical 9999900001 A system error has occurred. :[message]SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock; try restarting transaction (SQL:          update  shipment_record_details
 
 [trace]#0 /application/vendor/laravel/framework/src/Illuminate/Database/Connection.php(631): Illuminate\Database\Connection-&amp;gt;runQueryCallback(&amp;#039;  ...&amp;#039;, Array, Object(Closure))
@@ -12906,18 +12936,18 @@ colomn2　インデックスあり</p>
 #3 /application/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(367): Illuminate\Database\Connection-&amp;gt;update(&amp;#039; ...&amp;#039;, Array)
 #4 /application/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\Database\DatabaseManager-&amp;gt;__call(&amp;#039;update&amp;#039;, Array)
 </code></pre>
-<h2 id="_11">ロック待ちのタイムアウト時間の確認／設定</h2>
-<h3 id="_12">確認</h3>
+<h2 id="_12">ロック待ちのタイムアウト時間の確認／設定</h2>
+<h3 id="_13">確認</h3>
 <p>デフォルトは 50秒</p>
 <pre><code>mysql&gt; SHOW VARIABLES LIKE 'innodb_lock_wait_timeout';
 </code></pre>
-<h3 id="_13">設定</h3>
+<h3 id="_14">設定</h3>
 <pre><code>mysql&gt; SET innodb_lock_wait_timeout=5;
 </code></pre>
 <hr />
 <h2 id="mysql-explain">MySQLのインデックス作成方法 - 効いてないと思ったらexplainで確認する</h2>
 <p><a href="https://style.potepan.com/articles/17616.html">https://style.potepan.com/articles/17616.html</a></p>
-<h3 id="_14">インデックスの種類</h3>
+<h3 id="_15">インデックスの種類</h3>
 <p>MySQLではPRIMARY、UNIQUE、INDEX、FULLTEXT、SPATIALの5種類のインデックスが設定可能です。  </p>
 <p>SQL内の「ADD INDEX」の部分を「ADD UNIQUE」などに差し替えることでインデックス種類の指定ができます。  </p>
 <p>PRIMARYは、プライマリキーのインデックスです。プライマリキー指定をすると自動的に設定されます。  </p>
@@ -12925,7 +12955,7 @@ colomn2　インデックスあり</p>
 <p>INDEXは一般のインデックスです。基本は「ADD INDEX」でインデックス指定すると良いでしょう。  </p>
 <p>FULLTEXTは、全文検索用のインデックスです。不定長のtextカラムに設定すると、全文検索の速度が大幅に改善されますが、インデックスに使用する領域を多く使うという欠点もあります。  </p>
 <p>SPATIALは、空間データ用のインデックスです。空間データとは、都市や山などの立体情報や町や市などの範囲情報で、これらを格納するのに向いている空間データ型に対するのが空間インデックスです。MySQLでは、空間データのソリューション開発に関わる 250 以上の企業、機関、および大学の国際的なコンソーシアムOpen Geospatial Consortium (OGC) の仕様に沿って、空間データが実装されています。  </p>
-<h3 id="_15">インデックスの再構築方法</h3>
+<h3 id="_16">インデックスの再構築方法</h3>
 <p>照合順序の修正をおこなった場合など、インデックスを再設定するには、単純にインデックスをドロップしてから再作成します。  </p>
 
               

@@ -12997,8 +12997,18 @@ select * from users order by score desc limit 3;
 <h2 id="_8">日付の計算</h2>
 <pre><code class="language-sql">SELECT
  DATE_ADD(CURRENT_DATE(),INTERVAL 3 MONTH)
-
+,DATE_ADD(CURRENT_DATE(),INTERVAL 1 DAY) -- 1日後
+,DATE_SUB(CURRENT_DATE(),INTERVAL 1 DAY) -- 1日前
 </code></pre>
+<ul>
+<li>SECOND</li>
+<li>MINUTE</li>
+<li>HOUR</li>
+<li>DAY</li>
+<li>WEEK</li>
+<li>MONTH</li>
+<li>YEAR</li>
+</ul>
 <h2 id="_9">文字列から日付への変換・計算</h2>
 <pre><code class="language-sql">SELECT
     DATE_ADD(CAST('2018/01/28' AS DATE), INTERVAL 1 MONTH) AS &quot;1/28 の１か月後&quot;

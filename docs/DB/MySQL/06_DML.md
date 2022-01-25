@@ -138,7 +138,7 @@ SELECT
 
 ## 日付型への変換（キャスト）
 ```sql
-SELECT 
+SELECT
     CAST('20180823' AS DATE)                AS DATE01      -- 2018-08-23
    ,CAST('2018-08-23 11:20:00' AS DATETIME) AS DATETIME01  -- 2018-08-23 11:20:00
    ,STR_TO_DATE('2018-02-01',  '%Y-%M-%D')  AS X1

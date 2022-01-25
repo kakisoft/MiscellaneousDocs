@@ -147,13 +147,18 @@ SELECT
 ## 日付の計算
 ```sql
 SELECT
- DATE_ADD(CURRENT_DATE(),INTERVAL 3 MONTH)
-,DATE_ADD(CURRENT_DATE(),INTERVAL 1 DAY) -- 1日後
-,DATE_SUB(CURRENT_DATE(),INTERVAL 1 DAY) -- 1日前
+-- ===< 日付の加算・減算 >===
+  DATE_ADD(CURRENT_DATE(),INTERVAL 3 MONTH)
+ ,DATE_ADD(CURRENT_DATE(),INTERVAL 1 DAY) -- 1日後
+ ,DATE_SUB(CURRENT_DATE(),INTERVAL 1 DAY) -- 1日前
+-- 日付の計算：null を含む場合
+ ,DATE_ADD(null, INTERVAL items.number_of_shipping_limit_days DAY) -- null
+ ,DATE_ADD(CURRENT_DATE(), INTERVAL null DAY) -- null
 
--- 日付の差分
+-- ===< 日付の差分 >===
  ,DATEDIFF('2022-01-15','2022-01-05') --  10
  ,DATEDIFF('2022-01-15','2022-01-25') --  -10
+-- 日付の差分：null を含む場合
  ,DATEDIFF(null,'2022-01-15') -- null
  ,DATEDIFF('2022-01-15',null) -- null
 

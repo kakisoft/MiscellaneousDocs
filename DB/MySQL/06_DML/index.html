@@ -12999,6 +12999,13 @@ select * from users order by score desc limit 3;
  DATE_ADD(CURRENT_DATE(),INTERVAL 3 MONTH)
 ,DATE_ADD(CURRENT_DATE(),INTERVAL 1 DAY) -- 1日後
 ,DATE_SUB(CURRENT_DATE(),INTERVAL 1 DAY) -- 1日前
+
+-- 日付の差分
+ ,DATEDIFF('2022-01-15','2022-01-05') --  10
+ ,DATEDIFF('2022-01-15','2022-01-25') --  -10
+ ,DATEDIFF(null,'2022-01-15') -- null
+ ,DATEDIFF('2022-01-15',null) -- null
+
 </code></pre>
 <ul>
 <li>SECOND</li>

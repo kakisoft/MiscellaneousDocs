@@ -242,4 +242,14 @@ from
  items
 ```
 
+## if
+<https://dev.mysql.com/doc/refman/5.6/ja/control-flow-functions.html#function_ifnull>
+
+|  名前      |  説明                             |
+|:-----------|:--------------------------------|
+|  CASE      |  CASE 演算子                       |
+|  IF()      |  If/else 構文                     |
+|  IFNULL()  |  Null if/else 構文                |
+|  NULLIF()  |  expr1 = expr2 の場合に NULL を返します  |
+
 

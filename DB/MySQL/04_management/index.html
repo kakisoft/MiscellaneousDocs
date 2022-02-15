@@ -575,6 +575,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    オートインクリメントの値を表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#innodb_autoinc_lock_mode" class="md-nav__link">
+    オートインクリメントのモード（innodb_autoinc_lock_mode）を確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#myconf" class="md-nav__link">
+    my.conf
+  </a>
+  
+    <nav class="md-nav" aria-label="my.conf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    0 ：従来ロックモード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1：連続 ロックモード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2：インターリーブ ロックモード
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    レプリケーションとは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interleaving" class="md-nav__link">
+    インターリーブまたはインターリービング（英: Interleaving）とは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12858,6 +12927,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    オートインクリメントの値を表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#innodb_autoinc_lock_mode" class="md-nav__link">
+    オートインクリメントのモード（innodb_autoinc_lock_mode）を確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#myconf" class="md-nav__link">
+    my.conf
+  </a>
+  
+    <nav class="md-nav" aria-label="my.conf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    0 ：従来ロックモード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1：連続 ロックモード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2：インターリーブ ロックモード
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    レプリケーションとは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interleaving" class="md-nav__link">
+    インターリーブまたはインターリービング（英: Interleaving）とは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12882,6 +13020,10 @@ show variables like ‘port’;
 </code></pre>
 <h2 id="_2">設定ファイル</h2>
 <pre><code>/etc/my.cnf
+</code></pre>
+<p>設定ファイルを検索。<br />
+（実はファイル名は「my.cnf」でなくともよいので、別の名前になっている可能性も）  </p>
+<pre><code>sudo find / -name &quot;my.cnf&quot;
 </code></pre>
 <h2 id="_3">データベース一覧表示</h2>
 <pre><code>show databases
@@ -13029,6 +13171,92 @@ where  1=1
   and  TABLE_SCHEMA = database()
   and  TABLE_NAME   = 'users'
 </code></pre>
+<hr />
+<h2 id="_15">オートインクリメントの値を表示</h2>
+<pre><code class="language-sql">select
+    trim(table_name)     as  table_name
+   ,trim(table_comment)  as  table_comment
+   ,auto_increment
+from
+    information_schema.tables
+where  1=1
+  and  table_schema = database()
+  and  table_name in ('extends_items') 
+</code></pre>
+<hr />
+<h2 id="innodb_autoinc_lock_mode">オートインクリメントのモード（innodb_autoinc_lock_mode）を確認</h2>
+<pre><code class="language-sql">SELECT @@innodb_autoinc_lock_mode
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">@@innodb_autoinc_lock_mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="myconf">my.conf</h2>
+<pre><code>[mysqld]
+innodb_autoinc_lock_mode=0
+</code></pre>
+<p><a href="https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0049">AUTO_INCREMENTに関するオプション</a>  </p>
+<p>innodb_autoinc_lock_modeパラメータを使用することで，AUTO_INCロックを制御することができます。モードの変更にはMySQLの再起動が必要です。</p>
+<table>
+<thead>
+<tr>
+<th align="left">値</th>
+<th align="left">モード</th>
+<th align="left">デフォルト</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">従来ロックモード</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">連続ロックモード</td>
+<td align="left">○</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">インターリーブ ロックモード</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>※MySQL 8 からは、デフォルトは「２」  </p>
+<h4 id="0">0 ：従来ロックモード</h4>
+<p>下位互換のために残されている。通常は使用しない。  </p>
+<h4 id="1">1：連続 ロックモード</h4>
+<p>MySQL 5 までのデフォルトのロックモード。<br />
+挿入される行が事前に行数の把握できないINSERT..SELECT文やLOAD DATA INFILE文などの挿入文（一括挿入）時に対してAUTO_INCロックを取得する。  </p>
+<p>事前に行数の把握できる単純挿入は，これとは別の軽微な排他ロックを取得するため同時挿入性能は上がります。<br />
+また，一括挿入のAUTO_INCREMENTの順番が守られるので，ステートメントベースレプリケーションでも正常にレプリケーションされます。  </p>
+<h4 id="2">2：インターリーブ ロックモード</h4>
+<p>これはすべての挿入する文に対してAUTO_INCロックを取得しません。<br />
+そのため，長時間に渡る一括挿入の実行間でも並列挿入ができるため，高速で処理されます。<br />
+しかし，一括挿入のAUTO_INCREMENTの順番が守られないので，行ベースでのみレプリケーション可能となります。  </p>
+<p>その他，ロックモードによる挙動の違いは，詳しくはマニュアルをご参照ください。  </p>
+<h2 id="_16">レプリケーションとは</h2>
+<p>データの複製（レプリカ）を別のサーバに持つ機能<br />
+MySQLの標準機能で、多数のWebサイト等で利用されている<br />
+マスター・スレーブ構成など。  </p>
+<h2 id="interleaving">インターリーブまたはインターリービング（英: Interleaving）とは</h2>
+<p>計算機科学と電気通信において、データを何らかの領域（空間、時間、周波数など）で不連続な形で配置し、性能を向上させる技法を指す。  </p>
+<h2 id="_17">参考</h2>
+<p><a href="https://dev.mysql.com/doc/refman/5.6/ja/innodb-auto-increment-configurable.html">14.6.5.2 構成可能な InnoDB の自動インクリメントロック</a><br />
+<a href="https://yoku0825.blogspot.com/2019/11/innodbautoinclockmode-1-vs-2.html">innodb_autoinc_lock_mode = 1 vs 2 でバルクインサートが競合した時のAUTO_INCREMENTの挙動が違うはなし</a><br />
+<a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-auto-increment-handling.html#innodb-auto-increment-lock-mode-usage-implications">公式英語サイト（8）</a>  </p>
+<hr />
+<p>mysql ファントムリード<br />
+mysql ダーティリード  </p>
 
               
             </article>

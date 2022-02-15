@@ -13,6 +13,11 @@ show variables like ‘port’;
 ```
 /etc/my.cnf
 ```
+設定ファイルを検索。  
+（実はファイル名は「my.cnf」でなくともよいので、別の名前になっている可能性も）  
+```
+sudo find / -name "my.cnf"
+```
 
 ## データベース一覧表示
 ```
@@ -191,4 +196,84 @@ where  1=1
   and  TABLE_SCHEMA = database()
   and  TABLE_NAME   = 'users'
 ```
+
+__________________________________________
+## オートインクリメントの値を表示
+```sql
+select
+    trim(table_name)     as  table_name
+   ,trim(table_comment)  as  table_comment
+   ,auto_increment
+from
+    information_schema.tables
+where  1=1
+  and  table_schema = database()
+  and  table_name in ('extends_items') 
+```
+__________________________________________
+## オートインクリメントのモード（innodb_autoinc_lock_mode）を確認
+```sql
+SELECT @@innodb_autoinc_lock_mode
+```
+
+|  @@innodb_autoinc_lock_mode  |
+|:-----------------------------|
+|  1                           |
+
+## my.conf
+```
+[mysqld]
+innodb_autoinc_lock_mode=0
+```
+
+[AUTO_INCREMENTに関するオプション](https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0049)  
+
+innodb_autoinc_lock_modeパラメータを使用することで，AUTO_INCロックを制御することができます。モードの変更にはMySQLの再起動が必要です。
+
+|  値    |  モード             |  デフォルト  |
+|:------|:-----------------|:--------|
+|  0    |  従来ロックモード        |         |
+|  1    |  連続ロックモード        |  ○      |
+|  2    |  インターリーブ ロックモード  |         |
+
+※MySQL 8 からは、デフォルトは「２」  
+
+#### 0 ：従来ロックモード
+下位互換のために残されている。通常は使用しない。  
+
+#### 1：連続 ロックモード
+MySQL 5 までのデフォルトのロックモード。  
+挿入される行が事前に行数の把握できないINSERT..SELECT文やLOAD DATA INFILE文などの挿入文（一括挿入）時に対してAUTO_INCロックを取得する。  
+
+事前に行数の把握できる単純挿入は，これとは別の軽微な排他ロックを取得するため同時挿入性能は上がります。  
+また，一括挿入のAUTO_INCREMENTの順番が守られるので，ステートメントベースレプリケーションでも正常にレプリケーションされます。  
+
+#### 2：インターリーブ ロックモード
+これはすべての挿入する文に対してAUTO_INCロックを取得しません。  
+そのため，長時間に渡る一括挿入の実行間でも並列挿入ができるため，高速で処理されます。  
+しかし，一括挿入のAUTO_INCREMENTの順番が守られないので，行ベースでのみレプリケーション可能となります。  
+
+その他，ロックモードによる挙動の違いは，詳しくはマニュアルをご参照ください。  
+
+
+## レプリケーションとは
+データの複製（レプリカ）を別のサーバに持つ機能  
+MySQLの標準機能で、多数のWebサイト等で利用されている  
+マスター・スレーブ構成など。  
+
+## インターリーブまたはインターリービング（英: Interleaving）とは
+計算機科学と電気通信において、データを何らかの領域（空間、時間、周波数など）で不連続な形で配置し、性能を向上させる技法を指す。  
+
+
+## 参考
+[14.6.5.2 構成可能な InnoDB の自動インクリメントロック](https://dev.mysql.com/doc/refman/5.6/ja/innodb-auto-increment-configurable.html)  
+[innodb_autoinc_lock_mode = 1 vs 2 でバルクインサートが競合した時のAUTO_INCREMENTの挙動が違うはなし](https://yoku0825.blogspot.com/2019/11/innodbautoinclockmode-1-vs-2.html)  
+[公式英語サイト（8）](https://dev.mysql.com/doc/refman/8.0/en/innodb-auto-increment-handling.html#innodb-auto-increment-lock-mode-usage-implications)  
+
+
+________________________________________
+
+mysql ファントムリード  
+mysql ダーティリード  
+
 

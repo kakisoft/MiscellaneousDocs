@@ -12908,7 +12908,9 @@
 </tbody>
 </table>
 <p>MySQL のデフォルトは Repeatable Read。<br />
-insert デッドロック発生時、Read Committed に変える事を検討する。（ファントムリードが発生する事を許容する）  </p>
+insert デッドロック（ギャップロック）発生時、Read Committed に変える事を検討する。（ファントムリードが発生する事を許容する）  </p>
+<p>＜参考＞<br />
+<a href="https://medium.com/aerial-partners-engeneering/mysql-gaplock-5a194f31ec1f">MySQL InnoDBのギャップロックによるデッドロックを解明する</a>  </p>
 <hr />
 <h1 id="_3">トランザクション分離レベル</h1>
 <p>あるセッションのトランザクションで更新されたデータが、他セッションからのどう見えるかを設定するパラメータ値です。</p>

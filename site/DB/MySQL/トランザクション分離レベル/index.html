@@ -12907,9 +12907,13 @@
 </tr>
 </tbody>
 </table>
+<p>MySQL のデフォルトは Repeatable Read。<br />
+insert デッドロック発生時、Read Committed に変える事を検討する。（ファントムリードが発生する事を許容する）  </p>
 <hr />
 <h1 id="_3">トランザクション分離レベル</h1>
-<p><a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%88%86%E9%9B%A2%E3%83%AC%E3%83%99%E3%83%AB#:~:text=%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%88%86%E9%9B%A2%E3%83%AC%E3%83%99%E3%83%AB%20%EF%BC%88%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%B6%E3%82%93,%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%83%AC%E3%83%99%E3%83%AB%E3%81%A8%E3%82%82%E5%91%BC%E3%81%B0%E3%82%8C%E3%82%8B%E3%80%82">トランザクション分離レベル - Wikipedia</a>  </p>
+<p>あるセッションのトランザクションで更新されたデータが、他セッションからのどう見えるかを設定するパラメータ値です。</p>
+<p><a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%88%86%E9%9B%A2%E3%83%AC%E3%83%99%E3%83%AB#:~:text=%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%88%86%E9%9B%A2%E3%83%AC%E3%83%99%E3%83%AB%20%EF%BC%88%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%B6%E3%82%93,%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%83%AC%E3%83%99%E3%83%AB%E3%81%A8%E3%82%82%E5%91%BC%E3%81%B0%E3%82%8C%E3%82%8B%E3%80%82">トランザクション分離レベル - Wikipedia</a><br />
+<a href="https://www.matsubarasystems.com/mysql/insert-into-select-deadlock">MySQLでInsert into Selectでデッドロック発生</a>  </p>
 <h2 id="serializable">SERIALIZABLE（直列化可能）</h2>
 <p>複数の並行に動作するトランザクションそれぞれの結果が、いかなる場合でも、それらのトランザクションを時間的重なりなく逐次実行した場合と同じ結果となる。<br />
 このような性質を直列化可能性（Serializability）と呼ぶ.SERIALIZABLEは最も強い分離レベルであり、最も安全にデータを操作できるが、相対的に性能は低い。<br />

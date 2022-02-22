@@ -19,7 +19,7 @@
     
     
       
-        <title>リード現象(Read phenomena) - kakiNote</title>
+        <title>トランザクション分離レベル・リード現象 - kakiNote</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#read-phenomena" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              リード現象(Read phenomena)
+              トランザクション分離レベル・リード現象
             
           </span>
         </div>
@@ -717,12 +717,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          リード現象(Read phenomena)
+          トランザクション分離レベル・リード現象
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        リード現象(Read phenomena)
+        トランザクション分離レベル・リード現象
       </a>
       
         
@@ -762,7 +762,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     （個人用メモ）
   </a>
   
@@ -12725,7 +12725,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     （個人用メモ）
   </a>
   
@@ -12751,8 +12751,9 @@
               
                 
 
-<h1 id="read-phenomena">リード現象(Read phenomena)</h1>
-<p><a href="https://qiita.com/momotaro98/items/ad859ec2934ee98540fb">ダーティリード、リピータブルリード、ファントムリードをちゃんと理解してからトランザクション分離レベルを理解しよう</a>  </p>
+<h1 id="_1">トランザクション分離レベル・リード現象</h1>
+<p>リード現象(Read phenomena)<br />
+<a href="https://qiita.com/momotaro98/items/ad859ec2934ee98540fb">ダーティリード、リピータブルリード、ファントムリードをちゃんと理解してからトランザクション分離レベルを理解しよう</a>  </p>
 <h2 id="dirty-reads">ダーティリード(Dirty reads)</h2>
 <p>COMMITされていないトランザクションでの変更を他トランザクションがReadすることができてしまう現象。</p>
 <table>
@@ -12867,7 +12868,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_1">（個人用メモ）</h2>
+<h2 id="_2">（個人用メモ）</h2>
 <p>ノンリピータブルリードは update、ファントムリードは insert/delete が対象？  </p>
 <h2 id="vs">トランザクション分離レベル VS リード現象 対応表</h2>
 <table>
@@ -12907,7 +12908,7 @@
 </tbody>
 </table>
 <hr />
-<h1 id="_2">トランザクション分離レベル</h1>
+<h1 id="_3">トランザクション分離レベル</h1>
 <p><a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%88%86%E9%9B%A2%E3%83%AC%E3%83%99%E3%83%AB#:~:text=%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%88%86%E9%9B%A2%E3%83%AC%E3%83%99%E3%83%AB%20%EF%BC%88%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%B6%E3%82%93,%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%83%AC%E3%83%99%E3%83%AB%E3%81%A8%E3%82%82%E5%91%BC%E3%81%B0%E3%82%8C%E3%82%8B%E3%80%82">トランザクション分離レベル - Wikipedia</a>  </p>
 <h2 id="serializable">SERIALIZABLE（直列化可能）</h2>
 <p>複数の並行に動作するトランザクションそれぞれの結果が、いかなる場合でも、それらのトランザクションを時間的重なりなく逐次実行した場合と同じ結果となる。<br />

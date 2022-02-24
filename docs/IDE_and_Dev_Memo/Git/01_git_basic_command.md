@@ -19,6 +19,19 @@
 登録された変更点は、commit によりローカルリポジトリに反映される。
 
 
+## Git のバージョン確認
+git --version
+
+
+## Git のバージョンアップ（Mac）
+brew update
+brew install git
+
+
+## 設定確認
+git config --list
+
+
 ## add
 git add -p
 ファイルの部分的な修正をした時に使える

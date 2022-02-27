@@ -85,3 +85,17 @@ ALT + Z
 #### ショートカットキーの設定呼び出し
 Ctrl + K → Ctrl + S
 
+
+
+#### Mac : タブ切替のショートカット
+<https://toripiyo.hatenablog.com/entry/2020/02/15/234434>  
+
+1. command + shift + pで、Preferences: Open Keyboard Shortcuts を選択する
+
+2. 変更したいコマンドを入力して絞り込む
+
+右のタブに移動するコマンド: workbench.action.nexteditor  
+左のタブに移動するコマンド: workbench.action.previouseditor  
+
+3. 変更したいキーバインディングに対して左側の鉛筆マークのアイコンをクリック、設定したいショートカットキーを入力してEnter
+

@@ -99,3 +99,19 @@ Ctrl + K → Ctrl + S
 
 3. 変更したいキーバインディングに対して左側の鉛筆マークのアイコンをクリック、設定したいショートカットキーを入力してEnter
 
+
+
+#### Mac : 一番上に移動・一番下に移動
+1. command + shift + pで、Preferences: Open Keyboard Shortcuts を選択
+
+cursorTop  
+cursorBottom  
+
+鉛筆マークのアイコンにて編集。  
+
+ctrl + home  
+ctrl + end  
+
+等
+
+

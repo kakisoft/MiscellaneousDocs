@@ -22,6 +22,11 @@ sudo pip install pip --upgrade
 sudo pip install mkdocs
 
 sudo pip install mkdocs-windmill
+
+
+## こっちの方法でも。（Python3）
+python3 -m pip install mkdocs
+python3 -m pip install mkdocs-windmill
 ```
 
 ## プライグイン

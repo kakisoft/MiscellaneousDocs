@@ -1976,6 +1976,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/ShellScript/script/ShellScriptBasicStatement/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kakisoft.github.io/MiscellaneousDocs/Linux/firewall/centos7_firewall/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>

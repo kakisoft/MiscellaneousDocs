@@ -2,7 +2,7 @@
 ## ディストリ確認
 (debian) cat /etc/issue
 (redhat) cat /etc/redhat-release
-(Amazon) cat /etc/system-release
+(Amazon) cat /etc/system-release  ,  cat /etc/os-release
 
 
 ## sshログイン

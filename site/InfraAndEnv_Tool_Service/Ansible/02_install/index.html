@@ -5607,6 +5607,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#amazon-linux" class="md-nav__link">
+    Amazon Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    バージョン確認
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12732,6 +12752,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#amazon-linux" class="md-nav__link">
+    Amazon Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    バージョン確認
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12763,6 +12803,30 @@ brew search ansible
 
 （インストール例）
 brew install ansible
+</code></pre>
+<h2 id="amazon-linux">Amazon Linux</h2>
+<p>インストールには、「Amazon Linux Extras」が必要らしい。<br />
+https://qiita.com/1_ta/items/92dcfa6fa2a33cb11442<br />
+https://aws.amazon.com/jp/amazon-linux-2/faqs/  </p>
+<pre><code>（コマンドが使用できるかチェック）
+which amazon-linux-extras
+
+
+（Ansible がリストに存在するかをチェック）
+amazon-linux-extras | grep ansible
+
+   -&gt; [実行例]　0  ansible2                 available    \
+
+
+（有効化）
+sudo amazon-linux-extras enable ansible2
+
+
+（インストール）
+sudo yum install -y ansible
+</code></pre>
+<h3 id="_1">バージョン確認</h3>
+<pre><code>--version
 </code></pre>
 
               

@@ -8,3 +8,13 @@ sudo rpm -Uvh epel-release-latest-7.noarch.rpm
 sudo yum -y install ansible
 ansible --version
 ```
+
+
+## mac
+```
+（パッケージを調べる）
+brew search ansible
+
+（インストール例）
+brew install ansible
+```

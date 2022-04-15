@@ -12681,7 +12681,7 @@
 </tr>
 <tr>
 <td align="left">/boot</td>
-<td align="left">カーネルイメージ</td>
+<td align="left">カーネルイメージ。ブートに必要なファイル。</td>
 </tr>
 <tr>
 <td align="left">/dev</td>
@@ -12697,11 +12697,7 @@
 </tr>
 <tr>
 <td align="left">/proc</td>
-<td align="left">システムに接続されているデバイス情報や、カーネルパラメータ。</td>
-</tr>
-<tr>
-<td align="left">この値を直接変更すると、設定が即座にカーネルに反映される。</td>
-<td align="left"></td>
+<td align="left">システムに接続されているデバイス情報や、カーネルパラメータ。この値を直接変更すると、設定が即座にカーネルに反映される。</td>
 </tr>
 <tr>
 <td align="left">/sbin</td>
@@ -12722,6 +12718,34 @@
 <tr>
 <td align="left">/var</td>
 <td align="left">システムのログファイルなど、頻繁に書き換わるファイルが置かれる。</td>
+</tr>
+<tr>
+<td align="left">/tmp</td>
+<td align="left">テンポラリデータの保存場所。メモリ上の一時ファイルを保存します。ダウンロードフォルダとして利用することもあります。再起動時に消去されます。また通常はcronで定期的に消去されます。</td>
+</tr>
+<tr>
+<td align="left">/lib</td>
+<td align="left">/binや/sbinのコマンドを実行するのに必要なファイルが配置されています。基本的にユーザーが変更を加えることはありません</td>
+</tr>
+<tr>
+<td align="left">/media</td>
+<td align="left">リムーバブルメディアのマウントポイント。（floppy、CD、DVDなど）</td>
+</tr>
+<tr>
+<td align="left">/mnt</td>
+<td align="left">一時的なマウントポイント。mediaとの違いは、一時的なファイルシステム（fstabなど）のマウントに使う点。</td>
+</tr>
+<tr>
+<td align="left">/opt</td>
+<td align="left">rpmなどパッケージ管理システムのインストール先。複数のユーザーで利用する場合追加したものをここに保存しておけば、変更点を把握しやすい。</td>
+</tr>
+<tr>
+<td align="left">/selinux</td>
+<td align="left">セキュリティーを向上させるために利用する、Security-Enhanced Linux。rootへの権限が集中を分散することでセキュリティの向上を図る。ディストリビューションの Scientific Linuxとは無関係</td>
+</tr>
+<tr>
+<td align="left">/srv</td>
+<td align="left">FTP、WWWなどで利用するユーザー用のスペース。/homeとも違う、FTP専用、WWW専用のユーザー用ディレクトリ。</td>
 </tr>
 </tbody>
 </table>

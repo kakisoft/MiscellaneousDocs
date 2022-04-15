@@ -821,6 +821,13 @@ r  --recursive
 u  --unfied
 
 
+（使用例）
+diff -ru ~/.ssh/config ~/.ssh__bk_20220415__/config
+diff -ru ~/.ssh/id_rsa ~/.ssh__bk_20220415__/id_rsa
+diff -ru ~/.ssh/id_rsa.pub ~/.ssh__bk_20220415__/id_rsa.pub
+diff -ru ~/.ssh/known_hosts ~/.ssh__bk_20220415__/known_hosts
+
+
 ## ネットワーク帯域チェック（どのプロセスやサービスが一番ネットワークに負荷をかけているかチェック）
 nethogs
 

@@ -5,6 +5,11 @@
 (Amazon) cat /etc/system-release  ,  cat /etc/os-release
 
 
+## ハイフン
+bash -
+標準出力を表す
+
+
 ## sshログイン
 ssh -i <AccessKey> UserName@<IPアドレス>  [-p <ポート番号>]  
 chmod 600 <AccessKey>
@@ -415,6 +420,11 @@ tty
 
 
 ## curl
+https://curl.se/docs/manpage.html
+https://www.mit.edu/afs.new/sipb/user/ssen/src/curl-7.11.1/docs/curl.html
+
+
+
 curl -X POST http://kakiaaa.herokuapp.com/challenge_users -d name=tanaka -d email=tanaka@gmail.com  
 
 
@@ -452,6 +462,7 @@ curl -k -s https://localhost:44364/api/Products/3 | python -m json.tool
 -s    silent
 JSON は、より適切に表示するため、Python の json.tool モジュールに送信されます。
 　
+-S(-sS):  --show-error  <進捗はいらないけどエラーは表示したい>  -S オプションは -s オプションと併用することが前提のオプションで、進捗は表示されないけどエラーは表示されるようになる。
 
 
 curl -v -k \
@@ -470,6 +481,9 @@ curl -v -k \
 
 -v, -verbose
 処理状況の更なる詳細や説明を出力させます。
+
+
+-f, --fail          Fail silently (no output at all) on HTTP errors
 
 
 #### BASIC認証

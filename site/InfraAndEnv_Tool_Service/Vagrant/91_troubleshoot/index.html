@@ -7451,6 +7451,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vagrant-up-macos-big-sur" class="md-nav__link">
+    vagrant up 時にエラー（macOS Big Sur）
+  </a>
+  
+    <nav class="md-nav" aria-label="vagrant up 時にエラー（macOS Big Sur）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    エラーメッセージ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    解決策
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12772,6 +12799,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vagrant-up-macos-big-sur" class="md-nav__link">
+    vagrant up 時にエラー（macOS Big Sur）
+  </a>
+  
+    <nav class="md-nav" aria-label="vagrant up 時にエラー（macOS Big Sur）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    エラーメッセージ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    解決策
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12808,6 +12862,22 @@ data &lt;&lt; io.readpartial(READ_CHUNK_SIZE).encode(&quot;UTF-8&quot;,       En
 【 修正後 】
 data &lt;&lt; io.readpartial(READ_CHUNK_SIZE).encode(&quot;Windows-31J&quot;, Encoding.default_external)
 </code></pre>
+<hr />
+<h2 id="vagrant-up-macos-big-sur">vagrant up 時にエラー（macOS Big Sur）</h2>
+<h3 id="_3">エラーメッセージ</h3>
+<pre><code>==&gt; default: Booting VM...
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: [&quot;startvm&quot;, &quot;53425969-a53b-43ea-b566-ace68e90b44b&quot;, &quot;--type&quot;, &quot;headless&quot;]
+
+Stderr: VBoxManage: error: The virtual machine 'vagrant_default_1650730233117_51806' has terminated unexpectedly during startup with exit code 1 (0x1)
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component MachineWrap, interface IMachine
+</code></pre>
+<h3 id="_4">解決策</h3>
+<p>システム環境設定 -&gt; セキュリティとプライバシー -&gt; 左下「変更するにはカギをクリックします」 -&gt; App Store と確認済みの開発元からのアプリケーションを許可  </p>
+<p>にチェックを入れる。  </p>
+<p>その後、再起動。  </p>
 
               
             </article>

@@ -1,6 +1,17 @@
 ### インストール
+
+#### Ubuntu
 ```
 sudo apt-get install vagrant
+```
+
+#### macOS Big Sur
+```
+brew uninstall virtualbox
+brew uninstall vagrant
+
+brew install virtualbox
+brew install vagrant
 ```
 
 ### バージョン確認

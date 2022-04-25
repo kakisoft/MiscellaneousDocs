@@ -1,3 +1,13 @@
+## SSH　ログイン
+```
+ssh -i <AccessKey> UserName@<IPアドレス>  [-p <ポート番号>]  
+chmod 600 <AccessKey>
+
+（例）
+ssh -i ~/.ssh/kaki-stg-key.pem ec2-user@10.125.547.124 -p 22
+```
+
+
 # SSH鍵生成
 ```
 ssh-keygen -t rsa -C "sample@gmail.com"

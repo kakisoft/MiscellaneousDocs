@@ -82,7 +82,7 @@ tar xzvf asterisk-1.8.8.1.tar.gz
 
 
 ## 圧縮（tar）
-tar czvf xxxx.tar.gz directory
+tar czvf xxxxx.tar.gz directory
 
  z - gzip形式を利用
  v - 処理したファイルの一覧を表示
@@ -93,9 +93,9 @@ tar czvf xxxx.tar.gz directory
 
 ## Zipアーカイブ
 zip a.zip b.txt
-zip -e --password=xxxx encrypt.zip source.txt      # パスワード付き
+zip -e --password=xxxxx encrypt.zip source.txt     # パスワード付き
 zip -r 生成するzipファイル名 zip化するディレクトリ名   #  ディレクトリ単位
-unzip -P xxxx encrypt.zip                          # パスワード付きを展開
+unzip -P xxxxx encrypt.zip                         # パスワード付きを展開
 
 
 ## ログインユーザ切り替え
@@ -518,6 +518,18 @@ ls -lh
 
 
 ## 容量確認
+https://xtech.nikkei.com/it/article/COLUMN/20060227/230748/
+
+[du]
+-h	容量を適当な単位で表示する
+-s  引数で指定したファイルやディレクトリの総計を表示する
+
+＜ディレクトリ＞
+du -sh <dir_name>
+
+＜ファイルも＞
+du
+
 ＜ドライブ単位＞
 df -hT
 （ /dev を確認 ）

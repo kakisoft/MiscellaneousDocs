@@ -3647,34 +3647,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitignore_note_00/" class="md-nav__link">
-        Gitignore note 00
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gitignore_note_01/" class="md-nav__link">
-        project/.gitignore に登録
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../gitlab_memo/" class="md-nav__link">
         Gitlab memo
       </a>
@@ -12873,8 +12845,10 @@ git config --list  # 設定一覧を表示 
 <h2 id="false">falseにすると、コミット・チェックアウト時に改行コードの変換を行わない。</h2>
 <p>git config --global core.autocrlf false</p>
 <h2 id="ds_store-mac">.DS_Store を除外（Mac）</h2>
-<pre><code>git config --global core.excludesfile $HOME/.gitexclude
-echo &quot;.DS_Store&quot; &gt;&gt; $HOME/.gitexclude
+<pre><code>vi ~/.config/git/ignore
+
+# ignoreの中身
+.DS_Store
 </code></pre>
 <h2 id="git-ignore">git ignore</h2>
 <p>vscode 使ってるなら、右クリックで追加。  </p>

@@ -18,8 +18,6 @@ rm -f .git/index
 git reset
 
 
-## .gitignore作るのは”gibo”を使うと便利です。
-http://d.hatena.ne.jp/hnw/20121221
 
 
 ## git pull エラー対処

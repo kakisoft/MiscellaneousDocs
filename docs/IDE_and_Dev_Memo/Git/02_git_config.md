@@ -13,8 +13,10 @@ git config --global core.autocrlf false
 
 ## .DS_Store を除外（Mac）
 ```
-git config --global core.excludesfile $HOME/.gitexclude
-echo ".DS_Store" >> $HOME/.gitexclude
+vi ~/.config/git/ignore
+
+# ignoreの中身
+.DS_Store
 ```
 
 ## git ignore

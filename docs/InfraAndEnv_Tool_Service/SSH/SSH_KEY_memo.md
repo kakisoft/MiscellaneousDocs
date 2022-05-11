@@ -1,14 +1,71 @@
 ## SSH　ログイン
 ```
 ssh -i <AccessKey> UserName@<IPアドレス>  [-p <ポート番号>]  
+
+※鍵の権限を変えておく
 chmod 600 <AccessKey>
 
 （例）
 ssh -i ~/.ssh/kaki-stg-key.pem ec2-user@10.125.547.124 -p 22
 ```
 
+## コンフィグを設定して接続先を登録
+```
+vi ~/.ssh/config
 
-# SSH鍵生成
+（例）
+Host web
+ HostName 192.168.43.52
+Host db
+ HostName 192.168.43.53
+```
+```
+chmod 600 ~/.ssh/config
+ssh-keygen -t rsa
+（Enter→Enter）
+```
+
+
+### ssh-copy-id コマンドで公開鍵を渡す
+```
+ssh-copy-id web
+ssh web
+ssh-copy-id db
+ssh db
+```
+（Yes）でメッセージ送り
+
+
+### ~/.ssh/config （コンフィグ例）
+トンネル可能。鍵を指定できる。
+```
+Host sample01-prd-bastion
+   HostName 51.166.196.132
+   User ec2-user
+   Port 22
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/sample01-prd-key.pem
+Host sample01-prd1
+   HostName 172.30.1.51
+   User ec2-user
+   ProxyCommand ssh sample01-prd-bastion -W %h:%p
+   IdentityFile ~/.ssh/sample01-prd-key.pem
+Host sample01-prd2
+   HostName 172.30.1.52
+   User ec2-user
+   ProxyCommand ssh sample01-prd-bastion -W %h:%p
+   IdentityFile ~/.ssh/sample01-prd-key.pem
+```
+上記を設定すると、以下のコマンドで ssh ログインできる。
+
+```
+ssh sample01-prd-bastion
+ssh sample01-prd1
+ssh sample01-prd2
+```
+
+
+## SSH鍵生成
 ```
 ssh-keygen -t rsa -C "sample@gmail.com"
 　・id_rsa （秘密鍵）

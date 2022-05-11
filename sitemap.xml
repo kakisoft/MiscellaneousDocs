@@ -1566,11 +1566,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/SSH/ssh_key_nemo/</loc>
-         <lastmod>2022-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/SSH/ssh_server_openssh/</loc>
          <lastmod>2022-05-11</lastmod>
          <changefreq>daily</changefreq>

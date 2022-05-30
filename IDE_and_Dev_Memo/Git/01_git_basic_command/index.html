@@ -12901,6 +12901,25 @@ git init --bare  #共有リポジトリにする場合にはこのオプショ�
 ベアリポジトリ：ワークツリーを持たず、チェックアウト、マージができないリポジトリ。
 
 
+## リモートリポジトリの URL 変更
+https://qiita.com/minoringo/items/917e325892733e0d606e
+
+（内容確認）
+git remote -v
+
+&gt; origin  https://github.com/kakisoft-lab/kaki-prd.git (fetch)
+&gt; origin  https://github.com/kakisoft-lab/kaki-prd.git (push)
+
+
+git remote set-url origin {new url}
+git remote set-url origin https://github.com/kakisoft-inc/kaki-prd
+
+
+git remote -v
+&gt; origin  https://github.com/kakisoft-inc/kaki-prd (fetch)
+&gt; origin  https://github.com/kakisoft-inc/kaki-prd (push)
+
+
 ## プッシュ（リモートリポジトリへ反映）
 git push &lt;name&gt; &lt;branch&gt; 
 git push origin master   #originに向かって、masterの内容を突っ込む

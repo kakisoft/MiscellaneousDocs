@@ -6822,6 +6822,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#nginxconf" class="md-nav__link">
+    nginx.conf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#defaultconf" class="md-nav__link">
     default.conf
   </a>
@@ -12808,6 +12815,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#nginxconf" class="md-nav__link">
+    nginx.conf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#defaultconf" class="md-nav__link">
     default.conf
   </a>
@@ -12863,8 +12877,45 @@ services:
 <pre><code>Welcome to nginx!
 </code></pre>
 <h2 id="_1">コンフィグ</h2>
-<pre><code>/etc/nginx/conf.d
+<p>nginx.conf<br />
+default.conf  </p>
+<pre><code>/etc/nginx/nginx.conf
+
+/etc/nginx/conf.d
              ┗ default.conf
+</code></pre>
+<h3 id="nginxconf">nginx.conf</h3>
+<pre><code class="language-conf">user  nginx;
+worker_processes  1;
+
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] &quot;$request&quot; '
+                      '$status $body_bytes_sent &quot;$http_referer&quot; '
+                      '&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    include /etc/nginx/conf.d/*.conf;
+}
 </code></pre>
 <h3 id="defaultconf">default.conf</h3>
 <pre><code class="language-conf">server {

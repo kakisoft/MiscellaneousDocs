@@ -112,7 +112,7 @@ server {
 ## フォルダ構成
 ```
 /etc/nginx
-       ┗ conf.d
+       ┗ conf.dx
        ┗ fastcgi_params
        ┗ koi-utf
        ┗ koi-win

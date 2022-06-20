@@ -20,6 +20,7 @@ nginx.conf
 default.conf  
 ```
 /etc/nginx/nginx.conf
+/etc/nginx/fastcgi_params
 
 /etc/nginx/conf.d
              ┗ default.conf
@@ -133,6 +134,46 @@ server {
 ```
 
 
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
 
+#### etc\nginx\default.conf : location
+```
+location ~ [^/]\.php(/|$) {
+
+
+/xxx.php
+/xxx.php/
+```
+
+#### etc\nginx\default.conf : location : fastcgi_split_path_info
+```
+fastcgi_split_path_info ^(.+?\.php)(/.*)$;
+
+
+xxx.php/xxx
+```
+
+#### !-f
+ファイルの存在 -f ,!-f  
+http://www2.matsue-ct.ac.jp/home/kanayama/text/nginx/node73.html
+```
+if (!-f $document_root$fastcgi_script_name) {
+    return 404;
+}
+```
+
+##### /etc/nginx/fastcgi_params
+```
+fastcgi_param  DOCUMENT_ROOT      $document_root;
+fastcgi_param  SCRIPT_NAME        $fastcgi_script_name;
+
+-------------------------------------------------------------
+var_export($_SERVER);
+
+'DOCUMENT_ROOT' => '/var/www/src/public',
+'SCRIPT_NAME' => '/server-params.php',
+```
 
 

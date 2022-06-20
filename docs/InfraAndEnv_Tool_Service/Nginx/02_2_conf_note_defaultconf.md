@@ -1,3 +1,5 @@
+default.conf
+
 ## 「location /」
 ```conf
     location / {
@@ -42,4 +44,29 @@ server {
     index  index.html index.htm;
 }
 ```
+
+
+## PHP実行環境（php-fpm）
+```conf
+    location ~ \.php$ {
+       fastcgi_pass   php:9000;
+       fastcgi_index  index.php;
+       fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+       include        fastcgi_params;
+    }
+```
+デフォルト
+```conf
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    location ~ \.php$ {
+        root           html;
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+```
+fastcgi_pass ：「コンテナ名：ポート番号」に変更。（上記では、コンテナ「php」。php-fpm のデフォルトポートは 9000）  
+fastcgi_param ：「/scripts」->「$document_root」に修正。  
 

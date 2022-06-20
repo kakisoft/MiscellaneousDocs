@@ -43,3 +43,9 @@ sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
 
+## vi install
+```
+apt-get update
+apt-get install -y vim
+```
+

@@ -43,9 +43,27 @@ sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
 
+____________________________________________________________
 ## vi install
 ```
 apt-get update
 apt-get install -y vim
 ```
+
+## ping install
+```
+apt-get update
+apt-get install -y iputils-ping
+```
+
+____________________________________________________________
+## Access
+http://localhost:8000/
+
+
+## PHP Accesscheck
+```
+ping php
+```
+____________________________________________________________
 

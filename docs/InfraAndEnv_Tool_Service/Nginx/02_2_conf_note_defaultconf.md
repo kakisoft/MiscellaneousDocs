@@ -70,3 +70,50 @@ server {
 fastcgi_pass ：「コンテナ名：ポート番号」に変更。（上記では、コンテナ「php」。php-fpm のデフォルトポートは 9000）  
 fastcgi_param ：「/scripts」->「$document_root」に修正。  
 
+<https://kitigai.hatenablog.com/entry/2019/05/01/024341> 
+※FastCGIサーバではデフォルトポートの9000番を使用するためportsの指定は行いません。  
+
+
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+#### etc\nginx\default.conf : location
+```
+location ~ [^/]\.php(/|$) {
+
+
+/xxx.php
+/xxx.php/
+```
+
+#### etc\nginx\default.conf : location : fastcgi_split_path_info
+```
+fastcgi_split_path_info ^(.+?\.php)(/.*)$;
+
+
+xxx.php/xxx
+```
+
+#### !-f
+ファイルの存在 -f ,!-f  
+http://www2.matsue-ct.ac.jp/home/kanayama/text/nginx/node73.html
+```
+if (!-f $document_root$fastcgi_script_name) {
+    return 404;
+}
+```
+
+##### /etc/nginx/fastcgi_params
+```
+fastcgi_param  DOCUMENT_ROOT      $document_root;
+fastcgi_param  SCRIPT_NAME        $fastcgi_script_name;
+
+-------------------------------------------------------------
+var_export($_SERVER);
+
+'DOCUMENT_ROOT' => '/var/www/src/public',
+'SCRIPT_NAME' => '/server-params.php',
+```
+
+
+

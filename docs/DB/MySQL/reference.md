@@ -2,6 +2,10 @@
 <https://www.mysql.com/jp/>
 
 
+## MySQLの実行計画
+<https://speakerdeck.com/take2webservice/mysqlfalseshi-xing-ji-hua-2022xin-zu?slide=25>
+
+
 ## データ型
 ```
 =====< データ型 >=====

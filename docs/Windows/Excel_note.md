@@ -44,3 +44,10 @@ VLOOKUP(検索値, 範囲, 列番号 [, 検索方法])
 ━━━━━━━━━━━━━━━━━━━━━━
 
 ```
+
+
+## APIコール
+```
+=WEBSERVICE("http://api.excelapi.org/post/address?zipcode=1000014")
+```
+

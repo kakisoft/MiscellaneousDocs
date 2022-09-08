@@ -93,8 +93,7 @@ select
 ## ユーティリティ
 ```sql
 SELECT
-    REPLACE(my_content, CHAR(9), ' ') AS "タブをスペースに変換"
-
+    REPLACE(my_content, CHAR(9), ' ') AS "タブをスペースに変換"  -- 置換
 ```
 
 ## 日付の差分

@@ -252,3 +252,13 @@ from
 |  NULLIF()  |  expr1 = expr2 の場合に NULL を返します  |
 
 
+```sql
+select
+ IF(estimate_items.record_till is null, 
+      1,
+      PERIOD_DIFF(
+                   DATE_FORMAT(CONCAT(estimate_items.record_till, '/01'), '%Y%m'),
+                   DATE_FORMAT(CONCAT(estimate_items.record_from, '/01'), '%Y%m')
+                 ) + 1
+   ) as MONTH_SPAN
+```

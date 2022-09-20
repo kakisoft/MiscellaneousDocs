@@ -13139,8 +13139,7 @@ select * from users order by score desc limit 3;
 </code></pre>
 <h2 id="_4">ユーティリティ</h2>
 <pre><code class="language-sql">SELECT
-    REPLACE(my_content, CHAR(9), ' ') AS &quot;タブをスペースに変換&quot;
-
+    REPLACE(my_content, CHAR(9), ' ') AS &quot;タブをスペースに変換&quot;  -- 置換
 </code></pre>
 <h2 id="_5">日付の差分</h2>
 <pre><code class="language-sql">SELECT
@@ -13299,6 +13298,15 @@ from
 </tr>
 </tbody>
 </table>
+<pre><code class="language-sql">select
+ IF(estimate_items.record_till is null, 
+      1,
+      PERIOD_DIFF(
+                   DATE_FORMAT(CONCAT(estimate_items.record_till, '/01'), '%Y%m'),
+                   DATE_FORMAT(CONCAT(estimate_items.record_from, '/01'), '%Y%m')
+                 ) + 1
+   ) as MONTH_SPAN
+</code></pre>
 
               
             </article>

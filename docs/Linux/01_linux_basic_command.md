@@ -511,6 +511,23 @@ curl -v -k \
 #### curl を使ってグローパルIPアドレスを確認
 curl ifconfig.io
 
+
+#### 日本語 Unicode エスケープ
+echo -en "$(curl -s https://dev-api.example.com/api/report/personal/38)"
+
+{"message":"\u8a31\u53ef\u3055\u308c\u3066\u3044\u306a\u3044\u65b9\u6cd5"}
+↓
+{"message":"許可されていない方法"}
+
+https://stackoverflow.com/questions/8795702/how-to-convert-uxxxx-unicode-to-utf-8-using-console-tools-in-nix
+
+
+サービスから使用
+https://www.oh-benri-tools.com/tools/programming/unicode-escape-unescape
+
+
+PHP で使用する場合、json_decode を使用。
+
 ______________________________________________________________
 
 ## cd

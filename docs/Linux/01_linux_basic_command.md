@@ -515,6 +515,10 @@ curl ifconfig.io
 #### 日本語 Unicode エスケープ
 echo -en "$(curl -s https://dev-api.example.com/api/report/personal/38)"
 
+-e interprets escapes
+-n suppresses the newline
+
+
 {"message":"\u8a31\u53ef\u3055\u308c\u3066\u3044\u306a\u3044\u65b9\u6cd5"}
 ↓
 {"message":"許可されていない方法"}

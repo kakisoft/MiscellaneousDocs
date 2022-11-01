@@ -122,8 +122,8 @@ Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 ⇒ 同上
 
-
-C:\Users\kakis/.ssh/id_rsa)
+C:\Users\kakis\.ssh
+C:\Users\kakis\.ssh\id_rsa
 といった場所に生成される。
 
 ＜生成されるファイル＞

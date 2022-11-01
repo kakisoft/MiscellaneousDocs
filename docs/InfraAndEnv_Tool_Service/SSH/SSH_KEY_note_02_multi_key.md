@@ -1,4 +1,4 @@
-# ローカルに複数キーが存在する場合
+# SSH メモ2 ：ローカルに複数キーが存在する場合
 
 ## キー作成
 ※カレントディレクトリに作成される
@@ -24,7 +24,7 @@ Host github.com.sample-inc
   TCPKeepAlive yes
   IdentitiesOnly yes
 
-Host github.com/YamadaTaro
+Host github.com.YamadaTaro
   HostName github.com
   User YamadaTaro
   Port 22

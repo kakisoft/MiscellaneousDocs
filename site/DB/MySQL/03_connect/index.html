@@ -12964,7 +12964,15 @@
   <h1>03 connect</h1>
 
 <h2 id="_1">ログイン</h2>
-<pre><code>mysql -u root
+<pre><code>（コマンド）
+mysql --host=&lt;hostname&gt; --user=&lt;username&gt; --password=&lt;password&gt; &lt;scheme&gt;
+
+（使用例）
+mysql --host=localhost --user=user --password=password myapp01
+
+
+（基本形）
+mysql -u root
 mysql -u ユーザ名 -p [データベース名]
 mysql -u root -p rootpassword
 
@@ -12979,6 +12987,7 @@ mysql -u dbuser01 -p mydb01
 （リモート）
 mysql -h &lt;hostname&gt; -u &lt;remoteusername&gt; -p
 ※hostnameは、IPでも可。
+
 </code></pre>
 <h2 id="_2">データベース選択</h2>
 <pre><code>use データベース名

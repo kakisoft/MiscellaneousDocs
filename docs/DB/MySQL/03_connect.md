@@ -1,5 +1,13 @@
 ## ログイン
 ```
+（コマンド）
+mysql --host=<hostname> --user=<username> --password=<password> <scheme>
+
+（使用例）
+mysql --host=localhost --user=user --password=password myapp01
+
+
+（基本形）
 mysql -u root
 mysql -u ユーザ名 -p [データベース名]
 mysql -u root -p rootpassword
@@ -15,6 +23,7 @@ mysql -u dbuser01 -p mydb01
 （リモート）
 mysql -h <hostname> -u <remoteusername> -p
 ※hostnameは、IPでも可。
+
 ```
 ## データベース選択
 ```

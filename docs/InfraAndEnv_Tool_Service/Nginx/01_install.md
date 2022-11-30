@@ -36,7 +36,7 @@ systemctl start nginx
 
 ## Amazon Linux
 ```
-sudo amazon-linux-extras enable nginx1
+sudo amazon-linux-extras enable nginx
 sudo yum install -y nginx
 
 sudo systemctl enable nginx

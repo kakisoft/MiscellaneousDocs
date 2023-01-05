@@ -25,7 +25,7 @@ select
    ,convert_tz(created_at, 'UTC', 'Asia/Tokyo') as "UTC → Asia/Tokyo  1"
    ,job_start_time
    ,convert_tz(job_start_time, "UTC", "Asia/Tokyo") as "UTC → Asia/Tokyo  2"
--- ,CAST('2021/10/18 18:30:00' AS time) 
+-- ,CAST('2021/10/18 18:30:00' AS time)
    ,CAST( convert_tz(job_start_time, 'UTC', 'Asia/Tokyo')  AS time) as "UTC → Asia/Tokyo  3"
 from
   samples

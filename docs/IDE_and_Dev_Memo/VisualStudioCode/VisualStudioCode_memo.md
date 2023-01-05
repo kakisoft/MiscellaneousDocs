@@ -115,3 +115,35 @@ ctrl + end
 等
 
 
+## 改行
+
+＜改行コード＞
+<https://qiita.com/kondo0602/items/3454b270c89d0ab1f471>
+
+MacOS/Linuxの改行コード：LF  
+Windowsの改行コード：CR+LF  
+
+
+|  core.autocrlfの設定  |  チェックアウト時    |  コミット時   |
+|:----------------------|:-------------------|:-------------|
+|  true                 |  LF -> CRLF        |  CRLF -> LF  |
+|  input                |  変換しない         |  CRLF -> LF  |
+|  false                |  変換しない         |  変換しない   |
+
+
+```
+// 設定確認
+git config core.autocrlf
+
+// 設定
+git config --global core.autocrlf true
+git config --global core.autocrlf false
+git config --global core.autocrlf input
+
+
+
+settings.json ( >defaultSetting.json )
+>setting
+"files.eol": "auto",
+
+```

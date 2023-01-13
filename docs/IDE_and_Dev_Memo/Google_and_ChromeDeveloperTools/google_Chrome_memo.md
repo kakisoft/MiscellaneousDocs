@@ -7,7 +7,7 @@ https://transparencyreport.google.com/safe-browsing/search?url=http:%2F%2Fgloyah
 
 _______________________________________________________________________________________
 _______________________________________________________________________________________
-# Developer Tool
+# Chrome Developer Tool
 
 ## Chrome スーパーリロード（キャッシュもクリア）
 Shift ＋ F5
@@ -37,3 +37,8 @@ document.designMode = 'on';
 ## curlコマンドとしてコピー
 Networkタブ -> All -> Name  -> 項目を選択して右クリック -> Copy -> Copy as cURL
 
+
+## CSS の状態ごとの class （選択中・クリック時 等）
+:how > ":active", ":focus" 等のイベント
+
+![alt](chrome_css_active.png)

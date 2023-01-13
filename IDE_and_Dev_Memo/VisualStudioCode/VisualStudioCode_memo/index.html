@@ -4738,6 +4738,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    改行
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12965,6 +12972,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    改行
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -13181,6 +13195,52 @@ cursorBottom  </p>
 <p>ctrl + home<br />
 ctrl + end  </p>
 <p>等</p>
+<h2 id="_6">改行</h2>
+<p>＜改行コード＞
+<a href="https://qiita.com/kondo0602/items/3454b270c89d0ab1f471">https://qiita.com/kondo0602/items/3454b270c89d0ab1f471</a></p>
+<p>MacOS/Linuxの改行コード：LF<br />
+Windowsの改行コード：CR+LF  </p>
+<table>
+<thead>
+<tr>
+<th align="left">core.autocrlfの設定</th>
+<th align="left">チェックアウト時</th>
+<th align="left">コミット時</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">true</td>
+<td align="left">LF -&gt; CRLF</td>
+<td align="left">CRLF -&gt; LF</td>
+</tr>
+<tr>
+<td align="left">input</td>
+<td align="left">変換しない</td>
+<td align="left">CRLF -&gt; LF</td>
+</tr>
+<tr>
+<td align="left">false</td>
+<td align="left">変換しない</td>
+<td align="left">変換しない</td>
+</tr>
+</tbody>
+</table>
+<pre><code>// 設定確認
+git config core.autocrlf
+
+// 設定
+git config --global core.autocrlf true
+git config --global core.autocrlf false
+git config --global core.autocrlf input
+
+
+
+settings.json ( &gt;defaultSetting.json )
+&gt;setting
+&quot;files.eol&quot;: &quot;auto&quot;,
+
+</code></pre>
 
               
             </article>

@@ -12944,7 +12944,7 @@
    ,convert_tz(created_at, 'UTC', 'Asia/Tokyo') as &quot;UTC → Asia/Tokyo  1&quot;
    ,job_start_time
    ,convert_tz(job_start_time, &quot;UTC&quot;, &quot;Asia/Tokyo&quot;) as &quot;UTC → Asia/Tokyo  2&quot;
--- ,CAST('2021/10/18 18:30:00' AS time) 
+-- ,CAST('2021/10/18 18:30:00' AS time)
    ,CAST( convert_tz(job_start_time, 'UTC', 'Asia/Tokyo')  AS time) as &quot;UTC → Asia/Tokyo  3&quot;
 from
   samples

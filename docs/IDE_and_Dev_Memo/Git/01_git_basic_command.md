@@ -345,6 +345,15 @@ git revert -m 1 46985bc20e54962ef1fe39697615147a3ee3a50b
 打ち消した後、git show で確認
 
 
+```
+
+## update （バージョンアップ）
+```
+（Win）
+git update-git-for-windows
+
+（Mac）
+brew upgrade git
 
 ```
 __________________________________________________________________

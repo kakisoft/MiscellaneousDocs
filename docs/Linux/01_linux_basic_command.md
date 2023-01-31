@@ -713,11 +713,14 @@ sudo lsof -i :5432
 ss
 
 
+### TCP/IP通信の状態を調べる
 ＜netstat は、CentOs7からは非推奨？＞
-netstat -nap
+sudo netstat -anp
 
 sudo netstat -ltup4
 
+
+-a  すべての接続とリッスン ポートを表示
 -l	Listenしているポートのみ表示
 -t	TCPを表示
 -u	UDPを表示
@@ -948,7 +951,7 @@ dig +noedns
 
 
 
-## whois
+## whois    ドメイン情報を表示    名前解決    正引き
 whois npmjs.com
 
 

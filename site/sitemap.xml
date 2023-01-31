@@ -1396,6 +1396,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_note/</loc>
          <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
@@ -1407,11 +1412,6 @@
     </url>
     <url>
          <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_ref/</loc>
-         <lastmod>2023-01-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/command/</loc>
          <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -13655,17 +13655,20 @@ nc -v -w 1 10.0.1.45 -z 5432
 
 ## どのサービスがポートを使用しているかチェック
 sudo lsof -i :5432
-
+※sudo を付けないと、表示範囲に違いが出る
 
 ＜ssコマンド＞
 ss
 
 
+### TCP/IP通信の状態を調べる
 ＜netstat は、CentOs7からは非推奨？＞
-netstat -nap
+sudo netstat -anp
 
 sudo netstat -ltup4
 
+
+-a  すべての接続とリッスン ポートを表示
 -l  Listenしているポートのみ表示
 -t  TCPを表示
 -u  UDPを表示
@@ -13896,7 +13899,7 @@ dig +noedns
 
 
 
-## whois
+## whois    ドメイン情報を表示    名前解決    正引き
 whois npmjs.com
 
 

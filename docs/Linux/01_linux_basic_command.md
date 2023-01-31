@@ -1005,3 +1005,5 @@ bash のシンボリックリンク
 |  tcsh  |  csh から派生                                                          |
 
 
+## DNS_command
+<https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/>

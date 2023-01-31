@@ -713,10 +713,16 @@ sudo lsof -i :5432
 ss
 
 
-### TCP/IP通信の状態を調べる
+### TCP/IP通信の状態を調べる（どの IPアドレスと接続しているか通信状態を表示できる）
 ＜netstat は、CentOs7からは非推奨？＞
-sudo netstat -anp
+sudo netstat --help
 
+### 待ち受け中のポートを表示
+sudo netstat -putan
+sudo netstat -putan | grep 80(port)
+
+
+sudo netstat -anp
 sudo netstat -ltup4
 
 
@@ -899,6 +905,7 @@ diff -ru ~/.ssh/known_hosts ~/.ssh__bk_20220415__/known_hosts
 ## ネットワーク帯域チェック（どのプロセスやサービスが一番ネットワークに負荷をかけているかチェック）
 nethogs
 
+
 ## 通信相手のコンピュータとの通信料を調べる
 iftop
 
@@ -932,29 +939,6 @@ pwgen 16 1
 https://qiita.com/speg03/items/ec404c217e417160e2d5
 
 
-## dig
-ドメインからIPアドレスを調べる。
-dig www.npmjs.com npmjs.com
-
-dig npmjs.com mx
-
-dig +noedns
-
-リフレッシュ時間
-
-
-ヘッダ・フッタを除くと最大で4つのセクションが表示される。
-　・QUESTION：実行した検索内容
-　・ANSWER：検索結果
-　・AUTHORITY：ANSWERに権威を持つDNSサーバ（NSレコード）
-　・ADDITIONAL：追加情報
-
-
-
-## whois    ドメイン情報を表示    名前解決    正引き
-whois npmjs.com
-
-
 
 ## graceful  (apache再起動)
 /etc/init.d/httpd configtest
@@ -965,8 +949,6 @@ whois npmjs.com
 : > access_log             # サイズが0になる。
 
 echo '' > access_log       # これだとサイズが0にならない。
-
-
 
 
 ```

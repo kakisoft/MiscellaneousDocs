@@ -4,9 +4,13 @@ create database DATABASE_NAME;
 ```
 
 ## データベース削除
+<https://dev.mysql.com/doc/refman/5.6/ja/drop-database.html>  
+DROP SCHEMA は DROP DATABASE のシノニムです。
 ```
 drop database DATABASE_NAME;
+drop schema DATABASE_NAME;
 ```
+
 
 ## 現在選択中のデータベースを表示
 ```

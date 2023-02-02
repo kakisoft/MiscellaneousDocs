@@ -35,6 +35,7 @@ mysqldump -u admin -p -h 127.0.0.1 -P 33060 --skip-column-statistics production 
 mysqldump -u admin -p -h 127.0.0.1 -P 33060 --skip-column-statistics production > production.dump
 ```
 
+MySQL 8にて、MySQL 5 の dumpを取ろうとすると、エラーが発生する。回避用のオプションを指定する必要がある。
 ```
 –skip-column-statistics
 

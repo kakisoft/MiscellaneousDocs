@@ -1,7 +1,7 @@
 # MySQL - dump
 <https://docs.oracle.com/cd/E17952_01/mysql-8.0-ja/mysqlpump.html>
 
-## dumpファイル作成
+## dumpファイル作成 / エクスポート / Export
 ```
 mysqldump -u root -p DATABASE_NAME > dump_file.sql 
 
@@ -23,7 +23,11 @@ mysqldump --set-gtid-purged=OFF --skip-lock-tables --skip-add-locks --skip-colum
 "--opt" など、一部のオプションは "--lock-tables" を自動的に有効にします。これをオーバーライドするには、"--skip-lock-tables" をオプションリストの最後に使用します。
 ```
 
+#### バイナリログ / バイナリロギング
+<https://dev.mysql.com/doc/refman/8.0/ja/binary-log.html>
 
+
+<https://blog.pinkumohikan.com/entry/mysqldump-disable-column-statistics>
 ```
 mysql5.7のサーバに対して、mysql8クライアントでdumpを取ろうとすると出たりする。
 MySQL8ではヒストグラム統計というのを考慮するようになり、dumpを生成しようとするときにANALYZE TABLE文を生成しようとする。
@@ -48,7 +52,7 @@ mysqldump8以降でそれ以前 (5.7など)のMySQLサーバに対してダン�
 mysql -u root -p DATABASE_NAME < dump_file.sql 
 
 // パスワードを指定
-
+mysql --host=localhost --user=root --password=password myapp01 < dump_file_20221119.sql
 ```
 
 ## dumpファイルから復元（文字コードを指定）

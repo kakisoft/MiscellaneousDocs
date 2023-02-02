@@ -19,7 +19,7 @@
     
     
       
-        <title>07 dump - kakiNote</title>
+        <title>MySQL - dump - kakiNote</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dump" class="md-skip">
+        <a href="#mysql-dump" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              07 dump
+              MySQL - dump
             
           </span>
         </div>
@@ -489,14 +489,16 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          07 dump
+          MySQL - dump
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        07 dump
+        MySQL - dump
       </a>
       
         
@@ -504,6 +506,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="目次">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -513,28 +517,41 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dump" class="md-nav__link">
-    dumpファイル作成
+  <a href="#dump-export" class="md-nav__link">
+    dumpファイル作成 / エクスポート / Export
   </a>
+  
+    <nav class="md-nav" aria-label="dumpファイル作成 / エクスポート / Export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    バイナリログ / バイナリロギング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dump_1" class="md-nav__link">
+  <a href="#dump" class="md-nav__link">
     dumpファイルから復元
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dump_2" class="md-nav__link">
+  <a href="#dump_1" class="md-nav__link">
     dumpファイルから復元（文字コードを指定）
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     テーブルを全部入れ替え
   </a>
   
@@ -12870,6 +12887,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -12878,28 +12897,41 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dump" class="md-nav__link">
-    dumpファイル作成
+  <a href="#dump-export" class="md-nav__link">
+    dumpファイル作成 / エクスポート / Export
   </a>
+  
+    <nav class="md-nav" aria-label="dumpファイル作成 / エクスポート / Export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    バイナリログ / バイナリロギング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dump_1" class="md-nav__link">
+  <a href="#dump" class="md-nav__link">
     dumpファイルから復元
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dump_2" class="md-nav__link">
+  <a href="#dump_1" class="md-nav__link">
     dumpファイルから復元（文字コードを指定）
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     テーブルを全部入れ替え
   </a>
   
@@ -12919,20 +12951,54 @@
                 
 
 
-  <h1>07 dump</h1>
-
-<h2 id="dump">dumpファイル作成</h2>
+<h1 id="mysql-dump">MySQL - dump</h1>
+<p><a href="https://docs.oracle.com/cd/E17952_01/mysql-8.0-ja/mysqlpump.html">https://docs.oracle.com/cd/E17952_01/mysql-8.0-ja/mysqlpump.html</a></p>
+<h2 id="dump-export">dumpファイル作成 / エクスポート / Export</h2>
 <pre><code>mysqldump -u root -p DATABASE_NAME &gt; dump_file.sql 
+
+// パスワードを指定
+mysqldump --user=root --password=password myapp01 &gt; dump_file_20230201.sql
+
+// オプションを追加
+mysqldump --set-gtid-purged=OFF --skip-lock-tables --skip-add-locks --user=root --password=root myapp01 &gt; dump_file_20230201.sql
+mysqldump --set-gtid-purged=OFF --skip-lock-tables --skip-add-locks --skip-column-statistics --user=root --password=root myapp01 &gt; dump_file_20230201.sql
 </code></pre>
-<h2 id="dump_1">dumpファイルから復元</h2>
+<p><a href="https://dev.mysql.com/doc/refman/5.6/ja/mysqldump.html">https://dev.mysql.com/doc/refman/5.6/ja/mysqldump.html</a></p>
+<pre><code>--lock-tables      : ダンプされる各データベースに対して、ダンプするすべてのテーブルをダンプ前にロックする。
+--skip-lock-tables : mysqldump中にREAD LOCKさせないようにする
+
+
+&quot;--opt&quot; など、一部のオプションは &quot;--lock-tables&quot; を自動的に有効にします。これをオーバーライドするには、&quot;--skip-lock-tables&quot; をオプションリストの最後に使用します。
+</code></pre>
+<h4 id="_1">バイナリログ / バイナリロギング</h4>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/ja/binary-log.html">https://dev.mysql.com/doc/refman/8.0/ja/binary-log.html</a></p>
+<p><a href="https://blog.pinkumohikan.com/entry/mysqldump-disable-column-statistics">https://blog.pinkumohikan.com/entry/mysqldump-disable-column-statistics</a></p>
+<pre><code>mysql5.7のサーバに対して、mysql8クライアントでdumpを取ろうとすると出たりする。
+MySQL8ではヒストグラム統計というのを考慮するようになり、dumpを生成しようとするときにANALYZE TABLE文を生成しようとする。
+information_schema.COLUMN_STATISTICSを参照しようとするとが、これはmysq8からのスキーマでmysql5.7にはないので、エラーになっている。ということみたい。
+「 –skip-column-statistics」オプションをつけてあげればいい。
+
+mysqldump -u admin -p -h 127.0.0.1 -P 33060 --skip-column-statistics production &gt; production.dump
+
+mysqldump -u admin -p -h 127.0.0.1 -P 33060 --skip-column-statistics production &gt; production.dump
+</code></pre>
+<p>MySQL 8にて、MySQL 5 の dumpを取ろうとすると、エラーが発生する。回避用のオプションを指定する必要がある。</p>
+<pre><code>–skip-column-statistics
+
+mysqldump8以降でそれ以前 (5.7など)のMySQLサーバに対してダンプを実行した場合のエラーを回避するためのオプション
+</code></pre>
+<h2 id="dump">dumpファイルから復元</h2>
 <pre><code>mysql -u root -p DATABASE_NAME &lt; dump_file.sql 
+
+// パスワードを指定
+mysql --host=localhost --user=root --password=password myapp01 &lt; dump_file_20221119.sql
 </code></pre>
-<h2 id="dump_2">dumpファイルから復元（文字コードを指定）</h2>
+<h2 id="dump_1">dumpファイルから復元（文字コードを指定）</h2>
 <pre><code>mysql -u root -p database_name --default-character-set=utf8 &lt; dump_file.sql 
 </code></pre>
 <p>※上記では utf8を指定。インポート時に「Unknown command '\".」と出ていたら、これで回避できた。</p>
 <hr />
-<h2 id="_1">テーブルを全部入れ替え</h2>
+<h2 id="_2">テーブルを全部入れ替え</h2>
 <pre><code>drop database DATABASE_NAME;
 create database DATABASE_NAME;
 

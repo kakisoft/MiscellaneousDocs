@@ -605,7 +605,7 @@
   
     <li class="md-nav__item">
       <a href="../07_dump/" class="md-nav__link">
-        07 dump
+        MySQL - dump
       </a>
     </li>
   
@@ -13051,7 +13051,10 @@
 <pre><code>create database DATABASE_NAME;
 </code></pre>
 <h2 id="_2">データベース削除</h2>
+<p><a href="https://dev.mysql.com/doc/refman/5.6/ja/drop-database.html">https://dev.mysql.com/doc/refman/5.6/ja/drop-database.html</a><br />
+DROP SCHEMA は DROP DATABASE のシノニムです。</p>
 <pre><code>drop database DATABASE_NAME;
+drop schema DATABASE_NAME;
 </code></pre>
 <h2 id="_3">現在選択中のデータベースを表示</h2>
 <pre><code>select database();

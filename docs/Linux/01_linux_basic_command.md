@@ -996,7 +996,7 @@ bash のシンボリックリンク
 |:-------|:-------------------------------------------------------------------|
 |  sh    |  最も基本的なシェル。ここから bash や ksh に派生。                                    |
 |  bash  |  多くの Linux ディストリのデフォルト                                             |
-|  ksh   |  bash と親が同じらしいが、今一つ影が薄い。                                           |
+|  ksh   |  bash と親が同じらしい                                           |
 |  ash   |  軽量。組み込み Linux に採用。Docker ベースイメージによく使われる Alpine もこれ。Bashより機能が少ない。  |
 |  dash  |  Debian系で使われる軽量 shell。                                              |
 |  zsh   |  Catalina 以降の Mac のデフォルト                                           |
@@ -1007,3 +1007,8 @@ bash のシンボリックリンク
 
 ## DNS_command
 <https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/>
+
+
+## yum
+<https://kakisoft.github.io/MiscellaneousDocs/Linux/centos_memo/>
+

@@ -10,22 +10,6 @@ bash -
 標準出力を表す
 
 
-## sshログイン
-ssh -i <AccessKey> UserName@<IPアドレス>  [-p <ポート番号>]  
-chmod 600 <AccessKey>
-
-（例）
-ssh -i ~/.ssh/kaki-stg-key.pem ec2-user@10.125.547.124 -p 22
-
-
-（GUIモード）
-ssh -Y -C
-nautilus
-
-
-## ssh-add
-
-
 ## ls コマンドで、サブディレクトリまで含めて表示（子ディレクトリまで含めて表示）
 ll -d $(find `pwd`)
 
@@ -1012,3 +996,6 @@ bash のシンボリックリンク
 ## yum
 <https://kakisoft.github.io/MiscellaneousDocs/Linux/centos_memo/>
 
+
+## ssh
+Move to MyDevEnv

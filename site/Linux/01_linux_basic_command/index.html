@@ -6502,36 +6502,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../InfraAndEnv_Tool_Service/NetworkNote/20171108_sakura_SSL/" class="md-nav__link">
-        20171108 sakura SSL
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../InfraAndEnv_Tool_Service/NetworkNote/Auth/" class="md-nav__link">
-        Auth
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../InfraAndEnv_Tool_Service/NetworkNote/CORS/" class="md-nav__link">
-        CORS(Cross-Origin Resource Sharing：オリジン間リソース共有)
+      <a href="../../InfraAndEnv_Tool_Service/NetworkNote/Auth_OAuth/" class="md-nav__link">
+        Auth OAuth
       </a>
     </li>
   
@@ -6586,6 +6558,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../InfraAndEnv_Tool_Service/NetworkNote/Network_terms/" class="md-nav__link">
+        CORS(Cross-Origin Resource Sharing：オリジン間リソース共有)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../InfraAndEnv_Tool_Service/NetworkNote/Windows_network/" class="md-nav__link">
         Windows network
       </a>
@@ -6628,20 +6614,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../InfraAndEnv_Tool_Service/NetworkNote/networking_memo/" class="md-nav__link">
-        Networking memo
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../InfraAndEnv_Tool_Service/NetworkNote/port_number_note/" class="md-nav__link">
         Port number note
       </a>
@@ -6658,6 +6630,20 @@
     <li class="md-nav__item">
       <a href="../../InfraAndEnv_Tool_Service/NetworkNote/proxy_memo/" class="md-nav__link">
         Proxy memo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfraAndEnv_Tool_Service/NetworkNote/sakura_SSL_20171108/" class="md-nav__link">
+        sakura SSL 20171108
       </a>
     </li>
   
@@ -6700,6 +6686,20 @@
     <li class="md-nav__item">
       <a href="../../InfraAndEnv_Tool_Service/NetworkNote/virus_soft_note/" class="md-nav__link">
         Virus soft note
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfraAndEnv_Tool_Service/NetworkNote/wireless_networking_memo/" class="md-nav__link">
+        Wireless networking memo
       </a>
     </li>
   
@@ -6890,50 +6890,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../InfraAndEnv_Tool_Service/SSH/SSH_KEY_note_01/" class="md-nav__link">
-        SSH メモ1 ：生成～ログイン
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../InfraAndEnv_Tool_Service/SSH/SSH_KEY_note_02_multi_key/" class="md-nav__link">
-        SSH メモ2 ：ローカルに複数キーが存在する場合
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../InfraAndEnv_Tool_Service/SSH/other_note/" class="md-nav__link">
-        Other note
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../InfraAndEnv_Tool_Service/SSH/ssh_server_openssh/" class="md-nav__link">
-        Ssh server openssh
+      <a href="../../InfraAndEnv_Tool_Service/SSH/SSH_note_01/" class="md-nav__link">
+        SSH note 01
       </a>
     </li>
   
@@ -8425,6 +8383,13 @@
         <li class="md-nav__item">
   <a href="#yum" class="md-nav__link">
     yum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    ssh
   </a>
   
 </li>
@@ -12959,6 +12924,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    ssh
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -12984,22 +12956,6 @@
 ## ハイフン
 bash -
 標準出力を表す
-
-
-## sshログイン
-ssh -i &lt;AccessKey&gt; UserName@&lt;IPアドレス&gt;  [-p &lt;ポート番号&gt;]  
-chmod 600 &lt;AccessKey&gt;
-
-（例）
-ssh -i ~/.ssh/kaki-stg-key.pem ec2-user@10.125.547.124 -p 22
-
-
-（GUIモード）
-ssh -Y -C
-nautilus
-
-
-## ssh-add
 
 
 ## ls コマンドで、サブディレクトリまで含めて表示（子ディレクトリまで含めて表示）
@@ -14003,6 +13959,8 @@ echo '' &gt; access_log       # これだとサイズが0にならない。
 <p><a href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/">https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/</a></p>
 <h2 id="yum">yum</h2>
 <p><a href="https://kakisoft.github.io/MiscellaneousDocs/Linux/centos_memo/">https://kakisoft.github.io/MiscellaneousDocs/Linux/centos_memo/</a></p>
+<h2 id="ssh">ssh</h2>
+<p>Move to MyDevEnv</p>
 
               
             </article>

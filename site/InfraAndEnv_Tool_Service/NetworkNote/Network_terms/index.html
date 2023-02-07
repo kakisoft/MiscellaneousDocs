@@ -12,14 +12,14 @@
         <meta name="author" content="kakisoft">
       
       
-        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/SSH/ssh_server_openssh/">
+        <link rel="canonical" href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/NetworkNote/Network_terms/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
     
     
       
-        <title>Ssh server openssh - kakiNote</title>
+        <title>CORS(Cross-Origin Resource Sharing：オリジン間リソース共有) - kakiNote</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ssh" class="md-skip">
+        <a href="#corscross-origin-resource-sharing" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ssh server openssh
+              CORS(Cross-Origin Resource Sharing：オリジン間リソース共有)
             
           </span>
         </div>
@@ -6476,12 +6476,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_17" type="checkbox" id="__nav_7_17" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_17" type="checkbox" id="__nav_7_17" checked>
       
       
       
@@ -6504,8 +6506,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/20171108_sakura_SSL/" class="md-nav__link">
-        20171108 sakura SSL
+      <a href="../Auth_OAuth/" class="md-nav__link">
+        Auth OAuth
       </a>
     </li>
   
@@ -6518,35 +6520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/Auth/" class="md-nav__link">
-        Auth
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../NetworkNote/CORS/" class="md-nav__link">
-        CORS(Cross-Origin Resource Sharing：オリジン間リソース共有)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../NetworkNote/HTTP_StatusCode/" class="md-nav__link">
+      <a href="../HTTP_StatusCode/" class="md-nav__link">
         HTTP StatusCode
       </a>
     </li>
@@ -6560,7 +6534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/HomeNetwork/" class="md-nav__link">
+      <a href="../HomeNetwork/" class="md-nav__link">
         HomeNetwork
       </a>
     </li>
@@ -6574,7 +6548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/IP-class/" class="md-nav__link">
+      <a href="../IP-class/" class="md-nav__link">
         IP class
       </a>
     </li>
@@ -6586,9 +6560,78 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CORS(Cross-Origin Resource Sharing：オリジン間リソース共有)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CORS(Cross-Origin Resource Sharing：オリジン間リソース共有)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#same-origin-policy" class="md-nav__link">
+    Same-Origin Policy（同一生成元ポリシー）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    シンプルにデータの読み込みを許可したい場合
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/Windows_network/" class="md-nav__link">
+      <a href="../Windows_network/" class="md-nav__link">
         Windows network
       </a>
     </li>
@@ -6602,7 +6645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/ip_check/" class="md-nav__link">
+      <a href="../ip_check/" class="md-nav__link">
         Ip check
       </a>
     </li>
@@ -6616,7 +6659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/machine/" class="md-nav__link">
+      <a href="../machine/" class="md-nav__link">
         Machine
       </a>
     </li>
@@ -6630,21 +6673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/networking_memo/" class="md-nav__link">
-        Networking memo
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../NetworkNote/port_number_note/" class="md-nav__link">
+      <a href="../port_number_note/" class="md-nav__link">
         Port number note
       </a>
     </li>
@@ -6658,7 +6687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/proxy_memo/" class="md-nav__link">
+      <a href="../proxy_memo/" class="md-nav__link">
         Proxy memo
       </a>
     </li>
@@ -6672,7 +6701,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/security_policy_note/" class="md-nav__link">
+      <a href="../sakura_SSL_20171108/" class="md-nav__link">
+        sakura SSL 20171108
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security_policy_note/" class="md-nav__link">
         Security policy note
       </a>
     </li>
@@ -6686,7 +6729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/tmp/" class="md-nav__link">
+      <a href="../tmp/" class="md-nav__link">
         Tmp
       </a>
     </li>
@@ -6700,7 +6743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/virus_soft_note/" class="md-nav__link">
+      <a href="../virus_soft_note/" class="md-nav__link">
         Virus soft note
       </a>
     </li>
@@ -6714,7 +6757,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NetworkNote/%E7%94%A8%E8%AA%9E/" class="md-nav__link">
+      <a href="../wireless_networking_memo/" class="md-nav__link">
+        Wireless networking memo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%94%A8%E8%AA%9E/" class="md-nav__link">
         用語
       </a>
     </li>
@@ -6864,14 +6921,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_19" type="checkbox" id="__nav_7_19" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_19" type="checkbox" id="__nav_7_19" >
       
       
       
@@ -6894,130 +6949,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../SSH_KEY_note_01/" class="md-nav__link">
-        SSH メモ1 ：生成～ログイン
+      <a href="../../SSH/SSH_note_01/" class="md-nav__link">
+        SSH note 01
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../SSH_KEY_note_02_multi_key/" class="md-nav__link">
-        SSH メモ2 ：ローカルに複数キーが存在する場合
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../other_note/" class="md-nav__link">
-        Other note
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Ssh server openssh
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Ssh server openssh
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    sshサーバのインストール状況を確認
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    鍵登録
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    インストール
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    設定ファイル
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    基本設定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    再起動（設定反映）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    参考サイト
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -12891,6 +12825,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -12899,50 +12835,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    sshサーバのインストール状況を確認
+  <a href="#same-origin-policy" class="md-nav__link">
+    Same-Origin Policy（同一生成元ポリシー）
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    鍵登録
+    シンプルにデータの読み込みを許可したい場合
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    インストール
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    設定ファイル
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    基本設定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    再起動（設定反映）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    参考サイト
+    
   </a>
   
 </li>
@@ -12961,79 +12869,16 @@
                 
 
 
-  <h1>Ssh server openssh</h1>
-
-<h2 id="ssh">sshサーバのインストール状況を確認</h2>
-<pre><code>【 CentOS 】
-（インストール状況）
-rpm -qa | grep ssh
-
-（インストール先のフォルダ）
-rpm -ql openssh-server
-
-（デーモン）
-ps aux | grep sshd
-
-
-</code></pre>
-<h2 id="_1">鍵登録</h2>
-<pre><code>（内容確認）
-cat ~/.ssh/id_rsa.pub
-
-
-・鍵情報をコピー
-ssh -i id_rsa -p 60897 kaki@10.160.132.159
-
-
-・鍵を置く
-（odoo@nrq-staging:/home/kaki$）
-echo &quot;ssh-rsa hogeeeeAA1Ap9bizz3X6atTa5 root@dev&quot; &gt;&gt; ~/.ssh/authorized_keys 
-※↑で確認した「rsa.pub」の内容
-
-
-chmod 600 ~/.ssh/authorized_keys
-</code></pre>
-<hr />
-<hr />
-<hr />
-<h2 id="_2">インストール</h2>
-<pre><code>sudo apt install openssh-server
-
-これも？
-sudo apt install openssh-client
-
-＜debian：これでもOK？？
-sudo apt install ssh
-＜RedHat＞
-dnf install openssh openssh-server
-
-</code></pre>
-<h2 id="_3">設定ファイル</h2>
-<p>/etc/ssh/sshd_config </p>
-<h2 id="_4">基本設定</h2>
-<pre><code>（ルートログインを禁止）
-# Authentication:
-PermitRootLogin no
-
-（パスワード認証を禁止（公開鍵認証のみ））
-PasswordAuthentication no
-ChallengeResponseAuthentication no
-
-RSAAuthentication yes
-PubkeyAuthentication yes
-
-Port 22（以外の値）
-</code></pre>
-<h2 id="_5">再起動（設定反映）</h2>
-<p>ubuntu 15 &gt;= sudo systemctl restart ssh
-ubuntu 14 &lt;= sudo service ssh restart
-CentOS 7  &gt;= systemctl restart sshd.service
-CentOS 6  &lt;= service sshd restart</p>
-<hr />
-<h2 id="_6">参考サイト</h2>
-<p>https://help.ubuntu.com/lts/serverguide/openssh-server.html.en<br />
-<br />
-https://qiita.com/a_k0406/items/660e686285ead5ac93f4</p>
+<h1 id="corscross-origin-resource-sharing">CORS(Cross-Origin Resource Sharing：オリジン間リソース共有)</h1>
+<p>データのアクセスを許可できるWebサイトに対してはOriginを越えたアクセスを可能にするための仕組み。  </p>
+<p>追加の HTTP ヘッダを使用して、ユーザーが現在のサイトとは別のサーバーから、<br />
+選択されたリソースにアクセスできるようにする仕組み。（アクセスできる権限を得られるようにする仕組み。）</p>
+<h3 id="same-origin-policy">Same-Origin Policy（同一生成元ポリシー）</h3>
+<p>現在のWebブラウザでは、あるWebサイトが持つ情報が別の悪意あるWebサイトに悪用されるのを防ぐために、<br />
+Same-Origin Policy(日本語では同一生成元ポリシー)が適用されます。</p>
+<h2 id="_1">シンプルにデータの読み込みを許可したい場合</h2>
+<p>https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34</p>
+<h2 id="_2"></h2>
 
               
             </article>
@@ -13047,7 +12892,7 @@ https://qiita.com/a_k0406/items/660e686285ead5ac93f4</p>
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../other_note/" class="md-footer__link md-footer__link--prev" aria-label="前: Other note" rel="prev">
+        <a href="../IP-class/" class="md-footer__link md-footer__link--prev" aria-label="前: IP class" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -13056,20 +12901,20 @@ https://qiita.com/a_k0406/items/660e686285ead5ac93f4</p>
               <span class="md-footer__direction">
                 前
               </span>
-              Other note
+              IP class
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../SSL/SSL_install/" class="md-footer__link md-footer__link--next" aria-label="次: SSL install" rel="next">
+        <a href="../Windows_network/" class="md-footer__link md-footer__link--next" aria-label="次: Windows network" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              SSL install
+              Windows network
             </div>
           </div>
           <div class="md-footer__button md-icon">

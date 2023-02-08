@@ -104,3 +104,21 @@ Shift + Alt + p
 Code Spell Checker
 <https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker>
 
+
+
+## コンバータ （Unicode 変換、json, yaml 変換等も可）
+Encoce Decode
+
+VScodeでUnicodeをデコードする方法  
+<https://yukushige.com/blog/?p=511>
+
+
+```
+「 \\u.{4} 」と検索。
+　↓
+Alt + Enter
+　↓
+Ctrl+Alt+C
+　↓
+「Unicode to String」
+```

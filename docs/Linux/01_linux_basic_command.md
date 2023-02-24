@@ -989,6 +989,20 @@ bash のシンボリックリンク
 |  tcsh  |  csh から派生                                                          |
 
 
+#### シェル実行時のエラー
+```
+bash-4.2# ./server-setup
+bash: ./server-setup: /bin/bash^M: bad interpreter: No such file or directory
+```
+改行コードの差異によるもの
+```
+cat -e <対象のファイル>
+改行が「^M$」となっている。
+
+sed -i 's/\r//' <対象のファイル>
+```
+
+
 ## DNS_command
 <https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/>
 

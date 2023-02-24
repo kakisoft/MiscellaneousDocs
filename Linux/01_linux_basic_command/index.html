@@ -8254,6 +8254,19 @@
     シェルの種類
   </a>
   
+    <nav class="md-nav" aria-label="シェルの種類">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    シェル実行時のエラー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -12777,6 +12790,19 @@
     シェルの種類
   </a>
   
+    <nav class="md-nav" aria-label="シェルの種類">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    シェル実行時のエラー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -13824,6 +13850,16 @@ echo '' &gt; access_log       # これだとサイズが0にならない。
 </tr>
 </tbody>
 </table>
+<h4 id="_5">シェル実行時のエラー</h4>
+<pre><code>bash-4.2# ./server-setup
+bash: ./server-setup: /bin/bash^M: bad interpreter: No such file or directory
+</code></pre>
+<p>改行コードの差異によるもの</p>
+<pre><code>cat -e &lt;対象のファイル&gt;
+改行が「^M$」となっている。
+
+sed -i 's/\r//' &lt;対象のファイル&gt;
+</code></pre>
 <h2 id="dns_command">DNS_command</h2>
 <p><a href="https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/">https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/</a></p>
 <h2 id="yum">yum</h2>

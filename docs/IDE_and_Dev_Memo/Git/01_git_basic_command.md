@@ -195,6 +195,10 @@ git log -p public_html/js/common/components.min.js
 git status
 
 
+## 変更を破棄（編集中のファイルを、元に戻す）
+git restore <ファイル名>
+
+
 ## 差分チェック
 git diff           #ワーキングエリアとステージングエリアの差分
 git diff --cashed  #ステージングエリアとリポジトリの差分

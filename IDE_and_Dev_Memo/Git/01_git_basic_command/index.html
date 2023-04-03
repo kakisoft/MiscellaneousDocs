@@ -12960,12 +12960,22 @@ git remote rm origin
 git branch -a
 
 
+## リモートブランチのみを表示
+git branch -r
+
+
 ## リモートリポジトリの変更を取得（リモートで追加されたブランチを取得）
 git fetch
 
 // リモートのブランチ名を指定する場合（fetch だけで取ってこれない場合、こっちを）
 git fetch origin feat/592
 
+## リモートから取得したブランチに切り替え（先に↑にてリモートのブランチを取得しておく）
+※ブランチ名「origin/fix/products」
+git checkout -b origin/fix/products origin/fix/products
+
+mainブランチに持ってくる場合、こんな感じ
+git checkout -b main origin/main
 
 
 ## リモート追跡ブランチをクリア（ローカルのブランチが邪魔して、リモートブランチを取得できなかった時など）
@@ -13060,6 +13070,8 @@ git branch -d &lt;ブランチ名&gt;  #ブランチ削除
 ## リモートブランチを削除
 git push --delete origin keshitaibranch
 
+## 削除済みのリモートブランチの状態を、ローカルに反映
+git fetch --prune
 
 ## コンフリクト
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD

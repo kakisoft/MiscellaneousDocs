@@ -45,3 +45,4 @@ ____________________________________________________________
 C:\Windows\explorer.exe C:\kaki\RepositoryShortcut
 ```
 
+C:\Windows\explorer.exe "C:\Program Files\Microsoft VS Code\Code.exe" C:\kaki\kaki-en-talk

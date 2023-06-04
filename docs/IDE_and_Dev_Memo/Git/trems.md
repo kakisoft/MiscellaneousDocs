@@ -1,5 +1,0 @@
-```
-upstream
-
-origin
-```

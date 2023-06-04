@@ -33,3 +33,10 @@ boolean    ※tinyint(1)の別名。（１桁しか扱わないint）
 ※MySQLでは、0とnullがfalse。
 　それ以外は true。（空文字は true）
 ```
+
+__________________________________________________________________________
+## SQL Training 2021
+<https://speakerdeck.com/ymiyake/sql-training-2021>
+
+
+

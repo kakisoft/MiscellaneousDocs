@@ -427,6 +427,31 @@ php artisan test --testsuite=Unit
 tty
 
 
+
+
+## ユーザ追加
+sudo adduser myuser
+
+
+## ユーザを sudo グループに追加
+usermod -aG sudo myuser
+
+
+## ユーザが所属するグループを表示
+groups myuser
+
+
+## ユーザ無効化    ユーザ削除
+userdel ubuntu
+
+
+## ホスト名を変更    ホスト名変更
+sudo hostnamectl set-hostname my.host.name
+
+
+
+
+
 ## curl
 https://curl.se/docs/manpage.html
 https://www.mit.edu/afs.new/sipb/user/ssen/src/curl-7.11.1/docs/curl.html
@@ -533,8 +558,15 @@ cd -  １つ前に戻る
 ls -lh
 
 
-## 容量確認
+## ディスクの空き容量確認    容量を確認
 https://xtech.nikkei.com/it/article/COLUMN/20060227/230748/
+
+
+```
+（１発目はこれ。※ルートディレクトリに移動して実行）
+du -h --max-depth 1
+```
+
 
 [du]
 -h	容量を適当な単位で表示する

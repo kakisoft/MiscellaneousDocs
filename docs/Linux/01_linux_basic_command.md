@@ -564,6 +564,7 @@ https://xtech.nikkei.com/it/article/COLUMN/20060227/230748/
 
 ```
 （１発目はこれ。※ルートディレクトリに移動して実行）
+df -h
 du -h --max-depth 1
 ```
 

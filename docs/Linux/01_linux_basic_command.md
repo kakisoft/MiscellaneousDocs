@@ -177,6 +177,13 @@ unlink <リンク名>
 ## シンボリックリンクのコピー
 ln -s <リンク先ディレクトリ名 or ファイル名> <作成するリンク名>
 
+## シンボリックリンクコマンドのオプション
+-s ： シンボリックリンクを作成します。シンボリックリンクは、ファイルまたはディレクトリへの参照として動作します。
+-n ： 既存のファイルを上書きせず、エラーを表示せずに処理をスキップします。既存のファイルがある場合、新しいリンクは作成されません。
+-f ： 既存のファイルやディレクトリに強制的にリンクを作成します。既存のファイルやディレクトリがある場合でも、それを削除して新しいリンクを作成します。
+
+ln -snf コマンドは、既存のファイルを上書きし、シンボリックリンクを作成する際にエラーを無視します。
+
 
 ## ユーザ一覧
 cat /etc/passwd
@@ -614,7 +621,16 @@ Ctrl + l（エル）
 date
 
 
-## タイムゾーンを日本に設定
+## タイムゾーンを日本に設定１
+https://docs.google.com/spreadsheets/d/1SV1X48sucQD336GbtHfIbMxM5aZ3cV8ktuFC3z8s0D8/edit#gid=1965433726
+
+（Ubuntu 18 にて検証）
+export TZ=Asia/Tokyo
+sudo ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+sudo apt install -y awscli
+
+
+## タイムゾーンを日本に設定２
 sudo rm /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 

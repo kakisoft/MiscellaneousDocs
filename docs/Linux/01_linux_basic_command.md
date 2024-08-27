@@ -1071,6 +1071,22 @@ sed -i 's/\r//' <対象のファイル>
 ```
 
 
+## 重複している行を削除
+uniq
+
+-c  各行の前に出現回数を出力（重複した数を表示する）
+-u  重複していない行だけを出力
+-d  重複した行だけを出力
+
+＜使用例＞
+sort kaki_20240827_tmp.txt | uniq -c
+sort kaki_20240827_tmp.txt | uniq -cd
+
+
+
+<https://atmarkit.itmedia.co.jp/ait/articles/1611/14/news021.html>
+
+
 ## DNS_command
 <https://kakisoft.github.io/MiscellaneousDocs/InfraAndEnv_Tool_Service/DNS/DNS_command/>
 

@@ -334,6 +334,11 @@ scp -i secret_key.pem ec2-user@hostname:/home/ec2-user/file_name.txt ~/
 scp -r -i secret_key.pem ec2-user@hostname:/home/ec2-user/dir_name/ ~/
 
 
+## サーバのファイルをローカルにコピー（ .ssh/config の設定が使用可）
+ログファイルをローカルに落とす
+scp odk_wooms_dev:/home/wooms/log/* .
+
+
 ## 中身ごとディレクトリを中身削除
 rm -rf
 

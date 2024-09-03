@@ -353,7 +353,7 @@ whoami 
 fg
 
 
-## 画面を分割して作業
+## 画面を分割して作業 : tmux
 ＜tmux＞
 無ければ apt-get や yum でインストール。
 起動後
@@ -363,6 +363,20 @@ fg
 [ctrl] + B → 矢印キー
 分割を解除
 分割された画面にて exit
+
+
+## 画面を分割して作業 : screen
+スクリーン起動
+screen -S monitor01
+
+デタッチ（抜ける）
+Ctrl A -> Ctrl D
+
+スクリーン一覧
+screen -ls
+
+スクリーン一覧から選択
+screen -r monitor01
 
 
 ## Windowsのメモ帳チックなエディタ起動

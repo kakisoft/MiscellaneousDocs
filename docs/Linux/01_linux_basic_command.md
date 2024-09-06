@@ -326,6 +326,9 @@ export PATH=$PATH:/usr/pgsql-9.6/bin
 /usr/sbin
 等はデフォルトで入ってる。
 
+＜改行＞
+echo $PATH | tr ':' '\n'
+
 
 ## set
 http://linuxcommand.org/lc3_man_pages/seth.html

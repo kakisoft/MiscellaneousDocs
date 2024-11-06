@@ -25,7 +25,7 @@ ll -d $(find `pwd`)
 pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/|  /g'
 
 ## ファイル検索
-sudo find / -name "filename" 
+sudo find / -name "filename"
 locate "filename"　　　※updatedb。ファイル名データベースから検索。
 
 sudo find /etc -name "http*" -type f    # （ファイルのみ。ディレクトリは除く。）

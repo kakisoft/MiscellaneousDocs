@@ -962,6 +962,13 @@ cat error_log | grep 114.157.38.153
 ## アクセス状況を動的に見る
 tail -F /var/log/auth.log
 
+-f	ファイルの中身を追跡するが、ファイルが削除または置き換えられると停止する可能性がある。
+-F	ファイルの削除や置き換えに対応し、新しいファイルに自動的に追従する。
+
+## ページごとに表示
+sudo cat error.log.1 | less
+
+
 
 ## postfix （メールサーバ）
 systemctl status postfix.service

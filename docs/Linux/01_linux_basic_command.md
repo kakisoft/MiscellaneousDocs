@@ -812,6 +812,12 @@ sudo lsof -i :5432
 
 -i: ネットワーク接続に関連する情報
 
+
+## 特定のポートで稼働しているアプリをkillする
+（例：ポート80で稼働しているアプリをkill）
+sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
+
+
 ＜ssコマンド＞
 ss
 

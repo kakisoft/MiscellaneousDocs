@@ -138,3 +138,7 @@ Ubuntu の場合、「/etc/mysql/mysql.conf.d/mysql.cnf」を使う。
 チューニングパラメータを書く。
 
 
+
+## その他メモ
+設定ファイル＝my.cnf と呼ばれることが多い。
+
